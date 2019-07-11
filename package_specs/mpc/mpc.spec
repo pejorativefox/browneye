@@ -1,19 +1,19 @@
-Name:       which
-Version:    2.21
+Name:       mpc
+Version:    1.1.0
 Release:    1
-Summary:    Provides the GNU which executable
+Summary:    TODO
 License:    GPL3
 Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
 %description
-which-2.21.tar.gz 
+TODO
 
 %prep
 %setup -q -a0
 
 %build
-%configure 
+%configure --disable-static --docdir=/usr/share/doc/mpc-1.1.0
 %make_build
 
 %install
@@ -22,8 +22,12 @@ rm -rf %{buildroot}
 rm -vf %{buildroot}%{_infodir}/dir*
 
 %files
-/usr/bin/which
-/usr/share/info/which.info.gz
-/usr/share/man/man1/which.1.gz
+/usr/include/mpc.h
+/usr/lib64/libmpc.la
+/usr/lib64/libmpc.so
+/usr/lib64/libmpc.so.3
+/usr/lib64/libmpc.so.3.1.0
+/usr/share/info/mpc.info.gz
+
 %changelog
 # let's skip this for now

@@ -1,5 +1,5 @@
 #!/bin/bash
-LFS=/home/daspork/browneye/root
+LFS=/home/daspork/browneye/root/mnt/target
 
 #cp lfs-stage2.sh ${LFS}/
 
@@ -14,11 +14,6 @@ if [ -h $LFS/dev/shm ]; then
   mkdir -pv $LFS/$(readlink $LFS/dev/shm)
 fi
 
-chroot "$LFS" /tools/bin/env -i \
-    HOME=/root                  \
-    TERM="$TERM"                \
-    PS1='(lfs chroot) \u:\w\$ ' \
-    PATH=/bin:/usr/bin:/sbin:/usr/sbin:/tools/bin \
-    /tools/bin/bash --login +h
+chroot "$LFS" /usr/bin/bash --login +h
 
 exit

@@ -1,19 +1,20 @@
-Name:       which
-Version:    2.21
+Name:       less
+Version:    530
 Release:    1
-Summary:    Provides the GNU which executable
+Summary:    TODO
 License:    GPL3
 Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
 %description
-which-2.21.tar.gz 
+TODO
 
 %prep
 %setup -q -a0
 
 %build
-%configure 
+
+%configure --sysconfdir=/etc
 %make_build
 
 %install
@@ -22,8 +23,12 @@ rm -rf %{buildroot}
 rm -vf %{buildroot}%{_infodir}/dir*
 
 %files
-/usr/bin/which
-/usr/share/info/which.info.gz
-/usr/share/man/man1/which.1.gz
+/usr/bin/less
+/usr/bin/lessecho
+/usr/bin/lesskey
+/usr/share/man/man1/less.1.gz
+/usr/share/man/man1/lessecho.1.gz
+/usr/share/man/man1/lesskey.1.gz
+
 %changelog
 # let's skip this for now
