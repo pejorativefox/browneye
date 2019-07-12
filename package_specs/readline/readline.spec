@@ -14,7 +14,7 @@ TODO
 
 %build
 %configure --with-curses --disable-install-examples
-%make_build
+%make_build SHLIB_LIBS=-lncurses
 
 %install
 rm -rf %{buildroot}
