@@ -1,5 +1,5 @@
 #!/bin/bash
-LFS=/home/daspork/browneye/root/mnt/target
+LFS=/home/daspork/browneye/root/mnt/loop
 
 #cp lfs-stage2.sh ${LFS}/
 

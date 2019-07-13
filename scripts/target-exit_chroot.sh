@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LFS=/home/daspork/browneye/root/mnt/target
+LFS=/home/daspork/browneye/root/mnt/loop
 
 sudo umount $LFS/run
 sudo umount $LFS/sys

@@ -23,8 +23,34 @@ TODO
 rm -rf %{buildroot}
 %make_install
 rm -vf %{buildroot}%{_infodir}/dir*
+pushd %{buildroot}/usr/bin
+ln -s bash sh
+popd
+
+mkdir -pv %{buildroot}/etc/profile.d
+
+cat > %{buildroot}/etc/profile << "EOF"
+export PS1='(\h) \u:\w\$ '
+alias ls='ls --color'
+alias ll='ls -lash'
+
+# Load profiles from /etc/profile.d
+if test -d /etc/profile.d/; then
+        for profile in /etc/profile.d/*.sh; do
+                test -r "$profile" && . "$profile"
+        done
+        unset profile
+fi
+
+EOF
+
+
+
 
 %files
+/etc/profile.d
+/etc/profile
+/usr/bin/sh
 /usr/bin/bash
 /usr/bin/bashbug
 /usr/include/bash/alias.h
