@@ -33,17 +33,17 @@ mv -v %{buildroot}/usr/share/man/man4/intel-virtual-output.4 \
 sed -i '/\.TH/s/4/1/' %{buildroot}/usr/share/man/man1/intel-virtual-output.1
 
 %files
-/usr/local/bin/intel-virtual-output
-/usr/local/lib/libIntelXvMC.la
-/usr/local/lib/libIntelXvMC.so
-/usr/local/lib/libIntelXvMC.so.1
-/usr/local/lib/libIntelXvMC.so.1.0.0
-/usr/local/lib/xorg/modules/drivers/intel_drv.la
-/usr/local/lib/xorg/modules/drivers/intel_drv.so
-/usr/local/libexec/xf86-video-intel-backlight-helper
-/usr/local/share/polkit-1/actions/org.x.xf86-video-intel.backlight-helper.policy
+/usr/bin/intel-virtual-output
+/usr/lib/libIntelXvMC.la
+/usr/lib/libIntelXvMC.so
+/usr/lib/libIntelXvMC.so.1
+/usr/lib/libIntelXvMC.so.1.0.0
+/usr/lib/xorg/modules/drivers/intel_drv.la
+/usr/lib/xorg/modules/drivers/intel_drv.so
+/usr/libexec/xf86-video-intel-backlight-helper
 /usr/share/man/man4/intel-virtual-output.4.gz
 /usr/share/man/man4/intel.4.gz
+/usr/share/polkit-1/actions/org.x.xf86-video-intel.backlight-helper.policy
 
 
 %changelog

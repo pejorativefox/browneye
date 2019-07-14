@@ -32,7 +32,7 @@ rm -vf %{buildroot}%{_infodir}/dir*
 mkdir -pv %{buildroot}/etc
 
 cat > %{buildroot}/etc/passwd << "EOF"
-root:x:0:0:root:/root:/bin/bash
+root::0:0:root:/root:/bin/bash
 bin:x:1:1:bin:/dev/null:/bin/false
 daemon:x:6:6:Daemon User:/dev/null:/bin/false
 messagebus:x:18:18:D-Bus Message Daemon User:/var/run/dbus:/bin/false

@@ -32,7 +32,40 @@ TEXINFO_XS=omit make -j1 install_root=$RPM_BUILD_ROOT install #MAKEINFO=true
 popd
 rm -vf %{buildroot}%{_infodir}/dir*
 
+
+mkdir -pv %{buildroot}/etc
+cat > %{buildroot}/etc/nsswitch.conf << "EOF"
+# Begin /etc/nsswitch.conf
+
+passwd: files
+group: files
+shadow: files
+
+hosts: files dns
+networks: files
+
+protocols: files
+services: files
+ethers: files
+rpc: files
+
+# End /etc/nsswitch.conf
+EOF
+
+mkdir -pv %{buildroot}/etc/ld.so.conf.d/
+cat >> %{buildroot}/etc/ld.so.conf << "EOF"
+# Add an include directory
+include /etc/ld.so.conf.d/*.conf
+
+EOF
+mkdir -pv /etc/ld.so.conf.d
+
+
+
 %files
+/etc/nsswitch.conf
+/etc/ld.so.conf
+/etc/ld.so.conf.d/
 /etc/ld.so.cache
 /etc/rpc
 /lib/ld-2.29.so
