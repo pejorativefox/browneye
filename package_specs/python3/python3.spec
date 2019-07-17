@@ -25,7 +25,7 @@ rm -rf %{buildroot}
 chmod -v 755 %{buildroot}/usr/lib64/libpython3.7m.so
 chmod -v 755 %{buildroot}/usr/lib64/libpython3.so
 rm -vf %{buildroot}%{_infodir}/dir*
-
+rm -vrf %{buildroot}/usr/lib/python3.7/site-packages/pip/_internal/models/__pycache__
 
 %files
 /usr/bin/2to3
@@ -7043,7 +7043,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/lib64/python3.7/lib-dynload/zlib.cpython-37m-x86_64-linux-gnu.so
 /usr/share/man/man1/python3.1.gz
 /usr/share/man/man1/python3.7.1.gz
-
 
 %changelog
 # let's skip this for now

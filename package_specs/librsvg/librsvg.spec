@@ -24,6 +24,7 @@ rm -vf %{buildroot}%{_infodir}/dir*
 
 %files
 /usr/bin/rsvg-convert
+/usr/bin/rsvg-view-3
 /usr/include/librsvg-2.0/librsvg/librsvg-enum-types.h
 /usr/include/librsvg-2.0/librsvg/librsvg-features.h
 /usr/include/librsvg-2.0/librsvg/rsvg-cairo.h

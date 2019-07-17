@@ -191,7 +191,12 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/gtk-doc/html/harfbuzz/why-do-i-need-a-shaping-engine.html
 /usr/share/gtk-doc/html/harfbuzz/why-is-it-called-harfbuzz.html
 /usr/share/gtk-doc/html/harfbuzz/working-with-harfbuzz-clusters.html
-
+   /usr/include/harfbuzz/hb-icu.h
+   /usr/lib64/libharfbuzz-icu.la
+   /usr/lib64/libharfbuzz-icu.so
+   /usr/lib64/libharfbuzz-icu.so.0
+   /usr/lib64/libharfbuzz-icu.so.0.20301.0
+   /usr/lib64/pkgconfig/harfbuzz-icu.pc
 
 %changelog
 # let's skip this for now

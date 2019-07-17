@@ -355,6 +355,7 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/locale/zh_CN/LC_MESSAGES/xkeyboard-config.mo
 /usr/share/locale/zh_TW/LC_MESSAGES/xkeyboard-config.mo
 /usr/share/pkgconfig/xkeyboard-config.pc
+/usr/share/man/man7/xkeyboard-config.7.gz
 
 %changelog
 # let's skip this for now

@@ -22,7 +22,8 @@ sed -i '/LIBTOOL_INSTALL/d' c++/Makefile.in
 rm -rf %{buildroot}
 %make_install
 mkdir -pv %{buildroot}/lib
-mv -v %{buildroot}/usr/lib64/libncursesw.so.6* %{buildroot}/lib
+#mv -v %{buildroot}/usr/lib64/libncursesw.so.6* %{buildroot}/lib
+mv -v %{buildroot}/share/pkgconfig %{buildroot}/usr/share
 
 %files
 /usr/bin/captoinfo

@@ -155,6 +155,17 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/man/man1/xsltproc.1.gz
 /usr/share/man/man3/libexslt.3.gz
 /usr/share/man/man3/libxslt.3.gz
+   /usr/lib64/python2.7/site-packages/libxslt.py
+   /usr/lib64/python2.7/site-packages/libxsltmod.la
+   /usr/lib64/python2.7/site-packages/libxsltmod.so
+   /usr/share/doc/libxslt-python-1.1.33/TODO
+   /usr/share/doc/libxslt-python-1.1.33/examples/basic.py
+   /usr/share/doc/libxslt-python-1.1.33/examples/exslt.py
+   /usr/share/doc/libxslt-python-1.1.33/examples/extelem.py
+   /usr/share/doc/libxslt-python-1.1.33/examples/extfunc.py
+   /usr/share/doc/libxslt-python-1.1.33/examples/pyxsltproc.py
+   /usr/share/doc/libxslt-python-1.1.33/examples/test.xml
+   /usr/share/doc/libxslt-python-1.1.33/examples/test.xsl
 
 %changelog
 # let's skip this for now
