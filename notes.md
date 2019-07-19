@@ -42,6 +42,21 @@ qemu-system-x86_64 -kernel /home/daspork/browneye/root/kernel\
 qemu-system-x86_64 -m 2048 --enable-kvm -cpu host -drive format=raw,file=browneye.rimg
 
 
+# missing env
+SHELL
+
+# lua
+chmod exes
+
+# missing paths
+/opt/rust/bin
+/run/dbus
+
+# missing links
+/bin/cc
+
+
+
 # polkit
 groupadd -fg 27 polkitd &&
 useradd -c "PolicyKit Daemon Owner" -d /etc/polkit-1 -u 27 \
