@@ -22,27 +22,27 @@ rm -rf %{buildroot}
 rm -vf %{buildroot}%{_infodir}/dir*
 
 %files
-/usr/lib/python3.7/site-packages/xcbgen/__init__.py
-/usr/lib/python3.7/site-packages/xcbgen/__pycache__/__init__.cpython-37.opt-1.pyc
-/usr/lib/python3.7/site-packages/xcbgen/__pycache__/__init__.cpython-37.pyc
-/usr/lib/python3.7/site-packages/xcbgen/__pycache__/align.cpython-37.opt-1.pyc
-/usr/lib/python3.7/site-packages/xcbgen/__pycache__/align.cpython-37.pyc
-/usr/lib/python3.7/site-packages/xcbgen/__pycache__/error.cpython-37.opt-1.pyc
-/usr/lib/python3.7/site-packages/xcbgen/__pycache__/error.cpython-37.pyc
-/usr/lib/python3.7/site-packages/xcbgen/__pycache__/expr.cpython-37.opt-1.pyc
-/usr/lib/python3.7/site-packages/xcbgen/__pycache__/expr.cpython-37.pyc
-/usr/lib/python3.7/site-packages/xcbgen/__pycache__/matcher.cpython-37.opt-1.pyc
-/usr/lib/python3.7/site-packages/xcbgen/__pycache__/matcher.cpython-37.pyc
-/usr/lib/python3.7/site-packages/xcbgen/__pycache__/state.cpython-37.opt-1.pyc
-/usr/lib/python3.7/site-packages/xcbgen/__pycache__/state.cpython-37.pyc
-/usr/lib/python3.7/site-packages/xcbgen/__pycache__/xtypes.cpython-37.opt-1.pyc
-/usr/lib/python3.7/site-packages/xcbgen/__pycache__/xtypes.cpython-37.pyc
-/usr/lib/python3.7/site-packages/xcbgen/align.py
-/usr/lib/python3.7/site-packages/xcbgen/error.py
-/usr/lib/python3.7/site-packages/xcbgen/expr.py
-/usr/lib/python3.7/site-packages/xcbgen/matcher.py
-/usr/lib/python3.7/site-packages/xcbgen/state.py
-/usr/lib/python3.7/site-packages/xcbgen/xtypes.py
+   /usr/lib/python2.7/site-packages/xcbgen/__init__.py
+   /usr/lib/python2.7/site-packages/xcbgen/__init__.pyc
+   /usr/lib/python2.7/site-packages/xcbgen/__init__.pyo
+   /usr/lib/python2.7/site-packages/xcbgen/align.py
+   /usr/lib/python2.7/site-packages/xcbgen/align.pyc
+   /usr/lib/python2.7/site-packages/xcbgen/align.pyo
+   /usr/lib/python2.7/site-packages/xcbgen/error.py
+   /usr/lib/python2.7/site-packages/xcbgen/error.pyc
+   /usr/lib/python2.7/site-packages/xcbgen/error.pyo
+   /usr/lib/python2.7/site-packages/xcbgen/expr.py
+   /usr/lib/python2.7/site-packages/xcbgen/expr.pyc
+   /usr/lib/python2.7/site-packages/xcbgen/expr.pyo
+   /usr/lib/python2.7/site-packages/xcbgen/matcher.py
+   /usr/lib/python2.7/site-packages/xcbgen/matcher.pyc
+   /usr/lib/python2.7/site-packages/xcbgen/matcher.pyo
+   /usr/lib/python2.7/site-packages/xcbgen/state.py
+   /usr/lib/python2.7/site-packages/xcbgen/state.pyc
+   /usr/lib/python2.7/site-packages/xcbgen/state.pyo
+   /usr/lib/python2.7/site-packages/xcbgen/xtypes.py
+   /usr/lib/python2.7/site-packages/xcbgen/xtypes.pyc
+   /usr/lib/python2.7/site-packages/xcbgen/xtypes.pyo
 /usr/lib64/pkgconfig/xcb-proto.pc
 /usr/share/xcb/bigreq.xml
 /usr/share/xcb/composite.xml

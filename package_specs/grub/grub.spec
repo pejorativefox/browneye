@@ -40,6 +40,7 @@ mv -v %{buildroot}/etc/bash_completion.d/grub %{buildroot}/usr/share/bash-comple
 /usr/bin/grub-glue-efi
 /usr/bin/grub-kbdcomp
 /usr/bin/grub-menulst2cfg
+/usr/bin/grub-mkfont
 /usr/bin/grub-mkimage
 /usr/bin/grub-mklayout
 /usr/bin/grub-mknetdir

@@ -23,7 +23,7 @@ mkdir -v build
 pushd build
 ../configure --enable-languages=c,c++ --disable-multilib --disable-bootstrap \
              --prefix=/usr --disable-libmpx --with-system-zlib
-%make_build
+%make_build -j3
 popd
 
 %install
@@ -1498,6 +1498,10 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/man/man7/fsf-funding.7.gz
 /usr/share/man/man7/gfdl.7.gz
 /usr/share/man/man7/gpl.7.gz
+/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed/X11/Xw32defs.h
+/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed/slang.h
+/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed/xorg/compiler.h
+/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed/xorg/edid.h
 
 
 %changelog

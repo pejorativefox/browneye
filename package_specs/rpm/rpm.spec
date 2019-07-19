@@ -283,6 +283,8 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/man/ru/man8/rpm.8.gz
 /usr/share/man/ru/man8/rpm2cpio.8.gz
 /usr/share/man/sk/man8/rpm.8.gz
+/usr/lib64/rpm-plugins/systemd_inhibit.la
+/usr/lib64/rpm-plugins/systemd_inhibit.so
 
 %changelog
 # let's skip this for now
