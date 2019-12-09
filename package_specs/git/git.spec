@@ -17,6 +17,8 @@ TODO
 
 %install    
 rm -rf %{buildroot}
+mkdir -pv %{buildroot}/etc/bash_completion.d/
+cp contrib/completion/git-completion.bash %{buildroot}/etc/bash_completion.d/
 make prefix=/usr install DESTDIR=$RPM_BUILD_ROOT
 rm -vf %{buildroot}%{_infodir}/dir*
 
@@ -344,6 +346,7 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/perl5/Git/SVN/Prompt.pm
 /usr/share/perl5/Git/SVN/Ra.pm
 /usr/share/perl5/Git/SVN/Utils.pm
+/etc/bash_completion.d/git-completion.bash
 
 %changelog
 # let's skip this for now
