@@ -16,7 +16,7 @@ TODO
 %setup -a 0 -n finit-3.2-rc1
 
 %build
-%configure 
+%configure --enable-dbus-plugin --enable-rw-rootfs --enable-progress 
 %make_build
 
 %install
