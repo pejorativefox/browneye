@@ -12,7 +12,7 @@ Source0:    %{name}-%{version}.tar.gz
 TODO
 
 %prep
-#%setup -a 0
+%setup -a 0
 
 %install
 ls
