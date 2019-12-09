@@ -1,9 +1,9 @@
-Name:       autoconf
-Version:    2.69
+Name:       intltool
+Version:    0.51.0
 Release:    1
 Summary:    TODO
 License:    GPL3
-Source0:    %{name}-%{version}.tar.xz
+Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
 %description
@@ -13,77 +13,23 @@ TODO
 %setup -q -a0
 
 %build
-sed '361 s/{/\\{/' -i bin/autoscan.in
+sed -i 's:\\\${:\\\$\\{:' intltool-update.in
 %configure
 %make_build
 
 %install
 rm -rf %{buildroot}
 %make_install
-rm -vf %{buildroot}%{_infodir}/dir*
 
 %files
-/usr/bin/autoconf
-/usr/bin/autoheader
-/usr/bin/autom4te
-/usr/bin/autoreconf
-/usr/bin/autoscan
-/usr/bin/autoupdate
-/usr/bin/ifnames
-/usr/share/autoconf/Autom4te/C4che.pm
-/usr/share/autoconf/Autom4te/ChannelDefs.pm
-/usr/share/autoconf/Autom4te/Channels.pm
-/usr/share/autoconf/Autom4te/Configure_ac.pm
-/usr/share/autoconf/Autom4te/FileUtils.pm
-/usr/share/autoconf/Autom4te/General.pm
-/usr/share/autoconf/Autom4te/Getopt.pm
-/usr/share/autoconf/Autom4te/Request.pm
-/usr/share/autoconf/Autom4te/XFile.pm
-/usr/share/autoconf/INSTALL
-/usr/share/autoconf/autoconf/autoconf.m4
-/usr/share/autoconf/autoconf/autoconf.m4f
-/usr/share/autoconf/autoconf/autoheader.m4
-/usr/share/autoconf/autoconf/autoscan.m4
-/usr/share/autoconf/autoconf/autotest.m4
-/usr/share/autoconf/autoconf/autoupdate.m4
-/usr/share/autoconf/autoconf/c.m4
-/usr/share/autoconf/autoconf/erlang.m4
-/usr/share/autoconf/autoconf/fortran.m4
-/usr/share/autoconf/autoconf/functions.m4
-/usr/share/autoconf/autoconf/general.m4
-/usr/share/autoconf/autoconf/go.m4
-/usr/share/autoconf/autoconf/headers.m4
-/usr/share/autoconf/autoconf/lang.m4
-/usr/share/autoconf/autoconf/libs.m4
-/usr/share/autoconf/autoconf/oldnames.m4
-/usr/share/autoconf/autoconf/programs.m4
-/usr/share/autoconf/autoconf/specific.m4
-/usr/share/autoconf/autoconf/status.m4
-/usr/share/autoconf/autoconf/types.m4
-/usr/share/autoconf/autom4te.cfg
-/usr/share/autoconf/autoscan/autoscan.list
-/usr/share/autoconf/autotest/autotest.m4
-/usr/share/autoconf/autotest/autotest.m4f
-/usr/share/autoconf/autotest/general.m4
-/usr/share/autoconf/autotest/specific.m4
-/usr/share/autoconf/m4sugar/foreach.m4
-/usr/share/autoconf/m4sugar/m4sh.m4
-/usr/share/autoconf/m4sugar/m4sh.m4f
-/usr/share/autoconf/m4sugar/m4sugar.m4
-/usr/share/autoconf/m4sugar/m4sugar.m4f
-/usr/share/autoconf/m4sugar/version.m4
-/usr/share/info/autoconf.info.gz
-/usr/share/info/standards.info.gz
-/usr/share/man/man1/autoconf.1.gz
-/usr/share/man/man1/autoheader.1.gz
-/usr/share/man/man1/autom4te.1.gz
-/usr/share/man/man1/autoreconf.1.gz
-/usr/share/man/man1/autoscan.1.gz
-/usr/share/man/man1/autoupdate.1.gz
-/usr/share/man/man1/config.guess.1.gz
-/usr/share/man/man1/config.sub.1.gz
-/usr/share/man/man1/ifnames.1.gz
-
+/usr/bin/intltool-extract
+/usr/bin/intltool-merge
+/usr/bin/intltool-prepare
+/usr/bin/intltool-update
+/usr/bin/intltoolize
+/usr/share/aclocal/intltool.m4
+/usr/share/intltool/Makefile.in.in
+/usr/share/man/*
 
 %changelog
 # let's skip this for now
