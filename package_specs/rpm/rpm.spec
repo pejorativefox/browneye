@@ -13,7 +13,7 @@ TODO
 %setup -q -a0
 
 %build
-%configure --without-lua
+%configure --without-lua --enable-python
 %make_build
 
 %install    
@@ -285,6 +285,7 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/man/sk/man8/rpm.8.gz
 /usr/lib64/rpm-plugins/systemd_inhibit.la
 /usr/lib64/rpm-plugins/systemd_inhibit.so
+/usr/lib/python2.7/site-packages/rpm/*
 
 %changelog
 # let's skip this for now
