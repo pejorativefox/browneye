@@ -17,7 +17,7 @@ TODO
 %configure  --enable-shared     \
             --with-system-expat \
             --with-system-ffi   \
-            --with-ensurepip=yes \
+            --without-ensurepip \
             --enable-unicode=ucs4
 %make_build
 

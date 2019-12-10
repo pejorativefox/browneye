@@ -16,7 +16,7 @@ TODO
 %configure --enable-shared     \
            --with-system-expat \
            --with-system-ffi   \
-           --with-ensurepip=install
+           --without-ensurepip
 %make_build
 
 %install
@@ -32,9 +32,6 @@ rm -vrf %{buildroot}/usr/lib/python3.7/site-packages/pip/_internal/models/__pyca
 /usr/bin/2to3-3.7
 /usr/bin/idle3
 /usr/bin/idle3.7
-/usr/bin/easy_install-3.7
-/usr/bin/pip3
-/usr/bin/pip3.7
 /usr/bin/pydoc3
 /usr/bin/pydoc3.7
 /usr/bin/python3
