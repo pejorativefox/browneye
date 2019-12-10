@@ -1,17 +1,17 @@
 Name:       adwaita-icon-theme
 Version:    3.30.1
 Release:    1
-Summary:    TODO
-License:    GPL3
+Summary:    Gnome standard icon set.
+License:    LGPL
 Prefix:     /usr
 Source0:    %{name}-%{version}.tar.xz
 
 
 %description
-TODO
+Gnome standard icons.
 
 %prep
-%setup -a 0
+%setup
 
 %build
 %configure
@@ -27,5 +27,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/pkgconfig/adwaita-icon-theme.pc
 
 %changelog
-# let's skip this for now
+* Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 3.30.1
+- Initial RPM release
 

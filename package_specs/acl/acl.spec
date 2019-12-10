@@ -1,21 +1,22 @@
 Name:       acl
 Version:    2.2.53
 Release:    1
-Summary:    TODO
-License:    GPL3
+Summary:    Linux access control lists.
+License:    LGPL
 Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
 %description
-TODO
+The Acl package contains utilities to administer Access Control Lists, which are used to
+define more fine-grained discretionary access rights for files and directories. 
 
 %prep
-%setup -q -a0
+%setup
 
 %build
-%configure --disable-static      \
-            --libexecdir=/usr/lib \
-            --docdir=/usr/share/doc/acl-2.2.53
+%configure --disable-static       \
+           --libexecdir=/usr/lib  \
+           --docdir=/usr/share/doc/acl-2.2.53
 %make_build
 
 %install
@@ -33,12 +34,7 @@ rm -rf %{buildroot}
 /usr/lib64/libacl.so.1
 /usr/lib64/libacl.so.1.1.2253
 /usr/lib64/pkgconfig/libacl.pc
-/usr/share/doc/acl-2.2.53/CHANGES
-/usr/share/doc/acl-2.2.53/COPYING
-/usr/share/doc/acl-2.2.53/COPYING.LGPL
-/usr/share/doc/acl-2.2.53/PORTING
-/usr/share/doc/acl-2.2.53/extensions.txt
-/usr/share/doc/acl-2.2.53/libacl.txt
+/usr/share/doc/acl-2.2.53/*
 /usr/share/locale/de/LC_MESSAGES/acl.mo
 /usr/share/locale/en@boldquot/LC_MESSAGES/acl.mo
 /usr/share/locale/en@quot/LC_MESSAGES/acl.mo
@@ -47,51 +43,8 @@ rm -rf %{buildroot}
 /usr/share/locale/gl/LC_MESSAGES/acl.mo
 /usr/share/locale/pl/LC_MESSAGES/acl.mo
 /usr/share/locale/sv/LC_MESSAGES/acl.mo
-/usr/share/man/man1/chacl.1.gz
-/usr/share/man/man1/getfacl.1.gz
-/usr/share/man/man1/setfacl.1.gz
-/usr/share/man/man3/acl_add_perm.3.gz
-/usr/share/man/man3/acl_calc_mask.3.gz
-/usr/share/man/man3/acl_check.3.gz
-/usr/share/man/man3/acl_clear_perms.3.gz
-/usr/share/man/man3/acl_cmp.3.gz
-/usr/share/man/man3/acl_copy_entry.3.gz
-/usr/share/man/man3/acl_copy_ext.3.gz
-/usr/share/man/man3/acl_copy_int.3.gz
-/usr/share/man/man3/acl_create_entry.3.gz
-/usr/share/man/man3/acl_delete_def_file.3.gz
-/usr/share/man/man3/acl_delete_entry.3.gz
-/usr/share/man/man3/acl_delete_perm.3.gz
-/usr/share/man/man3/acl_dup.3.gz
-/usr/share/man/man3/acl_entries.3.gz
-/usr/share/man/man3/acl_equiv_mode.3.gz
-/usr/share/man/man3/acl_error.3.gz
-/usr/share/man/man3/acl_extended_fd.3.gz
-/usr/share/man/man3/acl_extended_file.3.gz
-/usr/share/man/man3/acl_extended_file_nofollow.3.gz
-/usr/share/man/man3/acl_free.3.gz
-/usr/share/man/man3/acl_from_mode.3.gz
-/usr/share/man/man3/acl_from_text.3.gz
-/usr/share/man/man3/acl_get_entry.3.gz
-/usr/share/man/man3/acl_get_fd.3.gz
-/usr/share/man/man3/acl_get_file.3.gz
-/usr/share/man/man3/acl_get_perm.3.gz
-/usr/share/man/man3/acl_get_permset.3.gz
-/usr/share/man/man3/acl_get_qualifier.3.gz
-/usr/share/man/man3/acl_get_tag_type.3.gz
-/usr/share/man/man3/acl_init.3.gz
-/usr/share/man/man3/acl_set_fd.3.gz
-/usr/share/man/man3/acl_set_file.3.gz
-/usr/share/man/man3/acl_set_permset.3.gz
-/usr/share/man/man3/acl_set_qualifier.3.gz
-/usr/share/man/man3/acl_set_tag_type.3.gz
-/usr/share/man/man3/acl_size.3.gz
-/usr/share/man/man3/acl_to_any_text.3.gz
-/usr/share/man/man3/acl_to_text.3.gz
-/usr/share/man/man3/acl_valid.3.gz
-/usr/share/man/man5/acl.5.gz
-
-
+/usr/share/man/*
 
 %changelog
-# let's skip this for now
+* Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 2.2.53
+- Initial RPM release
