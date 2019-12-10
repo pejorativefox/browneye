@@ -1,0 +1,26 @@
+Name:       libx264
+Version:    
+Release:    1
+Summary:    TODO
+License:    GPL3
+Source0:    %{name}-%{version}.tar.gz
+Prefix:     /usr
+
+%description
+TODO
+
+%prep
+%setup -q -a0
+
+%build
+
+%make_build
+
+%install
+rm -rf %{buildroot}
+%make_install
+
+%files
+
+%changelog
+# let's skip this for now
