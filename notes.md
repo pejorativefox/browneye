@@ -1,4 +1,7 @@
 
+# mpv
+https://pi3d.github.io/html/FAQ.html#glx-dri2-not-supported-or-failed-to-authenticate
+
 # Kernel
 WARNING: iwlwifi is useless without IWLDVM or IWLMVM
 linux-firmware
@@ -7,10 +10,12 @@ linux-firmware
 BAD SYMLINK /var/run -> /run
 tmp wrong perms
 
+# makeca
+post install script
+rename conf.dist
 
 #missing packages
 manpages
-
 
 # missing env
 SHELL
@@ -21,28 +26,24 @@ chmod exes
 # missing paths
 /opt/rust/bin
 /sbin
-
+/var/lib/dbus
 
 #docs
 stop html gen on openssl
 
-
 # missing links
 /bin/cc
 libbz2.so.1.0
-
 
 # polkit
 groupadd -fg 27 polkitd &&
 useradd -c "PolicyKit Daemon Owner" -d /etc/polkit-1 -u 27 \
         -g polkitd -s /bin/false polkitd
 
-
 # python
 pyc files in packages
 install of 2.x clobbes /usr/bin/python
 pygobject is needed for network manager build
-
 
 # gtk pixbuf
 gdk-pixbuf-query-loaders --update-cache
@@ -53,7 +54,6 @@ maybe the same
  If you installed the package on to your system using a “DESTDIR” method, an important file was not installed and must be copied and/or generated. Generate it using the following command as the root user:
 gtk-query-immodules-2.0 --update-cache
 
-
 # gtk+ 3
 this is missing in post install for gtk+
 gtk-query-immodules-3.0 --update-cache
@@ -62,12 +62,12 @@ gtk-query-immodules-3.0 --update-cache
 /bin/depmod -> /sbin/depmod
 
 # fstab
-/dev/          /            ext      noatime             0     0
-proc           /proc        proc     nosuid,noexec,nodev 0     0
-sysfs          /sys         sysfs    nosuid,noexec,nodev 0     0
-devpts         /dev/pts     devpts   gid=5,mode=620      0     0
-tmpfs          /run         tmpfs    defaults            0     0
-devtmpfs       /dev         devtmpfs mode=0755,nosuid    0     0
+/dev/<root_dev>	/            ext      noatime             0     0
+proc           	/proc        proc     nosuid,noexec,nodev 0     0
+sysfs          	/sys         sysfs    nosuid,noexec,nodev 0     0
+devpts         	/dev/pts     devpts   gid=5,mode=620      0     0
+tmpfs          	/run         tmpfs    defaults            0     0
+devtmpfs       	/dev         devtmpfs mode=0755,nosuid    0     0
 
 
 # fonts
