@@ -11,7 +11,7 @@ Source0:    %{name}-%{version}gnome1.tar.gz
 TODO
 
 %prep
-%setup -a 0 -n mozjs-52.2.1gnome1
+%setup -n mozjs-52.2.1gnome1
 
 %build
 pushd js/src

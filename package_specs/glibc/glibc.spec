@@ -13,7 +13,7 @@ kluged to work around: https://www.linuxquestions.org/questions/slackware-14/bug
 
 
 %prep
-%setup -q -a0
+%setup
 %patch -p1
 
 %build

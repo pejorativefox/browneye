@@ -318,7 +318,7 @@ rm -vf %{buildroot}%{_infodir}/dir
 /usr/share/locale/zh_HK/LC_MESSAGES/gcr.mo
 /usr/share/locale/zh_TW/LC_MESSAGES/gcr.mo
 /usr/share/mime/packages/gcr-crypto-types.xml
-
+/usr/share/vala/*
 
 %changelog
 # let's skip this for now
