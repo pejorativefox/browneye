@@ -1,4 +1,7 @@
 
+# permissions
+/tmp needs    0 drwxrwxrwt  15 root root  460 Dec 11 12:02 tmp
+
 # mpv
 https://pi3d.github.io/html/FAQ.html#glx-dri2-not-supported-or-failed-to-authenticate
 

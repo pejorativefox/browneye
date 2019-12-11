@@ -11,7 +11,7 @@ Source0:    %{name}-%{version}.tar.xz
 TODO
 
 %prep
-%setup -a 0
+%setup
 
 %build
 mkdir build-atk
@@ -38,5 +38,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/lib64/pkgconfig/atk-bridge-2.0.pc
 
 %changelog
-# let's skip this for now
+* Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 2.30.0
+- Initial RPM
 
