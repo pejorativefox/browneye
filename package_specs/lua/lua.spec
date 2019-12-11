@@ -50,7 +50,8 @@ pushd src
 mkdir -pv %{buildroot}/usr/bin
 mkdir -pv %{buildroot}/usr/include
 mkdir -pv %{buildroot}/usr/lib
-install -v -m644 -D lua luac %{buildroot}/usr/bin
+chmod +x lua luac
+install -v -m744 -D lua luac %{buildroot}/usr/bin
 install -v -m644 -D lua.h luaconf.h lualib.h lauxlib.h lua.hpp %{buildroot}/usr/include
 install -v -m644 -D liblua.so liblua.so.5.3 liblua.so.5.3.4 %{buildroot}/usr/lib
 popd

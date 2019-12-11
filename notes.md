@@ -20,9 +20,6 @@ manpages
 # missing env
 SHELL
 
-# lua
-chmod exes
-
 # missing paths
 /opt/rust/bin
 /sbin
