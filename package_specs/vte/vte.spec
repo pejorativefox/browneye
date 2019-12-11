@@ -18,7 +18,6 @@ pushd build
 meson   --prefix=/usr     \
 	--sysconfdir=/etc \
         -Dfribidi=false   \
-        -Dgnutls=false    \
         -Dvapi=false
 ninja
 popd

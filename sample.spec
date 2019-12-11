@@ -24,5 +24,5 @@ rm -rf %{buildroot}
 
 %changelog
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 3.30.1
-- Added this sample to help with adding new packages.
+- Initial RPM
 
