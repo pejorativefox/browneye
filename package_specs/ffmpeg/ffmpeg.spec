@@ -97,6 +97,11 @@ cp -v tools/qt-faststart %{buildroot}/usr/bin
 /usr/share/doc/*
 /usr/share/ffmpeg/*
 /usr/share/man/*
+/usr/bin/ffplay
+/usr/share/doc/ffmpeg-4.1.1/ffplay-all.html
+/usr/share/doc/ffmpeg-4.1.1/ffplay.html
+/usr/share/man/man1/ffplay-all.1.gz
+/usr/share/man/man1/ffplay.1.gz
 
 
 %changelog

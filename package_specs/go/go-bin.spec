@@ -10,7 +10,7 @@ Prefix:     /usr
 TODO
 
 %prep
-%setup -q -a0 -n go
+%setup -n go
 
 %build 
 

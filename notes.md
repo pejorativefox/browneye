@@ -2,6 +2,12 @@
 # permissions
 /tmp needs    0 drwxrwxrwt  15 root root  460 Dec 11 12:02 tmp
 
+# docker
+ERRO[2019-12-11T13:56:07.774884115Z] 'overlay' not found as a supported filesystem on this host. Please ensure kernel is new enough and has overlay support loaded.  storage-driver=overlay2
+ERRO[2019-12-11T13:56:07.778411777Z] AUFS was not found in /proc/filesystems       storage-driver=aufs
+ERRO[2019-12-11T13:56:07.779149212Z] 'overlay' not found as a supported filesystem on this host. Please ensure kernel is new enough and has overlay support loaded.  storage-driver=overlay
+ERRO[2019-12-11T13:56:07.779188737Z] Failed to built-in GetDriver graph devicemapper /var/lib/docker 
+
 # mpv
 https://pi3d.github.io/html/FAQ.html#glx-dri2-not-supported-or-failed-to-authenticate
 

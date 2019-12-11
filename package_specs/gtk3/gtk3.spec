@@ -11,7 +11,7 @@ Source0:    %{name}-%{version}.tar.xz
 TODO
 
 %prep
-%setup -a 0
+%setup
 
 %build
 %configure  --sysconfdir=/etc         \
