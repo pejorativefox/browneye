@@ -10,7 +10,7 @@ Prefix:     /usr
 TODO 
 
 %prep
-%setup -q -a0
+%setup
 
 %build
 case $(uname -m) in
