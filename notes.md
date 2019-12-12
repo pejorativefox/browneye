@@ -1,4 +1,12 @@
 
+#file conflicts
+file /usr/share/info/dir from install of libksba-1.3.5-1.x86_64 conflicts with file from package nettle-3.4-1.x86_64
+file /usr/share/info/dir from install of libksba-1.3.5-1.x86_64 conflicts with file from package gnutls-3.5.19-1.x86_64
+file /usr/share/info/dir from install of libksba-1.3.5-1.x86_64 conflicts with file from package libassuan-2.5.1-1.x86_64
+file /usr/share/info/dir from install of libksba-1.3.5-1.x86_64 conflicts with file from package gpgme-1.11.1-1.x86_64
+
+
+
 # permissions
 /tmp needs    0 drwxrwxrwt  15 root root  460 Dec 11 12:02 tmp
 
