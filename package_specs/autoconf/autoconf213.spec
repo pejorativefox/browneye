@@ -7,6 +7,11 @@ Prefix:     /usr
 Source0:    autoconf-%{version}.tar.gz
 Patch:     autoconf-2.13-consolidated_fixes-1.patch
 
+AutoReq: no
+
+Requires: /bin/perl, /bin/sh
+
+
 %description
 TODO
 

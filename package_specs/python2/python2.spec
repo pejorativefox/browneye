@@ -6,6 +6,12 @@ License:    GPL3
 Prefix:     /usr
 Source0:    Python-%{version}.tar.xz
 
+Provides: /bin/python2
+
+AutoReq: no
+
+Requires: /bin/sh /usr/bin/env /usr/bin/pkg-config /usr/bin/python2.7 libbz2.so.1.0()(64bit) libc.so.6()(64bit) libc.so.6(GLIBC_2.14)(64bit) libc.so.6(GLIBC_2.2.5)(64bit) libc.so.6(GLIBC_2.28)(64bit) libc.so.6(GLIBC_2.3)(64bit) libc.so.6(GLIBC_2.3.2)(64bit) libc.so.6(GLIBC_2.7)(64bit) libcrypt.so.1()(64bit) libcrypt.so.1(GLIBC_2.2.5)(64bit) libcrypto.so.1.1()(64bit) libcrypto.so.1.1(OPENSSL_1_1_0)(64bit) libdl.so.2()(64bit) libdl.so.2(GLIBC_2.2.5)(64bit) libexpat.so.1()(64bit) libffi.so.6()(64bit) libgdbm.so.6()(64bit) libgdbm_compat.so.4()(64bit) libm.so.6()(64bit) libm.so.6(GLIBC_2.2.5)(64bit) libm.so.6(GLIBC_2.29)(64bit) libncursesw.so.6()(64bit) libpanelw.so.6()(64bit) libpthread.so.0()(64bit) libpthread.so.0(GLIBC_2.2.5)(64bit) libpython2.7.so.1.0()(64bit) libreadline.so.8()(64bit) libsqlite3.so.0()(64bit) libssl.so.1.1()(64bit) libssl.so.1.1(OPENSSL_1_1_0)(64bit) libutil.so.1()(64bit) libutil.so.1(GLIBC_2.2.5)(64bit) libz.so.1()(64bit) libz.so.1(ZLIB_1.2.0)(64bit) python(abi) = 2.7
+
 
 %description
 TODO
@@ -37,6 +43,7 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/python2.7
 /usr/bin/python2.7-config
 /usr/bin/smtpd.py
+/usr/lib64/python2.7/lib-dynload/_sqlite3.so
 /usr/include/python2.7/Python-ast.h
 /usr/include/python2.7/Python.h
 /usr/include/python2.7/abstract.h

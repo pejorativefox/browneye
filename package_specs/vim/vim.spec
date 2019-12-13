@@ -6,6 +6,10 @@ License:    GPL3
 Source0:    %{name}-%{version}.tar.bz2
 Prefix:     /usr
 
+AutoReq: no
+
+Requires: libICE.so.6()(64bit), libSM.so.6()(64bit), libX11.so.6()(64bit), libXt.so.6()(64bit), libacl.so.1()(64bit), libc.so.6()(64bit), libdl.so.2()(64bit), libgdk-x11-2.0.so.0()(64bit), libgdk_pixbuf-2.0.so.0()(64bit), libgio-2.0.so.0()(64bit), libglib-2.0.so.0()(64bit), libgobject-2.0.so.0()(64bit), libgtk-x11-2.0.so.0()(64bit), libm.so.6()(64bit), libncursesw.so.6()(64bit), libpango-1.0.so.0()(64bit)
+
 %description
 TODO
 

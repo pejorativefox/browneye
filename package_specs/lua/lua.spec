@@ -7,11 +7,13 @@ Prefix:     /usr
 Source0:    %{name}-%{version}.tar.gz
 Patch:      lua-5.3.5-shared_library-1.patch
 
+Provides: liblua.so.5.3()(64bit)
+
 %description
 TODO
 
 %prep
-%setup -a 0
+%setup
 %patch -p1
 
 %build

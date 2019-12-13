@@ -6,6 +6,8 @@ License:    GPL3
 Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
 
+Provides: libgcc_s.so.1()(64bit), libgcc_s.so.1(GCC_3.0)(64bit), libgcc_s.so.1(GCC_3.3)(64bit), libgcc_s.so.1(GCC_4.2.0)(64bit), libgcc_s.so.1(GCC_3.4)(64bit), libgcc_s.so.1(GCC_3.3.1)(64bit)
+
 %description
 TODO 
 

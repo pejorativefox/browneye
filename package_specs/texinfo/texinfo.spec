@@ -6,6 +6,11 @@ License:    GPL3
 Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
 
+AutoReq: no
+
+Requires: libc.so.6()(64bit), libncursesw.so.6()(64bit), perl >= 0:5.004
+
+
 %description
 TODO
 

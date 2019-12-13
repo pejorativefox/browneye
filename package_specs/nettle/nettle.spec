@@ -6,6 +6,9 @@ License:    GPL
 Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
+Provides: libhogweed.so.4()(64bit), libhogweed.so.4(HOGWEED_4)(64bit)
+Provides: libnettle.so.6()(64bit), libnettle.so.6(NETTLE_6)(64bit)
+
 %description
 The Nettle package contains a low-level cryptographic library that is designed 
 to fit easily in many contexts. 

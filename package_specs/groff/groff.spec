@@ -6,6 +6,10 @@ License:    GPL3
 Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
+AutoReq: no
+
+Requires: libICE.so.6()(64bit), libSM.so.6()(64bit), libX11.so.6()(64bit), libXaw.so.7()(64bit), libXmu.so.6()(64bit), libXt.so.6()(64bit), libc.so.6()(64bit), libgcc_s.so.1()(64bit), libm.so.6()(64bit), libstdc++.so.6()(64bit), perl >= 0:5.004
+
 %description
 TODO
 

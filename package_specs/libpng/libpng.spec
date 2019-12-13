@@ -7,7 +7,9 @@ Prefix:     /usr
 Source0:    %{name}-%{version}.tar.xz
 Patch:     libpng-1.6.36-apng.patch
 
+BuildRequires: zlib, pkg-config
 
+Provides: pkgconfig(libpng)
 
 %description
 TODO

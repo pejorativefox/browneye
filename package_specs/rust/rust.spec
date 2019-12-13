@@ -8,6 +8,11 @@ Source0:    rustc-1.31.1-x86_64-unknown-linux-gnu.tar.gz
 Source1:    rust-std-1.31.1-x86_64-unknown-linux-gnu.tar.gz
 Source2:    cargo-0.32.0-x86_64-unknown-linux-gnu.tar.gz
 
+AutoReq: no
+
+Requires: ld-linux-x86-64.so.2()(64bit), libc.so.6()(64bit), libdl.so.2()(64bit), libgcc_s.so.1()(64bit), libm.so.6()(64bit), libpthread.so.0()(64bit), librt.so.1()(64bit)
+
+
 %description
 TODO
 

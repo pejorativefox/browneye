@@ -6,6 +6,9 @@ License:    GPL3
 Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
+Provides: /bin/bash
+Provides: /bin/sh
+
 %description
 TODO
 

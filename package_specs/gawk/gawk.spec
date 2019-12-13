@@ -6,6 +6,8 @@ License:    GPL3
 Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
 
+Provides: /bin/gawk
+
 %description
 TODO
 
