@@ -29,6 +29,8 @@ ln -sfv /etc/pki/tls/certs/ca-bundle.crt \
 /usr/libexec/make-ca/copy-trust-modifications
 /usr/sbin/make-ca
 /usr/share/man/man8/make-ca.8.gz
+/usr/lib/systemd/system/update-pki.service
+/usr/lib/systemd/system/update-pki.timer
 
 %changelog
 # let's skip this for now
