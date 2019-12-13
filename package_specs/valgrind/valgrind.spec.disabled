@@ -1,0 +1,29 @@
+Name:       valgrind
+Version:    3.13.0
+Release:    1
+Summary:    Valgrind is an instrumentation framework for building dynamic analysis tools.
+License:    GPL
+Source0:    %{name}-%{version}.tar.bz2
+Prefix:     /usr
+
+%description
+Valgrind is an instrumentation framework for building dynamic analysis tools.
+
+%prep
+%setup
+
+%build
+sed -i '1904s/4/5/' coregrind/m_syswrap/syswrap-linux.c
+%configure
+%make_build
+
+%install
+rm -rf %{buildroot}
+%make_install
+
+%files
+
+%changelog
+* Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 3.13.0
+- Initial RPM
+
