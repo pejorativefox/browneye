@@ -13,7 +13,8 @@ High-Level Crypto API for encryption
 %setup
 
 %build
-%configure --disable-gpg-test
+export PYTHON_VERSION=3
+%configure --disable-gpg-test 
 %make_build
 
 %install
@@ -44,6 +45,8 @@ rm -rf %{buildroot}
 /usr/share/info/gpgme.info-2.gz
 /usr/share/info/gpgme.info.gz
 /usr/include/gpgme++/*
+/usr/lib/python3.7/site-packages/*
+/usr/lib/python2.7/site-packages/*
 
 %changelog
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 1.11.1
