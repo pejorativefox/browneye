@@ -158,6 +158,8 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/man/man8/tune2fs.8.gz
 /usr/share/ss/ct_c.awk
 /usr/share/ss/ct_c.sed
+/usr/sbin/fuse2fs
+/usr/share/man/man1/fuse2fs.1.gz
 
 %changelog
 # let's skip this for now
