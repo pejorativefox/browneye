@@ -65,7 +65,7 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/man/man1/sndfile-metadata-set.1.gz
 /usr/share/man/man1/sndfile-play.1.gz
 /usr/share/man/man1/sndfile-salvage.1.gz
-
+/usr/bin/sndfile-regtest
 
 %changelog
 # let's skip this for now
