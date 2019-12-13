@@ -13,6 +13,7 @@ TODO
 %setup -q -a0
 
 %build
+export PYTHON=python3
 %configure --without-lua --enable-python
 %make_build
 
@@ -34,42 +35,7 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/rpmsign
 /usr/bin/rpmspec
 /usr/bin/rpmverify
-/usr/include/rpm/argv.h
-/usr/include/rpm/header.h
-/usr/include/rpm/rpmarchive.h
-/usr/include/rpm/rpmbase64.h
-/usr/include/rpm/rpmbuild.h
-/usr/include/rpm/rpmcallback.h
-/usr/include/rpm/rpmcli.h
-/usr/include/rpm/rpmdb.h
-/usr/include/rpm/rpmds.h
-/usr/include/rpm/rpmfc.h
-/usr/include/rpm/rpmfi.h
-/usr/include/rpm/rpmfiles.h
-/usr/include/rpm/rpmfileutil.h
-/usr/include/rpm/rpmio.h
-/usr/include/rpm/rpmkeyring.h
-/usr/include/rpm/rpmlib.h
-/usr/include/rpm/rpmlog.h
-/usr/include/rpm/rpmmacro.h
-/usr/include/rpm/rpmpgp.h
-/usr/include/rpm/rpmpol.h
-/usr/include/rpm/rpmprob.h
-/usr/include/rpm/rpmps.h
-/usr/include/rpm/rpmsign.h
-/usr/include/rpm/rpmspec.h
-/usr/include/rpm/rpmsq.h
-/usr/include/rpm/rpmstring.h
-/usr/include/rpm/rpmstrpool.h
-/usr/include/rpm/rpmsw.h
-/usr/include/rpm/rpmtag.h
-/usr/include/rpm/rpmtd.h
-/usr/include/rpm/rpmte.h
-/usr/include/rpm/rpmts.h
-/usr/include/rpm/rpmtypes.h
-/usr/include/rpm/rpmurl.h
-/usr/include/rpm/rpmutil.h
-/usr/include/rpm/rpmvf.h
+/usr/include/rpm/*
 /usr/lib/rpm/brp-compress
 /usr/lib/rpm/brp-java-gcjcompile
 /usr/lib/rpm/brp-python-bytecompile
@@ -285,7 +251,7 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/man/sk/man8/rpm.8.gz
 /usr/lib64/rpm-plugins/systemd_inhibit.la
 /usr/lib64/rpm-plugins/systemd_inhibit.so
-/usr/lib/python2.7/site-packages/rpm/*
+/usr/lib/python3.7/*
 
 %changelog
 # let's skip this for now
