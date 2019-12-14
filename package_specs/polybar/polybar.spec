@@ -15,7 +15,7 @@ A fast and easy-to-use status bar
 %build
 mkdir build
 pushd build
-cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
+cmake -DBUILD_DOC=0 -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
 %make_build
 popd
 
