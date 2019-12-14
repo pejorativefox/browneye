@@ -11,7 +11,7 @@ for dir in "${dirs[@]}"; do
     if [ -f "../../build_cache/$spec" ]; then
 	echo "Already built: $spec"
     else 
-    	rpmbuild -ba $spec
+    	rpmbuild -bb --clean $spec
 	echo "done" > ../../build_cache/$spec
     fi
   done
