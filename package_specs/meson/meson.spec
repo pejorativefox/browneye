@@ -1,16 +1,16 @@
 Name:       meson
-Version:    0.49.2
+Version:    0.52.1
 Release:    1
-Summary:    TODO
+Summary:    Meson build system
 License:    GPL3
 Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
 %description
-TODO
+Meson build system
 
 %prep
-%setup -q -a0
+%setup
 
 %build
 python3 setup.py build
@@ -20,191 +20,19 @@ rm -rf %{buildroot}
 python3 setup.py install --root=dest
 mkdir -pv %{buildroot}/usr
 cp -rv dest/* %{buildroot}
+
+
 %files
 /usr/bin/meson
-/usr/lib/python3.7/site-packages/meson-0.49.2-py3.7.egg-info/PKG-INFO
-/usr/lib/python3.7/site-packages/meson-0.49.2-py3.7.egg-info/SOURCES.txt
-/usr/lib/python3.7/site-packages/meson-0.49.2-py3.7.egg-info/dependency_links.txt
-/usr/lib/python3.7/site-packages/meson-0.49.2-py3.7.egg-info/entry_points.txt
-/usr/lib/python3.7/site-packages/meson-0.49.2-py3.7.egg-info/top_level.txt
-/usr/lib/python3.7/site-packages/mesonbuild/__init__.py
-/usr/lib/python3.7/site-packages/mesonbuild/__pycache__/__init__.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/__pycache__/astinterpreter.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/__pycache__/build.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/__pycache__/coredata.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/__pycache__/environment.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/__pycache__/interpreter.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/__pycache__/interpreterbase.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/__pycache__/linkers.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/__pycache__/mconf.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/__pycache__/mesonlib.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/__pycache__/mesonmain.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/__pycache__/minit.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/__pycache__/minstall.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/__pycache__/mintro.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/__pycache__/mlog.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/__pycache__/mparser.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/__pycache__/msetup.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/__pycache__/msubprojects.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/__pycache__/mtest.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/__pycache__/optinterpreter.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/__pycache__/rewriter.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/astinterpreter.py
-/usr/lib/python3.7/site-packages/mesonbuild/backend/__init__.py
-/usr/lib/python3.7/site-packages/mesonbuild/backend/__pycache__/__init__.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/backend/__pycache__/backends.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/backend/__pycache__/ninjabackend.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/backend/__pycache__/vs2010backend.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/backend/__pycache__/vs2015backend.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/backend/__pycache__/vs2017backend.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/backend/__pycache__/xcodebackend.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/backend/backends.py
-/usr/lib/python3.7/site-packages/mesonbuild/backend/ninjabackend.py
-/usr/lib/python3.7/site-packages/mesonbuild/backend/vs2010backend.py
-/usr/lib/python3.7/site-packages/mesonbuild/backend/vs2015backend.py
-/usr/lib/python3.7/site-packages/mesonbuild/backend/vs2017backend.py
-/usr/lib/python3.7/site-packages/mesonbuild/backend/xcodebackend.py
-/usr/lib/python3.7/site-packages/mesonbuild/build.py
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/__init__.py
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/__pycache__/__init__.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/__pycache__/c.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/__pycache__/c_function_attributes.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/__pycache__/compilers.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/__pycache__/cpp.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/__pycache__/cs.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/__pycache__/d.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/__pycache__/fortran.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/__pycache__/java.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/__pycache__/objc.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/__pycache__/objcpp.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/__pycache__/rust.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/__pycache__/swift.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/__pycache__/vala.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/c.py
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/c_function_attributes.py
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/compilers.py
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/cpp.py
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/cs.py
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/d.py
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/fortran.py
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/java.py
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/objc.py
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/objcpp.py
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/rust.py
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/swift.py
-/usr/lib/python3.7/site-packages/mesonbuild/compilers/vala.py
-/usr/lib/python3.7/site-packages/mesonbuild/coredata.py
-/usr/lib/python3.7/site-packages/mesonbuild/dependencies/__init__.py
-/usr/lib/python3.7/site-packages/mesonbuild/dependencies/__pycache__/__init__.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/dependencies/__pycache__/base.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/dependencies/__pycache__/boost.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/dependencies/__pycache__/dev.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/dependencies/__pycache__/misc.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/dependencies/__pycache__/platform.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/dependencies/__pycache__/ui.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/dependencies/base.py
-/usr/lib/python3.7/site-packages/mesonbuild/dependencies/boost.py
-/usr/lib/python3.7/site-packages/mesonbuild/dependencies/data/CMakeLists.txt
-/usr/lib/python3.7/site-packages/mesonbuild/dependencies/dev.py
-/usr/lib/python3.7/site-packages/mesonbuild/dependencies/misc.py
-/usr/lib/python3.7/site-packages/mesonbuild/dependencies/platform.py
-/usr/lib/python3.7/site-packages/mesonbuild/dependencies/ui.py
-/usr/lib/python3.7/site-packages/mesonbuild/environment.py
-/usr/lib/python3.7/site-packages/mesonbuild/interpreter.py
-/usr/lib/python3.7/site-packages/mesonbuild/interpreterbase.py
-/usr/lib/python3.7/site-packages/mesonbuild/linkers.py
-/usr/lib/python3.7/site-packages/mesonbuild/mconf.py
-/usr/lib/python3.7/site-packages/mesonbuild/mesonlib.py
-/usr/lib/python3.7/site-packages/mesonbuild/mesonmain.py
-/usr/lib/python3.7/site-packages/mesonbuild/minit.py
-/usr/lib/python3.7/site-packages/mesonbuild/minstall.py
-/usr/lib/python3.7/site-packages/mesonbuild/mintro.py
-/usr/lib/python3.7/site-packages/mesonbuild/mlog.py
-/usr/lib/python3.7/site-packages/mesonbuild/modules/__init__.py
-/usr/lib/python3.7/site-packages/mesonbuild/modules/__pycache__/__init__.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/modules/__pycache__/dlang.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/modules/__pycache__/gnome.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/modules/__pycache__/hotdoc.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/modules/__pycache__/i18n.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/modules/__pycache__/modtest.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/modules/__pycache__/pkgconfig.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/modules/__pycache__/python.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/modules/__pycache__/python3.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/modules/__pycache__/qt.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/modules/__pycache__/qt4.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/modules/__pycache__/qt5.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/modules/__pycache__/rpm.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/modules/__pycache__/unstable_icestorm.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/modules/__pycache__/unstable_simd.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/modules/__pycache__/windows.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/modules/dlang.py
-/usr/lib/python3.7/site-packages/mesonbuild/modules/gnome.py
-/usr/lib/python3.7/site-packages/mesonbuild/modules/hotdoc.py
-/usr/lib/python3.7/site-packages/mesonbuild/modules/i18n.py
-/usr/lib/python3.7/site-packages/mesonbuild/modules/modtest.py
-/usr/lib/python3.7/site-packages/mesonbuild/modules/pkgconfig.py
-/usr/lib/python3.7/site-packages/mesonbuild/modules/python.py
-/usr/lib/python3.7/site-packages/mesonbuild/modules/python3.py
-/usr/lib/python3.7/site-packages/mesonbuild/modules/qt.py
-/usr/lib/python3.7/site-packages/mesonbuild/modules/qt4.py
-/usr/lib/python3.7/site-packages/mesonbuild/modules/qt5.py
-/usr/lib/python3.7/site-packages/mesonbuild/modules/rpm.py
-/usr/lib/python3.7/site-packages/mesonbuild/modules/unstable_icestorm.py
-/usr/lib/python3.7/site-packages/mesonbuild/modules/unstable_simd.py
-/usr/lib/python3.7/site-packages/mesonbuild/modules/windows.py
-/usr/lib/python3.7/site-packages/mesonbuild/mparser.py
-/usr/lib/python3.7/site-packages/mesonbuild/msetup.py
-/usr/lib/python3.7/site-packages/mesonbuild/msubprojects.py
-/usr/lib/python3.7/site-packages/mesonbuild/mtest.py
-/usr/lib/python3.7/site-packages/mesonbuild/optinterpreter.py
-/usr/lib/python3.7/site-packages/mesonbuild/rewriter.py
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/__init__.py
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/__pycache__/__init__.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/__pycache__/cleantrees.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/__pycache__/commandrunner.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/__pycache__/coverage.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/__pycache__/delwithsuffix.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/__pycache__/depfixer.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/__pycache__/dirchanger.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/__pycache__/dist.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/__pycache__/gettext.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/__pycache__/gtkdochelper.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/__pycache__/hotdochelper.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/__pycache__/meson_exe.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/__pycache__/msgfmthelper.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/__pycache__/regen_checker.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/__pycache__/scanbuild.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/__pycache__/symbolextractor.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/__pycache__/uninstall.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/__pycache__/vcstagger.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/__pycache__/yelphelper.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/cleantrees.py
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/commandrunner.py
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/coverage.py
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/delwithsuffix.py
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/depfixer.py
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/dirchanger.py
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/dist.py
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/gettext.py
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/gtkdochelper.py
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/hotdochelper.py
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/meson_exe.py
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/msgfmthelper.py
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/regen_checker.py
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/scanbuild.py
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/symbolextractor.py
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/uninstall.py
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/vcstagger.py
-/usr/lib/python3.7/site-packages/mesonbuild/scripts/yelphelper.py
-/usr/lib/python3.7/site-packages/mesonbuild/wrap/__init__.py
-/usr/lib/python3.7/site-packages/mesonbuild/wrap/__pycache__/__init__.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/wrap/__pycache__/wrap.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/wrap/__pycache__/wraptool.cpython-37.pyc
-/usr/lib/python3.7/site-packages/mesonbuild/wrap/wrap.py
-/usr/lib/python3.7/site-packages/mesonbuild/wrap/wraptool.py
+/usr/lib/python3.7/site-packages/meson-0.52.1-py3.7.egg-info/PKG-INFO
+/usr/lib/python3.7/site-packages/meson-0.52.1-py3.7.egg-info/SOURCES.txt
+/usr/lib/python3.7/site-packages/meson-0.52.1-py3.7.egg-info/dependency_links.txt
+/usr/lib/python3.7/site-packages/meson-0.52.1-py3.7.egg-info/entry_points.txt
+/usr/lib/python3.7/site-packages/meson-0.52.1-py3.7.egg-info/requires.txt
+/usr/lib/python3.7/site-packages/meson-0.52.1-py3.7.egg-info/top_level.txt
+/usr/lib/python3.7/site-packages/mesonbuild/*
 /usr/share/man/man1/meson.1.gz
 /usr/share/polkit-1/actions/com.mesonbuild.install.policy
-
 
 %changelog
 # let's skip this for now

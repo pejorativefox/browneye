@@ -1,0 +1,52 @@
+Name:       libwnck
+Version:    2.30.7
+Release:    1
+Summary:    Library to manage X windows and workspaces (via pagers, tasklists, etc.)
+License:    LGPL
+Source0:    %{name}-%{version}.tar.xz
+Prefix:     /usr
+
+%description
+Library to manage X windows and workspaces (via pagers, tasklists, etc.)
+
+%prep
+%setup
+
+%build
+%configure
+%make_build
+
+%install
+rm -rf %{buildroot}
+%make_install
+
+%files
+/usr/bin/wnck-urgency-monitor
+/usr/bin/wnckprop
+/usr/include/libwnck-1.0/libwnck/application.h
+/usr/include/libwnck-1.0/libwnck/class-group.h
+/usr/include/libwnck-1.0/libwnck/libwnck.h
+/usr/include/libwnck-1.0/libwnck/pager.h
+/usr/include/libwnck-1.0/libwnck/screen.h
+/usr/include/libwnck-1.0/libwnck/selector.h
+/usr/include/libwnck-1.0/libwnck/tasklist.h
+/usr/include/libwnck-1.0/libwnck/util.h
+/usr/include/libwnck-1.0/libwnck/window-action-menu.h
+/usr/include/libwnck-1.0/libwnck/window.h
+/usr/include/libwnck-1.0/libwnck/wnck-enum-types.h
+/usr/include/libwnck-1.0/libwnck/workspace.h
+/usr/lib64/girepository-1.0/Wnck-1.0.typelib
+/usr/lib64/libwnck-1.a
+/usr/lib64/libwnck-1.la
+/usr/lib64/libwnck-1.so
+/usr/lib64/libwnck-1.so.22
+/usr/lib64/libwnck-1.so.22.3.31
+/usr/lib64/pkgconfig/libwnck-1.0.pc
+/usr/share/gir-1.0/Wnck-1.0.gir
+/usr/share/gtk-doc/html/libwnck/*
+/usr/share/locale/*
+
+%changelog
+* Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 2.30.7
+- Initial RPM
+
