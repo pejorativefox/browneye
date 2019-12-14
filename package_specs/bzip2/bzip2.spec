@@ -51,6 +51,7 @@ ln -s bzdiff.1 $RPM_BUILD_ROOT%{_mandir}/man1/bzcmp.1
 ln -s bzmore.1 $RPM_BUILD_ROOT%{_mandir}/man1/bzless.1
 ln -s bzgrep.1 $RPM_BUILD_ROOT%{_mandir}/man1/bzegrep.1
 ln -s bzgrep.1 $RPM_BUILD_ROOT%{_mandir}/man1/bzfgrep.1
+ln -s libbz2.so.1 %{buildroot}/usr/lib64/libbz2.so.1.0
 
 %files
 /usr/bin/bunzip2
@@ -68,6 +69,7 @@ ln -s bzgrep.1 $RPM_BUILD_ROOT%{_mandir}/man1/bzfgrep.1
 /usr/lib64/libbz2.a
 /usr/lib64/libbz2.so
 /usr/lib64/libbz2.so.1
+/usr/lib64/libbz2.so.1.0
 /usr/lib64/libbz2.so.1.0.6
 /usr/share/man/man1/bunzip2.1.gz
 /usr/share/man/man1/bzcat.1.gz

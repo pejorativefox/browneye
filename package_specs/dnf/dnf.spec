@@ -6,6 +6,9 @@ License:    GPL
 Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
+Requires: libdnf >= 0.39.1-1, rpm >= 4.14.2.1-1, python3-libcomps >= 0.1.14-1
+
+
 %description
 Software management utility. 
 

@@ -20,6 +20,7 @@ GNU's tool for secure communication and data storage.
 %install
 rm -rf %{buildroot}
 %make_install
+rpm -rf %{buildroot}/usr/share/info/dir
 
 %files
 /usr/bin/dirmngr
@@ -46,7 +47,6 @@ rm -rf %{buildroot}
 /usr/share/doc/gnupg-2.2.9/*
 /usr/share/gnupg/distsigkey.gpg
 /usr/share/gnupg/*
-/usr/share/info/dir
 /usr/share/info/gnupg.info-1.gz
 /usr/share/info/gnupg.info-2.gz
 /usr/share/info/gnupg.info.gz

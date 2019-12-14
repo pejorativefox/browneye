@@ -22,12 +22,12 @@ TODO
 rm -rf %{buildroot}
 %make_install
 rm -vf %{buildroot}%{_infodir}/dir*
+rm -rf %{buildroot}/usr/share/fonts/X11/TTF/fonts.dir
+rm -rf %{buildroot}/usr/share/fonts/X11/TTF/fonts.scale
 
 %files
 /etc/fonts/conf.avail/42-luxi-mono.conf
 /etc/fonts/conf.d/42-luxi-mono.conf
-/usr/share/fonts/X11/TTF/fonts.dir
-/usr/share/fonts/X11/TTF/fonts.scale
 /usr/share/fonts/X11/TTF/luximb.ttf
 /usr/share/fonts/X11/TTF/luximbi.ttf
 /usr/share/fonts/X11/TTF/luximr.ttf

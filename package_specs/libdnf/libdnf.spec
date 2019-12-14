@@ -6,6 +6,8 @@ License:    GPL
 Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
+Requires: nss >= 3.42.1-1
+
 %description
 Software management library. 
 

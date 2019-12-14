@@ -22,6 +22,7 @@ the proposed standards by the IETF's TLS working group.
 %install
 rm -rf %{buildroot}
 %make_install
+rm -rf %{buildroot}/usr/share/info/dir
 
 %files
 /usr/share/man/*

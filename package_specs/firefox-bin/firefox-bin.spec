@@ -6,7 +6,11 @@ License:    GPL3
 Prefix:     /usr
 Source0:    firefox-%{version}.tar.bz2
 
+AutoProv: no
+AutoReq: no
 
+Provides: firefox = 71.0
+Requires: ld-linux-x86-64.so.2()(64bit), libX11.so.6()(64bit), libc.so.6()(64bit), libstdc++.so.6()(64bit)
 %description
 TODO
 

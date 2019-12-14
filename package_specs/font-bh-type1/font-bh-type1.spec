@@ -12,7 +12,7 @@ Source0:    %{name}-%{version}.tar.bz2
 TODO
 
 %prep
-%setup -a 0
+%setup
 
 %build
 %configure 
@@ -22,10 +22,10 @@ TODO
 rm -rf %{buildroot}
 %make_install
 rm -vf %{buildroot}%{_infodir}/dir*
+rm -rf %{buildroot}/usr/share/fonts/X11/Type1/fonts.dir
+rm -rf %{buildroot}/usr/share/fonts/X11/Type1/fonts.scale
 
 %files
-/usr/share/fonts/X11/Type1/fonts.dir
-/usr/share/fonts/X11/Type1/fonts.scale
 /usr/share/fonts/X11/Type1/l047013t.afm
 /usr/share/fonts/X11/Type1/l047013t.pfa
 /usr/share/fonts/X11/Type1/l047016t.afm

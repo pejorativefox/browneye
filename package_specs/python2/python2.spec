@@ -17,7 +17,7 @@ Requires: /bin/sh /usr/bin/env /usr/bin/pkg-config /usr/bin/python2.7 libbz2.so.
 TODO
 
 %prep
-%setup -a 0 -n Python-%{version}
+%setup -n Python-%{version}
 
 %build
 %configure  --enable-shared     \
@@ -30,10 +30,9 @@ TODO
 %install    
 rm -rf %{buildroot}
 %make_install
-rm -vf %{buildroot}%{_infodir}/dir*
+rm %{buildroot}/usr/bin/2to3
 
 %files
-/usr/bin/2to3
 /usr/bin/idle
 /usr/bin/pydoc
 /usr/bin/python

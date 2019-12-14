@@ -29,16 +29,15 @@ rm -rf %{buildroot}
 #mv -v %{buildroot}/usr/lib64/libncursesw.so.6* %{buildroot}/lib
 mv -v %{buildroot}/share/pkgconfig %{buildroot}/usr/share
 
-%post
 for lib in ncurses form panel menu ; do
-    rm -vf                    /usr/lib/lib${lib}.so
-    echo "INPUT(-l${lib}w)" > /usr/lib/lib${lib}.so
-    ln -sfv ${lib}w.pc        /usr/lib/pkgconfig/${lib}.pc
+    rm -vf                    %{buildroot}/usr/lib64/lib${lib}.so
+    echo "INPUT(-l${lib}w)" > %{buildroot}/usr/lib64/lib${lib}.so
+    ln -sfv ${lib}w.pc        %{buildroot}/usr/share/pkgconfig/${lib}.pc
 done
-rm -vf                     /usr/lib/libcursesw.so
-echo "INPUT(-lncursesw)" > /usr/lib/libcursesw.so
-ln -sfv libncurses.so      /usr/lib/libcurses.so
 
+rm -vf                     %{buildroot}/usr/lib64/libcursesw.so
+echo "INPUT(-lncursesw)" > %{buildroot}/usr/lib64/libcursesw.so
+ln -sfv libncurses.so      %{buildroot}/usr/lib64/libcurses.so
 
 %files
 /usr/bin/captoinfo
@@ -96,6 +95,16 @@ ln -sfv libncurses.so      /usr/lib/libcurses.so
 /usr/share/tabset/vt100
 /usr/share/tabset/vt300
 /usr/share/terminfo/*
+/usr/lib64/libcurses.so
+/usr/lib64/libcursesw.so
+/usr/lib64/libform.so
+/usr/lib64/libmenu.so
+/usr/lib64/libncurses.so
+/usr/lib64/libpanel.so
+/usr/share/pkgconfig/form.pc
+/usr/share/pkgconfig/menu.pc
+/usr/share/pkgconfig/ncurses.pc
+/usr/share/pkgconfig/panel.pc
 
 %changelog
 # let's skip this for now

@@ -18,9 +18,9 @@ Python setuptools build system.
 rm -rf %{buildroot}
 python2 bootstrap.py
 python2 setup.py install --root %{buildroot}
+rm %{buildroot}/usr/bin/easy_install
 
 %files
-/usr/bin/easy_install
 /usr/bin/easy_install-2.7
 /usr/lib/python2.7/site-packages/*
 

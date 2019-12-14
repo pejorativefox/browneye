@@ -17,9 +17,9 @@ The Python package installer.
 %install
 rm -rf %{buildroot}
 python2 setup.py install --root %{buildroot}
+rm %{buildroot}/usr/bin/pip
 
 %files
-/usr/bin/pip
 /usr/bin/pip2
 /usr/bin/pip2.7
 /usr/lib/python2.7/site-packages/

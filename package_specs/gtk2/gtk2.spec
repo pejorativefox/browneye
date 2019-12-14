@@ -23,7 +23,7 @@ sed -e 's#l \(gtk-.*\).sgml#& -o \1#' \
 rm -rf %{buildroot}
 %make_install
 rm -vf %{buildroot}%{_infodir}/dir*
-
+mv %{buildroot}/usr/bin/gtk-update-icon-cache %{buildroot}/usr/bin/gtk2-update-icon-cache
 mkdir -pv %{buildroot}/etc/gtk-2.0/
 cat > %{buildroot}/etc/gtk-2.0/gtkrc << "EOF"
 include "/usr/share/themes/Clearlooks/gtk-2.0/gtkrc"
@@ -36,7 +36,7 @@ EOF
 /usr/bin/gtk-builder-convert
 /usr/bin/gtk-demo
 /usr/bin/gtk-query-immodules-2.0
-/usr/bin/gtk-update-icon-cache
+/usr/bin/gtk2-update-icon-cache
 /usr/etc/gtk-2.0/im-multipress.conf
 /usr/include/gail-1.0/gail/gailwidget.h
 /usr/include/gail-1.0/libgail-util/gail-util.h

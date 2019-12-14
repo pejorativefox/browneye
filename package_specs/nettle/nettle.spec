@@ -23,6 +23,7 @@ to fit easily in many contexts.
 %install
 rm -rf %{buildroot}
 %make_install
+rm -rf %{buildroot}/usr/share/info/dir
 
 %files
 /usr/include/nettle/*
@@ -39,7 +40,6 @@ rm -rf %{buildroot}
 /usr/lib64/libnettle.so.6.4
 /usr/lib64/pkgconfig/hogweed.pc
 /usr/lib64/pkgconfig/nettle.pc
-/usr/share/info/dir
 /usr/share/info/nettle.info.gz
 
 %changelog

@@ -19,6 +19,7 @@ GnuPG ipc library.
 %install
 rm -rf %{buildroot}
 %make_install
+rm -rf %{buildroot}/usr/share/info/dir
 
 %files
 /usr/bin/libassuan-config
@@ -29,7 +30,6 @@ rm -rf %{buildroot}
 /usr/lib64/libassuan.so.0.8.1
 /usr/share/aclocal/libassuan.m4
 /usr/share/info/assuan.info.gz
-/usr/share/info/dir
 
 %changelog
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 2.5.1

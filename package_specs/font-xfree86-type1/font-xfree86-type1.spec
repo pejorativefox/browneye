@@ -22,11 +22,11 @@ TODO
 rm -rf %{buildroot}
 %make_install
 rm -vf %{buildroot}%{_infodir}/dir*
+rm -rf %{buildroot}/usr/share/fonts/X11/Type1/fonts.dir
+rm -rf %{buildroot}/usr/share/fonts/X11/Type1/fonts.scale
 
 %files
 /usr/share/fonts/X11/Type1/cursor.pfa
-/usr/share/fonts/X11/Type1/fonts.dir
-/usr/share/fonts/X11/Type1/fonts.scale
 
 %changelog
 # let's skip this for now

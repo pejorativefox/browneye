@@ -19,6 +19,7 @@ X.509 certificate library
 %install
 rm -rf %{buildroot}
 %make_install
+rm -rf %{buildroot}/usr/share/info/dir
 
 %files
 /usr/bin/ksba-config
@@ -28,7 +29,6 @@ rm -rf %{buildroot}
 /usr/lib64/libksba.so.8
 /usr/lib64/libksba.so.8.11.6
 /usr/share/aclocal/ksba.m4
-/usr/share/info/dir
 /usr/share/info/ksba.info.gz
 
 %changelog

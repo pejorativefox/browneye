@@ -20,9 +20,9 @@ perl Makefile.PL
 rm -rf %{buildroot}
 make install DESTDIR=$RPM_BUILD_ROOT
 rm -vf %{buildroot}%{_infodir}/dir*
+rm -f %{buildroot}/usr/lib/perl5/5.28.1/x86_64-linux-thread-multi/perllocal.pod
 
 %files
-/usr/lib/perl5/5.28.1/x86_64-linux-thread-multi/perllocal.pod
 /usr/lib/perl5/site_perl/5.28.1/x86_64-linux-thread-multi/XML/Parser.pm
 /usr/lib/perl5/site_perl/5.28.1/x86_64-linux-thread-multi/XML/Parser/Encodings/Japanese_Encodings.msg
 /usr/lib/perl5/site_perl/5.28.1/x86_64-linux-thread-multi/XML/Parser/Encodings/README

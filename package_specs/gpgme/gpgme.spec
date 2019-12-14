@@ -20,6 +20,7 @@ export PYTHON_VERSION=3
 %install
 rm -rf %{buildroot}
 %make_install
+rm -rf %{buildroot}/usr/share/info/dir
 
 %files
 /usr/bin/gpgme-config
@@ -40,7 +41,6 @@ rm -rf %{buildroot}
 /usr/share/common-lisp/source/gpgme/gpgme-package.lisp
 /usr/share/common-lisp/source/gpgme/gpgme.asd
 /usr/share/common-lisp/source/gpgme/gpgme.lisp
-/usr/share/info/dir
 /usr/share/info/gpgme.info-1.gz
 /usr/share/info/gpgme.info-2.gz
 /usr/share/info/gpgme.info.gz
