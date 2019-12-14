@@ -48,6 +48,7 @@ mv -v %{buildroot}/etc/bash_completion.d/grub %{buildroot}/usr/share/bash-comple
 /usr/bin/grub-mkrelpath
 /usr/bin/grub-mkrescue
 /usr/bin/grub-mkstandalone
+/usr/bin/grub-mount
 /usr/bin/grub-render-label
 /usr/bin/grub-script-check
 /usr/bin/grub-syslinux2cfg
