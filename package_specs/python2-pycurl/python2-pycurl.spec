@@ -21,10 +21,7 @@ python2 setup.py install --with-openssl --root %{buildroot}
 %files
 /usr/lib/python2.7/site-packages/curl/__init__.py
 /usr/lib/python2.7/site-packages/curl/__init__.pyc
-/usr/lib/python2.7/site-packages/pycurl-7.43.0.2-py2.7.egg-info/PKG-INFO
-/usr/lib/python2.7/site-packages/pycurl-7.43.0.2-py2.7.egg-info/SOURCES.txt
-/usr/lib/python2.7/site-packages/pycurl-7.43.0.2-py2.7.egg-info/dependency_links.txt
-/usr/lib/python2.7/site-packages/pycurl-7.43.0.2-py2.7.egg-info/top_level.txt
+/usr/lib/python2.7/site-packages/pycurl-7.43.0.2-py2.7.egg-info
 /usr/lib/python2.7/site-packages/pycurl.so
 /usr/share/doc/pycurl/*
 

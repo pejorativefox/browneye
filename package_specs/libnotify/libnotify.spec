@@ -32,11 +32,11 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/libnotify/notify-enum-types.h
 /usr/include/libnotify/notify-features.h
 /usr/include/libnotify/notify.h
-/usr/lib64/girepository-1.0/Notify-0.7.typelib
-/usr/lib64/libnotify.so
-/usr/lib64/libnotify.so.4
-/usr/lib64/libnotify.so.4.0.0
-/usr/lib64/pkgconfig/libnotify.pc
+/usr/lib/girepository-1.0/Notify-0.7.typelib
+/usr/lib/libnotify.so
+/usr/lib/libnotify.so.4
+/usr/lib/libnotify.so.4.0.0
+/usr/lib/pkgconfig/libnotify.pc
 /usr/share/gir-1.0/Notify-0.7.gir
 
 %changelog

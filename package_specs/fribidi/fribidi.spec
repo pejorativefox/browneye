@@ -52,10 +52,10 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/fribidi/fribidi-unicode-version.h
 /usr/include/fribidi/fribidi-unicode.h
 /usr/include/fribidi/fribidi.h
-/usr/lib64/libfribidi.so
-/usr/lib64/libfribidi.so.0
-/usr/lib64/libfribidi.so.0.4.0
-/usr/lib64/pkgconfig/fribidi.pc
+/usr/lib/libfribidi.so
+/usr/lib/libfribidi.so.0
+/usr/lib/libfribidi.so.0.4.0
+/usr/lib/pkgconfig/fribidi.pc
 /usr/share/man/man3/fribidi_charset_to_unicode.3.gz
 /usr/share/man/man3/fribidi_debug_status.3.gz
 /usr/share/man/man3/fribidi_get_bidi_type.3.gz

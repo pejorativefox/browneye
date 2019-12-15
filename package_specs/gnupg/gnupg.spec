@@ -20,7 +20,7 @@ GNU's tool for secure communication and data storage.
 %install
 rm -rf %{buildroot}
 %make_install
-rpm -rf %{buildroot}/usr/share/info/dir
+rm -rf %{buildroot}/usr/share/info/dir
 
 %files
 /usr/bin/dirmngr

@@ -31,6 +31,7 @@ chmod +x %{buildroot}/lib64/libcap.so.2.26
 /sbin/setcap
 /usr/include/sys/capability.h
 /usr/lib64/pkgconfig/libcap.pc
+/lib64/security/pam_cap.so
 /usr/share/man/man1/capsh.1.gz
 /usr/share/man/man3/cap_clear.3.gz
 /usr/share/man/man3/cap_clear_flag.3.gz

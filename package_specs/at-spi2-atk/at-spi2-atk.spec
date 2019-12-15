@@ -30,12 +30,12 @@ rm -vf %{buildroot}%{_infodir}/dir*
 
 %files
 /usr/include/at-spi2-atk/2.0/atk-bridge.h
-/usr/lib64/gnome-settings-daemon-3.0/gtk-modules/at-spi2-atk.desktop
-/usr/lib64/gtk-2.0/modules/libatk-bridge.so
-/usr/lib64/libatk-bridge-2.0.so
-/usr/lib64/libatk-bridge-2.0.so.0
-/usr/lib64/libatk-bridge-2.0.so.0.0.0
-/usr/lib64/pkgconfig/atk-bridge-2.0.pc
+/usr/lib/gnome-settings-daemon-3.0/gtk-modules/at-spi2-atk.desktop
+/usr/lib/gtk-2.0/modules/libatk-bridge.so
+/usr/lib/libatk-bridge-2.0.so
+/usr/lib/libatk-bridge-2.0.so.0
+/usr/lib/libatk-bridge-2.0.so.0.0.0
+/usr/lib/pkgconfig/atk-bridge-2.0.pc
 
 %changelog
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 2.30.0

@@ -32,11 +32,11 @@ popd
 /etc/profile.d/vte.sh
 /usr/bin/vte-2.91
 /usr/include/vte-2.91/vte/*
-/usr/lib64/girepository-1.0/Vte-2.91.typelib
-/usr/lib64/libvte-2.91.so
-/usr/lib64/libvte-2.91.so.0
-/usr/lib64/libvte-2.91.so.0.5800.3
-/usr/lib64/pkgconfig/vte-2.91.pc
+/usr/lib/girepository-1.0/Vte-2.91.typelib
+/usr/lib/libvte-2.91.so
+/usr/lib/libvte-2.91.so.0
+/usr/lib/libvte-2.91.so.0.5800.3
+/usr/lib/pkgconfig/vte-2.91.pc
 /usr/share/gir-1.0/Vte-2.91.gir
 /usr/share/locale/*
 

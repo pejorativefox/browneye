@@ -32,11 +32,11 @@ rm -vf %{buildroot}%{_infodir}/dir*
 
 %files
 /usr/include/atk-1.0/atk/*
-/usr/lib64/girepository-1.0/Atk-1.0.typelib
-/usr/lib64/libatk-1.0.so
-/usr/lib64/libatk-1.0.so.0
-/usr/lib64/libatk-1.0.so.0.23009.1
-/usr/lib64/pkgconfig/atk.pc
+/usr/lib/girepository-1.0/Atk-1.0.typelib
+/usr/lib/libatk-1.0.so
+/usr/lib/libatk-1.0.so.0
+/usr/lib/libatk-1.0.so.0.23009.1
+/usr/lib/pkgconfig/atk.pc
 /usr/share/gir-1.0/Atk-1.0.gir
 /usr/share/locale/*
 

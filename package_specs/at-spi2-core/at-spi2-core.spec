@@ -32,11 +32,11 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /etc/xdg/autostart/at-spi-dbus-bus.desktop
 /usr/include/at-spi-2.0/atspi/*
 /usr/lib/systemd/user/at-spi-dbus-bus.service
-/usr/lib64/girepository-1.0/Atspi-2.0.typelib
-/usr/lib64/libatspi.so
-/usr/lib64/libatspi.so.0
-/usr/lib64/libatspi.so.0.0.1
-/usr/lib64/pkgconfig/atspi-2.pc
+/usr/lib/girepository-1.0/Atspi-2.0.typelib
+/usr/lib/libatspi.so
+/usr/lib/libatspi.so.0
+/usr/lib/libatspi.so.0.0.1
+/usr/lib/pkgconfig/atspi-2.pc
 /usr/libexec/at-spi-bus-launcher
 /usr/libexec/at-spi2-registryd
 /usr/share/dbus-1/accessibility-services/org.a11y.atspi.Registry.service
