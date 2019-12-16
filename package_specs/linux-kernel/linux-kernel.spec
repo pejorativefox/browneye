@@ -1,37 +1,33 @@
 Name:       linux-kernel
-Version:    4.20.12
+Version:    5.3.16
 Release:    1
-Summary:    TODO
+Summary:    Linux kernel
 License:    GPL3
 Prefix:     /usr
-Source0:    linux-4.20.12.tar.xz
+Source0:    linux-%{version}.tar.xz
 
 %description
-TODO
+Linux kernel
 
 %prep
-rm -rf %{buildroot}
-tar xf %{SOURCE0}
+%setup -n linux-%{version}
 
 %build
-pushd linux-4.20.12
 make mrproper
 make defconfig
 %make_build
-popd
 
 %install    
-pushd linux-4.20.12
 mkdir -pv %{buildroot}/boot
 %make_install INSTALL_PATH=%{buildroot}/boot
-popd
 
 %files
 /boot/System.map
 /boot/vmlinuz
 
 %changelog
-# let's skip this for now
+* Mon Dec 16 2019 Chris Statzer <chris.statzer@qq.com> 5.3.16
+- Kernel upgrade
 
-
-
+* Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 4.20.12
+- Initial RPM
