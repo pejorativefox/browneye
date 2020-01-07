@@ -51,10 +51,10 @@ popd
 /usr/include/modulemd/modulemd-translation-entry.h
 /usr/include/modulemd/modulemd-translation.h
 /usr/include/modulemd/modulemd.h
-/usr/lib64/libmodulemd.so
-/usr/lib64/libmodulemd.so.1
-/usr/lib64/libmodulemd.so.1.8.16
-/usr/lib64/pkgconfig/modulemd.pc
+/usr/lib/libmodulemd.so
+/usr/lib/libmodulemd.so.1
+/usr/lib/libmodulemd.so.1.8.16
+/usr/lib/pkgconfig/modulemd.pc
 
 %changelog
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 1.8.16

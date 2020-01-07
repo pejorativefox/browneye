@@ -29,15 +29,15 @@ popd
 %files
 /usr/share/locale/*
 /usr/include/libappstream-glib/*
-/usr/lib64/asb-plugins-5/*
+/usr/lib/asb-plugins-5/*
 /usr/bin/appstream-builder
 /usr/bin/appstream-compose
 /usr/bin/appstream-util
-/usr/lib64/girepository-1.0/AppStreamGlib-1.0.typelib
-/usr/lib64/libappstream-glib.so
-/usr/lib64/libappstream-glib.so.8
-/usr/lib64/libappstream-glib.so.8.0.10
-/usr/lib64/pkgconfig/appstream-glib.pc
+/usr/lib/girepository-1.0/AppStreamGlib-1.0.typelib
+/usr/lib/libappstream-glib.so
+/usr/lib/libappstream-glib.so.8
+/usr/lib/libappstream-glib.so.8.0.10
+/usr/lib/pkgconfig/appstream-glib.pc
 /usr/share/*
 
 %changelog

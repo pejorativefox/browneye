@@ -41,10 +41,10 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /lib/udev/rules.d/90-libinput-model-quirks.rules
 /usr/bin/libinput
 /usr/include/libinput.h
-/usr/lib64/libinput.so
-/usr/lib64/libinput.so.10
-/usr/lib64/libinput.so.10.13.0
-/usr/lib64/pkgconfig/libinput.pc
+/usr/lib/libinput.so
+/usr/lib/libinput.so.10
+/usr/lib/libinput.so.10.13.0
+/usr/lib/pkgconfig/libinput.pc
 /usr/libexec/libinput/libinput-debug-events
 /usr/libexec/libinput/libinput-list-devices
 /usr/libexec/libinput/libinput-measure

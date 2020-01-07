@@ -41,11 +41,11 @@ popd
 /usr/include/libwnck-3.0/libwnck/window.h
 /usr/include/libwnck-3.0/libwnck/wnck-enum-types.h
 /usr/include/libwnck-3.0/libwnck/workspace.h
-/usr/lib64/girepository-1.0/Wnck-3.0.typelib
-/usr/lib64/libwnck-3.so
-/usr/lib64/libwnck-3.so.0
-/usr/lib64/libwnck-3.so.0.3.0
-/usr/lib64/pkgconfig/libwnck-3.0.pc
+/usr/lib/girepository-1.0/Wnck-3.0.typelib
+/usr/lib/libwnck-3.so
+/usr/lib/libwnck-3.so.0
+/usr/lib/libwnck-3.so.0.3.0
+/usr/lib/pkgconfig/libwnck-3.0.pc
 /usr/share/gir-1.0/Wnck-3.0.gir
 /usr/share/locale/*
 

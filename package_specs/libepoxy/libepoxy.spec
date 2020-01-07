@@ -36,10 +36,10 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/epoxy/gl_generated.h
 /usr/include/epoxy/glx.h
 /usr/include/epoxy/glx_generated.h
-/usr/lib64/libepoxy.so
-/usr/lib64/libepoxy.so.0
-/usr/lib64/libepoxy.so.0.0.0
-/usr/lib64/pkgconfig/epoxy.pc
+/usr/lib/libepoxy.so
+/usr/lib/libepoxy.so.0
+/usr/lib/libepoxy.so.0.0.0
+/usr/lib/pkgconfig/epoxy.pc
 
 %changelog
 # let's skip this for now

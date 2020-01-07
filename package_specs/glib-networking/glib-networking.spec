@@ -29,8 +29,8 @@ popd
 
 %files
 /usr/share/locale/*
-/usr/lib64/gio/modules/libgiognomeproxy.so
-/usr/lib64/gio/modules/libgiognutls.so
+/usr/lib/gio/modules/libgiognomeproxy.so
+/usr/lib/gio/modules/libgiognutls.so
 
 %changelog
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 2.56.1

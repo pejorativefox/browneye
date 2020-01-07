@@ -32,11 +32,11 @@ popd
 /usr/include/dconf/common/dconf-enums.h
 /usr/include/dconf/common/dconf-paths.h
 /usr/include/dconf/dconf.h
-/usr/lib64/gio/modules/libdconfsettings.so
-/usr/lib64/libdconf.so
-/usr/lib64/libdconf.so.1
-/usr/lib64/libdconf.so.1.0.0
-/usr/lib64/pkgconfig/dconf.pc
+/usr/lib/gio/modules/libdconfsettings.so
+/usr/lib/libdconf.so
+/usr/lib/libdconf.so.1
+/usr/lib/libdconf.so.1.0.0
+/usr/lib/pkgconfig/dconf.pc
 /usr/libexec/dconf-service
 /usr/share/bash-completion/completions/dconf
 /usr/share/dbus-1/services/ca.desrt.dconf.service
