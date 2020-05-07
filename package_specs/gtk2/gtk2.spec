@@ -6,6 +6,7 @@ License:    GPL3
 Prefix:     /usr
 Source0:    gtk+-%{version}.tar.xz
 
+Provides: pkgconfig(gtk+-2.0)
 
 %description
 TODO

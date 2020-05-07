@@ -6,6 +6,7 @@ License:    GPL3
 Prefix:     /usr
 Source0:    %{name}-%{version}.tar.bz2
 
+Provides: pkgconfig(harfbuzz)
 
 %description
 TODO

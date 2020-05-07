@@ -6,6 +6,7 @@ License:    GPL3
 Prefix:     /usr
 Source0:    %{name}-%{version}.tar.xz
 
+Provides: pkgconfig(gdk-pixbuf-2.0)
 
 %description
 TODO

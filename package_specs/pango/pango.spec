@@ -6,6 +6,9 @@ License:    GPL3
 Prefix:     /usr
 Source0:    %{name}-%{version}.tar.xz
 
+Provides: pkgconfig(pango)
+Provides: pkgconfig(pangocairo)
+Provides: pkgconfig(pangoft2)
 
 %description
 TODO

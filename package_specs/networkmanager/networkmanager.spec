@@ -7,7 +7,7 @@ Prefix:     /usr
 Source0:    %{name}-%{version}.tar.xz
 
 Requires: shadow >= 4.6-1
-
+Provides: pkgconfig(libnm)
 
 %description
 TODO

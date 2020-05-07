@@ -6,6 +6,8 @@ License:    LGPL
 Prefix:     /usr
 Source0:    %{name}-%{version}.tar.xz
 
+Provides: pkgconfig(atk-2.0)
+Provides: pkgconfig(atk)
 
 %description
 ATK provides the set of accessibility interfaces that are implemented by other toolkits and

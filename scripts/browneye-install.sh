@@ -31,8 +31,8 @@ mkdir -pv run/lock
 ln -sv ../run/lock var/lock
 
 mkdir -pv etc/yum.repos.d
-cp /etc/yum/repos.d/core.repo etc/yum.repos.d/
+cp /etc/yum.repos.d/core.repo etc/yum.repos.d/
 
 popd
 
-dnf-3 --installroot $ROOT --releasever=1 -y install "*"
+dnf-3 --installroot $ROOT --releasever=1 -y --skip-broken install "*"
