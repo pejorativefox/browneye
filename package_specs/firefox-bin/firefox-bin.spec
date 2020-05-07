@@ -1,15 +1,16 @@
 Name:       firefox-bin
-Version:    71.0
+Version:    76.0
 Release:    1
 Summary:    TODO
 License:    GPL3
 Prefix:     /usr
 Source0:    firefox-%{version}.tar.bz2
+Source1:    firefox.desktop
 
 AutoProv: no
 AutoReq: no
 
-Provides: firefox = 71.0
+Provides: firefox = 76.0
 Requires: ld-linux-x86-64.so.2()(64bit), libX11.so.6()(64bit), libc.so.6()(64bit), libstdc++.so.6()(64bit)
 %description
 TODO
@@ -28,9 +29,12 @@ pushd firefox-bin
 mkdir -pv %{buildroot}/opt
 cp -r firefox %{buildroot}/opt
 popd
+mkdir -pv %{buildroot}/share/applications
+cp %{SOURCE1} %{buildroot}/share/applications
 
 %files
 /opt/firefox/*
+/share/applications/firefox.desktop
 
 %changelog
 # let's skip this for now

@@ -5,6 +5,7 @@ Summary:    Linux
 License:    GPL3
 Prefix:     /usr
 Source0:    linux-%{version}.tar.xz
+Source1:    linux-5.3.16.config
 
 %description
 Linux
@@ -12,11 +13,11 @@ Linux
 %prep
 %setup -n linux-%{version}
 
-
 %build
 make mrproper
-make defconfig
-%make_build
+cp -v %{SOURCE1} ./.config
+#%make_build
+make -j4
 make modules
 
 %install    
