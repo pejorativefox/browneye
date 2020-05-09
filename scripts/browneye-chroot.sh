@@ -1,22 +1,22 @@
 #!/bin/bash
-LFS=$1
+ROOT=$1
 
 
-mount -v --bind /dev $LFS/dev
-mount -vt devpts devpts $LFS/dev/pts -o gid=5,mode=620
-mount -vt proc proc $LFS/proc
-mount -vt sysfs sysfs $LFS/sys
-mount -vt tmpfs tmpfs $LFS/run
+mount -v --bind /dev $ROOT/dev
+mount -vt devpts devpts $ROOT/dev/pts -o gid=5,mode=620
+mount -vt proc proc $ROOT/proc
+mount -vt sysfs sysfs $ROOT/sys
+mount -vt tmpfs tmpfs $ROOT/run
 
-if [ -h $LFS/dev/shm ]; then
-  mkdir -pv $LFS/$(readlink $LFS/dev/shm)
+if [ -h $ROOT/dev/shm ]; then
+  mkdir -pv $ROOT/$(readlink $ROOT/dev/shm)
 fi
 
-chroot "$LFS" /usr/bin/bash --login +h
+chroot "$ROOT" /usr/bin/bash --login +h
 
-sudo umount $LFS/run
-sudo umount $LFS/sys
-sudo umount $LFS/proc
-sudo umount $LFS/dev/pts
-sudo umount $LFS/dev
+sudo umount $ROOT/run
+sudo umount $ROOT/sys
+sudo umount $ROOT/proc
+sudo umount $ROOT/dev/pts
+sudo umount $ROOT/dev
 
