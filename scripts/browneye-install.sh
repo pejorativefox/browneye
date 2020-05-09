@@ -35,4 +35,4 @@ cp /etc/yum.repos.d/core.repo etc/yum.repos.d/
 
 popd
 
-dnf-3 --installroot $ROOT --releasever=1 -y --skip-broken install "*"
+dnf-3 --installroot $ROOT --releasever=1 -y -x busybox install "*"
