@@ -66,28 +66,14 @@ nogroup:x:99:
 users:x:999:
 EOF
 
+rm -rf %{buildroot}/etc/pam.d
+
 
 %files
 /etc/group
 /etc/passwd
 /etc/default/useradd
 /etc/login.defs
-/etc/pam.d/chage
-/etc/pam.d/chfn
-/etc/pam.d/chgpasswd
-/etc/pam.d/chpasswd
-/etc/pam.d/chsh
-/etc/pam.d/groupadd
-/etc/pam.d/groupdel
-/etc/pam.d/groupmems
-/etc/pam.d/groupmod
-/etc/pam.d/login
-/etc/pam.d/newusers
-/etc/pam.d/passwd
-/etc/pam.d/su
-/etc/pam.d/useradd
-/etc/pam.d/userdel
-/etc/pam.d/usermod
 /usr/bin/chage
 /usr/bin/chfn
 /usr/bin/chsh

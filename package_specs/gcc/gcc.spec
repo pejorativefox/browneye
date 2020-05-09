@@ -34,11 +34,13 @@ pushd build
 %make_install
 popd
 rm -vf %{buildroot}%{_infodir}/dir*
+ln -sfv gcc %{buildroot}/usr/bin/cc
 
 %files
 /usr/bin/c++
 /usr/bin/cpp
 /usr/bin/g++
+/usr/bin/cc
 /usr/bin/gcc
 /usr/bin/gcc-ar
 /usr/bin/gcc-nm
