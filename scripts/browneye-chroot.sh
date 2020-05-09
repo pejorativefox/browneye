@@ -12,7 +12,18 @@ if [ -h $ROOT/dev/shm ]; then
   mkdir -pv $ROOT/$(readlink $ROOT/dev/shm)
 fi
 
-chroot "$ROOT" /usr/bin/bash --login +h
+COMMAND="/usr/bin/bash --login +h"
+
+
+if [ -z "$2" ]
+  then
+    echo "No argument supplied"
+  else
+    COMMAND=$2
+fi
+echo ">>> $COMMAND"
+
+chroot $ROOT $COMMAND
 
 sudo umount $ROOT/run
 sudo umount $ROOT/sys
