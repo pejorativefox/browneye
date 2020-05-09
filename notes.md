@@ -1,23 +1,9 @@
 
 # Libsolv
 puts its cmake module in wrong path
-
-#file conflicts
-file /usr/share/info/dir from install of libksba-1.3.5-1.x86_64 conflicts with file from package nettle-3.4-1.x86_64
-file /usr/share/info/dir from install of libksba-1.3.5-1.x86_64 conflicts with file from package gnutls-3.5.19-1.x86_64
-file /usr/share/info/dir from install of libksba-1.3.5-1.x86_64 conflicts with file from package libassuan-2.5.1-1.x86_64
-file /usr/share/info/dir from install of libksba-1.3.5-1.x86_64 conflicts with file from package gpgme-1.11.1-1.x86_64
-
-
+ln -s /share/cmake/Modules/FindLibSolv.cmake /share/cmake-3.13/Modules/
 
 # permissions
-/tmp needs    0 drwxrwxrwt  15 root root  460 Dec 11 12:02 tmp
-
-# docker
-ERRO[2019-12-11T13:56:07.774884115Z] 'overlay' not found as a supported filesystem on this host. Please ensure kernel is new enough and has overlay support loaded.  storage-driver=overlay2
-ERRO[2019-12-11T13:56:07.778411777Z] AUFS was not found in /proc/filesystems       storage-driver=aufs
-ERRO[2019-12-11T13:56:07.779149212Z] 'overlay' not found as a supported filesystem on this host. Please ensure kernel is new enough and has overlay support loaded.  storage-driver=overlay
-ERRO[2019-12-11T13:56:07.779188737Z] Failed to built-in GetDriver graph devicemapper /var/lib/docker 
 
 # mpv
 https://pi3d.github.io/html/FAQ.html#glx-dri2-not-supported-or-failed-to-authenticate
@@ -25,10 +11,6 @@ https://pi3d.github.io/html/FAQ.html#glx-dri2-not-supported-or-failed-to-authent
 # Kernel
 WARNING: iwlwifi is useless without IWLDVM or IWLMVM
 linux-firmware
-
-# MISC
-BAD SYMLINK /var/run -> /run
-tmp wrong perms
 
 # makeca
 post install script
@@ -50,12 +32,6 @@ stop html gen on openssl
 
 # missing links
 /bin/cc
-libbz2.so.1.0
-
-# polkit
-groupadd -fg 27 polkitd &&
-useradd -c "PolicyKit Daemon Owner" -d /etc/polkit-1 -u 27 \
-        -g polkitd -s /bin/false polkitd
 
 # python
 pyc files in packages
