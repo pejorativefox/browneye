@@ -34,5 +34,5 @@ mkdir -pv etc/yum.repos.d
 cp /etc/yum.repos.d/core.repo etc/yum.repos.d/
 
 popd
-
-dnf-3 --installroot $ROOT --releasever=1 -y -x busybox install "*"
+#dnf-3 --installroot $ROOT --releasever=1 -y -x busybox install "*"
+dnf-3 --installroot $ROOT --releasever=1 -y -x busybox install dnf bash shadow linux-pam
