@@ -1,6 +1,6 @@
 Name:       linux-pam
 Version:    1.3.0
-Release:    1
+Release:    2 
 Summary:    PAM (Pluggable Authentication Modules) library
 License:    GPL2
 Source0:    Linux-PAM-%{version}.tar.bz2
@@ -26,62 +26,21 @@ chmod -v 4755 %{buildroot}/usr/sbin/unix_chkpwd
 
 install -v -m755 -d %{buildroot}/etc/pam.d
 
-cat > %{buildroot}/etc/pam.d/system-account << "EOF"
-account   required    pam_unix.so
-EOF
-
-
-cat > %{buildroot}/etc/pam.d/system-auth << "EOF"
-auth      required    pam_unix.so
-EOF
-
-
-cat > %{buildroot}/etc/pam.d/system-session << "EOF"
-session   required    pam_unix.so
-EOF
-
-cat > %{buildroot}/etc/pam.d/useradd << "EOF"
-auth      sufficient  pam_rootok.so
-
-# include system auth, account, and session settings
-auth      include     system-auth
-account   include     system-account
-session   include     system-session
-
-# Always permit for authentication updates
-password  required    pam_permit.so
-EOF
-
-cat > %{buildroot}/etc/pam.d/groupadd << "EOF"
-auth      sufficient  pam_rootok.so
-
-# include system auth, account, and session settings
-auth      include     system-auth
-account   include     system-account
-session   include     system-session
-
-# Always permit for authentication updates
-password  required    pam_permit.so
-EOF
-
 cat > %{buildroot}/etc/pam.d/other << "EOF"
-auth     required       pam_deny.so
-account  required       pam_deny.so
-password required       pam_deny.so
-session  required       pam_deny.so
+# Begin /etc/pam.d/other
+
+auth            required        pam_unix.so     nullok
+account         required        pam_unix.so
+session         required        pam_unix.so
+password        required        pam_unix.so     nullok
+
+# End /etc/pam.d/otheruth     required       pam_deny.so
 EOF
-
-
 
 %files
 /usr/share/locale/*
 /usr/share/man/*
 /etc/pam.d/other
-/etc/pam.d/groupadd
-/etc/pam.d/system-account
-/etc/pam.d/system-auth
-/etc/pam.d/system-session
-/etc/pam.d/useradd
 /lib/security/*
 /usr/etc/environment
 /usr/etc/security/*

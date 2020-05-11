@@ -28,7 +28,6 @@ SHELL
 /var/lib/dbus
 
 #docs
-stop html gen on openssl
 
 # missing links
 /bin/cc

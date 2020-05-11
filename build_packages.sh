@@ -20,7 +20,6 @@ for dir in "${dirs[@]}"; do
 	      cp -v $file ~/rpmbuild/SOURCES
             done	      
         fi
-        exit	
     	rpmbuild -bb --clean $spec
 	echo "done" > ../../build_cache/$spec
     fi

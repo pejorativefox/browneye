@@ -34,5 +34,7 @@ mkdir -pv etc/yum.repos.d
 cp /etc/yum.repos.d/core.repo etc/yum.repos.d/
 
 popd
-#dnf-3 --installroot $ROOT --releasever=1 -y -x busybox install "*"
+
+
 dnf-3 --installroot $ROOT --releasever=1 -y -x busybox install dnf bash shadow linux-pam
+./scripts/browneye-chroot.sh $ROOT "/bin/dnf-3 --releasever=1 -y -x busybox install xorg-server bspwm firefox NetworkManager polkit linux-kernel shadow linux-pam finit"
