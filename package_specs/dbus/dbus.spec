@@ -1,6 +1,6 @@
 Name:       dbus
 Version:    1.12.12
-Release:    1
+Release:    3
 Summary:    TODO
 License:    GPL3
 Prefix:     /usr
@@ -29,6 +29,15 @@ TODO
 rm -rf %{buildroot}
 %make_install
 rm -vf %{buildroot}%{_infodir}/dir*
+
+%post
+mkdir -pv /var/lib/dbus
+mkdir -pv /run/dbus
+useradd -c "D-Bus Message Daemon User" -d /var/run/dbus \
+        -u 18 -g messagebus -s /bin/false messagebus
+chown -v root:messagebus /usr/libexec/dbus-daemon-launch-helper &&
+chmod -v      4750       /usr/libexec/dbus-daemon-launch-helper
+
 
 %files
 /etc/dbus-1/session.conf
