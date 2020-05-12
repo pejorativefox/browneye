@@ -1,5 +1,5 @@
 Name:       libdnf
-Version:    0.39.1
+Version:    0.47.0
 Release:    1
 Summary:    Software management library. 
 License:    GPL
@@ -17,11 +17,12 @@ Software management library.
 %build
 mkdir build
 pushd build
-cmake 	-DWITH_GTKDOC=0 \
-	-DWITH_HTML=0 \
-	-DWITH_MAN=0 \
-	-DPYTHON_DESIRED=3 \
+cmake 	-DWITH_GTKDOC=OFF \
+	-DWITH_HTML=OFF \
+	-DWITH_MAN=OFF \
+	-DPYTHON_DESIRED:FILEPATH=/usr/bin/python3 \
 	-DCMAKE_INSTALL_PREFIX:PATH=/usr \
+        -DWITH_GTKDOC=OFF \
 	..
 %make_build
 popd
@@ -42,6 +43,9 @@ popd
 /usr/lib/python3.7/site-packages/*
 
 %changelog
+* Wed May 13 2020 Chris Statzer <chris.statzer@qq.com> 0.47.0
+- Upgrade to fix dnf incompat
+
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 0.39.1
 - Initial RPM
 

@@ -1,5 +1,5 @@
 Name:       dnf
-Version:    4.2.6
+Version:    4.2.21
 Release:    1
 Summary:    Software management utility. 
 License:    GPL
@@ -29,6 +29,7 @@ popd
 rm -rf %{buildroot}
 pushd build
 %make_install
+ln -sr %{buildroot}%{_bindir}/dnf-3 %{buildroot}%{_bindir}/dnf
 popd
 
 %files
@@ -42,12 +43,17 @@ popd
 /usr/bin/dnf-3
 /usr/bin/dnf-automatic-3
 /usr/lib/tmpfiles.d/dnf.conf
-/usr/share/bash-completion/completions/dnf
 /usr/lib/python3.7/site-packages/dnf/*
 /usr/lib/systemd/*
 /usr/share/locale/*
+/etc/dnf/dnf-strict.conf
+/usr/bin/dnf
+/usr/share/bash-completion/completions/dnf
 
 %changelog
+* Wed May 13 2020 Chris Statzer <chris.statzer@qq.com> 4.2.21
+- Version upgrade to attempt to fix the bash completion issues.
+
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 4.2.6
 - Initial RPM
 
