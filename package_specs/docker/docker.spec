@@ -1,6 +1,6 @@
 Name:       docker
 Version:    18.06.3
-Release:    1
+Release:    2
 Summary:    Docker container runtime
 License:    GPL
 Source0:    %{name}-%{version}-ce.tgz
