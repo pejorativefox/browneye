@@ -1,6 +1,6 @@
 Name:       shadow
 Version:    4.6
-Release:    2
+Release:    3
 Summary:    TODO
 License:    GPL3
 Source0:    %{name}-%{version}.tar.xz
@@ -29,6 +29,10 @@ rm -rf %{buildroot}
 %make_install
 rm -vf %{buildroot}%{_infodir}/dir*
 rm -rf %{buildroot}/etc/pam.d
+
+%post
+pwconv
+grpconv
 
 %files
 /etc/default/useradd
@@ -71,4 +75,6 @@ rm -rf %{buildroot}/etc/pam.d
 /usr/share/man/*
 
 %changelog
-# let's skip this for now
+* Thu May 14 2020 Chris Statzer <chris.statzer@qq.com> 4.6-3
+- Added post command to create /etc/shadow
+
