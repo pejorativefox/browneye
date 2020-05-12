@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Prepare the command line options
+OPTIONS="--raw-logs"
+
+# Execute the program
+exec /usr/bin/dockerd $OPTIONS &> /var/log/dockerd.log
