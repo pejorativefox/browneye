@@ -1,5 +1,5 @@
 Name:       browneye-sysconfig
-Version:    0.01
+Version:    0.04
 Release:    1
 Summary:    Initial configuration for Browneye Linux.
 License:    MIT
@@ -18,12 +18,11 @@ mkdir -pv %{buildroot}/etc
 cp -r etc/* %{buildroot}/etc/
 
 %files
-/etc/finit.conf
-/etc/fstab
-/etc/hosts
-/etc/start.d/README
-/etc/sysconfig/README
+/etc/*
 
 %changelog
+* Wed May 13 2020 Chris Statzer <chris.statzer@qq.com> 0.03
+- Moved PAM config and added some startup items.
+
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 0.01
 - Initial package.
