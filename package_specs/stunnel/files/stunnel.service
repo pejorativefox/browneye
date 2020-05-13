@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Prepare the command line options
+OPTIONS=""
+
+# Execute the program
+exec /bin/stunnel $OPTIONS &> /var/log/stunnel.log

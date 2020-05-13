@@ -1,9 +1,11 @@
 Name:       stunnel 
 Version:    5.56
-Release:    2
+Release:    3
 Summary:    TLS proxy daemon.
 License:    GPL
 Source0:    %{name}-%{version}.tar.gz
+Source1:    stunnel-service.conf
+Source2:    stunnel.service
 Prefix:     /usr
 
 %description
@@ -20,13 +22,12 @@ Stunnel is a proxy designed to add TLS encryption functionality to existing clie
 rm -rf %{buildroot}
 %make_install
 
-# Kludge for simple finit configs
 mkdir -pv %{buildroot}/etc/finit.d/available
-cat > %{buildroot}/etc/finit.d/available/stunnel.conf << "EOF"
-# Stunnel4
-# For proper logging it needs to be specified in your /etc/stunnel/stunnel.conf!
-task [2345] /bin/stunnel
-EOF
+mkdir -pv %{buildroot}/etc/service.d
+
+cp %{SOURCE1} %{buildroot}/etc/finit.d/available/stunnel.conf
+cp %{SOURCE2} %{buildroot}/etc/service.d/
+
 
 %files
 /usr/bin/stunnel
@@ -37,6 +38,7 @@ EOF
 /usr/share/doc/stunnel/*
 /usr/share/man/*
 /etc/finit.d/available/stunnel.conf
+/etc/service.d/stunnel.service
 
 %changelog
 * Thu May 14 2020 Chris Statzer <chris.statzer@qq.com> 5.56-2
