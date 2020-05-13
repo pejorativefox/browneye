@@ -1,11 +1,16 @@
 Name:       make-ca
 Version:    1.2
-Release:    3
+Release:    4
 Summary:    TODO
 License:    GPL3
 Source0:    %{name}-%{version}.tar.xz
 Source1:    certdata.txt
 Prefix:     /usr
+
+Requires:  p11-kit
+Requires:  grep
+Requires:  sed
+Requires:  gawk
 
 %description
 TODO
