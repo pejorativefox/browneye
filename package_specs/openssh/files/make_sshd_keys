@@ -1,0 +1,13 @@
+#!/bin/bash
+
+mkdir -pv /etc/ssh
+
+for key_type in rsa dsa ecdsa ed25519
+do
+    if [ ! -f /etc/ssh/ssh_host_${key_type}_key ]
+    then
+        cat /dev/zero | ssh-keygen -q -t ${key_type} -f /etc/ssh/ssh_host_${key_type}_key -C'' -N'' &> /dev/null
+	echo "${key_type} key generated...."
+    fi
+done
+

@@ -1,25 +1,50 @@
 Name:       openssh
 Version:    8.0p1
-Release:    1
-Summary:    TODO
+Release:    4
+Summary:    OpenSSH is the premier connectivity tool for remote login with the SSH protocol. 
 License:    GPL3
 Source0:    %{name}-%{version}.tar.gz
+Source1:    sshd_config
+Source2:    sshd-service.conf
+Source3:    make_sshd_keys
 Prefix:     /usr
 
 %description
-TODO
-
+OpenSSH is the premier connectivity tool for remote login with the SSH protocol.
+ 
 %prep
-%setup -q -a0
+%setup
 
 %build 
-%configure
+%configure --sysconfdir=/etc
 %make_build
 
 %install    
 rm -rf %{buildroot}
 %make_install
 rm -vf %{buildroot}%{_infodir}/dir*
+
+rm %{buildroot}/etc/sshd_config
+mkdir -pv %{buildroot}/etc/
+cp -v %{SOURCE1} %{buildroot}/etc/sshd_config
+
+mkdir -pv %{buildroot}/etc/finit.d/available
+cp %{SOURCE2} %{buildroot}/etc/finit.d/available
+
+mkdir -pv %{buildroot}/sbin
+cp %{SOURCE3} %{buildroot}/sbin
+
+%post
+install  -v -m700 -d /var/lib/sshd &&
+chown    -v root:sys /var/lib/sshd &&
+
+groupadd -g 50 sshd        &&
+useradd  -c 'sshd PrivSep' \
+         -d /var/lib/sshd  \
+         -g sshd           \
+         -s /bin/false     \
+         -u 50 sshd
+make_sshd_keys
 
 %files
 /usr/bin/scp
@@ -29,27 +54,18 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/ssh-agent
 /usr/bin/ssh-keygen
 /usr/bin/ssh-keyscan
-/usr/etc/moduli
-/usr/etc/ssh_config
-/usr/etc/sshd_config
+/etc/moduli
+/etc/ssh_config
 /usr/libexec/sftp-server
 /usr/libexec/ssh-keysign
 /usr/libexec/ssh-pkcs11-helper
 /usr/sbin/sshd
-/usr/share/man/man1/scp.1.gz
-/usr/share/man/man1/sftp.1.gz
-/usr/share/man/man1/ssh-add.1.gz
-/usr/share/man/man1/ssh-agent.1.gz
-/usr/share/man/man1/ssh-keygen.1.gz
-/usr/share/man/man1/ssh-keyscan.1.gz
-/usr/share/man/man1/ssh.1.gz
-/usr/share/man/man5/moduli.5.gz
-/usr/share/man/man5/ssh_config.5.gz
-/usr/share/man/man5/sshd_config.5.gz
-/usr/share/man/man8/sftp-server.8.gz
-/usr/share/man/man8/ssh-keysign.8.gz
-/usr/share/man/man8/ssh-pkcs11-helper.8.gz
-/usr/share/man/man8/sshd.8.gz
+/usr/share/man/*
+/etc/finit.d/available/sshd-service.conf
+/etc/sshd_config
+/sbin/make_sshd_keys
 
 %changelog
-# let's skip this for now
+* Thu May 14 2020 Chris Statzer <chris.statzer@qq.com> 8.0p1
+- Added finit services and a default configuration
+
