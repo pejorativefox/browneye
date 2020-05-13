@@ -1,7 +1,7 @@
 Name:       make-ca
 Version:    1.2
 Release:    4
-Summary:    TODO
+Summary:    PKI setup script for LFS (and others)
 License:    GPL3
 Source0:    %{name}-%{version}.tar.xz
 Source1:    certdata.txt
@@ -13,13 +13,12 @@ Requires:  sed
 Requires:  gawk
 
 %description
-TODO
+PKI setup script for LFS (and others)
 
 %prep
-%setup -q -a0
+%setup
 
 %build
-
 
 %install    
 rm -rf %{buildroot}
@@ -45,4 +44,6 @@ make-ca -C /share/make-ca/certdata.txt
 /share/make-ca/certdata.txt
 
 %changelog
-# let's skip this for now
+* Thu May 15 2020 Chris Statzer <chris.statzer@qq.com> 1.2
+- Added certdata and post install command to build the certs.
+
