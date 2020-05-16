@@ -1,6 +1,6 @@
 Name:       vim
 Version:    8.1
-Release:    3
+Release:    4
 Summary:    vi Improved Text editor
 License:    GPL3
 Source0:    %{name}-%{version}.tar.bz2
@@ -42,6 +42,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/man/*
 
 %changelog
-* Thu May 15 2020 Chris Statzer <chris.statzer@qq.com> 8.1-3
+* Thu May 15 2020 Chris Statzer <chris.statzer@qq.com> 8.1-4
 - Removed gtk/X11 build
 
