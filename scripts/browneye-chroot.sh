@@ -25,9 +25,9 @@ echo ">>> $COMMAND"
 
 chroot $ROOT $COMMAND
 
-sudo umount $ROOT/run
-sudo umount $ROOT/sys
-sudo umount $ROOT/proc
-sudo umount $ROOT/dev/pts
-sudo umount $ROOT/dev
+umount $ROOT/run
+umount $ROOT/sys
+umount $ROOT/proc
+umount $ROOT/dev/pts
+umount $ROOT/dev
 
