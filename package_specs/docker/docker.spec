@@ -1,6 +1,6 @@
 Name:       docker
 Version:    18.06.3
-Release:    2
+Release:    3
 Summary:    Docker container runtime
 License:    GPL
 Source0:    %{name}-%{version}-ce.tgz
@@ -41,7 +41,7 @@ cp %{SOURCE2} %{buildroot}/etc/service.d/
 /etc/service.d/dockerd.service
 
 %changelog
-* Thu May 13 2020 Chris Statzer <chris.statzer@qq.com> 3.30.1-2
+* Thu May 13 2020 Chris Statzer <chris.statzer@qq.com> 3.30.1-3
 - Added proper finit init scripts 
 
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 3.30.1
