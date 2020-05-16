@@ -1,5 +1,5 @@
 Name:       browneye-sysconfig
-Version:    0.04
+Version:    0.05
 Release:    1
 Summary:    Initial configuration for Browneye Linux.
 License:    MIT
