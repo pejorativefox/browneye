@@ -39,3 +39,5 @@ dnf-3 --installroot $ROOT --releasever=1 -y -x busybox install browneye-release 
 dnf-3 --installroot $ROOT --releasever=1 -y -x busybox install dnf shadow linux-pam
 
 ./scripts/browneye-chroot.sh $ROOT "/bin/dnf-3 -y -x busybox install NetworkManager polkit linux-kernel linux-modules finit p11-kit make-ca grep sed gawk e2fsprogs sysklogd"
+
+./scripts/browneye-chroot.sh $ROOT "ln -s /etc/finit.d/available/networkmanager.conf /etc/finit.d/"
