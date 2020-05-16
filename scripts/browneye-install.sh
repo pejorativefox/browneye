@@ -35,6 +35,7 @@ cp /etc/yum.repos.d/core.repo etc/yum.repos.d/
 
 popd
 
+dnf-3 --installroot $ROOT --releasever=1 -y -x busybox install browneye-release browneye-sysconfig coreutils
+dnf-3 --installroot $ROOT --releasever=1 -y -x busybox install dnf shadow linux-pam
 
-dnf-3 --installroot $ROOT --releasever=1 -y -x busybox install dnf bash shadow linux-pam
-./scripts/browneye-chroot.sh $ROOT "/bin/dnf-3 --releasever=1 -y -x busybox install xorg-server bspwm firefox NetworkManager polkit linux-kernel shadow linux-pam finit"
+./scripts/browneye-chroot.sh $ROOT "/bin/dnf-3 -y -x busybox install NetworkManager polkit linux-kernel linux-modules finit p11-kit make-ca grep sed gawk e2fsprogs sysklogd"
