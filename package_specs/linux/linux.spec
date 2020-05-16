@@ -1,6 +1,6 @@
 Name:       linux
 Version:    5.3.16
-Release:    2
+Release:    3
 Summary:    Linux
 License:    GPL3
 Prefix:     /usr
@@ -59,6 +59,9 @@ Linux kernel modules
 
 %files modules
 /lib/modules/*
+
+%post modules
+depmod
 
 %changelog
 * Sat May 16 2020 Chris Statzer <chris.statzer@qq.com> 5.3.16-2
