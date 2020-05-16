@@ -1,6 +1,6 @@
 Name:       linux
 Version:    5.3.16
-Release:    1
+Release:    2
 Summary:    Linux
 License:    GPL3
 Prefix:     /usr
@@ -24,6 +24,7 @@ make modules
 # kernel
 mkdir -pv %{buildroot}/boot
 %make_install INSTALL_PATH=%{buildroot}/boot
+mv %{buildroot}/boot/vmlinuz %{buildroot}/boot/vmlinuz-%{version}
 
 # headers 
 make INSTALL_HDR_PATH=dest headers_install
@@ -41,7 +42,7 @@ Linux kernel
 
 %files kernel
 /boot/System.map
-/boot/vmlinuz
+/boot/vmlinuz-%{version}
 
 %package headers
 Summary: Linux kernel headers
@@ -60,6 +61,10 @@ Linux kernel modules
 /lib/modules/*
 
 %changelog
+* Sat May 16 2020 Chris Statzer <chris.statzer@qq.com> 5.3.16-2
+- Fixed vmlinuz filenames to include version so they can be auto
+  added by grubmkconfig.
+
 * Mon Dec 16 2019 Chris Statzer <chris.statzer@qq.com> 5.3.16
 - Kernel upgrade
 
