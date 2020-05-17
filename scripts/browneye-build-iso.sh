@@ -23,8 +23,10 @@ mkdir -pv $CD_ROOT/LiveOS
 mksquashfs $SQUASH_ROOT $CD_ROOT/LiveOS/squashfs.img
 
 dracut --no-hostonly --add "dmsquash-live pollcdrom" $CD_ROOT/boot/initrd.img
-cp /boot/vmlinuz $CD_ROOT/boot
+cp /boot/vmlinuz-5.3.16 $CD_ROOT/boot/vmlinuz
 
-genisoimage -o output.iso -V BrowneyeLive \
+genisoimage -o browneye.iso -V BrowneyeLive \
             -b isolinux/isolinux.bin -c isolinux/boot.cat \
 	    -no-emul-boot -boot-load-size 4 -boot-info-table -debug $CD_ROOT
+
+isohybrid browneye.iso
