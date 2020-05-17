@@ -1,4 +1,11 @@
 
+#XML-Parser
+Had to reinstall the package to build upower, this needs to be checked for errors on initial install, 
+maybe change install order with requirements
+
+#dbus
+machine-id: Unable to load /var/lib/dbus/machine-id or /etc/machine-id: Failed to open file ?/var/lib/dbus/machine-id?: No such file or directory
+
 # Libsolv
 puts its cmake module in wrong path
 ln -s /share/cmake/Modules/FindLibSolv.cmake /share/cmake-3.13/Modules/
