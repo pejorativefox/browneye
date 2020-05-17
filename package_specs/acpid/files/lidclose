@@ -1,0 +1,5 @@
+# When a button/lid event is received, the pm-suspend bin is run.
+
+event=button/lid
+action=pm-suspend
+
