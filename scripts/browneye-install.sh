@@ -31,13 +31,16 @@ mkdir -pv run/lock
 ln -sv ../run/lock var/lock
 
 mkdir -pv etc/yum.repos.d
-cp /etc/yum.repos.d/core.repo etc/yum.repos.d/
 
 popd
 
-dnf-3 --installroot $ROOT --releasever=1 -y -x busybox install browneye-release browneye-sysconfig coreutils
-dnf-3 --installroot $ROOT --releasever=1 -y -x busybox install dnf shadow linux-pam
 
-./scripts/browneye-chroot.sh $ROOT "/bin/dnf-3 -y -x busybox install NetworkManager polkit linux-kernel linux-modules linux-firmware finit p11-kit make-ca grep sed gawk e2fsprogs sysklogd dhcp inetutils wpa-supplicant"
+cp ./iso/core.repo $ROOT/etc/yum.repos.d/
+cp /etc/resolv.conf $ROOT/etc/
+
+dnf-3 --installroot $ROOT --releasever=1 -y -x busybox install browneye-release browneye-sysconfig coreutils
+dnf-3 --installroot $ROOT --releasever=1 -y -x busybox install dnf shadow linux-pam make-ca
+
+./scripts/browneye-chroot.sh $ROOT "/bin/dnf-3 -y -x busybox install NetworkManager polkit linux-kernel linux-modules linux-firmware finit p11-kit make-ca grep sed gawk e2fsprogs sysklogd dhcp inetutils wpa-supplicant vim"
 
 ./scripts/browneye-chroot.sh $ROOT "ln -s /etc/finit.d/available/networkmanager.conf /etc/finit.d/"
