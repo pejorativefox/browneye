@@ -1,3 +1,7 @@
+# Locale generation
+localedef -v -c -i en_US -f UTF-8 en_US.UTF-8
+https://www.tldp.org/HOWTO/Unicode-HOWTO-3.html
+
 
 #XML-Parser
 Had to reinstall the package to build upower, this needs to be checked for errors on initial install, 
