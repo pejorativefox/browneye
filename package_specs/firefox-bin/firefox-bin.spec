@@ -1,5 +1,5 @@
 Name:       firefox-bin
-Version:    76.0
+Version:    76.0.1
 Release:    1
 Summary:    TODO
 License:    GPL3
