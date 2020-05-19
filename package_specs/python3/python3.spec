@@ -1,6 +1,6 @@
 Name:       python
 Version:    3.7.2
-Release:    1
+Release:    2
 Summary:    TODO
 License:    GPL3
 Source0:    Python-%{version}.tar.xz
@@ -32,6 +32,8 @@ chmod -v 755 %{buildroot}/usr/lib64/libpython3.7m.so
 chmod -v 755 %{buildroot}/usr/lib64/libpython3.so
 rm -vf %{buildroot}%{_infodir}/dir*
 rm -vrf %{buildroot}/usr/lib/python3.7/site-packages/pip/_internal/models/__pycache__
+rm -rf %{buildroot}/usr/lib/python3.7/test
+
 
 %files
 /usr/bin/2to3
@@ -48,17 +50,18 @@ rm -vrf %{buildroot}/usr/lib/python3.7/site-packages/pip/_internal/models/__pyca
 /usr/bin/python3.7m-config
 /usr/bin/pyvenv
 /usr/bin/pyvenv-3.7
-/usr/include/python3.7m/*
-/usr/lib/python3.7/*
+/usr/include/python3.7m/
+/usr/lib/python3.7/
 /usr/lib64/libpython3.7m.so
 /usr/lib64/libpython3.7m.so.1.0
 /usr/lib64/libpython3.so
 /usr/lib64/pkgconfig/python-3.7.pc
 /usr/lib64/pkgconfig/python-3.7m.pc
 /usr/lib64/pkgconfig/python3.pc
-/usr/lib64/python3.7/*
+/usr/lib64/python3.7/
 /usr/share/man/man1/python3.1.gz
 /usr/share/man/man1/python3.7.1.gz
 
 %changelog
-# let's skip this for now
+* Tue May 19 2020 Chris Statzer <chris.statzer@qq.com> 3.7.2-2
+- Removed left over tests folder.

@@ -1,14 +1,10 @@
 Name:       vim
 Version:    8.1
-Release:    4
+Release:    5
 Summary:    vi Improved Text editor
 License:    GPL3
 Source0:    %{name}-%{version}.tar.bz2
 Prefix:     /usr
-
-AutoReq: no
-
-Requires: libICE.so.6()(64bit), libSM.so.6()(64bit), libX11.so.6()(64bit), libXt.so.6()(64bit), libacl.so.1()(64bit), libc.so.6()(64bit), libdl.so.2()(64bit), libgdk-x11-2.0.so.0()(64bit), libgdk_pixbuf-2.0.so.0()(64bit), libgio-2.0.so.0()(64bit), libglib-2.0.so.0()(64bit), libgobject-2.0.so.0()(64bit), libgtk-x11-2.0.so.0()(64bit), libm.so.6()(64bit), libncursesw.so.6()(64bit), libpango-1.0.so.0()(64bit)
 
 %description
 Vim is a highly configurable text editor built to make creating and changing any kind of text very efficient. It is included as "vi" with most UNIX systems and with Apple OS X. 
@@ -25,6 +21,10 @@ echo '#define SYS_VIMRC_FILE "/etc/vimrc"' >> src/feature.h
 rm -rf %{buildroot}
 %make_install
 rm -vf %{buildroot}%{_infodir}/dir*
+rm %{buildroot}/usr/share/applications/gvim.desktop
+rm -rf %{buildroot}/usr/share/icons/*
+rm %{buildroot}/usr/share/vim/vim81/tools/vim132
+
 
 %files
 /usr/bin/ex
@@ -35,9 +35,7 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/vimdiff
 /usr/bin/vimtutor
 /usr/bin/xxd
-/usr/share/applications/gvim.desktop
 /usr/share/applications/vim.desktop
-/usr/share/icons/*
 /usr/share/vim/*
 /usr/share/man/*
 
