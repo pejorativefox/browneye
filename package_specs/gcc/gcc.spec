@@ -1,6 +1,6 @@
 Name:       gcc
 Version:    8.2.0
-Release:    1
+Release:    2
 Summary:    The GNU Compiler Collection
 License:    GPL3
 Source0:    %{name}-%{version}.tar.xz
