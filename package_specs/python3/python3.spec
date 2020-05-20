@@ -1,6 +1,6 @@
 Name:       python
 Version:    3.7.2
-Release:    2
+Release:    3
 Summary:    TODO
 License:    GPL3
 Source0:    Python-%{version}.tar.xz
@@ -33,7 +33,7 @@ chmod -v 755 %{buildroot}/usr/lib64/libpython3.so
 rm -vf %{buildroot}%{_infodir}/dir*
 rm -vrf %{buildroot}/usr/lib/python3.7/site-packages/pip/_internal/models/__pycache__
 rm -rf %{buildroot}/usr/lib/python3.7/test
-
+ln -s python3.7 %{buildroot}/usr/bin/python
 
 %files
 /usr/bin/2to3
@@ -42,6 +42,7 @@ rm -rf %{buildroot}/usr/lib/python3.7/test
 /usr/bin/idle3.7
 /usr/bin/pydoc3
 /usr/bin/pydoc3.7
+/usr/bin/python
 /usr/bin/python3
 /usr/bin/python3-config
 /usr/bin/python3.7

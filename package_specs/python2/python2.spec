@@ -1,6 +1,6 @@
 Name:       python2
 Version:    2.7.15
-Release:    2
+Release:    3
 Summary:    TODO
 License:    GPL3
 Prefix:     /usr
@@ -32,11 +32,11 @@ rm -rf %{buildroot}
 %make_install
 rm %{buildroot}/usr/bin/2to3
 rm -rf %{buildroot}/usr/lib/python2.7/test
+rm %{buildroot}/usr/bin/python
 
 %files
 /usr/bin/idle
 /usr/bin/pydoc
-/usr/bin/python
 /usr/bin/python-config
 /usr/bin/python2
 /usr/bin/python2-config
