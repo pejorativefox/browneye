@@ -10,11 +10,17 @@ echo $CD_ROOT
 
 mkdir -pv $SQUASH_ROOT
 
-./scripts/browneye-install.sh $SQUASH_ROOT
+./scripts/install.sh $SQUASH_ROOT
 
 mkdir -pv $CD_ROOT/isolinux/kernel
 cp /share/syslinux/isolinux.bin $CD_ROOT/isolinux
+# modules
 cp /share/syslinux/ldlinux.c32 $CD_ROOT/isolinux
+cp /share/syslinux/vesamenu.c32 $CD_ROOT/isolinux
+cp /share/syslinux/libcom32.c32 $CD_ROOT/isolinux
+cp /share/syslinux/libutil.c32 $CD_ROOT/isolinux
+
+
 cp /share/syslinux/memdisk $CD_ROOT/isolinux/kernel
 cp ./iso/isolinux.cfg $CD_ROOT/isolinux
 
