@@ -3,14 +3,14 @@ Version:    3.4.1
 Release:    1
 Summary:    A fast and easy-to-use status bar
 License:    GPL
-Source0:    %{name}-%{version}.tar.gz
+Source0:    %{name}-%{version}.tar
 Prefix:     /usr
 
 %description
 A fast and easy-to-use status bar
 
 %prep
-%setup
+%setup -n polybar
 
 %build
 mkdir build

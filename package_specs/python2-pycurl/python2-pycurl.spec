@@ -10,9 +10,10 @@ Prefix:     /usr
 urlgrabber is a pure python package that drastically simplifies the fetching of files. 
 
 %prep
-%setup -n pycurl-%{version}
+%setup -n pycurl-REL_7_43_0_2
 
 %build
+make gen
 
 %install
 rm -rf %{buildroot}

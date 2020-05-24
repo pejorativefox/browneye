@@ -3,7 +3,7 @@ Version:    1.11
 Release:    1
 Summary:    Tool for checking common errors in rpm packages
 License:    GPL
-Source0:    rpmlint-rpmlint-%{version}.tar.gz
+Source0:    rpmlint-%{version}.tar.gz
 Prefix:     /usr
 
 %description

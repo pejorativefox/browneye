@@ -4,15 +4,16 @@ Release:    1
 Summary:    TODO
 License:    GPL3
 Prefix:     /usr
-Source0:    libxdg-basedir_1.2.0.orig.tar.gz
+Source0:    %{name}-%{version}.tar.gz
 
 %description
 TODO
 
 %prep
-%setup -a 0
+%setup -n %{name}-%{name}-%{version}
 
 %build
+./autogen.sh
 %configure
 %make_build
 

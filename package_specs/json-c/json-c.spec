@@ -3,7 +3,7 @@ Version:    0.13.1
 Release:    1
 Summary:    A JSON implementation in C
 License:    MIT
-Source0:    json-c-json-c-0.13.1-20180305.tar.gz
+Source0:    json-c-0.13.1-20180305.tar.gz
 Prefix:     /usr
 
 %description
