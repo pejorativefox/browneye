@@ -12,7 +12,7 @@ Prefix:     /usr
 Stunnel is a proxy designed to add TLS encryption functionality to existing clients and servers without any changes in the programs' code. 
 
 %prep
-%setup -n stunnel-stunnel-%{version}
+%setup -n stunnel-%{version}
 
 %build
 %configure

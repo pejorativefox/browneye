@@ -4,7 +4,7 @@ Release:    1
 Summary:    TODO
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}_%{version}.tar.xz
+Source0:    %{name}-%{version}.tar.xz
 
 %description
 TODO

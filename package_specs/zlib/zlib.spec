@@ -3,7 +3,7 @@ Version:    1.2.11
 Release:    1
 Summary:    zlib compression library
 License:    GPL3
-Source0:    %{name}-%{version}.tar.xz
+Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
 %description

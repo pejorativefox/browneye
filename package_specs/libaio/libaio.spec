@@ -3,7 +3,7 @@ Version:    0.3.112
 Release:    1
 Summary:    The libaio package is an asynchronous I/O facility ("async I/O", or "aio") that has a richer API and capability set than the simple POSIX async I/O facility. 
 License:    GPL
-Source0:    %{name}-%{version}.tar.xz
+Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
 %description

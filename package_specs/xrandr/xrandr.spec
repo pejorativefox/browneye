@@ -4,7 +4,7 @@ Release:    1
 Summary:    TODO
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}-%{version}.tar.bz2
+Source0:    %{name}-%{version}.tar.gz
 
 
 
@@ -12,9 +12,10 @@ Source0:    %{name}-%{version}.tar.bz2
 TODO
 
 %prep
-%setup -a 0
+%setup -n xorg-xrandr-xrandr-%{version}
 
 %build
+./autogen.sh
 %configure 
 %make_build
 
