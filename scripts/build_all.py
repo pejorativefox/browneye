@@ -4,6 +4,7 @@ import os
 import glob
 import subprocess
 import ntpath
+from pathlib import Path
 
 
 if not os.path.isdir(".build_cache"):
@@ -15,11 +16,12 @@ count = 0
 for path in packages:
     count += 1
     print("\n+ Processing: {} ({}/{})".format(path, count, num_packages))
-        for spec in glob.glob("()/*.spec".format(path)):
-            if os.path.isfile(".build_cache/{}".format(ntpath.basename(spec))):
-                    print("- Build already done, cached.")
-            else:
-                subprocess.run(["./scripts/build_package.py", package])
-                Path(".build_cache/{}".format(ntpathi.basename(spec))).touch()
+    for spec in glob.glob("{}/*.spec".format(path)):
+        print("* {}".format(spec))
+        if os.path.isfile(".build_cache/{}".format(ntpath.basename(spec))):
+            print("- Build already done, cached.")
+        else:
+            subprocess.run(["./scripts/build_package.py", spec])
+            Path(".build_cache/{}".format(ntpath.basename(spec))).touch()
 
         

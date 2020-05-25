@@ -99,4 +99,3 @@ for package in packages:
             print("- Build already done, cached.")
         else:
             build(spec)
-            Path(".build_cache/{}".format(ntpath.basename(spec))).touch()
