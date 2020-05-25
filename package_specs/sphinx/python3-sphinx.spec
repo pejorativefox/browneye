@@ -6,6 +6,10 @@ License:    MIT
 Source0:    sphinx-%{version}.tar.gz
 Prefix:     /usr
 
+Requires: python3-alabaster, python3-babel, python3-certifi, python3-chardet, python3-dateutil,	python3-docutils, python3-idna,	python3-imagesize, python3-jinja, python3-markupsafe, python3-pygments,	python3-pytz, python3-requests, python3-snowball, python3-urllib3
+
+Requires: python3-sphinxcontrib-applehelp, python3-sphinxcontrib-devhelp, python3-sphinxcontrib-htmlhelp, python3-sphinxcontrib-jsmath, python3-sphinxcontrib-qthelp, python3-sphinxcontrib-serializinghtml
+
 %description
 Sphinx documentation builder
 
