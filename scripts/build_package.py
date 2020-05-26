@@ -1,6 +1,7 @@
 #!/bin/python
 
 import os
+import sys
 import glob
 import subprocess
 import configparser
@@ -67,35 +68,33 @@ def process_sources(sources_file):
 
 
 def build(path):
-    print("Building:", spec)
-    print("\033]0;Building ( {} )\a".format(spec))
-    comp_proc = subprocess.run(["rpmbuild", "-bb", "--clean", spec])
+    path, spec = os.path.split(path)
+    print("Building:", path)
+    if os.path.isdir("{}/files".format(path)):
+        print("- Has additional source files..")
+        for f in glob.glob("{}/files/*".format(path)):
+            print("  * Copying:", f)
+            shutil.copy(f, "/root/rpmbuild/SOURCES")
+    if os.path.isfile("{}/sources".format(path)):
+        print("- Processing sources:")
+        process_sources("{}/sources".format(path))
+    else:
+        print("WARNING: this package is missing a valid sources file!")
+    set_term_title("Building ( {} )".format(spec))
+    spec_with_path = "{}/{}".format(path, spec)
+    comp_proc = subprocess.run(["rpmbuild", "-bb", "--clean", spec_with_path])
     if comp_proc.returncode != 0:
         print("Build process returned {}!".format(comp_proc.returncode))
         exit()
 
 
-if not os.path.isdir(".build_cache"):
-    os.mkdir(".build_cache")
 
-packages = glob.glob("package_specs/*")
-num_packages = len(packages)
-count = 0
-for package in packages:
-    count += 1
-    print("\n+ Processing: {} ({}/{})".format(package, count, num_packages))
-    if os.path.isdir("{}/files".format(package)):
-        print("- Has additional source files..")
-        for f in glob.glob("{}/files/*".format(package)):
-            print("  * Copying:", f)
-            shutil.copy(f, "/root/rpmbuild/SOURCES")
-    if os.path.isfile("{}/sources".format(package)):
-        print("- Processing sources:")
-        process_sources("{}/sources".format(package))
-    else:
-        print("WARNING: this package is missing a valid sources file!")
-    for spec in glob.glob("{}/*.spec".format(package)):
-        if os.path.isfile(".build_cache/{}".format(ntpath.basename(spec))):
-            print("- Build already done, cached.")
-        else:
-            build(spec)
+path = sys.argv[1]
+build(path)
+
+
+
+exit()
+
+
+

@@ -21,9 +21,7 @@ for path in packages:
         if os.path.isfile(".build_cache/{}".format(ntpath.basename(spec))):
             print("- Build already done, cached.")
         else:
-            subprocess.call("./scripts/build_package.py {}".format(spec), shell=True)
-            #subprocess.check_call(["python", "./scripts/build_package.py", spec])
-            exit()
+            subprocess.check_call(["python", "./scripts/build_package.py", spec])
             cache_file = ntpath.basename(spec)
             print("Caching build: {}".format(cache_file))
             Path(".build_cache/{}".format(cache_file)).touch()
