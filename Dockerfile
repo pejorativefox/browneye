@@ -1,4 +1,4 @@
 FROM scratch
-ADD browneye-rootfs-0.3.3.tar.gz /
+ADD build/browneye-rootfs.tar.gz /
 CMD ["/bin/bash"]
 
