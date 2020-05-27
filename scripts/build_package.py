@@ -12,15 +12,42 @@ from urllib.parse import urlparse
 
 
 def set_term_title(title):
+    """Sets the title of a POSIX terminal using escape codes.
+
+    Args:
+        param1 (str) title: the string to use as the terminal title.
+
+    """
     print("\033]0;{}\a".format(title))
 
 
 def get_md5(filename):
+    """Get an md5 for a file on the filesystem by running the md5sum tool.
+
+    Args:
+        param1 (str) filename: the full path of the file
+
+    Returns:
+        str: the md5sum of the specified file.
+
+    """
     md5 = subprocess.check_output(["md5sum", filename]).rstrip().decode('ascii').split(" ")[0]
     return md5
 
 
 def parse_sources(sources_filename):
+    """Parse a 'sources' file to get a list of files that need to be downloaded
+    for a package.
+
+    Args:
+        param1 (str) sources_filename: the full path to a valid sources file
+
+    Returns:
+        list of (str:md5sum, str:url, str:override_filename) 
+                or 
+                (str:md5sum, str:url, bool:has_override)
+    
+    """
     fbuff = ""
     with open(sources_filename, "r") as fd:
         fbuff = fd.readlines()
@@ -44,6 +71,12 @@ def parse_sources(sources_filename):
 
 
 def process_sources(sources_file):
+    """Check for cached, download, and verify a 'sources' file.
+
+    Args:
+        param1 (str) sources_file: The full path and filename of a sources file.
+
+    """
     sources = parse_sources(sources_file)
     for source in sources:
         md5, url, override_filename = source
@@ -68,6 +101,12 @@ def process_sources(sources_file):
 
 
 def build(path):
+    """Download, verify, and build a spec file.
+
+    Args:
+        param1 (str) path: the full path and filename to a spec file to build.
+
+    """
     path, spec = os.path.split(path)
     print("Building:", path)
     if os.path.isdir("{}/files".format(path)):
@@ -85,16 +124,13 @@ def build(path):
     comp_proc = subprocess.run(["rpmbuild", "-bb", "--clean", spec_with_path])
     if comp_proc.returncode != 0:
         print("Build process returned {}!".format(comp_proc.returncode))
-        exit()
+        exit(comp_proc.returncode)
 
 
-
-path = sys.argv[1]
-build(path)
-
-
-
-exit()
+if __name__ == "__main__":
+    path = sys.argv[1]
+    build(path)
+    exit(0)
 
 
 
