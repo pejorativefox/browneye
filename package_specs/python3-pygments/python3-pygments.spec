@@ -20,7 +20,7 @@ python3 setup.py install --root %{buildroot}
 
 %files
 /usr/bin/pygmentize
-/usr/lib/python3.7/site-packages/Pygments-2.6.1.dev20200524-py3.7.egg-info/
+/usr/lib/python3.7/site-packages/Pygments-2.6.1.dev*-py3.7.egg-info/
 /usr/lib/python3.7/site-packages/pygments/
 
 %changelog

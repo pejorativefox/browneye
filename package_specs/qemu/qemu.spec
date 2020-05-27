@@ -103,6 +103,8 @@ rm -rf %{buildroot}
 /usr/share/icons/
 /usr/share/locale/
 /usr/share/qemu/
+/usr/share/doc/qemu/
+/usr/share/man/
 
 %changelog
 * Sun May 17 2020 Chris Statzer <chris.statzer@qq.com> 4.2.0
