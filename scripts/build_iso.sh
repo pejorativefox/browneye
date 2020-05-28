@@ -1,4 +1,6 @@
-#!/bin/bash -ex
+#!/bin/bash
+
+set -ex
 
 ROOT="`pwd`/build/iso_build"
 SQUASH_ROOT=$ROOT/squash_root
