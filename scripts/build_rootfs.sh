@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash -ex
 
 ROOT="`pwd`/build/root_fs"
 

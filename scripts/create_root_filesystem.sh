@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash -ex
 
 ROOT=$1
 
