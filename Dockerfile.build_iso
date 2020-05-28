@@ -1,0 +1,16 @@
+FROM fedora:31
+
+COPY scripts /scripts
+COPY iso /iso
+
+RUN ln -sv usr/share /share
+
+RUN dnf install -y \
+    dracut-live \
+    genisoimage \
+    squashfs-tools \
+    syslinux-nonlinux \
+ && dnf clean all \
+ && rm -rf /var/cache/yum
+
+CMD ["scripts/build_iso.sh"]

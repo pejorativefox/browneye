@@ -1,4 +1,6 @@
-#/bin/bash
+#!/bin/bash
+
+set -ex
 
 ROOT="`pwd`/build/root_fs"
 
