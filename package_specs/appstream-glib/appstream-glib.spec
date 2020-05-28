@@ -3,7 +3,7 @@ Version:    0.7.16
 Release:    1
 Summary:    Glib AppStream metadata support.
 License:    GPL
-Source0:    appstream-glib-appstream_glib_0_7_16.tar.gz
+Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
 %description

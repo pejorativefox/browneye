@@ -1,11 +1,13 @@
 Name:       gdk-pixbuf
 Version:    2.38.0
-Release:    1
+Release:    3
 Summary:    TODO
 License:    GPL3
 Prefix:     /usr
 Source0:    %{name}-%{version}.tar.xz
 
+Provides: pkgconfig(gdk-pixbuf-2.0)
+Requires: librsvg
 
 %description
 TODO
@@ -28,7 +30,9 @@ DESTDIR=%{buildroot} ninja install
 popd
 rm -vf %{buildroot}%{_infodir}/dir*
 
-# gdk-pixbuf-query-loaders --update-cache
+%post
+gdk-pixbuf-query-loaders > /usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders.cache
+gdk-pixbuf-query-loaders --update-cache
 
 %files
 /usr/bin/gdk-pixbuf-csource

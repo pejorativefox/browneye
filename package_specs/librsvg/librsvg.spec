@@ -29,8 +29,8 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/librsvg-2.0/librsvg/librsvg-features.h
 /usr/include/librsvg-2.0/librsvg/rsvg-cairo.h
 /usr/include/librsvg-2.0/librsvg/rsvg.h
-/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.la
-/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.so
+/usr/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.la
+/usr/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.so
 /usr/lib64/girepository-1.0/Rsvg-2.0.typelib
 /usr/lib64/librsvg-2.la
 /usr/lib64/librsvg-2.so

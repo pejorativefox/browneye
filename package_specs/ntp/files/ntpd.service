@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Prepare the command line options
+OPTIONS="-n"
+
+# Execute the program
+exec /bin/ntpd $OPTIONS &> /var/log/ntpd.log

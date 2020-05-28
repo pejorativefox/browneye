@@ -1,13 +1,15 @@
 Name:       NetworkManager
 Version:    1.14.6
-Release:    1
+Release:    2 
 Summary:    TODO
 License:    GPL3
 Prefix:     /usr
 Source0:    %{name}-%{version}.tar.xz
-
+Source1:    NetworkManager.conf
+Source2:    org.freedesktop.NetworkManager.rules
+Source3:    networkmanager-service.conf
 Requires: shadow >= 4.6-1
-
+Provides: pkgconfig(libnm)
 
 %description
 TODO
@@ -40,7 +42,6 @@ meson --prefix /usr              \
       -Dqt=false                 \
       ..
 ninja
-
 popd
 
 %install    
@@ -48,25 +49,24 @@ rm -rf %{buildroot}
 pushd build
 DESTDIR=%{buildroot} ninja install
 popd
+
 rm -vf %{buildroot}%{_infodir}/dir*
+
+# configuration
+mkdir -pv %{buildroot}/etc/NetworkManager
+cp %{SOURCE1} %{buildroot}/etc/NetworkManager/
+
+# polkit policy
+mkdir -pv %{buildroot}/usr/share/polkit-1/rules.d/
+cp %{SOURCE2} %{buildroot}/usr/share/polkit-1/rules.d/
+
+# finit service file
+mkdir -pv %{buildroot}/etc/finit.d/available/
+cp %{SOURCE3} %{buildroot}/etc/finit.d/available/networkmanager.conf
+
 
 %post
 groupadd -fg 86 netdev
-
-mkdir -pv /usr/share/polkit-1/rules.d/
-cat > /usr/share/polkit-1/rules.d/org.freedesktop.NetworkManager.rules << "EOF"
-polkit.addRule(function(action, subject) {
-    if (action.id.indexOf("org.freedesktop.NetworkManager.") == 0 && subject.isInGroup("netdev")) {
-        return polkit.Result.YES;
-    }
-});
-EOF
-
-mkdir -pv /etc/NetworkManager
-cat >> /etc/NetworkManager/NetworkManager.conf << "EOF"
-[main]
-plugins=keyfile
-EOF
 
 %files
 /etc/dbus-1/system.d/nm-dispatcher.conf
@@ -116,8 +116,10 @@ EOF
 /usr/share/gir-1.0/NetworkManager-1.0.gir
 /usr/share/locale/*
 /usr/share/polkit-1/actions/org.freedesktop.NetworkManager.policy
-
+/etc/NetworkManager/NetworkManager.conf
+/etc/finit.d/available/networkmanager.conf
+/usr/share/polkit-1/rules.d/org.freedesktop.NetworkManager.rules
 
 %changelog
-# let's skip this for now
-
+* Thu May 14 2020 Chris Statzer <chris.statzer@qq.com> 1.14.6
+- Moved old cat file kludges out, added finit service

@@ -9,6 +9,8 @@ Prefix:     /usr
 %description
 A lightweight display manager
 
+Requires: shadow >= 4.6
+
 %prep
 %setup
 

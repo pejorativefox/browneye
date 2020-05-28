@@ -1,5 +1,5 @@
 Name:       cppunit
-Version:    1.14.0
+Version:    1.15.1
 Release:    1
 Summary:    CppUnit is the C++ port of the famous JUnit framework for unit testing.
 License:    GPL
@@ -22,8 +22,8 @@ rm -rf %{buildroot}
 
 %files
 /usr/bin/DllPlugInTester
-/usr/lib64/libcppunit-1.14.so.0
-/usr/lib64/libcppunit-1.14.so.0.0.0
+/usr/lib64/libcppunit-1.15.so.1
+/usr/lib64/libcppunit-1.15.so.1.0.0
 /usr/lib64/libcppunit.a
 /usr/lib64/libcppunit.la
 /usr/lib64/libcppunit.so
@@ -38,6 +38,9 @@ rm -rf %{buildroot}
 /usr/include/cppunit/*
 
 %changelog
+* Wed May 13 2020 Chris Statzer <chris.statzer@qq.com> 1.15.1
+- version bump for libdnf
+
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 1.14.0
 - Initial RPM
 

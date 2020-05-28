@@ -1,0 +1,5 @@
+# When a video/brightnessdown event is received, the xbacklight bin is run.
+
+event=video/brightnessdown
+action=xbacklight -dec 5
+

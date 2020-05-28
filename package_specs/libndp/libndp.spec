@@ -11,9 +11,10 @@ Source0:    %{name}-%{version}.tar.gz
 TODO
 
 %prep
-%setup -a 0
+%setup
 
 %build
+./autogen.sh
 %configure  --sysconfdir=/etc    \
             --localstatedir=/var \
             --disable-static

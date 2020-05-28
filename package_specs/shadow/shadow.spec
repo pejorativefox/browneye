@@ -1,6 +1,6 @@
 Name:       shadow
 Version:    4.6
-Release:    1
+Release:    3
 Summary:    TODO
 License:    GPL3
 Source0:    %{name}-%{version}.tar.xz
@@ -28,66 +28,15 @@ sed -i 's/1000/999/' etc/useradd
 rm -rf %{buildroot}
 %make_install
 rm -vf %{buildroot}%{_infodir}/dir*
+rm -rf %{buildroot}/etc/pam.d
 
-mkdir -pv %{buildroot}/etc
-
-cat > %{buildroot}/etc/passwd << "EOF"
-root::0:0:root:/root:/bin/bash
-bin:x:1:1:bin:/dev/null:/bin/false
-daemon:x:6:6:Daemon User:/dev/null:/bin/false
-messagebus:x:18:18:D-Bus Message Daemon User:/var/run/dbus:/bin/false
-nobody:x:99:99:Unprivileged User:/dev/null:/bin/false
-EOF
-
-cat > %{buildroot}/etc/group << "EOF"
-root:x:0:
-bin:x:1:daemon
-sys:x:2:
-kmem:x:3:
-tape:x:4:
-tty:x:5:
-daemon:x:6:
-floppy:x:7:
-disk:x:8:
-lp:x:9:
-dialout:x:10:
-audio:x:11:
-video:x:12:
-utmp:x:13:
-usb:x:14:
-cdrom:x:15:
-adm:x:16:
-messagebus:x:18:
-input:x:24:
-mail:x:34:
-kvm:x:61:
-wheel:x:97:
-nogroup:x:99:
-users:x:999:
-EOF
-
+%post
+pwconv
+grpconv
 
 %files
-/etc/group
-/etc/passwd
 /etc/default/useradd
 /etc/login.defs
-/etc/pam.d/chage
-/etc/pam.d/chfn
-/etc/pam.d/chgpasswd
-/etc/pam.d/chpasswd
-/etc/pam.d/chsh
-/etc/pam.d/groupadd
-/etc/pam.d/groupdel
-/etc/pam.d/groupmems
-/etc/pam.d/groupmod
-/etc/pam.d/login
-/etc/pam.d/newusers
-/etc/pam.d/passwd
-/etc/pam.d/su
-/etc/pam.d/useradd
-/etc/pam.d/userdel
-/etc/pam.d/usermod
 /usr/bin/chage
 /usr/bin/chfn
 /usr/bin/chsh
@@ -126,4 +75,6 @@ EOF
 /usr/share/man/*
 
 %changelog
-# let's skip this for now
+* Thu May 14 2020 Chris Statzer <chris.statzer@qq.com> 4.6-3
+- Added post command to create /etc/shadow
+

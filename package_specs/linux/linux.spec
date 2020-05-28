@@ -13,17 +13,18 @@ Linux
 %prep
 %setup -n linux-%{version}
 
-
 %build
 make mrproper
-make defconfig
-%make_build
+cp -v %{SOURCE1} ./.config
+#%make_build
+make -j4
 make modules
 
 %install    
 # kernel
 mkdir -pv %{buildroot}/boot
 %make_install INSTALL_PATH=%{buildroot}/boot
+mv %{buildroot}/boot/vmlinuz %{buildroot}/boot/vmlinuz-%{version}
 
 # headers 
 make INSTALL_HDR_PATH=dest headers_install
@@ -41,7 +42,7 @@ Linux kernel
 
 %files kernel
 /boot/System.map
-/boot/vmlinuz
+/boot/vmlinuz-%{version}
 
 %package headers
 Summary: Linux kernel headers
@@ -58,6 +59,9 @@ Linux kernel modules
 
 %files modules
 /lib/modules/*
+
+%post modules
+depmod
 
 %changelog
 * Wed May 27 2020 Chris Statzer <chris.statzer@qq.com> 5.6.14-1

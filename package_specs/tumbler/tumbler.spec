@@ -47,6 +47,8 @@ rm -rf %{buildroot}
 /usr/share/dbus-1/services/org.xfce.Tumbler.Thumbnailer1.service
 /usr/share/gtk-doc/html/tumbler/*
 /usr/share/locale/*
+/usr/lib64/tumbler-1/plugins/tumbler-poppler-thumbnailer.la
+/usr/lib64/tumbler-1/plugins/tumbler-poppler-thumbnailer.so
 
 %changelog
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 0.2.7

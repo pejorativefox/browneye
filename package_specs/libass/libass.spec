@@ -3,7 +3,7 @@ Version:    0.14.0
 Release:    1
 Summary:    TODO
 License:    GPL3
-Source0:    %{name}-%{version}.tar.xz
+Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
 %description

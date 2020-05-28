@@ -3,7 +3,7 @@ Version:    0.1.14
 Release:    1
 Summary:    Libcomps is alternative for yum.comps library.
 License:    GPL
-Source0:    libcomps-libcomps-%{version}.tar.gz
+Source0:    libcomps-%{version}.tar.gz
 Prefix:     /usr
 
 %description

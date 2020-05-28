@@ -1,6 +1,6 @@
 Name:       libsolv
 Version:    0.7.10
-Release:    1
+Release:    2
 Summary:    Library for solving packages and reading repositories
 License:    BSD
 Source0:    %{name}-%{version}.tar.gz
@@ -15,7 +15,9 @@ Library for solving packages and reading repositories
 %build
 mkdir build
 pushd build
-cmake -DENABLE_COMPLEX_DEPS=1 -DENABLE_RPMDB=1 -DENABLE_RPMMD=1 -DENABLE_RPMPKG=1 -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
+cmake -DENABLE_COMPLEX_DEPS=1 -DENABLE_RPMDB=1 -DENABLE_RPMMD=1 \
+      -DENABLE_RPMPKG=1 -DCMAKE_INSTALL_PREFIX:PATH=/usr \
+      -DENABLE_PYTHON=ON ..
 %make_build
 popd
 
@@ -99,6 +101,8 @@ popd
 /usr/share/man/man1/rpmmd2solv.1.gz
 /usr/share/man/man1/rpms2solv.1.gz
 /usr/share/man/man1/updateinfoxml2solv.1.gz
+/usr/lib/python3.7/site-packages/_solv.so
+/usr/lib/python3.7/site-packages/solv.py
 
 %changelog
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 0.7.10

@@ -3,16 +3,17 @@ Version:    3.3.15
 Release:    1
 Summary:    TODO
 License:    GPL3
-Source0:    %{name}-%{version}.tar.xz
+Source0:    procps-v%{version}.tar.gz
 Prefix:     /usr
 
 %description
 TODO
 
 %prep
-%setup -q -a0
+%setup -n procps-v%{version}
 
 %build
+./autogen.sh
 %configure  --docdir=/usr/share/doc/procps-ng-3.3.15 \
             --disable-static                         \
             --disable-kill

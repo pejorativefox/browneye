@@ -1,11 +1,18 @@
 Name:       glib
 Version:    2.58.3
-Release:    1
+Release:    2
 Summary:    TODO
 License:    GPL3
 Prefix:     /usr
 Source0:    %{name}-%{version}.tar.xz
 
+Provides:   pkgconfig(glib-2.0)
+Provides:   pkgconfig(gobject-2.0)
+Provides:   pkgconfig(gmodule-2.0)
+Provides:   pkgconfig(gmodule-no-export-2.0)
+Provides:   pkgconfig(gio-unix-2.0)
+Provides:   pkgconfig(gio-2.0)
+Provides:   pkgconfig(gthread-2.0)
 
 %description
 TODO

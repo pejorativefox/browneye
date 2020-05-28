@@ -1,6 +1,6 @@
 Name:       gtk+
 Version:    3.24.5
-Release:    1
+Release:    2
 Summary:    TODO
 License:    GPL3
 Prefix:     /usr
@@ -24,6 +24,9 @@ rm -rf %{buildroot}
 %make_install
 glib-compile-schemas %{buildroot}/usr/share/glib-2.0/schemas
 rm -vf %{buildroot}%{_infodir}/dir*
+
+%post
+gtk-query-immodules-3.0 --update-cache
 
 %files
 /etc/gtk-3.0/im-multipress.conf

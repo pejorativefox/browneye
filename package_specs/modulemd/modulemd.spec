@@ -1,5 +1,5 @@
 Name:       modulemd
-Version:    1.8.16
+Version:    2.9.3
 Release:    1
 Summary:    C Library for manipulating module metadata files 
 License:    GPL
@@ -31,32 +31,19 @@ DESTDIR=%{buildroot} ninja install
 popd
 
 %files
-/usr/bin/modulemd-validator-v1
-/usr/include/modulemd/modulemd-buildopts.h
-/usr/include/modulemd/modulemd-component-module.h
-/usr/include/modulemd/modulemd-component-rpm.h
-/usr/include/modulemd/modulemd-component.h
-/usr/include/modulemd/modulemd-defaults.h
-/usr/include/modulemd/modulemd-dependencies.h
-/usr/include/modulemd/modulemd-deprecated.h
-/usr/include/modulemd/modulemd-improvedmodule.h
-/usr/include/modulemd/modulemd-intent.h
-/usr/include/modulemd/modulemd-module.h
-/usr/include/modulemd/modulemd-modulestream.h
-/usr/include/modulemd/modulemd-prioritizer.h
-/usr/include/modulemd/modulemd-profile.h
-/usr/include/modulemd/modulemd-servicelevel.h
-/usr/include/modulemd/modulemd-simpleset.h
-/usr/include/modulemd/modulemd-subdocument.h
-/usr/include/modulemd/modulemd-translation-entry.h
-/usr/include/modulemd/modulemd-translation.h
-/usr/include/modulemd/modulemd.h
+/usr/bin/modulemd-validator
+/usr/include/modulemd-2.0/*
 /usr/lib/libmodulemd.so
-/usr/lib/libmodulemd.so.1
-/usr/lib/libmodulemd.so.1.8.16
-/usr/lib/pkgconfig/modulemd.pc
+/usr/lib/libmodulemd.so.2
+/usr/lib/libmodulemd.so.2.9.3
+/usr/lib/pkgconfig/modulemd-2.0.pc
+/usr/lib/python3.7/site-packages/gi/overrides/Modulemd.py
+/usr/share/man/man1/modulemd-validator.1.gz
 
 %changelog
+* Wed May 13 2020 Chris Statzer <chris.statzer@qq.com> 2.9.3
+- Update of library to current stable
+
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 1.8.16
 - Initial RPM
 

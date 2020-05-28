@@ -1,24 +1,33 @@
 #!/bin/bash
-LFS=/home/daspork/browneye/root
+ROOT=$1
 
-#cp lfs-stage2.sh ${LFS}/
 
-mount -v --bind /dev $LFS/dev
+mount -v --bind /dev $ROOT/dev
+mount -vt devpts devpts $ROOT/dev/pts -o gid=5,mode=620
+mount -vt proc proc $ROOT/proc
+mount -vt sysfs sysfs $ROOT/sys
+mount -vt tmpfs tmpfs $ROOT/run
 
-mount -vt devpts devpts $LFS/dev/pts -o gid=5,mode=620
-mount -vt proc proc $LFS/proc
-mount -vt sysfs sysfs $LFS/sys
-mount -vt tmpfs tmpfs $LFS/run
-
-if [ -h $LFS/dev/shm ]; then
-  mkdir -pv $LFS/$(readlink $LFS/dev/shm)
+if [ -h $ROOT/dev/shm ]; then
+  mkdir -pv $ROOT/$(readlink $ROOT/dev/shm)
 fi
 
-chroot "$LFS" /tools/bin/env -i \
-    HOME=/root                  \
-    TERM="$TERM"                \
-    PS1='(lfs chroot) \u:\w\$ ' \
-    PATH=/bin:/usr/bin:/sbin:/usr/sbin:/tools/bin \
-    /tools/bin/bash --login +h
+COMMAND="/usr/bin/bash --login +h"
 
-exit
+
+if [ -z "$2" ]
+  then
+    echo "No argument supplied"
+  else
+    COMMAND=$2
+fi
+echo ">>> $COMMAND"
+
+chroot $ROOT $COMMAND
+
+umount $ROOT/run
+umount $ROOT/sys
+umount $ROOT/proc
+umount $ROOT/dev/pts
+umount $ROOT/dev
+
