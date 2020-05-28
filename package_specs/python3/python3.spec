@@ -6,10 +6,14 @@ License:    GPL3
 Source0:    Python-%{version}.tar.xz
 Prefix:     /usr
 
-AutoReq: no
+BuildRequires: sqlite3
+BuildRequires: bzip2
+BuildRequires: openssl
+BuildRequires: gnupg
 
 Provides: /bin/python3
 
+AutoReq: no
 Requires: libbz2.so.1.0()(64bit), libc.so.6()(64bit), libcrypt.so.1()(64bit), libdl.so.2()(64bit), libexpat.so.1()(64bit) libffi.so.6()(64bit) libgdbm.so.6()(64bit) libgdbm_compat.so.4()(64bit) liblzma.so.5()(64bit) liblzma.so.5(XZ_5.0)(64bit) libm.so.6()(64bit), libncursesw.so.6()(64bit) libpanelw.so.6()(64bit) libpthread.so.0()(64bit), libreadline.so.8()(64bit) libsqlite3.so.0()(64bit) libssl.so.1.1()(64bit), libutil.so.1()(64bit), libuuid.so.1()(64bit), libz.so.1()(64bit)
 
 %description
