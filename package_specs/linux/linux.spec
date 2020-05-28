@@ -1,11 +1,11 @@
 Name:       linux
-Version:    5.3.16
-Release:    9
+Version:    5.6.14
+Release:    1
 Summary:    Linux
 License:    GPL3
 Prefix:     /usr
 Source0:    linux-%{version}.tar.xz
-Source1:    linux-5.3.16.config
+Source1:    linux-%{version}.config
 
 %description
 Linux
@@ -64,6 +64,9 @@ Linux kernel modules
 depmod
 
 %changelog
+* Wed May 27 2020 Chris Statzer <chris.statzer@qq.com> 5.6.14-1
+- Upgraded kernel to current stable
+
 * Sat May 16 2020 Chris Statzer <chris.statzer@qq.com> 5.3.16-2
 - Fixed vmlinuz filenames to include version so they can be auto
   added by grubmkconfig.
