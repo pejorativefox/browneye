@@ -1,5 +1,5 @@
 Name:       firefox-bin
-Version:    79.0
+Version:    80.0
 Release:    1
 Summary:    TODO
 License:    GPL3
@@ -37,6 +37,9 @@ cp %{SOURCE1} %{buildroot}/share/applications
 /share/applications/firefox.desktop
 
 %changelog
+* Sat Aug 29 2020 Chris Statzer <chris.statzer@qq.com> 80.0
+- version bump
+
 * Wed Aug 19 2020 Chris Statzer <chris.statzer@qq.com> 79.0
 - version bump
 
