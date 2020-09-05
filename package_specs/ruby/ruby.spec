@@ -13,6 +13,7 @@ Ruby programming language
 %setup
 
 %build
+find ./ -type f -exec sed -i -r 's/(#!.*)(\/usr\/local\/bin\/ruby)/#!\/usr\/bin\/ruby/g' {} \;
 %configure
 %make_build
 
