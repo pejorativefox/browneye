@@ -1,5 +1,5 @@
 Name:       glib
-Version:    2.58.3
+Version:    2.66.0
 Release:    2
 Summary:    TODO
 License:    GPL3
@@ -26,7 +26,7 @@ pushd build-glib
 
 meson --prefix=/usr   \
       -Dman=false      \
-      -Dselinux=false \
+      -Dselinux=disabled \
       ..
 ninja
 popd
@@ -43,7 +43,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/gdbus
 /usr/bin/gdbus-codegen
 /usr/bin/gio
-/usr/bin/gio-launch-desktop
 /usr/bin/gio-querymodules
 /usr/bin/glib-compile-resources
 /usr/bin/glib-compile-schemas
@@ -65,23 +64,23 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/gio-unix-2.0/gio/gunixmounts.h
 /usr/include/gio-unix-2.0/gio/gunixoutputstream.h
 /usr/include/gio-unix-2.0/gio/gunixsocketaddress.h
-/usr/include/glib-2.0/*
+/usr/include/glib-2.0/
 /usr/lib/glib-2.0/include/glibconfig.h
 /usr/lib/libgio-2.0.so
 /usr/lib/libgio-2.0.so.0
-/usr/lib/libgio-2.0.so.0.5800.3
+/usr/lib/libgio-2.0.so.0.6600.0
 /usr/lib/libglib-2.0.so
 /usr/lib/libglib-2.0.so.0
-/usr/lib/libglib-2.0.so.0.5800.3
+/usr/lib/libglib-2.0.so.0.6600.0
 /usr/lib/libgmodule-2.0.so
 /usr/lib/libgmodule-2.0.so.0
-/usr/lib/libgmodule-2.0.so.0.5800.3
+/usr/lib/libgmodule-2.0.so.0.6600.0
 /usr/lib/libgobject-2.0.so
 /usr/lib/libgobject-2.0.so.0
-/usr/lib/libgobject-2.0.so.0.5800.3
+/usr/lib/libgobject-2.0.so.0.6600.0
 /usr/lib/libgthread-2.0.so
 /usr/lib/libgthread-2.0.so.0
-/usr/lib/libgthread-2.0.so.0.5800.3
+/usr/lib/libgthread-2.0.so.0.6600.0
 /usr/lib/pkgconfig/gio-2.0.pc
 /usr/lib/pkgconfig/gio-unix-2.0.pc
 /usr/lib/pkgconfig/glib-2.0.pc
@@ -93,18 +92,15 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/aclocal/glib-2.0.m4
 /usr/share/aclocal/glib-gettext.m4
 /usr/share/aclocal/gsettings.m4
-/usr/share/bash-completion/completions/gapplication
-/usr/share/bash-completion/completions/gdbus
-/usr/share/bash-completion/completions/gio
-/usr/share/bash-completion/completions/gresource
-/usr/share/bash-completion/completions/gsettings
-/usr/share/gdb/auto-load/usr/lib/libglib-2.0.so.0.5800.3-gdb.py
-/usr/share/gdb/auto-load/usr/lib/libgobject-2.0.so.0.5800.3-gdb.py
+/usr/share/bash-completion/completions/
+/usr/share/gdb/auto-load/usr/lib/libglib-2.0.so.0.6600.0-gdb.py
+/usr/share/gdb/auto-load/usr/lib/libgobject-2.0.so.0.6600.0-gdb.py
 /usr/share/gettext/its/gschema.its
 /usr/share/gettext/its/gschema.loc
-/usr/share/glib-2.0/*
-/usr/share/locale/*
+/usr/share/glib-2.0/
+/usr/share/locale/
 
 %changelog
-# let's skip this for now
+* Fri Sep 11 2020 Chris Statzer <chris.statzer@qq.com> 2.66.0
+- Update to newest glib
 
