@@ -1,6 +1,5 @@
 [browneye-core]
 name=browneye-core - 64-bit
-baseurl=https://dspk.xyz/browneye/repos/0.3.3
+baseurl=https://dspk.cc/browneye/repos/0.3.3
 enabled=1
 gpgcheck=0
-#gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
