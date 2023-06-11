@@ -11,6 +11,9 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 
+BASE_PATH = os.path.expanduser('~')
+
+
 def set_term_title(title):
     """Sets the title of a POSIX terminal using escape codes.
 
@@ -87,12 +90,12 @@ def process_sources(sources_file):
             filename = override_filename
         else:
             filename = os.path.basename(urlparse(url).path)
-        if os.path.isfile("/root/rpmbuild/SOURCES/{}".format(filename)):
+        if os.path.isfile(BASE_PATH + "/rpmbuild/SOURCES/{}".format(filename)):
             print("  + Already present (cached)")
         else:
-            print("Downloading to {}".format("/root/rpmbuild/SOURCES/{}".format(filename)))
-            subprocess.call(["wget", "-c", "-O", "/root/rpmbuild/SOURCES/{}".format(filename), url])
-        target_md5 = get_md5("/root/rpmbuild/SOURCES/{}".format(filename))
+            print("Downloading to {}".format(BASE_PATH + "/rpmbuild/SOURCES/{}".format(filename)))
+            subprocess.call(["wget", "-c", "-O", BASE_PATH +"/rpmbuild/SOURCES/{}".format(filename), url])
+        target_md5 = get_md5(BASE_PATH + "/rpmbuild/SOURCES/{}".format(filename))
         if md5 == target_md5:
             print("  + md5 good")
         else:
@@ -113,7 +116,7 @@ def build(path):
         print("- Has additional source files..")
         for f in glob.glob("{}/files/*".format(path)):
             print("  * Copying:", f)
-            shutil.copy(f, "/root/rpmbuild/SOURCES")
+            shutil.copy(f, BASE_PATH + "/rpmbuild/SOURCES")
     if os.path.isfile("{}/sources".format(path)):
         print("- Processing sources:")
         process_sources("{}/sources".format(path))
