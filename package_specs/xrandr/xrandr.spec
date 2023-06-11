@@ -12,7 +12,7 @@ Source0:    %{name}-%{version}.tar.gz
 TODO
 
 %prep
-%setup -n xorg-xrandr-xrandr-%{version}
+%setup -n xrandr-%{version}
 
 %build
 ./autogen.sh
