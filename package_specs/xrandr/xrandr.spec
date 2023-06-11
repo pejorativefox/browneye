@@ -15,7 +15,6 @@ TODO
 %setup -n xrandr-%{version}
 
 %build
-./autogen.sh
 %configure 
 %make_build
 
