@@ -100,7 +100,7 @@ def process_sources(sources_file):
             print("  + md5 good")
         else:
             print("Bad md5: {}".format(target_md5))
-            exit()
+            exit(-1)
 
 
 def build(path):
@@ -121,7 +121,8 @@ def build(path):
         print("- Processing sources:")
         process_sources("{}/sources".format(path))
     else:
-        print("WARNING: this package is missing a valid sources file!")
+        print("Error: this package is missing a valid sources file!")
+        exit(-1)
     set_term_title("Building ( {} )".format(spec))
     spec_with_path = "{}/{}".format(path, spec)
     comp_proc = subprocess.run(["rpmbuild", "-bb", "--clean", spec_with_path])
