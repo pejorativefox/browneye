@@ -1,5 +1,5 @@
 Name:       perl-cgi
-Version:    4.44
+Version:    4.57
 Release:    1
 Summary:    Perl CGI module
 License:    Artistic License 2.0
@@ -47,6 +47,9 @@ find %{buildroot} -name perllocal.pod -delete
 /usr/share/man/man3/CGI::Util.3.gz
 
 %changelog
+* Mon Jun 12 2023 Chris Statzer <chris.statzer@gmail.com> 4.57
+- Version Bump
+
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 4.44
 - Initial RPM
 

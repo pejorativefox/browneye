@@ -24,10 +24,10 @@ mkdir -pv %{buildroot}/usr/share/man/man8/
 mkdir -pv %{buildroot}/usr/share/man/man5/
 mkdir -pv %{buildroot}/etc/
 mkdir -pv %{buildroot}/usr/sbin/
-/usr/bin/install -o root -g root -m 644 sysklogd.8 %{buildroot}/usr/share/man/man8/sysklogd.8
-/usr/bin/install -o root -g root -m 644 syslogd.8 %{buildroot}/usr/share/man/man8/syslogd.8
-/usr/bin/install -o root -g root -m 644 syslog.conf.5 %{buildroot}/usr/share/man/man5/syslog.conf.5
-/usr/bin/install -o root -g root -m 644 klogd.8 %{buildroot}/usr/share/man/man8/klogd.8
+#/usr/bin/install -o root -g root -m 644 sysklogd.8 %{buildroot}/usr/share/man/man8/sysklogd.8
+##/usr/bin/install -o root -g root -m 644 syslogd.8 %{buildroot}/usr/share/man/man8/syslogd.8
+#/usr/bin/install -o root -g root -m 644 syslog.conf.5 %{buildroot}/usr/share/man/man5/syslog.conf.5
+#/usr/bin/install -o root -g root -m 644 klogd.8 %{buildroot}/usr/share/man/man8/klogd.8
 /usr/bin/install -m 500 -s syslogd %{buildroot}/usr/sbin/syslogd
 /usr/bin/install -m 500 -s klogd %{buildroot}/usr/sbin/klogd
 
@@ -52,10 +52,10 @@ EOF
 /etc/syslog.conf
 /usr/sbin/klogd
 /usr/sbin/syslogd
-/usr/share/man/man5/syslog.conf.5.gz
-/usr/share/man/man8/klogd.8.gz
-/usr/share/man/man8/sysklogd.8.gz
-/usr/share/man/man8/syslogd.8.gz
+#/usr/share/man/man5/syslog.conf.5.gz
+#/usr/share/man/man8/klogd.8.gz
+#/usr/share/man/man8/sysklogd.8.gz
+#/usr/share/man/man8/syslogd.8.gz
 
 %changelog
 # let's skip this for now

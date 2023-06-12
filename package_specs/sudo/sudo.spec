@@ -24,7 +24,8 @@ Sudo (su "do") allows a system administrator to delegate authority to give certa
 
 %install
 rm -rf %{buildroot}
-%make_install
+#%make_install
+make install DESTDIR="$RPM_BUILD_ROOT" install_uid=`id -u` install_gid=`id -g` sudoers_uid=`id -u` sudoers_gid=`id -g`
 
 %post
 ln -sfv libsudo_util.so.0.0.0 /usr/lib/sudo/libsudo_util.so.0

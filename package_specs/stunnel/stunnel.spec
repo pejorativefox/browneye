@@ -1,6 +1,6 @@
 Name:       stunnel 
-Version:    5.56
-Release:    3
+Version:    5.69
+Release:    1
 Summary:    TLS proxy daemon.
 License:    GPL
 Source0:    %{name}-%{version}.tar.gz
@@ -41,6 +41,9 @@ cp %{SOURCE2} %{buildroot}/etc/service.d/
 /etc/service.d/stunnel.service
 
 %changelog
+* Mon Jun 12 2023 Chris Statzer <chris.statzer@gmail.com> 5.69
+- Version bump
+
 * Thu May 14 2020 Chris Statzer <chris.statzer@qq.com> 5.56-2
 - Added finit control script
 
