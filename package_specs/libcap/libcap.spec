@@ -1,10 +1,12 @@
 Name:       libcap
 Version:    2.26
-Release:    1
+Release:    2
 Summary:    TODO
 License:    GPL3
 Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
+
+Provides: libcap.so.2()(64bit)
 
 %description
 TODO
