@@ -18,11 +18,8 @@ Unprivileged sandboxing tool
 
 %install
 rm -rf %{buildroot}
-#%make_install
-mkdir -p %{buildroot}/usr/bin
-install -m 0755 bwrap  %{buildroot}/%{_bindir}
-mkdir -p %{buildroot}/usr/share/bash-completion/completions
-install -p completions/bash/bwrap %{buildroot}/usr/share/bash-completion/completions/bwrap
+%make_install
+
 %files
 /usr/bin/bwrap
 /usr/share/bash-completion/completions/bwrap
