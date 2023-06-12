@@ -25,7 +25,8 @@ TODO
             --disable-static     \
             --without-python     \
             --without-systemd    \
-            --without-systemdsystemunitdir
+            --without-systemdsystemunitdir \
+            --disable-makeinstall-chown
 %make_build
 
 %install
