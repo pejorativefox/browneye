@@ -23,6 +23,6 @@ rm -rf %{buildroot}
 %files
 
 %changelog
-* Sun May 17 2020 Chris Statzer <chris.statzer@qq.com> 3.30.1
+* Tue Jun 13 2023 Chris Statzer <chris.statzer@gmail.com> 3.30.1
 - Initial RPM
 
