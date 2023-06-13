@@ -1,6 +1,6 @@
 Name:       grub
 Version:    2.02
-Release:    1
+Release:    2
 Summary:    TODO
 License:    GPL3
 Source0:    %{name}-%{version}.tar.xz
@@ -16,6 +16,10 @@ TODO
 
 %configure --disable-efiemu       \
            --sysconfdir=/etc      \
+           --disable-efimenu      \
+           --with-patform=efi     \
+           --target=x86_64        \
+           --enable-grub-mkfont   \
            --disable-werror
 %make_build
 
@@ -28,34 +32,9 @@ mv -v %{buildroot}/etc/bash_completion.d/grub %{buildroot}/usr/share/bash-comple
 
 %files
 /etc/grub.d/*
-/usr/bin/grub-editenv
-/usr/bin/grub-file
-/usr/bin/grub-fstest
-/usr/bin/grub-glue-efi
-/usr/bin/grub-kbdcomp
-/usr/bin/grub-menulst2cfg
-/usr/bin/grub-mkfont
-/usr/bin/grub-mkimage
-/usr/bin/grub-mklayout
-/usr/bin/grub-mknetdir
-/usr/bin/grub-mkpasswd-pbkdf2
-/usr/bin/grub-mkrelpath
-/usr/bin/grub-mkrescue
-/usr/bin/grub-mkstandalone
-/usr/bin/grub-mount
-/usr/bin/grub-render-label
-/usr/bin/grub-script-check
-/usr/bin/grub-syslinux2cfg
+/usr/bin/grub-*
 /usr/lib64/grub/i386-pc/*
-/usr/sbin/grub-bios-setup
-/usr/sbin/grub-install
-/usr/sbin/grub-macbless
-/usr/sbin/grub-mkconfig
-/usr/sbin/grub-ofpathname
-/usr/sbin/grub-probe
-/usr/sbin/grub-reboot
-/usr/sbin/grub-set-default
-/usr/sbin/grub-sparc64-setup
+/usr/sbin/grub-*
 /usr/share/bash-completion/completions/grub
 /usr/share/grub/grub-mkconfig_lib
 /usr/share/info/grub-dev.info.gz
@@ -64,4 +43,5 @@ mv -v %{buildroot}/etc/bash_completion.d/grub %{buildroot}/usr/share/bash-comple
 /usr/share/man/*
 
 %changelog
-# let's skip this for now
+* Tue Jun 13 2023 Chris Statzer <chris.statzer@gmail.com> 2.02-2
+- Added UEFI support to build
