@@ -30,11 +30,7 @@ popd
 /etc/init.d/fuse3
 /lib/udev/rules.d/99-fuse3.rules
 /usr/bin/fusermount3
-/usr/include/fuse3/cuse_lowlevel.h
-/usr/include/fuse3/fuse.h
-/usr/include/fuse3/fuse_common.h
-/usr/include/fuse3/fuse_lowlevel.h
-/usr/include/fuse3/fuse_opt.h
+/usr/include/fuse3/
 /usr/lib/libfuse3.so
 /usr/lib/libfuse3.so.3
 /usr/lib/libfuse3.so.3.2.5

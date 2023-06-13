@@ -33,6 +33,7 @@ pushd build
 make install-libs DESTDIR=$RPM_BUILD_ROOT
 popd
 rm -vf %{buildroot}%{_infodir}/dir*
+chmod +w %{buildroot}/usr/lib/*.a
 
 %files
 /bin/chattr
