@@ -3,3 +3,4 @@ target-root/
 .build_cache/
 iso_build/
 browneye.iso
+build/
