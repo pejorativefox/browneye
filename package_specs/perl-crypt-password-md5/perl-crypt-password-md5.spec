@@ -1,5 +1,5 @@
 Name:       perl-crypt-password-md5
-Version:    1.40
+Version:    1.42
 Release:    1
 Summary:    Crypt::PasswdMD5 - Provide interoperable MD5-based crypt() functions
 License:    GPL 
@@ -31,6 +31,8 @@ find %{buildroot} -name perllocal.pod -delete
 /usr/share/man/man3/Crypt::PasswdMD5.3.gz
 
 %changelog
+* Mon Jun 16 2023 Chris Statzer <chris.statzer@gmail.com> 1.42
+- Version bump
 * Thu May 07 2020 Chris Statzer <chris.statzer@qq.com> 1.40
 - Initial RPM
 

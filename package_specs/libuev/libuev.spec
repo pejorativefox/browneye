@@ -1,5 +1,5 @@
 Name:       libuev
-Version:    2.3.0
+Version:    2.3.2
 Release:    1
 Summary:    TODO
 License:    GPL3
