@@ -27,7 +27,7 @@ rm -rf %{buildroot}
 %make_install
 #mkdir -pv %{buildroot}/lib
 #mv -v %{buildroot}/usr/lib64/libncursesw.so.6* %{buildroot}/lib
-mv -v %{buildroot}/share/pkgconfig %{buildroot}/usr/share
+#mv -v %{buildroot}/usr/share/pkgconfig %{buildroot}/usr/share
 
 for lib in ncurses form panel menu ; do
     rm -vf                    %{buildroot}/usr/lib64/lib${lib}.so

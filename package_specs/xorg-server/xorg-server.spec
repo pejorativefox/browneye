@@ -16,6 +16,8 @@ TODO
 
 %build
 %configure --enable-glamor          \
+           --enable-install-setuid  \
+           --enable-suid-wrapper    \
            --disable-systemd-logind \
            --with-xkb-output=/var/lib/xkb
 %make_build
@@ -57,6 +59,10 @@ EOF
 /usr/share/man/man5/xorg.conf.5.gz
 /usr/share/man/man5/xorg.conf.d.5.gz
 /var/lib/xkb/README.compiled
+/usr/libexec/Xorg
+/usr/libexec/Xorg.wrap
+/usr/share/man/man1/Xorg.wrap.1.gz
+/usr/share/man/man5/Xwrapper.config.5.gz
 
 %changelog
 # let's skip this for now
