@@ -13,6 +13,11 @@ mkdir -pv $SQUASH_ROOT
 ./scripts/install.sh $SQUASH_ROOT
 
 mkdir -pv $CD_ROOT/isolinux/kernel
+
+# EFI 
+mkdir -pv $CD_ROOT/EFI/BOOT
+cp /share/syslinux/efi64/syslinux.efi $CD_ROOT/EFI/BOOT/BOOTX64.EFI
+
 cp /share/syslinux/isolinux.bin $CD_ROOT/isolinux
 # modules
 cp /share/syslinux/ldlinux.c32 $CD_ROOT/isolinux
@@ -31,7 +36,7 @@ mksquashfs $SQUASH_ROOT $CD_ROOT/LiveOS/squashfs.img
 dracut --no-hostonly --add "dmsquash-live pollcdrom" $CD_ROOT/boot/initrd.img
 cp /boot/vmlinuz-5.6.14 $CD_ROOT/boot/vmlinuz
 
-genisoimage -o ./build/browneye.iso -V BrowneyeLive \
+genisoimage -o ./build/browneye.iso -V BrowneyeLive -r -J \
             -b isolinux/isolinux.bin -c isolinux/boot.cat \
 	    -no-emul-boot -boot-load-size 4 -boot-info-table -debug $CD_ROOT
 
