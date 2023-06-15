@@ -20,7 +20,8 @@ mkdir -pv %{buildroot}/lib/firmware
 cp iwlwifi* %{buildroot}/lib/firmware
 cp -r mediatek %{buildroot}/lib/firmware
 cp -r rtlwifi/ %{buildroot}/lib/firmware
-
+cp -r amdgpu/ %{buildroot}/lib/firmware
+ 
 %files
 /lib/firmware/
 
