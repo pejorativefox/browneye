@@ -1,5 +1,5 @@
 Name:       meson
-Version:    0.52.1
+Version:    1.1.1
 Release:    1
 Summary:    Meson build system
 License:    GPL3
@@ -23,14 +23,9 @@ cp -rv dest/* %{buildroot}
 
 
 %files
+/usr/lib/python3.7/site-packages/mesonbuild/
 /usr/bin/meson
-/usr/lib/python3.7/site-packages/meson-0.52.1-py3.7.egg-info/PKG-INFO
-/usr/lib/python3.7/site-packages/meson-0.52.1-py3.7.egg-info/SOURCES.txt
-/usr/lib/python3.7/site-packages/meson-0.52.1-py3.7.egg-info/dependency_links.txt
-/usr/lib/python3.7/site-packages/meson-0.52.1-py3.7.egg-info/entry_points.txt
-/usr/lib/python3.7/site-packages/meson-0.52.1-py3.7.egg-info/requires.txt
-/usr/lib/python3.7/site-packages/meson-0.52.1-py3.7.egg-info/top_level.txt
-/usr/lib/python3.7/site-packages/mesonbuild/*
+/usr/lib/python3.7/site-packages/meson-1.1.1-py3.7.egg-info/
 /usr/share/man/man1/meson.1.gz
 /usr/share/polkit-1/actions/com.mesonbuild.install.policy
 
