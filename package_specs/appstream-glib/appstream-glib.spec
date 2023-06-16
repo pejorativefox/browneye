@@ -16,7 +16,7 @@ Glib AppStream metadata support.
 %build
 mkdir build
 pushd build
-meson --prefix=/usr -Dgtk_doc=false -Dman=false ..
+meson --prefix=/usr -Dgtk-doc=false -Dman=false ..
 ninja
 popd
 
