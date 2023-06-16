@@ -121,8 +121,11 @@ def build(path):
         print("- Processing sources:")
         process_sources("{}/sources".format(path))
     else:
-        print("Error: this package is missing a valid sources file!")
-        exit(-1)
+        if os.path.isfile("{}/nosources".format(path)):
+            print("This packages does not require sources. Skpping!")
+        else:
+            print("Error: this package is missing a valid sources file!")
+            exit(-1)
     set_term_title("Building ( {} )".format(spec))
     spec_with_path = "{}/{}".format(path, spec)
     comp_proc = subprocess.run(["rpmbuild", "-bb", "--clean", spec_with_path])
