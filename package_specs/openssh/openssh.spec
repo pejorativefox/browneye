@@ -1,6 +1,6 @@
 Name:       openssh
 Version:    8.0p1
-Release:    4
+Release:    5
 Summary:    OpenSSH is the premier connectivity tool for remote login with the SSH protocol. 
 License:    GPL3
 Source0:    %{name}-%{version}.tar.gz
@@ -29,7 +29,7 @@ mkdir -pv %{buildroot}/etc/
 cp -v %{SOURCE1} %{buildroot}/etc/sshd_config
 
 mkdir -pv %{buildroot}/etc/finit.d/available
-cp %{SOURCE2} %{buildroot}/etc/finit.d/available
+cp %{SOURCE2} %{buildroot}/etc/finit.d/available/sshd.conf
 
 mkdir -pv %{buildroot}/sbin
 cp %{SOURCE3} %{buildroot}/sbin
@@ -61,11 +61,14 @@ make_sshd_keys
 /usr/libexec/ssh-pkcs11-helper
 /usr/sbin/sshd
 /usr/share/man/*
-/etc/finit.d/available/sshd-service.conf
+/etc/finit.d/available/sshd.conf
 /etc/sshd_config
 /sbin/make_sshd_keys
 
 %changelog
+* Fri Jun 16 2023 Chris Statzer <chris.statzer@gmail.com> 8.0p1-5
+- Renamed service destination file to follow the naming scheme
+
 * Thu May 14 2020 Chris Statzer <chris.statzer@qq.com> 8.0p1
 - Added finit services and a default configuration
 
