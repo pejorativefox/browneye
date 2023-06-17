@@ -9,7 +9,8 @@ SQL_CREATE_TABLES = """
 CREATE TABLE package (
             id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
             name TEXT,
-            built BOOL DEFAULT FALSE
+            built BOOL DEFAULT FALSE,
+            failed BOOL DEFAULT FALSE
         );
 """
 
@@ -27,11 +28,21 @@ SELECT built FROM package WHERE name="{}" LIMIT 1;
 """
 
 SQL_SET_BUILT = """
-UPDATE package SET built = TRUE WHERE name="{}";
+UPDATE package 
+    SET built = TRUE,
+        failed = FALSE
+WHERE name="{}";
 """
 
 SQL_SET_UNBUILT = """
 UPDATE package SET built = FALSE WHERE name="{}";
+"""
+
+SQL_SET_FAILED = """
+UPDATE package 
+    SET built = FALSE,
+        failed = TRUE 
+WHERE name="{}";
 """
 
 class PackageDatabase(object):
@@ -85,6 +96,11 @@ class PackageDatabase(object):
     def set_unbuilt(self, name):
         cur = self._connection.cursor()
         cur.execute(SQL_SET_UNBUILT.format(name))
+        self._connection.commit()
+    
+    def set_failed(self, name):
+        cur = self._connection.cursor()
+        cur.execute(SQL_SET_FAILED.format(name))
         self._connection.commit()
 
 if __name__ == "__main__":

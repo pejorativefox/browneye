@@ -71,9 +71,11 @@ def fetch_sources(sources, override_filename=None):
             cmd = ["curl", "-fL", "-o", out_file, url]
             #cmd = ["wget", "-N", "-c", "-O", out_file, url]
             if os.getenv("USE_PROXYCHAINS"):
-                cmd = ["proxychains4"] + cmd
+                cmd = ["proxychains4", "-q"] + cmd
             # use runprocess and check return code
             return_code = run_process(cmd)
+            if return_code != 0:
+                return False
             #subprocess.call(cmd)
 
         target_md5 = get_md5(BASE_PATH + "/rpmbuild/SOURCES/{}".format(filename))
@@ -83,3 +85,4 @@ def fetch_sources(sources, override_filename=None):
             print("Bad md5: {}".format(target_md5))
             # return false here as issues with md5
             return False
+    return True
