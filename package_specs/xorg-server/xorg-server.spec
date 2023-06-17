@@ -6,8 +6,8 @@ License:    GPL3
 Prefix:     /usr
 Source0:    %{name}-%{version}.tar.bz2
 
-
-
+BuildRequires: libX11, mesa, pixman, libdrm, libXfont2, libxkbfile, xtrans
+BuildRequires: libepoxy
 %description
 TODO
 
