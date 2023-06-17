@@ -1,6 +1,7 @@
 root/
 target-root/
-.build_cache/
+.package.sqlite
 iso_build/
 browneye.iso
 build/
+__pycache__
