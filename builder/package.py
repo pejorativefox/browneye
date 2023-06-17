@@ -14,6 +14,9 @@ class Package(object):
     
     def get_full_sources_path(self):
         return self.path + "/sources"
+    
+    def get_files_path(self):
+        return self.path + "/files"
 
 def check_has_sources(path):
     return True
