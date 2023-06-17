@@ -1,16 +1,16 @@
 Name:       ncurses
-Version:    6.1
+Version:    6.4
 Release:    1
-Summary:    TODO
+Summary:    Text based user interface library
 License:    GPL3
 Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
 %description
-TODO
+The ncurses (new curses) library is a free software emulation of curses in System V Release 4.0 (SVr4), and more. 
 
 %prep
-%setup -q -a0
+%setup
 
 %build
 sed -i '/LIBTOOL_INSTALL/d' c++/Makefile.in
@@ -25,19 +25,6 @@ sed -i '/LIBTOOL_INSTALL/d' c++/Makefile.in
 %install
 rm -rf %{buildroot}
 %make_install
-#mkdir -pv %{buildroot}/lib
-#mv -v %{buildroot}/usr/lib64/libncursesw.so.6* %{buildroot}/lib
-#mv -v %{buildroot}/usr/share/pkgconfig %{buildroot}/usr/share
-
-for lib in ncurses form panel menu ; do
-    rm -vf                    %{buildroot}/usr/lib64/lib${lib}.so
-    echo "INPUT(-l${lib}w)" > %{buildroot}/usr/lib64/lib${lib}.so
-    ln -sfv ${lib}w.pc        %{buildroot}/usr/share/pkgconfig/${lib}.pc
-done
-
-rm -vf                     %{buildroot}/usr/lib64/libcursesw.so
-echo "INPUT(-lncursesw)" > %{buildroot}/usr/lib64/libcursesw.so
-ln -sfv libncurses.so      %{buildroot}/usr/lib64/libcurses.so
 
 %files
 /usr/bin/captoinfo
@@ -73,38 +60,26 @@ ln -sfv libncurses.so      %{buildroot}/usr/lib64/libcurses.so
 /usr/include/unctrl.h
 /usr/lib64/libformw.so
 /usr/lib64/libformw.so.6
-/usr/lib64/libformw.so.6.1
+/usr/lib64/libformw.so.6.4
 /usr/lib64/libmenuw.so
 /usr/lib64/libmenuw.so.6
-/usr/lib64/libmenuw.so.6.1
+/usr/lib64/libmenuw.so.6.4
 /usr/lib64/libncurses++w.a
 /usr/lib64/libncursesw.so
 /usr/lib64/libncursesw.so.6
-/usr/lib64/libncursesw.so.6.1
+/usr/lib64/libncursesw.so.6.4
 /usr/lib64/libpanelw.so
 /usr/lib64/libpanelw.so.6
-/usr/lib64/libpanelw.so.6.1
-/usr/share/man/*
-/usr/share/pkgconfig/formw.pc
-/usr/share/pkgconfig/menuw.pc
-/usr/share/pkgconfig/ncurses++w.pc
-/usr/share/pkgconfig/ncursesw.pc
-/usr/share/pkgconfig/panelw.pc
-/usr/share/tabset/std
-/usr/share/tabset/stdcrt
-/usr/share/tabset/vt100
-/usr/share/tabset/vt300
-/usr/share/terminfo/*
-/usr/lib64/libcurses.so
-/usr/lib64/libcursesw.so
-/usr/lib64/libform.so
-/usr/lib64/libmenu.so
-/usr/lib64/libncurses.so
-/usr/lib64/libpanel.so
-/usr/share/pkgconfig/form.pc
-/usr/share/pkgconfig/menu.pc
-/usr/share/pkgconfig/ncurses.pc
-/usr/share/pkgconfig/panel.pc
+/usr/lib64/libpanelw.so.6.4
+/usr/lib64/pkgconfig/formw.pc
+/usr/lib64/pkgconfig/menuw.pc
+/usr/lib64/pkgconfig/ncurses++w.pc
+/usr/lib64/pkgconfig/ncursesw.pc
+/usr/lib64/pkgconfig/panelw.pc
+/usr/share/man/
+/usr/share/tabset/
+/usr/share/terminfo/
 
 %changelog
-# let's skip this for now
+* Sat Jun 17 2023 Chris Statzer <chris.statzer@gmail.com> 6.4
+- Bumped version to 6.4
