@@ -1,7 +1,7 @@
 Name:       lua
 Version:    5.3.5
-Release:    1
-Summary:    TODO
+Release:    2
+Summary:    Lua High-level programming language
 License:    GPL3
 Prefix:     /usr
 Source0:    %{name}-%{version}.tar.gz
@@ -10,7 +10,7 @@ Patch:      lua-5.3.5-shared_library-1.patch
 Provides: liblua.so.5.3()(64bit)
 
 %description
-TODO
+Lua is a lightweight, high-level, multi-paradigm programming language designed primarily for embedded use in applications.
 
 %prep
 %setup
@@ -53,7 +53,7 @@ mkdir -pv %{buildroot}/usr/bin
 mkdir -pv %{buildroot}/usr/include
 mkdir -pv %{buildroot}/usr/lib
 chmod +x lua luac
-install -v -m744 -D lua luac %{buildroot}/usr/bin
+install -v -m755 -D lua luac %{buildroot}/usr/bin
 install -v -m644 -D lua.h luaconf.h lualib.h lauxlib.h lua.hpp %{buildroot}/usr/include
 install -v -m644 -D liblua.so liblua.so.5.3 liblua.so.5.3.4 %{buildroot}/usr/lib
 popd
@@ -75,5 +75,5 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/lib/pkgconfig/lua.pc
 
 %changelog
-# let's skip this for now
-
+Sun Jun 18 2023 Chris Statzer <chris.statzer@gmail.com> 5.3.5-2
+- Fixed executable bit on the main lua exe
