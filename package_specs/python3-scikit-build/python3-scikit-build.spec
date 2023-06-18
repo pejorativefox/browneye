@@ -1,5 +1,5 @@
 Name:       python3-scikit-build
-Version:    0.10.0
+Version:    0.13.0
 Release:    1
 Summary:    Improved build system generator for CPython C, C++, Cython and Fortran extensions 
 License:    GPL
@@ -22,5 +22,8 @@ python3 setup.py install --root %{buildroot}
 /usr/lib/python3.7/site-packages/*
 
 %changelog
+* Sun Jun 18 2023 Chris Statzer <chris.statzer@gmail.com> 0.13.0
+- Version bump
+
 * Tue Dec 11 2019 Chris Statzer <chris.statzer@qq.com> 0.10.0
 - Initial rpm package

@@ -17,7 +17,6 @@ mkdir build
 pushd build
 meson    --prefix=/usr \
          -Dwith_docs=false \
-         -Dskip_clang_tidy=true \
          -Dskip_formatters=true \
          -Dskip_introspection=true \
          -Ddeveloper_build=false ..
