@@ -62,6 +62,8 @@ rm -rf %{buildroot}
 /usr/share/gnome/shutdown/libcanberra-logout-sound.sh
 /usr/share/gtk-doc/
 /usr/share/vala/vapi/
+/usr/lib64/libcanberra-0.30/libcanberra-gstreamer.la
+/usr/lib64/libcanberra-0.30/libcanberra-gstreamer.so
 
 %changelog
 * Sun May 17 2020 Chris Statzer <chris.statzer@qq.com> 0.30

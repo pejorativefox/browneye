@@ -10,7 +10,7 @@ Prefix:     /usr
 A Python Parsing Module
 
 %prep
-%setup -n pyparsing-%{version}
+%setup -n pyparsing-pyparsing_%{version}
 
 %build
 

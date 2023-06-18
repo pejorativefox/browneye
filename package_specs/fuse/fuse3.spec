@@ -13,6 +13,7 @@ FUSE (Filesystem in Userspace)
 %setup
 
 %build
+sed -i '/^udev/,$ s/^/#/' util/meson.build &&
 mkdir build
 pushd build
 meson --prefix=/usr ..
@@ -26,11 +27,12 @@ DESTDIR=%{buildroot} ninja install
 popd
 
 %files
-/etc/fuse.conf
-/etc/init.d/fuse3
-/lib/udev/rules.d/99-fuse3.rules
 /usr/bin/fusermount3
-/usr/include/fuse3/
+/usr/include/fuse3/cuse_lowlevel.h
+/usr/include/fuse3/fuse.h
+/usr/include/fuse3/fuse_common.h
+/usr/include/fuse3/fuse_lowlevel.h
+/usr/include/fuse3/fuse_opt.h
 /usr/lib/libfuse3.so
 /usr/lib/libfuse3.so.3
 /usr/lib/libfuse3.so.3.2.5
@@ -38,6 +40,7 @@ popd
 /usr/sbin/mount.fuse3
 /usr/share/man/man1/fusermount3.1.gz
 /usr/share/man/man8/mount.fuse3.8.gz
+
 
 %changelog
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 3.30.1
