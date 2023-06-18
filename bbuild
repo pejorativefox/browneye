@@ -8,7 +8,7 @@ sys.path.append("./builder/")
 import db
 from build import PackageBuilder
 
-logging.basicConfig(level=logging.DEBUG)
+
 
 parser = argparse.ArgumentParser(description='Build System')
 
@@ -38,6 +38,7 @@ if args.command == "build":
     if args.package_name == "all":
         pbuilder.build_all()
     else:
+        logging.basicConfig(level=logging.DEBUG)
         pbuilder.build_package(args.package_name)
 
 
