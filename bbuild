@@ -1,0 +1,35 @@
+#!/bin/env python3
+
+import argparse
+import sys
+sys.path.append("./builder/")
+
+import db
+
+parser = argparse.ArgumentParser(description='Build System')
+
+# Subparsers
+command_parsers = parser.add_subparsers(dest='command')
+build_parser = command_parsers.add_parser('build')
+query_parser = command_parsers.add_parser('query')
+
+# build
+build_parser.add_argument("package_name")
+#build_parser.add_argument("--all", action="store_true")
+
+# query
+query_parser.add_argument("mode")
+
+
+args = parser.parse_args()
+
+
+if args.command == "query":
+    if args.mode == "failed":
+        package_db = db.PackageDatabase()
+        failed_packages = package_db.get_failed()
+        for p in failed_packages:
+            print(p[1])
+
+
+#print(args)

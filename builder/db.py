@@ -45,6 +45,10 @@ UPDATE package
 WHERE name="{}";
 """
 
+SQL_GET_FAILED = """
+SELECT * FROM package WHERE failed=TRUE;
+"""
+
 class PackageDatabase(object):
     def __init__(self, path=DEFAULT_DATABASE_PATH):
         self._path = path
@@ -102,6 +106,14 @@ class PackageDatabase(object):
         cur = self._connection.cursor()
         cur.execute(SQL_SET_FAILED.format(name))
         self._connection.commit()
+    
+    def get_failed(self):
+        cur = self._connection.cursor()
+        cur.execute(SQL_GET_FAILED)
+        rows = cur.fetchall()
+        return rows
+        
+        
 
 if __name__ == "__main__":
     import package
