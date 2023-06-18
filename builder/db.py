@@ -81,7 +81,7 @@ class PackageDatabase(object):
             self._connection.commit()
             return True
         else:
-            print("Already exists: ", name)
+            #print("Already exists: ", name)
             return False
 
     def is_built(self, name):

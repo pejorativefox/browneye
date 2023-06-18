@@ -28,13 +28,14 @@ def discover_packages(path="package_specs/"):
     packages = []
     package_glob = glob.glob(path + "*")
     for package_path in package_glob:
-        print("- Found Package Path: ", package_path)
+        #print("- Found Package Path: ", package_path)
         for spec in glob.glob("{}/*.spec".format(package_path)): # TODO: check multiple and warn
-            print("    Found spec: ", spec)
+            #print("    Found spec: ", spec)
             spec_file = spec.split("/")[-1]
             package_name = spec.split(".")[0].split("/")[-1]
             # TODO: check needs root and has sources
             packages.append(Package(package_name, package_path, spec_file))
+    print("Found {} packages.".format(len(packages)))
     return packages
 
  

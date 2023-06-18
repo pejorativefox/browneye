@@ -1,10 +1,14 @@
 #!/bin/env python3
 
 import argparse
+import logging
 import sys
 sys.path.append("./builder/")
 
 import db
+from build import PackageBuilder
+
+logging.basicConfig(level=logging.DEBUG)
 
 parser = argparse.ArgumentParser(description='Build System')
 
@@ -19,10 +23,9 @@ build_parser.add_argument("package_name")
 
 # query
 query_parser.add_argument("mode")
-
-
 args = parser.parse_args()
 
+pbuilder = PackageBuilder()
 
 if args.command == "query":
     if args.mode == "failed":
@@ -30,6 +33,12 @@ if args.command == "query":
         failed_packages = package_db.get_failed()
         for p in failed_packages:
             print(p[1])
+
+if args.command == "build":
+    if args.package_name == "all":
+        pbuilder.build_all()
+    else:
+        pbuilder.build_package(args.package_name)
 
 
 #print(args)
