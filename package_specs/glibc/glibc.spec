@@ -7,6 +7,8 @@ Source0:    %{name}-%{version}.tar.xz
 Patch:     glibc-2.29-fhs-1.patch 
 Prefix:     /usr
 
+Provides: rtld(GNU_HASH)
+
 %description
 TODO
 kluged to work around: https://www.linuxquestions.org/questions/slackware-14/bug-while-building-glibc-2-27-with-new-gcc-8-1-1-and-perl-5-28-0-a-4175632782/
