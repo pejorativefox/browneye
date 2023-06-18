@@ -56,7 +56,8 @@ class PackageDatabase(object):
             print("Creating database @", self._path)
             self._create_package_database(self._path)
         else:
-            print("Aldeady have a database @", self._path)
+            #print("Aldeady have a database @", self._path)
+            pass
         
         self._connection = sql.connect(self._path)
 
