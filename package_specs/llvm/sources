@@ -1,0 +1,3 @@
+d9185fc007c32aea27a6de3c7c1eb90d https://github.com/llvm/llvm-project/releases/download/llvmorg-16.0.5/llvm-16.0.5.src.tar.xz
+8b506e49e5fa4c41186ba8ba7da5af82 https://anduin.linuxfromscratch.org/BLFS/llvm/llvm-third-party.src.tar.xz
+356a1aff675d281d7c76165269d33bd5 https://anduin.linuxfromscratch.org/BLFS/llvm/llvm-cmake.src.tar.xz

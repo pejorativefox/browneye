@@ -41,6 +41,8 @@ rm -rf %{buildroot}
 /usr/lib64/tumbler-1/plugins/tumbler-jpeg-thumbnailer.so
 /usr/lib64/tumbler-1/plugins/tumbler-pixbuf-thumbnailer.la
 /usr/lib64/tumbler-1/plugins/tumbler-pixbuf-thumbnailer.so
+/usr/lib64/tumbler-1/plugins/tumbler-gst-thumbnailer.la
+/usr/lib64/tumbler-1/plugins/tumbler-gst-thumbnailer.so
 /usr/lib64/tumbler-1/tumblerd
 /usr/share/dbus-1/services/org.xfce.Tumbler.Cache1.service
 /usr/share/dbus-1/services/org.xfce.Tumbler.Manager1.service

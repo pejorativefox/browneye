@@ -10,4 +10,10 @@ def set_term_title(title):
     """
     print("\033]0;{}\a".format(title))
 
-    
+
+def print_success_message(message):
+    print("\x1b[32m{}\x1b[0m".format(message))
+
+def print_fail_message(message):
+    print("\x1b[31m{}\x1b[0m".format(message))
+

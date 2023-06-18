@@ -7,6 +7,7 @@ from db import PackageDatabase
 from process import run_process
 from package import discover_packages
 from sources import parse_sources, fetch_sources
+import util
 
 log = logging.getLogger("BUILD")
 
@@ -22,6 +23,7 @@ class PackageBuilder(object):
 
     def _build_package(self, package):
         print("Building Package ({})".format(package.name))
+        util.set_term_title("Building Package ({})".format(package.name))
         sources = parse_sources(package.get_full_sources_path())
         if fetch_sources(sources) != True:
             return False
@@ -44,10 +46,10 @@ class PackageBuilder(object):
             package = self.packages[package_name]
             if self._build_package(package) == True:
                 self.package_db.set_built(package.name)
-                print("Sucessfully built: ", package_name)
+                util.print_success_message("Sucessfully built: {}".format(package_name))
             else:
                 self.package_db.set_failed(package.name)
-                print("Failed to build: ", package_name)
+                util.print_fail_message("Failed to build: {}".format(package_name))
         else:
             print("Package {} not found.".format(package_name))
 

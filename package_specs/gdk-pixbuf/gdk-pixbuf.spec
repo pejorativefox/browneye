@@ -31,8 +31,9 @@ popd
 rm -vf %{buildroot}%{_infodir}/dir*
 
 %post
-gdk-pixbuf-query-loaders > /usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders.cache
+update-mime-database /usr/share/mime
 gdk-pixbuf-query-loaders --update-cache
+
 
 %files
 /usr/bin/gdk-pixbuf-csource
