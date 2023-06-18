@@ -1,6 +1,6 @@
 Name:       libsolv
 Version:    0.7.10
-Release:    2
+Release:    3
 Summary:    Library for solving packages and reading repositories
 License:    BSD
 Source0:    %{name}-%{version}.tar.gz
@@ -25,6 +25,8 @@ popd
 rm -rf %{buildroot}
 pushd build
 %make_install
+mkdir -pv %{buildroot}/usr/share/cmake-3.17/Modules/
+mv %{buildroot}/usr/share/cmake/Modules/* %{buildroot}/usr/share/cmake-3.17/Modules/
 popd
 
 %files
@@ -70,7 +72,7 @@ popd
 /usr/lib64/libsolvext.so.1
 /usr/lib64/pkgconfig/libsolv.pc
 /usr/lib64/pkgconfig/libsolvext.pc
-/usr/share/cmake/Modules/FindLibSolv.cmake
+/usr/share/cmake-3.17/Modules/FindLibSolv.cmake
 /usr/share/man/man1/dumpsolv.1.gz
 /usr/share/man/man1/installcheck.1.gz
 /usr/share/man/man1/mergesolv.1.gz
@@ -105,6 +107,9 @@ popd
 /usr/lib/python3.7/site-packages/solv.py
 
 %changelog
+* Sun Jun 18 2023 Chris Statzer <chris.statzer@gmail.com> 0.7.10-3
+- Terrible kludge to fix cmake module path. This needs to be fixed in a larger change.
+
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 0.7.10
 - Initial RPM
 
