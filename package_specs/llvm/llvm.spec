@@ -38,7 +38,7 @@ cmake -DCMAKE_INSTALL_PREFIX=/usr               \
       -DLLVM_INCLUDE_BENCHMARKS=OFF             \
       -DCLANG_DEFAULT_PIE_ON_LINUX=ON           \
       -Wno-dev -G Ninja ..                      
-ninja
+ninja -j4
 popd
 
 
