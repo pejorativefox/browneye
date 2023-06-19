@@ -25,6 +25,12 @@ sed -i '/LIBTOOL_INSTALL/d' c++/Makefile.in
 %install
 rm -rf %{buildroot}
 %make_install
+mkdir -p %{buildroot}/usr/lib64/pkgconfig/
+for lib in ncurses form panel menu ; do
+    rm -vf                    %{buildroot}/usr/lib64/lib${lib}.so
+    echo "INPUT(-l${lib}w)" > %{buildroot}/usr/lib64/lib${lib}.so
+    ln -sfv ${lib}w.pc        %{buildroot}/usr/lib64/pkgconfig/${lib}.pc
+done
 
 %files
 /usr/bin/captoinfo
@@ -76,6 +82,14 @@ rm -rf %{buildroot}
 /usr/lib64/pkgconfig/ncurses++w.pc
 /usr/lib64/pkgconfig/ncursesw.pc
 /usr/lib64/pkgconfig/panelw.pc
+/usr/lib64/libform.so
+/usr/lib64/libmenu.so
+/usr/lib64/libncurses.so
+/usr/lib64/libpanel.so
+/usr/lib64/pkgconfig/form.pc
+/usr/lib64/pkgconfig/menu.pc
+/usr/lib64/pkgconfig/ncurses.pc
+/usr/lib64/pkgconfig/panel.pc
 /usr/share/man/
 /usr/share/tabset/
 /usr/share/terminfo/
