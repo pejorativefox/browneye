@@ -12,6 +12,8 @@ Requires: librsvg
 %description
 TODO
 
+Requires: librsvg
+
 %prep
 %setup -a 0
 
