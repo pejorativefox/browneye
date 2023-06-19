@@ -75,5 +75,5 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/lib/pkgconfig/lua.pc
 
 %changelog
-Sun Jun 18 2023 Chris Statzer <chris.statzer@gmail.com> 5.3.5-2
+* Sun Jun 18 2023 Chris Statzer <chris.statzer@gmail.com> 5.3.5-2
 - Fixed executable bit on the main lua exe
