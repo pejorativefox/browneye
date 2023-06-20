@@ -1,12 +1,10 @@
 [Desktop Entry]
-Name=Chromium
+Name=Chromium (bin)
 Comment=Browse the internet with Chromium
 GenericName=Web Browser
 Exec=/opt/chromium/chrome %F
-Icon=Chromium
+Icon=/opt/chromium/product_logo_48.png
 Terminal=false
 StartupNotify=true
 Type=Application
-Categories=System;Utility;Core;GTK;FileTools;FileManager;
-
-# vi:set encoding=UTF-8:
+Categories=Network;WebBrowser;
