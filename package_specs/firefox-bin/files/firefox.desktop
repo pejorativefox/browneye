@@ -1,12 +1,11 @@
 [Desktop Entry]
-Name=Firefox
+Name=Firefox (bin)
 Comment=Browse the internet with Firefox
 GenericName=Web Browser
 Exec=/opt/firefox/firefox %F
-Icon=Firefox
+Icon=/opt/firefox/browser/chrome/icons/default/default128.png
 Terminal=false
 StartupNotify=true
 Type=Application
-Categories=System;Utility;Core;GTK;FileTools;FileManager;
-
-# vi:set encoding=UTF-8:
+Keywords=web;browser;internet;www;
+Categories=Network;WebBrowser;

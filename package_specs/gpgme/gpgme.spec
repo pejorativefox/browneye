@@ -27,9 +27,6 @@ export PYTHON=/bin/python3.7
 rm -rf %{buildroot}
 %make_install
 rm -rf %{buildroot}/usr/share/info/dir
-# TODO: this is a terrible kludge and i have no idea why its working this way
-cp -r %{buildroot}/usr/lib/python3.7/site-packages/gpg-1.11.1-py3.7-linux-x86_64.egg/gpg \
-    %{buildroot}/usr/lib/python3.7/site-packages/
 
 %files
 /usr/bin/gpgme-config

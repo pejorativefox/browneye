@@ -1,13 +1,13 @@
 Name:       inetutils
 Version:    1.9.4
 Release:    1
-Summary:    TODO
+Summary:    Collection of common network programs.
 License:    GPL3
 Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
 
 %description
-TODO
+Collection of common network programs.
 
 %prep
 %setup -q -a0
@@ -35,7 +35,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/ifconfig
 /usr/bin/ping
 /usr/bin/ping6
-/usr/bin/talk
 /usr/bin/telnet
 /usr/bin/tftp
 /usr/bin/traceroute
@@ -46,10 +45,10 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/man/man1/ifconfig.1.gz
 /usr/share/man/man1/ping.1.gz
 /usr/share/man/man1/ping6.1.gz
-/usr/share/man/man1/talk.1.gz
 /usr/share/man/man1/telnet.1.gz
 /usr/share/man/man1/tftp.1.gz
 /usr/share/man/man1/traceroute.1.gz
 
 %changelog
-# let's skip this for now
+* Mon Jun 19 2023 Chris Statzer <chris.statzer@gmail.com> 1.9.4
+- Removed the talk binary as it's no longer being built.
