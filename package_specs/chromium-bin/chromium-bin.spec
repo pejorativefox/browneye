@@ -1,8 +1,8 @@
 Name:       chromium-bin
-Version:    842801
+Version:    1159763
 Release:    1
-Summary:    TODO
-License:    GPL3
+Summary:    Chromium Web Browser
+License:    Custom
 Prefix:     /usr
 Source0:    chrome-linux.zip
 Source1:    chromium.desktop
@@ -10,10 +10,10 @@ Source1:    chromium.desktop
 #AutoProv: no
 AutoReq: no
 
-#Provides: firefox = %{version}
 Requires: ld-linux-x86-64.so.2()(64bit), libX11.so.6()(64bit), libc.so.6()(64bit), libstdc++.so.6()(64bit)
-%description
 
+%description
+Chromium Web Browser
 
 %prep
 %setup -n chrome-linux
@@ -35,6 +35,9 @@ cp %{SOURCE1} %{buildroot}/share/applications
 /share/applications/chromium.desktop
 
 %changelog
+* Tue Jun 20 2023 Chris Statzer <chris.statzer@gmail.com> 1159763
+- version bump
+
 * Wed Jan 13 2021 Chris Statzer <chris.statzer@qq.com> 842801
 - version bump
 
