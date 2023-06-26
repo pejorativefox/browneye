@@ -2,7 +2,11 @@
 
 import sys
 
-PODMAN_COMMAND = "podman run -it --mount=type=bind,source={},destination=/build/{},ro=true,z --mount=type=bind,source=/home/daspork/rpmbuild/,destination=/root/rpmbuild/,z browneye:latest {}"
+PODMAN_COMMAND = "podman run -it"
+SPEC_MOUNT = "--mount=type=bind,source={},destination=/build/{},ro=true,z"
+RPMBUILD_MOUNT = "--mount=type=bind,source=/home/daspork/rpmbuild/,destination=/root/rpmbuild/,z"
+IMAGE = "browneye:latest {}"
+
 BUILD_COMMAND = "sh -c \"dnf update --refresh && dnf builddep -y {} && rpmbuild -bb --clean {}\""
 if __name__ == "__main__":
     source_file = sys.argv[1]
