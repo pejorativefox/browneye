@@ -12,7 +12,7 @@ import util
 log = logging.getLogger("BUILD")
 
 
-class PackageBuilder(object):
+class BuilderBase(object):
     def __init__(self):
         self.package_db = PackageDatabase()
         self.packages = {}
@@ -20,6 +20,31 @@ class PackageBuilder(object):
         for package in packages:
             self.package_db.add_package(package.name)
             self.packages[package.name] = package
+    
+    def build_package(self, package_name):
+        if package_name in self.packages:
+            package = self.packages[package_name]
+            if self._build_package(package) == True:
+                self.package_db.set_built(package.name)
+                util.print_success_message("Sucessfully built: {}".format(package_name))
+            else:
+                self.package_db.set_failed(package.name)
+                util.print_fail_message("Failed to build: {}".format(package_name))
+        else:
+            print("Package {} not found.".format(package_name))
+    
+    def build_all(self):
+        for package_name in self.packages:
+            if self.package_db.is_built(package_name):
+                print(package_name, "is already built, skipping.")
+            else:
+                self.build_package(package_name)
+
+
+class PackageBuilder(BuilderBase):
+
+    def __init__(self):
+        super().__init__()
 
     def _build_package(self, package):
         print("Building Package ({})".format(package.name))
@@ -40,26 +65,6 @@ class PackageBuilder(object):
             return False
         return True
 
-
-    def build_package(self, package_name):
-        if package_name in self.packages:
-            package = self.packages[package_name]
-            if self._build_package(package) == True:
-                self.package_db.set_built(package.name)
-                util.print_success_message("Sucessfully built: {}".format(package_name))
-            else:
-                self.package_db.set_failed(package.name)
-                util.print_fail_message("Failed to build: {}".format(package_name))
-        else:
-            print("Package {} not found.".format(package_name))
-
-    def build_all(self):
-        for package_name in self.packages:
-            if self.package_db.is_built(package_name):
-                print(package_name, "is already built, skipping.")
-            else:
-                self.build_package(package_name)
-
-
+    
 if __name__ == "__main__":
     logging.basicConfig(level=logging.DEBUG)

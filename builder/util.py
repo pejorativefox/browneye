@@ -14,6 +14,20 @@ def set_term_title(title):
 def print_success_message(message):
     print("\x1b[32m{}\x1b[0m".format(message))
 
+
 def print_fail_message(message):
     print("\x1b[31m{}\x1b[0m".format(message))
 
+
+def print_checkmark():
+    print(u'\x1b[32m\u2713\x1b[0m', end=" ")
+
+def print_crossmark():
+    print(u'\x1b[31m\u2717\x1b[0m', end=" ")
+
+if __name__ == "__main__":
+    set_term_title("Test1")
+    print_success_message("Success")
+    print_fail_message("Fail")
+    print_checkmark()
+    print_crossmark()
