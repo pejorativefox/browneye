@@ -1,5 +1,5 @@
 Name:       firefox-bin
-Version:    114.0.1
+Version:    116.0.3
 Release:    1
 Summary:    TODO
 License:    GPL3
@@ -37,6 +37,9 @@ cp %{SOURCE1} %{buildroot}/share/applications
 /share/applications/firefox.desktop
 
 %changelog
+* Mon Aug 28 2023 Chris Statzer <chris.statzer@gmail.com> 116.0.3
+- version bump
+
 * Fri Jun 16 2023 Chris Statzer <chris.statzer@gmail.com> 114.0.1
 - reverted from beta build
 
