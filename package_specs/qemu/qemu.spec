@@ -1,6 +1,6 @@
 Name:       qemu
-Version:    4.2.0
-Release:    2
+Version:    8.1.0
+Release:    1
 Summary:    QEMU is a generic and open source machine emulator and virtualizer.
 License:    GPL2
 Source0:    %{name}-%{version}.tar.xz
@@ -23,23 +23,16 @@ rm -rf %{buildroot}
 %make_install
 
 %files
-/usr/bin/elf2dmp
-/usr/bin/ivshmem-client
-/usr/bin/ivshmem-server
-/usr/bin/qemu-edid
-/usr/bin/qemu-ga
-/usr/bin/qemu-img
-/usr/bin/qemu-io
-/usr/bin/qemu-keymap
-/usr/bin/qemu-nbd
-/usr/bin/qemu-pr-helper
-/usr/bin/qemu-system-x86_64
-/usr/bin/qemu-x86_64
-/usr/bin/virtfs-proxy-helper
-/usr/libexec/qemu-bridge-helper
+/usr/bin/
+/usr/libexec/
 /usr/share/
+/usr/include/
+/usr/lib/
 
 %changelog
+* Wed Aug 30 2023 Chris Statzer <chris.statzer@gmail.com> 8.1.0
+- Version bump
+
 * Thu Jun 15 2023 Chris Statzer <chris.statzer@gmail.com> 4.2.0
 - Cleaned package of non-x86 and added kvm suppport.
 
