@@ -1,5 +1,5 @@
 Name:       xfce4-xkb-plugin
-Version:    0.8.1
+Version:    0.8.3
 Release:    1
 Summary:    Plugin to switch keyboard layouts for the Xfce4 panel
 License:    Custom
@@ -26,8 +26,12 @@ rm -rf %{buildroot}
 /usr/share/locale/*
 /usr/share/xfce4/panel/plugins/xkb.desktop
 /usr/share/xfce4/xkb/flags/*
+/usr/share/icons/hicolor/
 
 %changelog
+* Wed Aug 30 2023 Chris Statzer <chris.statzer@gmail.com> 0.8.3
+- Version bump
+
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 0.8.1
 - Initial RPM
 
