@@ -1,5 +1,5 @@
 Name:       lightdm-gtk-greeter
-Version:    2.0.3
+Version:    2.0.8
 Release:    1
 Summary:    GTK+ greeter for LightDM
 License:    GPL
@@ -42,6 +42,9 @@ rm -rf %{buildroot}
    /usr/share/xgreeters/lightdm-gtk-greeter.desktop
 
 %changelog
+* Wed Aug 30 2023 Chris Statzer <chris.statzer@gmail.com> 2.0.8
+- Version bump
+
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 2.0.3
 - Initial RPM
 
