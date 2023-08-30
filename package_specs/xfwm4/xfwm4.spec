@@ -1,5 +1,5 @@
 Name:       xfwm4
-Version:    4.14.0
+Version:    4.18.0
 Release:    1
 Summary:    Xfce's window manager
 License:    GPL2
@@ -21,20 +21,14 @@ rm -rf %{buildroot}
 %make_install
 
 %files
-   /usr/bin/xfwm4
-   /usr/bin/xfwm4-settings
-   /usr/bin/xfwm4-tweaks-settings
-   /usr/bin/xfwm4-workspace-settings
-   /usr/lib64/xfce4/xfwm4/helper-dialog
-   /usr/share/applications/xfce-wm-settings.desktop
-   /usr/share/applications/xfce-wmtweaks-settings.desktop
-   /usr/share/applications/xfce-workspaces-settings.desktop
-   /usr/share/icons/hicolor/*
-   /usr/share/locale/*
-   /usr/share/themes/*
-   /usr/share/xfwm4/defaults
+/usr/bin/
+/usr/lib64/
+/usr/share/
 
 %changelog
+* Wed Aug 30 2023 Chris Statzer <chris.statzer@gmail.com> 4.18.0
+- Version bump
+
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 4.14.0
 - Initial RPM
 
