@@ -1,5 +1,5 @@
 Name:       icewm
-Version:    1.6.5
+Version:    3.4.1
 Release:    1
 Summary:    A small win9x like window manager
 License:    GPL2
@@ -36,12 +36,12 @@ popd
 /usr/bin/icewm-set-gnomewm
 /usr/bin/icewmbg
 /usr/bin/icewmhint
-/usr/share/man/*
-/usr/share/icewm/*
-/usr/share/locale/*
-/usr/share/xsessions/*
+/usr/share/
 
 %changelog
-* Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 3.30.1
+* Wed Aug 30 2023 Chris Statzer <chris.statzer@gmail.com> 3.4.1
+- Version bump
+
+* Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 1.6.5
 - Initial RPM
 
