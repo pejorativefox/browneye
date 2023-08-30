@@ -1,13 +1,13 @@
-Name:       libxfce4util
+Name:       libxfce4windowing
 Version:    4.19.2
 Release:    1
-Summary:    Basic utility library for Xfce4.
-License:    GPL
+Summary:    Abstraction library for windowing concepts
+License:    LGPL
 Source0:    %{name}-%{version}.tar.bz2
 Prefix:     /usr
 
 %description
-Basic utility library for Xfce4.
+Libxfce4windowing is an abstraction library that attempts to present windowing concepts (screens, toplevel windows, workspaces, etc.) in a windowing-system-independent manner.
 
 %prep
 %setup
@@ -21,15 +21,11 @@ rm -rf %{buildroot}
 %make_install
 
 %files
-/usr/include/xfce4/
-/usr/lib64/
-/usr/sbin/xfce4-kiosk-query
 /usr/share/
+/usr/include/
+/usr/lib64/
 
 %changelog
 * Wed Aug 30 2023 Chris Statzer <chris.statzer@gmail.com> 4.19.2
-- Version bump
-
-* Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 4.14.0
 - Initial RPM
 
