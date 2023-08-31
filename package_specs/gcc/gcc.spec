@@ -1,6 +1,6 @@
 Name:       gcc
-Version:    8.2.0
-Release:    2
+Version:    13.2.0
+Release:    1
 Summary:    The GNU Compiler Collection
 License:    GPL3
 Source0:    %{name}-%{version}.tar.xz
@@ -47,14 +47,7 @@ Summary: The GNU Standard C++ Library v3
 The GNU Standard C++ Library v3 is an ongoing project to implement the ISO 14882 C++ Standard Library as described in clauses 20 through 33 and annex D (prior to the 2017 standard the library clauses started with 17).
 
 %files -n libstdc++
-/usr/lib/libstdc++.a
-/usr/lib/libstdc++.la
-/usr/lib/libstdc++.so
-/usr/lib/libstdc++.so.6
-/usr/lib/libstdc++.so.6.0.25
-/usr/lib/libstdc++.so.6.0.25-gdb.py
-/usr/lib/libstdc++fs.a
-/usr/lib/libstdc++fs.la
+/usr/lib/libstdc++*
 
 %package -n libgcc
 Summary: GCC low-level runtime library
@@ -78,20 +71,12 @@ The GCC low-level runtime library
 /usr/bin/gcov
 /usr/bin/gcov-dump
 /usr/bin/gcov-tool
-/usr/bin/x86_64-pc-linux-gnu-c++
-/usr/bin/x86_64-pc-linux-gnu-g++
-/usr/bin/x86_64-pc-linux-gnu-gcc
-/usr/bin/x86_64-pc-linux-gnu-gcc-8.2.0
-/usr/bin/x86_64-pc-linux-gnu-gcc-ar
-/usr/bin/x86_64-pc-linux-gnu-gcc-nm
-/usr/bin/x86_64-pc-linux-gnu-gcc-ranlib
+/usr/bin/x86_64-pc-linux-gnu-*
 /usr/include/c++/%{version}/*
-/usr/lib/gcc/x86_64-pc-linux-gnu/%{version}/*
+/usr/lib/gcc/x86_64-pc-linux-gnu/%{version}/
 /usr/lib/libasan.a
 /usr/lib/libasan.la
 /usr/lib/libasan.so
-/usr/lib/libasan.so.5
-/usr/lib/libasan.so.5.0.0
 /usr/lib/libasan_preinit.o
 /usr/lib/libatomic.a
 /usr/lib/libatomic.la
@@ -138,8 +123,6 @@ The GCC low-level runtime library
 /usr/lib/libtsan.a
 /usr/lib/libtsan.la
 /usr/lib/libtsan.so
-/usr/lib/libtsan.so.0
-/usr/lib/libtsan.so.0.0.0
 /usr/lib/libtsan_preinit.o
 /usr/lib/libubsan.a
 /usr/lib/libubsan.la
@@ -147,19 +130,15 @@ The GCC low-level runtime library
 /usr/lib/libubsan.so.1
 /usr/lib/libubsan.so.1.0.0
 /usr/libexec/gcc/x86_64-pc-linux-gnu/%{version}/*
-/usr/share/gcc-8.2.0/python/libstdcxx/__init__.py
-/usr/share/gcc-8.2.0/python/libstdcxx/v6/__init__.py
-/usr/share/gcc-8.2.0/python/libstdcxx/v6/printers.py
-/usr/share/gcc-8.2.0/python/libstdcxx/v6/xmethods.py
+/usr/share/gcc-%{version}/python/
 /usr/share/info/*
 /usr/share/locale/*
 /usr/share/man/*
-/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed/X11/Xw32defs.h
-/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed/slang.h
-/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed/xorg/compiler.h
-/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed/xorg/edid.h
-
+/usr/bin/lto-dump
+/usr/lib/libasan*
+/usr/lib/libhwasan*
+/usr/lib/libtsan*
 
 %changelog
-* Thu May 15 2020 Chris Statzer <chris.statzer@qq.com> 8.2.0-3
+* Fri May 15 2020 Chris Statzer <chris.statzer@qq.com> 8.2.0-3
 - Cleaned up spec file and added libgcc, libstdc++ subpackages to clean up the deps of many packages.
