@@ -1,12 +1,10 @@
 Name:       gcc
 Version:    13.2.0
-Release:    1
+Release:    2
 Summary:    The GNU Compiler Collection
 License:    GPL3
 Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
-
-#
 
 %description
 The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, Go, and D, as well as libraries for these languages
@@ -51,7 +49,8 @@ The GNU Standard C++ Library v3 is an ongoing project to implement the ISO 14882
 
 %package -n libgcc
 Summary: GCC low-level runtime library
-Provides: libgcc_s.so.1()(64bit), libgcc_s.so.1(GCC_3.0)(64bit), libgcc_s.so.1(GCC_3.3)(64bit), libgcc_s.so.1(GCC_4.2.0)(64bit), libgcc_s.so.1(GCC_3.4)(64bit), libgcc_s.so.1(GCC_3.3.1)(64bit), libgcc_s.so.1(GCC_4.7.0)(64bit)
+Provides: libgcc_s.so.1()(64bit), libgcc_s.so.1(GCC_3.0)(64bit), libgcc_s.so.1(GCC_3.3)(64bit), libgcc_s.so.1(GCC_4.2.0)(64bit), libgcc_s.so.1(GCC_3.4)(64bit), libgcc_s.so.1(GCC_3.3.1)(64bit), libgcc_s.so.1(GCC_4.7.0)(64bit), libgcc_s.so.1(GCC_4.3.0)(64bit)
+
 %description -n libgcc
 The GCC low-level runtime library
 
@@ -140,5 +139,11 @@ The GCC low-level runtime library
 /usr/lib/libtsan*
 
 %changelog
+* Thu Aug 31 2023 Chris Statzer <chris.statzer@gmail.com> 13.2.0-2
+- Added a missing provides for libgcc
+
+* Wed Aug 30 2023 Chris Statzer <chris.statzer@gmail.com> 13.2.0
+- Version bump
+
 * Fri May 15 2020 Chris Statzer <chris.statzer@qq.com> 8.2.0-3
 - Cleaned up spec file and added libgcc, libstdc++ subpackages to clean up the deps of many packages.
