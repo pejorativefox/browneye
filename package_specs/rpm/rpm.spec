@@ -1,13 +1,13 @@
 Name:       rpm
-Version:    4.14.2.1
-Release:    2
-Summary:    TODO
+Version:    4.17.1
+Release:    1
+Summary:    The RPM Package Manager
 License:    GPL3
 Source0:    %{name}-%{version}.tar.bz2
 Prefix:     /usr
 
 %description
-TODO
+The RPM Package Manager
 
 %prep
 %setup -q -a0
@@ -35,31 +35,13 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/rpmsign
 /usr/bin/rpmspec
 /usr/bin/rpmverify
-/usr/include/rpm/*
+/usr/include/rpm/
 /usr/lib/rpm/
-/usr/lib64/librpm.la
-/usr/lib64/librpm.so
-/usr/lib64/librpm.so.8
-/usr/lib64/librpm.so.8.1.0
-/usr/lib64/librpmbuild.la
-/usr/lib64/librpmbuild.so
-/usr/lib64/librpmbuild.so.8
-/usr/lib64/librpmbuild.so.8.1.0
-/usr/lib64/librpmio.la
-/usr/lib64/librpmio.so
-/usr/lib64/librpmio.so.8
-/usr/lib64/librpmio.so.8.1.0
-/usr/lib64/librpmsign.la
-/usr/lib64/librpmsign.so
-/usr/lib64/librpmsign.so.8
-/usr/lib64/librpmsign.so.8.1.0
-/usr/lib64/pkgconfig/rpm.pc
-/usr/lib64/rpm-plugins/
+/usr/lib64/
 /usr/share/locale/
 /usr/share/man/
-/usr/lib64/rpm-plugins/systemd_inhibit.la
-/usr/lib64/rpm-plugins/systemd_inhibit.so
 /usr/lib/python3.7/
+/usr/etc/dbus-1/system.d/org.rpm.conf
 
 %changelog
 * Wed May 20 2020 Chris Statzer <chris.statzer@qq.com> 4.14.2.1-2

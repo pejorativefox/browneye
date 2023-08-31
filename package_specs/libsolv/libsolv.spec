@@ -1,5 +1,5 @@
 Name:       libsolv
-Version:    0.7.10
+Version:    0.7.24
 Release:    3
 Summary:    Library for solving packages and reading repositories
 License:    BSD

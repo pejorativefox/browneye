@@ -7,6 +7,8 @@ License:    GPL3
 Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
+Provides: pkgconfig(popt)
+
 %description
 popt command line option parsing library.
 

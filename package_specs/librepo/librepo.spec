@@ -1,6 +1,6 @@
 Name:       librepo
-Version:    1.11.0
-Release:    2
+Version:    1.15.2
+Release:    1
 Summary:    A library providing C and Python (libcURL like) API for downloading packages.
 License:    GPL
 Source0:    %{name}-%{version}.tar.gz
@@ -26,14 +26,14 @@ pushd build
 popd
 
 %files
-/usr/include/
-/usr/lib64/librepo.so
-/usr/lib64/librepo.so.0
-/usr/lib64/pkgconfig/librepo.pc
-/usr/lib/python3.7/site-packages/librepo/__init__.py
-/usr/lib/python3.7/site-packages/librepo/_librepo.so
+/usr/include/librepo/
+/usr/lib/python3.7/site-packages/librepo/
+/usr/lib64/
 
 %changelog
+* Thu Aug 31 2023 Chris Statzer <chris.statzer@gmail.com> 1.15.2
+- Version bump
+
 * Wed May 20 2020 Chris Statzer <chris.statzer@qq.com> 1.11.0-2
 - Updated build to use python3
 
