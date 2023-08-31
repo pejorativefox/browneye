@@ -1,5 +1,5 @@
 Name:       libdnf
-Version:    0.47.0
+Version:    0.70.2
 Release:    1
 Summary:    Software management library. 
 License:    GPL
@@ -43,6 +43,9 @@ popd
 /usr/lib/python3.7/site-packages/*
 
 %changelog
+* Thu Aug 31 2023 Chris Statzer <chris.statzer@gmail.com> 0.70.2
+- Version bump
+
 * Wed May 13 2020 Chris Statzer <chris.statzer@qq.com> 0.47.0
 - Upgrade to fix dnf incompat
 

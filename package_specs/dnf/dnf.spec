@@ -1,5 +1,5 @@
 Name:       dnf
-Version:    4.2.21
+Version:    4.16.2
 Release:    1
 Summary:    Software management utility. 
 License:    GPL
@@ -49,6 +49,7 @@ popd
 /etc/dnf/dnf-strict.conf
 /usr/bin/dnf
 /usr/share/bash-completion/completions/dnf
+/etc/dnf/protected.d/python3-dnf.conf
 
 %changelog
 * Wed May 13 2020 Chris Statzer <chris.statzer@qq.com> 4.2.21
