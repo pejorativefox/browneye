@@ -1,5 +1,7 @@
+%define __os_install_post %{nil}
+
 Name:       git
-Version:    2.22.0
+Version:    2.42.0
 Release:    1
 Summary:    TODO
 License:    GPL3
@@ -35,6 +37,7 @@ cp contrib/completion/git-completion.bash %{buildroot}/etc/bash_completion.d/
 /usr/bin/git-upload-archive
 /usr/bin/git-upload-pack
 /usr/bin/gitk
+/usr/bin/scalar
 /usr/libexec/git-core/*
 /usr/share/locale/*
 /usr/share/perl5/*
