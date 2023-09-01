@@ -1,5 +1,5 @@
 Name:       vala
-Version:    0.40.8
+Version:    0.56.11
 Release:    1
 Summary:    Vala programming language.
 License:    GPL
@@ -13,10 +13,7 @@ Vala is a new programming language that aims to bring modern programming languag
 %setup
 
 %build
-sed -i '115d; 121,137d; 139,140d'  configure.ac &&
-sed -i '/valadoc/d' Makefile.am                 &&
-ACLOCAL= autoreconf -fiv
-%configure
+%configure --disable-valadoc
 %make_build
 
 %install
@@ -24,33 +21,10 @@ rm -rf %{buildroot}
 %make_install
 
 %files
-/usr/bin/vala
-/usr/bin/vala-0.40
-/usr/bin/vala-gen-introspect
-/usr/bin/vala-gen-introspect-0.40
-/usr/bin/valac
-/usr/bin/valac-0.40
-/usr/bin/vapigen
-/usr/bin/vapigen-0.40
-/usr/include/vala-0.40/vala.h
-/usr/include/vala-0.40/valagee.h
-/usr/lib64/libvala-0.40.la
-/usr/lib64/libvala-0.40.so
-/usr/lib64/libvala-0.40.so.0
-/usr/lib64/libvala-0.40.so.0.0.0
-/usr/lib64/pkgconfig/libvala-0.40.pc
-/usr/lib64/pkgconfig/vapigen-0.40.pc
-/usr/lib64/pkgconfig/vapigen.pc
-/usr/lib64/vala-0.40/gen-introspect-0.40
-/usr/lib64/vala-0.40/libvalaccodegen.la
-/usr/lib64/vala-0.40/libvalaccodegen.so
-/usr/share/aclocal/vala.m4
-/usr/share/aclocal/vapigen.m4
-/usr/share/vala/Makefile.vapigen
-/usr/share/vala/vapi/libvala-0.40.vapi
-/usr/share/man/*
-/usr/share/vala-0.40/*
-/usr/share/devhelp/books/vala-0.40/*
+/usr/bin/
+/usr/lib64/
+/usr/share/
+/usr/include/
 
 %changelog
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 0.40.8

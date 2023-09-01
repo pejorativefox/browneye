@@ -28,8 +28,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/X11/SM/SM.h
 /usr/include/X11/SM/SMlib.h
 /usr/include/X11/SM/SMproto.h
-/usr/lib64/libSM.a
-/usr/lib64/libSM.la
 /usr/lib64/libSM.so
 /usr/lib64/libSM.so.6
 /usr/lib64/libSM.so.6.0.1

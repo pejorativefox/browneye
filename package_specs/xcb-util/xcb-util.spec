@@ -30,7 +30,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/xcb/xcb_event.h
 /usr/include/xcb/xcb_util.h
 /usr/lib64/libxcb-util.a
-/usr/lib64/libxcb-util.la
 /usr/lib64/libxcb-util.so
 /usr/lib64/libxcb-util.so.1
 /usr/lib64/libxcb-util.so.1.0.0

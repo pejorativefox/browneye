@@ -26,7 +26,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/libssh2.h
 /usr/include/libssh2_publickey.h
 /usr/include/libssh2_sftp.h
-/usr/lib64/libssh2.la
 /usr/lib64/libssh2.so
 /usr/lib64/libssh2.so.1
 /usr/lib64/libssh2.so.1.0.1

@@ -21,7 +21,6 @@ rm -rf %{buildroot}
 %make_install
 
 %files
-/usr/lib64/xfce4/panel/plugins/libxkb.la
 /usr/lib64/xfce4/panel/plugins/libxkb.so
 /usr/share/locale/*
 /usr/share/xfce4/panel/plugins/xkb.desktop

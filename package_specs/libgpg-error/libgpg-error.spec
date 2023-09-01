@@ -29,7 +29,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/yat2m
 /usr/include/gpg-error.h
 /usr/include/gpgrt.h
-/usr/lib64/libgpg-error.la
 /usr/lib64/libgpg-error.so
 /usr/lib64/libgpg-error.so.0
 /usr/lib64/libgpg-error.so.0.26.1

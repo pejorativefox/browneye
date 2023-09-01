@@ -29,7 +29,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/sxpm
 /usr/include/X11/xpm.h
 /usr/lib64/libXpm.a
-/usr/lib64/libXpm.la
 /usr/lib64/libXpm.so
 /usr/lib64/libXpm.so.4
 /usr/lib64/libXpm.so.4.11.0

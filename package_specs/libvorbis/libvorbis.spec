@@ -26,15 +26,12 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/vorbis/codec.h
 /usr/include/vorbis/vorbisenc.h
 /usr/include/vorbis/vorbisfile.h
-/usr/lib64/libvorbis.la
 /usr/lib64/libvorbis.so
 /usr/lib64/libvorbis.so.0
 /usr/lib64/libvorbis.so.0.4.8
-/usr/lib64/libvorbisenc.la
 /usr/lib64/libvorbisenc.so
 /usr/lib64/libvorbisenc.so.2
 /usr/lib64/libvorbisenc.so.2.0.11
-/usr/lib64/libvorbisfile.la
 /usr/lib64/libvorbisfile.so
 /usr/lib64/libvorbisfile.so.3
 /usr/lib64/libvorbisfile.so.3.3.7

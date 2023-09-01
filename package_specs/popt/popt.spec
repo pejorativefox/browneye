@@ -26,7 +26,6 @@ rm -rf %{buildroot}
 %files
 /usr/include/popt.h
 /usr/lib/pkgconfig/popt.pc
-/usr/lib64/libpopt.la
 /usr/lib64/libpopt.so
 /usr/lib64/libpopt.so.0
 /usr/lib64/libpopt.so.0.0.0

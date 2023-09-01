@@ -26,7 +26,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/mp3rtp
 /usr/bin/lame
 /usr/include/lame/lame.h
-/usr/lib64/libmp3lame.la
 /usr/lib64/libmp3lame.so
 /usr/lib64/libmp3lame.so.0
 /usr/lib64/libmp3lame.so.0.0.0

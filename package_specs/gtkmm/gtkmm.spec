@@ -24,11 +24,9 @@ rm -rf %{buildroot}
 /usr/include/gdkmm-3.0/
 /usr/include/gtkmm-3.0/
 /usr/lib64/gtkmm-3.0/
-/usr/lib64/libgdkmm-3.0.la
 /usr/lib64/libgdkmm-3.0.so
 /usr/lib64/libgdkmm-3.0.so.1
 /usr/lib64/libgdkmm-3.0.so.1.1.0
-/usr/lib64/libgtkmm-3.0.la
 /usr/lib64/libgtkmm-3.0.so
 /usr/lib64/libgtkmm-3.0.so.1
 /usr/lib64/libgtkmm-3.0.so.1.1.0

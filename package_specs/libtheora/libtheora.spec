@@ -28,15 +28,12 @@ rm -rf %{buildroot}
 /usr/include/theora/theora.h
 /usr/include/theora/theoradec.h
 /usr/include/theora/theoraenc.h
-/usr/lib64/libtheora.la
 /usr/lib64/libtheora.so
 /usr/lib64/libtheora.so.0
 /usr/lib64/libtheora.so.0.3.10
-/usr/lib64/libtheoradec.la
 /usr/lib64/libtheoradec.so
 /usr/lib64/libtheoradec.so.1
 /usr/lib64/libtheoradec.so.1.1.4
-/usr/lib64/libtheoraenc.la
 /usr/lib64/libtheoraenc.so
 /usr/lib64/libtheoraenc.so.1
 /usr/lib64/libtheoraenc.so.1.1.2

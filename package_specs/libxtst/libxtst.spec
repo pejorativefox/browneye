@@ -28,7 +28,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/X11/extensions/XTest.h
 /usr/include/X11/extensions/record.h
 /usr/lib64/libXtst.a
-/usr/lib64/libXtst.la
 /usr/lib64/libXtst.so
 /usr/lib64/libXtst.so.6
 /usr/lib64/libXtst.so.6.1.0

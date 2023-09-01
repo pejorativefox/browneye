@@ -27,7 +27,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/xcb/xcb_cursor.h
 /usr/lib64/libxcb-cursor.a
-/usr/lib64/libxcb-cursor.la
 /usr/lib64/libxcb-cursor.so
 /usr/lib64/libxcb-cursor.so.0
 /usr/lib64/libxcb-cursor.so.0.0.0

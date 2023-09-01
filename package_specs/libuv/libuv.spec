@@ -32,7 +32,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/uv/threadpool.h
 /usr/include/uv/unix.h
 /usr/include/uv/version.h
-/usr/lib64/libuv.la
 /usr/lib64/libuv.so
 /usr/lib64/libuv.so.1
 /usr/lib64/libuv.so.1.0.0

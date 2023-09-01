@@ -24,7 +24,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/X11/Xauth.h
 /usr/lib64/libXau.a
-/usr/lib64/libXau.la
 /usr/lib64/libXau.so
 /usr/lib64/libXau.so.6
 /usr/lib64/libXau.so.6.0.0

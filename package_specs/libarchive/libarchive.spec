@@ -28,7 +28,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/archive.h
 /usr/include/archive_entry.h
 /usr/lib64/libarchive.a
-/usr/lib64/libarchive.la
 /usr/lib64/libarchive.so
 /usr/lib64/libarchive.so.13
 /usr/lib64/libarchive.so.13.4.0

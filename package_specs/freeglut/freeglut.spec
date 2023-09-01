@@ -35,7 +35,6 @@ popd
 /usr/lib64/cmake/FreeGLUT/FreeGLUTConfigVersion.cmake
 /usr/lib64/cmake/FreeGLUT/FreeGLUTTargets-noconfig.cmake
 /usr/lib64/cmake/FreeGLUT/FreeGLUTTargets.cmake
-/usr/lib64/libglut.a
 /usr/lib64/libglut.so
 /usr/lib64/libglut.so.3
 /usr/lib64/libglut.so.3.11.0

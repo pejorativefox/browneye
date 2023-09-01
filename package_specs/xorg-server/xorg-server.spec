@@ -1,10 +1,10 @@
 Name:       xorg-server
-Version:    1.20.3
+Version:    21.1.8
 Release:    1
 Summary:    TODO
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}-%{version}.tar.bz2
+Source0:    %{name}-%{version}.tar.xz
 
 BuildRequires: libX11, mesa, pixman, libdrm, libXfont2, libxkbfile, xtrans
 BuildRequires: libepoxy
@@ -39,7 +39,6 @@ EOF
 /usr/bin/Xnest
 /usr/bin/Xorg
 /usr/bin/Xvfb
-/usr/bin/cvt
 /usr/bin/gtf
 /usr/include/xorg/
 /usr/lib64/pkgconfig/xorg-server.pc
@@ -51,7 +50,6 @@ EOF
 /usr/share/man/man1/Xorg.1.gz
 /usr/share/man/man1/Xserver.1.gz
 /usr/share/man/man1/Xvfb.1.gz
-/usr/share/man/man1/cvt.1.gz
 /usr/share/man/man1/gtf.1.gz
 /usr/share/man/man4/exa.4.gz
 /usr/share/man/man4/fbdevhw.4.gz
@@ -63,6 +61,7 @@ EOF
 /usr/libexec/Xorg.wrap
 /usr/share/man/man1/Xorg.wrap.1.gz
 /usr/share/man/man5/Xwrapper.config.5.gz
+/usr/share/man/man4/inputtestdrv.4.gz
 
 %changelog
 # let's skip this for now

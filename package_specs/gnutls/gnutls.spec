@@ -38,11 +38,9 @@ rm -rf %{buildroot}/usr/share/info/dir
 /usr/bin/psktool
 /usr/bin/srptool
 /usr/include/gnutls/*
-/usr/lib64/libgnutls.la
 /usr/lib64/libgnutls.so
 /usr/lib64/libgnutls.so.30
 /usr/lib64/libgnutls.so.30.14.11
-/usr/lib64/libgnutlsxx.la
 /usr/lib64/libgnutlsxx.so
 /usr/lib64/libgnutlsxx.so.28
 /usr/lib64/libgnutlsxx.so.28.1.0

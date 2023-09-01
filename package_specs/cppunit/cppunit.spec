@@ -25,7 +25,6 @@ rm -rf %{buildroot}
 /usr/lib64/libcppunit-1.15.so.1
 /usr/lib64/libcppunit-1.15.so.1.0.0
 /usr/lib64/libcppunit.a
-/usr/lib64/libcppunit.la
 /usr/lib64/libcppunit.so
 /usr/lib64/pkgconfig/cppunit.pc
 /usr/share/doc/cppunit/AUTHORS

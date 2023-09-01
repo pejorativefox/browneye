@@ -1,10 +1,10 @@
 Name:       xf86-video-vesa
-Version:    2.4.0
+Version:    2.6.0
 Release:    1
 Summary:    TODO
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}-%{version}.tar.gz
+Source0:    %{name}-%{version}.tar.xz
 
 
 
@@ -25,7 +25,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 
 
 %files
-/usr/lib64/xorg/modules/drivers/vesa_drv.la
 /usr/lib64/xorg/modules/drivers/vesa_drv.so
 /usr/share/man/man4/vesa.4.gz
 

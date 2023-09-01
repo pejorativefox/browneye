@@ -61,7 +61,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/lzma/stream_flags.h
 /usr/include/lzma/version.h
 /usr/include/lzma/vli.h
-/usr/lib64/liblzma.la
 /usr/lib64/liblzma.so
 /usr/lib64/liblzma.so.5
 /usr/lib64/liblzma.so.5.2.4

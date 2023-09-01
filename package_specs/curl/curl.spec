@@ -35,7 +35,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/curl/system.h
 /usr/include/curl/typecheck-gcc.h
 /usr/include/curl/urlapi.h
-/usr/lib64/libcurl.la
 /usr/lib64/libcurl.so
 /usr/lib64/libcurl.so.4
 /usr/lib64/libcurl.so.4.5.0

@@ -29,7 +29,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
    /usr/include/libltdl/lt_system.h
    /usr/include/ltdl.h
    /usr/lib64/libltdl.a
-   /usr/lib64/libltdl.la
    /usr/lib64/libltdl.so
    /usr/lib64/libltdl.so.7
    /usr/lib64/libltdl.so.7.3.1

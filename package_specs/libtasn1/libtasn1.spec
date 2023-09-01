@@ -26,7 +26,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/asn1Decoding
 /usr/bin/asn1Parser
 /usr/include/libtasn1.h
-/usr/lib64/libtasn1.la
 /usr/lib64/libtasn1.so
 /usr/lib64/libtasn1.so.6
 /usr/lib64/libtasn1.so.6.5.5

@@ -53,7 +53,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/proc/version.h
 /usr/include/proc/wchan.h
 /usr/include/proc/whattime.h
-/usr/lib64/libprocps.la
 /usr/lib64/libprocps.so
 /usr/lib64/libprocps.so.7
 /usr/lib64/libprocps.so.7.1.0

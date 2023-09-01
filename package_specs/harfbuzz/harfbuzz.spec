@@ -60,15 +60,12 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/harfbuzz/hb.h
 /usr/lib64/cmake/harfbuzz/harfbuzz-config.cmake
 /usr/lib64/girepository-1.0/HarfBuzz-0.0.typelib
-/usr/lib64/libharfbuzz-gobject.la
 /usr/lib64/libharfbuzz-gobject.so
 /usr/lib64/libharfbuzz-gobject.so.0
 /usr/lib64/libharfbuzz-gobject.so.0.20301.0
-/usr/lib64/libharfbuzz-subset.la
 /usr/lib64/libharfbuzz-subset.so
 /usr/lib64/libharfbuzz-subset.so.0
 /usr/lib64/libharfbuzz-subset.so.0.20301.0
-/usr/lib64/libharfbuzz.la
 /usr/lib64/libharfbuzz.so
 /usr/lib64/libharfbuzz.so.0
 /usr/lib64/libharfbuzz.so.0.20301.0
@@ -193,7 +190,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/gtk-doc/html/harfbuzz/why-is-it-called-harfbuzz.html
 /usr/share/gtk-doc/html/harfbuzz/working-with-harfbuzz-clusters.html
    /usr/include/harfbuzz/hb-icu.h
-   /usr/lib64/libharfbuzz-icu.la
    /usr/lib64/libharfbuzz-icu.so
    /usr/lib64/libharfbuzz-icu.so.0
    /usr/lib64/libharfbuzz-icu.so.0.20301.0

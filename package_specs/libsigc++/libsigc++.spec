@@ -23,7 +23,6 @@ rm -rf %{buildroot}
 %files
 /usr/include/sigc++-2.0/
 /usr/share/doc/libsigc++-2.0/
-/usr/lib64/libsigc-2.0.la
 /usr/lib64/libsigc-2.0.so
 /usr/lib64/libsigc-2.0.so.0
 /usr/lib64/libsigc-2.0.so.0.0.0

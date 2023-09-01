@@ -23,7 +23,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 
 %files
 /usr/include/pipeline.h
-/usr/lib64/libpipeline.la
 /usr/lib64/libpipeline.so
 /usr/lib64/libpipeline.so.1
 /usr/lib64/libpipeline.so.1.5.1

@@ -25,7 +25,6 @@ rm -vf %{buildroot}%{_infodir}/dir
 /usr/bin/secret-tool
 /usr/include/libsecret-1/libsecret/*
 /usr/lib64/girepository-1.0/Secret-1.typelib
-/usr/lib64/libsecret-1.la
 /usr/lib64/libsecret-1.so
 /usr/lib64/libsecret-1.so.0
 /usr/lib64/libsecret-1.so.0.0.0

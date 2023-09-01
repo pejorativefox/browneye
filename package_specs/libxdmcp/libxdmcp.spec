@@ -24,7 +24,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/X11/Xdmcp.h
 /usr/lib64/libXdmcp.a
-/usr/lib64/libXdmcp.la
 /usr/lib64/libXdmcp.so
 /usr/lib64/libXdmcp.so.6
 /usr/lib64/libXdmcp.so.6.0.0

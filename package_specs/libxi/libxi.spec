@@ -28,7 +28,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/X11/extensions/XInput.h
 /usr/include/X11/extensions/XInput2.h
 /usr/lib64/libXi.a
-/usr/lib64/libXi.la
 /usr/lib64/libXi.so
 /usr/lib64/libXi.so.6
 /usr/lib64/libXi.so.6.1.0

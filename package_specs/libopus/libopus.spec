@@ -29,7 +29,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/opus/opus_multistream.h
 /usr/include/opus/opus_projection.h
 /usr/include/opus/opus_types.h
-/usr/lib64/libopus.la
 /usr/lib64/libopus.so
 /usr/lib64/libopus.so.0
 /usr/lib64/libopus.so.0.7.0

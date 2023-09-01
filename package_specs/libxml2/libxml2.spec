@@ -76,14 +76,12 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/libxml2/libxml/xpathInternals.h
 /usr/include/libxml2/libxml/xpointer.h
 /usr/lib64/cmake/libxml2/libxml2-config.cmake
-/usr/lib64/libxml2.la
 /usr/lib64/libxml2.so
 /usr/lib64/libxml2.so.2
 /usr/lib64/libxml2.so.2.9.9
 /usr/lib64/pkgconfig/libxml-2.0.pc
 /usr/lib64/python3.7/site-packages/drv_libxml2.py
 /usr/lib64/python3.7/site-packages/libxml2.py
-/usr/lib64/python3.7/site-packages/libxml2mod.la
 /usr/lib64/python3.7/site-packages/libxml2mod.so
 /usr/lib64/xml2Conf.sh
 /usr/share/aclocal/libxml.m4

@@ -48,11 +48,9 @@ rm -rf %{buildroot}/usr/share/doc/
 /usr/include/db.h
 /usr/include/db_185.h
 /usr/include/db_cxx.h
-/usr/lib/libdb-6.2.la
 /usr/lib/libdb-6.2.so
 /usr/lib/libdb-6.so
 /usr/lib/libdb.so
-/usr/lib/libdb_cxx-6.2.la
 /usr/lib/libdb_cxx-6.2.so
 /usr/lib/libdb_cxx-6.so
 /usr/lib/libdb_cxx.so

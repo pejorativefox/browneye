@@ -49,12 +49,10 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/X11/Xmu/Xct.h
 /usr/include/X11/Xmu/Xmu.h
 /usr/lib64/libXmu.a
-/usr/lib64/libXmu.la
 /usr/lib64/libXmu.so
 /usr/lib64/libXmu.so.6
 /usr/lib64/libXmu.so.6.2.0
 /usr/lib64/libXmuu.a
-/usr/lib64/libXmuu.la
 /usr/lib64/libXmuu.so
 /usr/lib64/libXmuu.so.1
 /usr/lib64/libXmuu.so.1.0.0

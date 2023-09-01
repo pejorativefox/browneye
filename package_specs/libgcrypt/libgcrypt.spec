@@ -28,7 +28,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/libgcrypt-config
 /usr/bin/mpicalc
 /usr/include/gcrypt.h
-/usr/lib64/libgcrypt.la
 /usr/lib64/libgcrypt.so
 /usr/lib64/libgcrypt.so.20
 /usr/lib64/libgcrypt.so.20.2.4

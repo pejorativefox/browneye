@@ -27,7 +27,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/X11/extensions/Xcomposite.h
 /usr/lib64/libXcomposite.a
-/usr/lib64/libXcomposite.la
 /usr/lib64/libXcomposite.so
 /usr/lib64/libXcomposite.so.1
 /usr/lib64/libXcomposite.so.1.0.0

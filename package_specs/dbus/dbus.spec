@@ -79,7 +79,6 @@ Summary: D-BUS libraries
 This package contains libraries for accessing D-BUS.
 
 %files libs
-/usr/lib64/libdbus-1.la
 /usr/lib64/libdbus-1.so
 /usr/lib64/libdbus-1.so.3
 /usr/lib64/libdbus-1.so.3.19.9

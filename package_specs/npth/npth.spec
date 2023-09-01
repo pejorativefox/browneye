@@ -23,7 +23,6 @@ rm -rf %{buildroot}
 %files
 /usr/bin/npth-config
 /usr/include/npth.h
-/usr/lib64/libnpth.la
 /usr/lib64/libnpth.so
 /usr/lib64/libnpth.so.0
 /usr/lib64/libnpth.so.0.1.2

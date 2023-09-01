@@ -21,7 +21,6 @@ rm -rf %{buildroot}
 %make_install
 
 %files
-/usr/lib64/xorg/modules/drivers/amdgpu_drv.la
 /usr/lib64/xorg/modules/drivers/amdgpu_drv.so
 /usr/share/X11/xorg.conf.d/10-amdgpu.conf
 /usr/share/man/man4/amdgpu.4.gz

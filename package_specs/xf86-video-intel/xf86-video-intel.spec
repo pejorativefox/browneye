@@ -34,11 +34,9 @@ sed -i '/\.TH/s/4/1/' %{buildroot}/usr/share/man/man1/intel-virtual-output.1
 
 %files
 /usr/bin/intel-virtual-output
-/usr/lib/libIntelXvMC.la
 /usr/lib/libIntelXvMC.so
 /usr/lib/libIntelXvMC.so.1
 /usr/lib/libIntelXvMC.so.1.0.0
-/usr/lib/xorg/modules/drivers/intel_drv.la
 /usr/lib/xorg/modules/drivers/intel_drv.so
 /usr/libexec/xf86-video-intel-backlight-helper
 /usr/share/man/man4/intel-virtual-output.4.gz

@@ -27,7 +27,6 @@ sed -i '1 s/tools/usr/' %{buildroot}/usr/bin/checkmk
 /usr/include/check.h
 /usr/include/check_stdint.h
 /usr/lib64/libcheck.a
-/usr/lib64/libcheck.la
 /usr/lib64/libcheck.so
 /usr/lib64/libcheck.so.0
 /usr/lib64/libcheck.so.0.0.0

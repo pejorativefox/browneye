@@ -27,7 +27,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/X11/fonts/FSlib.h
 /usr/lib64/libFS.a
-/usr/lib64/libFS.la
 /usr/lib64/libFS.so
 /usr/lib64/libFS.so.6
 /usr/lib64/libFS.so.6.0.0

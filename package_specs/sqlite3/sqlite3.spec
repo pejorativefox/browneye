@@ -32,7 +32,6 @@ rm -rf %{buildroot}
 /usr/bin/sqlite3
 /usr/include/sqlite3.h
 /usr/include/sqlite3ext.h
-/usr/lib64/libsqlite3.la
 /usr/lib64/libsqlite3.so
 /usr/lib64/libsqlite3.so.0
 /usr/lib64/libsqlite3.so.0.8.6

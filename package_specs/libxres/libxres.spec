@@ -27,7 +27,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/X11/extensions/XRes.h
 /usr/lib64/libXRes.a
-/usr/lib64/libXRes.la
 /usr/lib64/libXRes.so
 /usr/lib64/libXRes.so.1
 /usr/lib64/libXRes.so.1.0.0

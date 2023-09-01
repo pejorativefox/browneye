@@ -49,11 +49,9 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/lib/polkit-1/polkitd
 /usr/lib64/girepository-1.0/Polkit-1.0.typelib
 /usr/lib64/girepository-1.0/PolkitAgent-1.0.typelib
-/usr/lib64/libpolkit-agent-1.la
 /usr/lib64/libpolkit-agent-1.so
 /usr/lib64/libpolkit-agent-1.so.0
 /usr/lib64/libpolkit-agent-1.so.0.0.0
-/usr/lib64/libpolkit-gobject-1.la
 /usr/lib64/libpolkit-gobject-1.so
 /usr/lib64/libpolkit-gobject-1.so.0
 /usr/lib64/libpolkit-gobject-1.so.0.0.0

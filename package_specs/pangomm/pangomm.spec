@@ -23,7 +23,6 @@ rm -rf %{buildroot}
 %files
 /usr/include/pangomm-1.4/
 /usr/share/doc/pangomm-1.4/
-/usr/lib64/libpangomm-1.4.la
 /usr/lib64/libpangomm-1.4.so
 /usr/lib64/libpangomm-1.4.so.1
 /usr/lib64/libpangomm-1.4.so.1.0.30

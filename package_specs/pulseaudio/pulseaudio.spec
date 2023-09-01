@@ -51,15 +51,12 @@ rm -fv %{buildroot}/etc/dbus-1/system.d/pulseaudio-system.conf
 /lib/udev/rules.d/90-pulseaudio.rules
 /usr/lib64/cmake/PulseAudio/PulseAudioConfig.cmake
 /usr/lib64/cmake/PulseAudio/PulseAudioConfigVersion.cmake
-/usr/lib64/libpulse-mainloop-glib.la
 /usr/lib64/libpulse-mainloop-glib.so
 /usr/lib64/libpulse-mainloop-glib.so.0
 /usr/lib64/libpulse-mainloop-glib.so.0.0.5
-/usr/lib64/libpulse-simple.la
 /usr/lib64/libpulse-simple.so
 /usr/lib64/libpulse-simple.so.0
 /usr/lib64/libpulse-simple.so.0.1.1
-/usr/lib64/libpulse.la
 /usr/lib64/libpulse.so
 /usr/lib64/libpulse.so.0
 /usr/lib64/libpulse.so.0.20.3
@@ -67,11 +64,8 @@ rm -fv %{buildroot}/etc/dbus-1/system.d/pulseaudio-system.conf
 /usr/lib64/pkgconfig/libpulse-simple.pc
 /usr/lib64/pkgconfig/libpulse.pc
 /usr/lib64/pulse-12.2/*
-/usr/lib64/pulseaudio/libpulsecommon-12.2.la
 /usr/lib64/pulseaudio/libpulsecommon-12.2.so
-/usr/lib64/pulseaudio/libpulsecore-12.2.la
 /usr/lib64/pulseaudio/libpulsecore-12.2.so
-/usr/lib64/pulseaudio/libpulsedsp.la
 /usr/lib64/pulseaudio/libpulsedsp.so
 /usr/libexec/pulse/gsettings-helper
 /usr/share/GConf/gsettings/pulseaudio.convert

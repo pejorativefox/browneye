@@ -100,12 +100,10 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/lib64/libXaw.so.6
 /usr/lib64/libXaw.so.7
 /usr/lib64/libXaw6.a
-/usr/lib64/libXaw6.la
 /usr/lib64/libXaw6.so
 /usr/lib64/libXaw6.so.6
 /usr/lib64/libXaw6.so.6.0.1
 /usr/lib64/libXaw7.a
-/usr/lib64/libXaw7.la
 /usr/lib64/libXaw7.so
 /usr/lib64/libXaw7.so.7
 /usr/lib64/libXaw7.so.7.0.0

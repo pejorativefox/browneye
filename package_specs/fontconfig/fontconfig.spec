@@ -60,7 +60,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/fontconfig/fcfreetype.h
 /usr/include/fontconfig/fcprivate.h
 /usr/include/fontconfig/fontconfig.h
-/usr/lib64/libfontconfig.la
 /usr/lib64/libfontconfig.so
 /usr/lib64/libfontconfig.so.1
 /usr/lib64/libfontconfig.so.1.12.0

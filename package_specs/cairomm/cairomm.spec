@@ -23,7 +23,6 @@ rm -rf %{buildroot}
 %files
 /usr/include/cairomm-1.0/
 /usr/lib64/cairomm-1.0/include/cairommconfig.h
-/usr/lib64/libcairomm-1.0.la
 /usr/lib64/libcairomm-1.0.so
 /usr/lib64/libcairomm-1.0.so.1
 /usr/lib64/libcairomm-1.0.so.1.4.0

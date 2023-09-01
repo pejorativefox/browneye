@@ -32,7 +32,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.la
 /usr/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.so
 /usr/lib64/girepository-1.0/Rsvg-2.0.typelib
-/usr/lib64/librsvg-2.la
 /usr/lib64/librsvg-2.so
 /usr/lib64/librsvg-2.so.2
 /usr/lib64/librsvg-2.so.2.44.12

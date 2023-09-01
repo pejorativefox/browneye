@@ -27,12 +27,10 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/X11/extensions/XvMClib.h
 /usr/lib64/libXvMC.a
-/usr/lib64/libXvMC.la
 /usr/lib64/libXvMC.so
 /usr/lib64/libXvMC.so.1
 /usr/lib64/libXvMC.so.1.0.0
 /usr/lib64/libXvMCW.a
-/usr/lib64/libXvMCW.la
 /usr/lib64/libXvMCW.so
 /usr/lib64/libXvMCW.so.1
 /usr/lib64/libXvMCW.so.1.0.0

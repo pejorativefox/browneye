@@ -39,11 +39,9 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/FLAC/ordinals.h
 /usr/include/FLAC/stream_decoder.h
 /usr/include/FLAC/stream_encoder.h
-/usr/lib64/libFLAC++.la
 /usr/lib64/libFLAC++.so
 /usr/lib64/libFLAC++.so.6
 /usr/lib64/libFLAC++.so.6.3.0
-/usr/lib64/libFLAC.la
 /usr/lib64/libFLAC.so
 /usr/lib64/libFLAC.so.8
 /usr/lib64/libFLAC.so.8.3.0

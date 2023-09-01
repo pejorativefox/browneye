@@ -26,11 +26,9 @@ rm -rf %{buildroot}
 /usr/include/libsoup-gnome-2.4/libsoup/soup-gnome.h
 /usr/lib64/girepository-1.0/Soup-2.4.typelib
 /usr/lib64/girepository-1.0/SoupGNOME-2.4.typelib
-/usr/lib64/libsoup-2.4.la
 /usr/lib64/libsoup-2.4.so
 /usr/lib64/libsoup-2.4.so.1
 /usr/lib64/libsoup-2.4.so.1.8.0
-/usr/lib64/libsoup-gnome-2.4.la
 /usr/lib64/libsoup-gnome-2.4.so
 /usr/lib64/libsoup-gnome-2.4.so.1
 /usr/lib64/libsoup-gnome-2.4.so.1.8.0

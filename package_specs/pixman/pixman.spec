@@ -26,7 +26,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/pixman-1/pixman-version.h
 /usr/include/pixman-1/pixman.h
-/usr/lib64/libpixman-1.la
 /usr/lib64/libpixman-1.so
 /usr/lib64/libpixman-1.so.0
 /usr/lib64/libpixman-1.so.0.38.0

@@ -27,7 +27,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
  /usr/include/X11/extensions/Xrandr.h
 /usr/lib64/libXrandr.a
-/usr/lib64/libXrandr.la
 /usr/lib64/libXrandr.so
 /usr/lib64/libXrandr.so.2
 /usr/lib64/libXrandr.so.2.2.0

@@ -29,12 +29,9 @@ rm -rf %{buildroot}
 /usr/lib64/libSDL2-2.0.so.0
 /usr/lib64/libSDL2-2.0.so.0.8.0
 /usr/lib64/libSDL2.a
-/usr/lib64/libSDL2.la
 /usr/lib64/libSDL2.so
 /usr/lib64/libSDL2_test.a
-/usr/lib64/libSDL2_test.la
 /usr/lib64/libSDL2main.a
-/usr/lib64/libSDL2main.la
 /usr/lib64/pkgconfig/sdl2.pc
 /usr/share/aclocal/sdl2.m4
 

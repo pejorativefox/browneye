@@ -27,7 +27,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/X11/extensions/Xvlib.h
 /usr/lib64/libXv.a
-/usr/lib64/libXv.la
 /usr/lib64/libXv.so
 /usr/lib64/libXv.so.1
 /usr/lib64/libXv.so.1.0.0

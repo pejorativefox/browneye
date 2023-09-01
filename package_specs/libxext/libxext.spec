@@ -42,7 +42,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/X11/extensions/sync.h
 /usr/include/X11/extensions/xtestext1.h
 /usr/lib64/libXext.a
-/usr/lib64/libXext.la
 /usr/lib64/libXext.so
 /usr/lib64/libXext.so.6
 /usr/lib64/libXext.so.6.4.0

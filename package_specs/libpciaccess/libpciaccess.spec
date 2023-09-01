@@ -27,7 +27,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/pciaccess.h
 /usr/lib64/libpciaccess.a
-/usr/lib64/libpciaccess.la
 /usr/lib64/libpciaccess.so
 /usr/lib64/libpciaccess.so.0
 /usr/lib64/libpciaccess.so.0.11.1

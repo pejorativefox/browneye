@@ -25,12 +25,11 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/scmp_sys_resolver
 /usr/include/seccomp-syscalls.h
 /usr/include/seccomp.h
-/usr/lib64/libseccomp.la
 /usr/lib64/libseccomp.so
 /usr/lib64/libseccomp.so.2
 /usr/lib64/libseccomp.so.2.4.2
 /usr/lib64/pkgconfig/libseccomp.pc
-/usr/share/man/*
+/usr/share/man/
 
 %changelog
 # let's skip this for now

@@ -35,7 +35,6 @@ popd
 /usr/bin/modprobe
 /usr/bin/rmmod
 /usr/include/libkmod.h
-/usr/lib64/libkmod.la
 /usr/lib64/libkmod.so
 /usr/lib64/libkmod.so.2
 /usr/lib64/libkmod.so.2.3.4

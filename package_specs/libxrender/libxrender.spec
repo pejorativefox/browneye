@@ -27,7 +27,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/X11/extensions/Xrender.h
 /usr/lib64/libXrender.a
-/usr/lib64/libXrender.la
 /usr/lib64/libXrender.so
 /usr/lib64/libXrender.so.1
 /usr/lib64/libXrender.so.1.3.0

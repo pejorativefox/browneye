@@ -38,9 +38,8 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/png.h
 /usr/include/pngconf.h
 /usr/include/pnglibconf.h
-/usr/lib/libpng.la
 /usr/lib/libpng.so
-/usr/lib/libpng16.la
+/usr/lib/libpng.la
 /usr/lib/libpng16.so
 /usr/lib/libpng16.so.16
 /usr/lib/libpng16.so.16.36.0

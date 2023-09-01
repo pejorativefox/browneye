@@ -28,7 +28,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/X11/extensions/Xinerama.h
 /usr/include/X11/extensions/panoramiXext.h
 /usr/lib64/libXinerama.a
-/usr/lib64/libXinerama.la
 /usr/lib64/libXinerama.so
 /usr/lib64/libXinerama.so.1
 /usr/lib64/libXinerama.so.1.0.0

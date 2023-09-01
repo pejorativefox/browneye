@@ -37,9 +37,7 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/texi2dvi
 /usr/bin/texi2pdf
 /usr/bin/texindex
-/usr/lib64/texinfo/MiscXS.la
 /usr/lib64/texinfo/MiscXS.so
-/usr/lib64/texinfo/XSParagraph.la
 /usr/lib64/texinfo/XSParagraph.so
 /usr/share/info/info-stnd.info.gz
 /usr/share/info/texinfo.info-1.gz

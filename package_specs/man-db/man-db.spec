@@ -40,10 +40,8 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/manpath
 /usr/bin/whatis
 /usr/lib64/man-db/libman-2.8.5.so
-/usr/lib64/man-db/libman.la
 /usr/lib64/man-db/libman.so
 /usr/lib64/man-db/libmandb-2.8.5.so
-/usr/lib64/man-db/libmandb.la
 /usr/lib64/man-db/libmandb.so
 /usr/libexec/man-db/globbing
 /usr/libexec/man-db/manconv

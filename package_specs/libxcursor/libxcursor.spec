@@ -27,7 +27,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/X11/Xcursor/Xcursor.h
 /usr/lib64/libXcursor.a
-/usr/lib64/libXcursor.la
 /usr/lib64/libXcursor.so
 /usr/lib64/libXcursor.so.1
 /usr/lib64/libXcursor.so.1.0.2

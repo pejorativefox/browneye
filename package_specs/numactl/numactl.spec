@@ -32,7 +32,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/numa.h
 /usr/include/numacompat1.h
 /usr/include/numaif.h
-/usr/lib64/libnuma.la
 /usr/lib64/libnuma.so
 /usr/lib64/libnuma.so.1
 /usr/lib64/libnuma.so.1.0.0

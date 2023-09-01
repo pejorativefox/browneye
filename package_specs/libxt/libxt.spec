@@ -59,7 +59,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/X11/VendorP.h
 /usr/include/X11/Xtos.h
 /usr/lib64/libXt.a
-/usr/lib64/libXt.la
 /usr/lib64/libXt.so
 /usr/lib64/libXt.so.6
 /usr/lib64/libXt.so.6.0.0

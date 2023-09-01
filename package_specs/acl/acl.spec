@@ -29,7 +29,6 @@ rm -rf %{buildroot}
 /usr/bin/setfacl
 /usr/include/acl/libacl.h
 /usr/include/sys/acl.h
-/usr/lib64/libacl.la
 /usr/lib64/libacl.so
 /usr/lib64/libacl.so.1
 /usr/lib64/libacl.so.1.1.2253

@@ -46,7 +46,6 @@ mkdir -pv %{buildroot}/etc/udev/rules.d
 /sbin/udevd
 /usr/include/libudev.h
 /usr/include/udev.h
-/usr/lib/libudev.la
 /usr/lib/libudev.so
 /usr/lib/pkgconfig/libudev.pc
 /usr/share/man/man5/udev.conf.5.gz

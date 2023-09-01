@@ -23,7 +23,6 @@ rm -rf %{buildroot}
 %files
 /usr/bin/file
 /usr/include/magic.h
-/usr/lib64/libmagic.la
 /usr/lib64/libmagic.so
 /usr/lib64/libmagic.so.1
 /usr/lib64/libmagic.so.1.0.0

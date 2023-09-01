@@ -30,12 +30,10 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/xkbcommon/xkbcommon-x11.h
 /usr/include/xkbcommon/xkbcommon.h
 /usr/lib64/libxkbcommon-x11.a
-/usr/lib64/libxkbcommon-x11.la
 /usr/lib64/libxkbcommon-x11.so
 /usr/lib64/libxkbcommon-x11.so.0
 /usr/lib64/libxkbcommon-x11.so.0.0.0
 /usr/lib64/libxkbcommon.a
-/usr/lib64/libxkbcommon.la
 /usr/lib64/libxkbcommon.so
 /usr/lib64/libxkbcommon.so.0
 /usr/lib64/libxkbcommon.so.0.0.0

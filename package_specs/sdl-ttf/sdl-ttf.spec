@@ -25,7 +25,6 @@ rm -rf %{buildroot}
 /usr/lib64/libSDL_ttf-2.0.so.0
 /usr/lib64/libSDL_ttf-2.0.so.0.10.1
 /usr/lib64/libSDL_ttf.a
-/usr/lib64/libSDL_ttf.la
 /usr/lib64/libSDL_ttf.so
 /usr/lib64/pkgconfig/SDL_ttf.pc
 

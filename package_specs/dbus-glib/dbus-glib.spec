@@ -30,7 +30,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/dbus-1.0/dbus/dbus-glib.h
 /usr/include/dbus-1.0/dbus/dbus-gtype-specialized.h
 /usr/include/dbus-1.0/dbus/dbus-gvalue-parse-variant.h
-/usr/lib64/libdbus-glib-1.la
 /usr/lib64/libdbus-glib-1.so
 /usr/lib64/libdbus-glib-1.so.2
 /usr/lib64/libdbus-glib-1.so.2.3.4

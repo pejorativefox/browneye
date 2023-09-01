@@ -28,7 +28,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/expat.h
 /usr/include/expat_config.h
 /usr/include/expat_external.h
-/usr/lib64/libexpat.la
 /usr/lib64/libexpat.so
 /usr/lib64/libexpat.so.1
 /usr/lib64/libexpat.so.1.6.8

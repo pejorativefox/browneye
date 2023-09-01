@@ -29,7 +29,6 @@ TODO
 /usr/include/lite/strnlen.h
 /usr/include/lite/tree.h
 /usr/lib64/libite.a
-/usr/lib64/libite.la
 /usr/lib64/libite.so
 /usr/lib64/libite.so.5
 /usr/lib64/libite.so.5.0.1

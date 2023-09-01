@@ -25,7 +25,6 @@ rm -rf %{buildroot}
 /usr/bin/syndaemon
 /usr/include/xorg/synaptics-properties.h
 /usr/lib64/pkgconfig/xorg-synaptics.pc
-/usr/lib64/xorg/modules/input/synaptics_drv.la
 /usr/lib64/xorg/modules/input/synaptics_drv.so
 /usr/share/X11/xorg.conf.d/70-synaptics.conf
 /usr/share/man/man1/synclient.1.gz

@@ -32,7 +32,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/X11/ICE/ICEproto.h
 /usr/include/X11/ICE/ICEutil.h
 /usr/lib64/libICE.a
-/usr/lib64/libICE.la
 /usr/lib64/libICE.so
 /usr/lib64/libICE.so.6
 /usr/lib64/libICE.so.6.3.0

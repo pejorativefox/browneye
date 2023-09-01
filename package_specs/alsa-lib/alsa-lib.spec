@@ -25,7 +25,6 @@ rm -rf %{buildroot}
 /usr/include/alsa/*
 /usr/bin/aserver
 /usr/include/sys/asoundlib.h
-/usr/lib64/libasound.la
 /usr/lib64/libasound.so
 /usr/lib64/libasound.so.2
 /usr/lib64/libasound.so.2.0.0

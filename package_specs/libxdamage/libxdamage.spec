@@ -1,10 +1,10 @@
 Name:       libXdamage
-Version:    1.1.4
+Version:    1.1.6
 Release:    1
 Summary:    TODO
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}-%{version}.tar.bz2
+Source0:    %{name}-%{version}.tar.xz
 
 
 
@@ -27,7 +27,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/X11/extensions/Xdamage.h
 /usr/lib64/libXdamage.a
-/usr/lib64/libXdamage.la
 /usr/lib64/libXdamage.so
 /usr/lib64/libXdamage.so.1
 /usr/lib64/libXdamage.so.1.1.0

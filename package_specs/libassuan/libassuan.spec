@@ -24,7 +24,6 @@ rm -rf %{buildroot}/usr/share/info/dir
 %files
 /usr/bin/libassuan-config
 /usr/include/assuan.h
-/usr/lib64/libassuan.la
 /usr/lib64/libassuan.so
 /usr/lib64/libassuan.so.0
 /usr/lib64/libassuan.so.0.8.1

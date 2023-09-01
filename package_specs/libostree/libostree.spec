@@ -27,7 +27,6 @@ rm -rf %{buildroot}
 /usr/include/ostree-1/*
 /usr/lib/ostree/ostree-prepare-root
 /usr/lib64/girepository-1.0/OSTree-1.0.typelib
-/usr/lib64/libostree-1.la
 /usr/lib64/libostree-1.so
 /usr/lib64/libostree-1.so.1
 /usr/lib64/libostree-1.so.1.0.0

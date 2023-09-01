@@ -28,7 +28,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/bin/ndptool
 /usr/include/ndp.h
-/usr/lib64/libndp.la
 /usr/lib64/libndp.so
 /usr/lib64/libndp.so.0
 /usr/lib64/libndp.so.0.1.1

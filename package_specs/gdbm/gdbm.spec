@@ -29,11 +29,9 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/dbm.h
 /usr/include/gdbm.h
 /usr/include/ndbm.h
-/usr/lib64/libgdbm.la
 /usr/lib64/libgdbm.so
 /usr/lib64/libgdbm.so.6
 /usr/lib64/libgdbm.so.6.0.0
-/usr/lib64/libgdbm_compat.la
 /usr/lib64/libgdbm_compat.so
 /usr/lib64/libgdbm_compat.so.4
 /usr/lib64/libgdbm_compat.so.4.0.0

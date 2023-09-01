@@ -32,7 +32,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/X11/extensions/XKM.h
 /usr/include/X11/extensions/XKMformat.h
 /usr/lib64/libxkbfile.a
-/usr/lib64/libxkbfile.la
 /usr/lib64/libxkbfile.so
 /usr/lib64/libxkbfile.so.1
 /usr/lib64/libxkbfile.so.1.0.2

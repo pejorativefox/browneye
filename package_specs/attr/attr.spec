@@ -31,7 +31,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/attr/attributes.h
 /usr/include/attr/error_context.h
 /usr/include/attr/libattr.h
-/usr/lib64/libattr.la
 /usr/lib64/libattr.so
 /usr/lib64/libattr.so.1
 /usr/lib64/libattr.so.1.1.2448

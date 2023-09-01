@@ -27,7 +27,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/X11/fonts/libxfont2.h
 /usr/lib64/libXfont2.a
-/usr/lib64/libXfont2.la
 /usr/lib64/libXfont2.so
 /usr/lib64/libXfont2.so.2
 /usr/lib64/libXfont2.so.2.0.0

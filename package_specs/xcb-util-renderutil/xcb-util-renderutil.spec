@@ -27,7 +27,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/xcb/xcb_renderutil.h
 /usr/lib64/libxcb-render-util.a
-/usr/lib64/libxcb-render-util.la
 /usr/lib64/libxcb-render-util.so
 /usr/lib64/libxcb-render-util.so.0
 /usr/lib64/libxcb-render-util.so.0.0.0

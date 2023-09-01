@@ -29,11 +29,9 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/libexslt/
 /usr/include/libxslt/
 /usr/share/man/
-/usr/lib64/libexslt.la
 /usr/lib64/libexslt.so
 /usr/lib64/libexslt.so.0
 /usr/lib64/libexslt.so.0.8.20
-/usr/lib64/libxslt.la
 /usr/lib64/libxslt.so
 /usr/lib64/libxslt.so.1
 /usr/lib64/libxslt.so.1.1.33

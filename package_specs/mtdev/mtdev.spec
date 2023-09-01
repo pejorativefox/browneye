@@ -28,7 +28,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/mtdev-plumbing.h
 /usr/include/mtdev.h
 /usr/lib64/libmtdev.a
-/usr/lib64/libmtdev.la
 /usr/lib64/libmtdev.so
 /usr/lib64/libmtdev.so.1
 /usr/lib64/libmtdev.so.1.0.0

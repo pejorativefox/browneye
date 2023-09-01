@@ -30,7 +30,6 @@ rm -rf %{buildroot}
 /usr/include/libxklavier/xklavier.h
 /usr/lib64/girepository-1.0/Xkl-1.0.typelib
 /usr/lib64/libxklavier.a
-/usr/lib64/libxklavier.la
 /usr/lib64/libxklavier.so
 /usr/lib64/libxklavier.so.16
 /usr/lib64/libxklavier.so.16.4.0

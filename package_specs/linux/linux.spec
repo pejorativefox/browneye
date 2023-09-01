@@ -17,8 +17,8 @@ Linux
 make mrproper
 cp -v %{SOURCE1} ./.config
 #%make_build
-make -j4
-make modules
+make -j20
+make -j14 modules
 
 %install    
 # kernel

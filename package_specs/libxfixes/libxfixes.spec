@@ -1,10 +1,10 @@
 Name:       libXfixes
-Version:    5.0.3
+Version:    6.0.1
 Release:    1
 Summary:    TODO
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}-%{version}.tar.bz2
+Source0:    %{name}-%{version}.tar.xz
 
 
 
@@ -27,7 +27,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/X11/extensions/Xfixes.h
 /usr/lib64/libXfixes.a
-/usr/lib64/libXfixes.la
 /usr/lib64/libXfixes.so
 /usr/lib64/libXfixes.so.3
 /usr/lib64/libXfixes.so.3.1.0
@@ -35,4 +34,5 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/man/man3/Xfixes.3.gz
 
 %changelog
-# let's skip this for now
+* Thu Aug 31 2023 Chris Statzer <chris.statzer@gmail.com> 6.0.1
+- Version bump

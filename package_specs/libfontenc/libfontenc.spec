@@ -27,7 +27,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/X11/fonts/fontenc.h
 /usr/lib64/libfontenc.a
-/usr/lib64/libfontenc.la
 /usr/lib64/libfontenc.so
 /usr/lib64/libfontenc.so.1
 /usr/lib64/libfontenc.so.1.0.0

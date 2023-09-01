@@ -21,7 +21,6 @@ rm -rf %{buildroot}
 %make_install
 
 %files
-/usr/lib64/gtk-2.0/2.10.0/engines/libxfce.la
 /usr/lib64/gtk-2.0/2.10.0/engines/libxfce.so
 /usr/share/themes/Xfce-4.0/gtk-2.0/gtkrc
 /usr/share/themes/Xfce-4.2/gtk-2.0/gtkrc

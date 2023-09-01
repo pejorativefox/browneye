@@ -35,11 +35,9 @@ rm -rf %{buildroot}/usr/share/info/dir
 /usr/include/gpgme.h
 /usr/lib64/cmake/Gpgmepp/GpgmeppConfig.cmake
 /usr/lib64/cmake/Gpgmepp/GpgmeppConfigVersion.cmake
-/usr/lib64/libgpgme.la
 /usr/lib64/libgpgme.so
 /usr/lib64/libgpgme.so.11
 /usr/lib64/libgpgme.so.11.20.1
-/usr/lib64/libgpgmepp.la
 /usr/lib64/libgpgmepp.so
 /usr/lib64/libgpgmepp.so.6
 /usr/lib64/libgpgmepp.so.6.7.0

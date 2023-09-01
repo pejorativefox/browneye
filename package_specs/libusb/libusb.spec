@@ -22,7 +22,6 @@ TODO
 %files
 /usr/include/libusb-1.0/libusb.h
 /usr/lib64/libusb-1.0.a
-/usr/lib64/libusb-1.0.la
 /usr/lib64/libusb-1.0.so
 /usr/lib64/libusb-1.0.so.0
 /usr/lib64/libusb-1.0.so.0.2.0
