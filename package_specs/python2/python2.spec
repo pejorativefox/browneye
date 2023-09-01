@@ -6,7 +6,7 @@ License:    GPL3
 Prefix:     /usr
 Source0:    Python-%{version}.tar.xz
 
-Provides: /bin/python2
+Provides: /bin/python2, python(abi) = 2.7
 
 AutoReq: no
 

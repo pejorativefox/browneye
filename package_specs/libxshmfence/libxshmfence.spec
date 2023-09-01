@@ -27,7 +27,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/X11/xshmfence.h
 /usr/lib64/libxshmfence.a
-/usr/lib64/libxshmfence.la
 /usr/lib64/libxshmfence.so
 /usr/lib64/libxshmfence.so.1
 /usr/lib64/libxshmfence.so.1.0.0

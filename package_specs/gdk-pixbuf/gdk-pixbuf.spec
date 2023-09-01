@@ -21,7 +21,7 @@ Requires: librsvg
 mkdir build-pb
 pushd build-pb
 
-meson --prefix=/usr -Dman=false ..
+meson --prefix=/usr -Dman=false -Dgtk_doc=false ..
 ninja
 popd
 

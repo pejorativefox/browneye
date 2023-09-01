@@ -31,6 +31,7 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/lib64/libSM.so
 /usr/lib64/libSM.so.6
 /usr/lib64/libSM.so.6.0.1
+/usr/lib64/libSM.a
 /usr/lib64/pkgconfig/sm.pc
 /usr/share/doc/libSM/SMlib.xml
 /usr/share/doc/libSM/xsmp.xml
