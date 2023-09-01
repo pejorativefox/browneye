@@ -1,5 +1,5 @@
 Name:       gdbm
-Version:    1.18.1
+Version:    1.23
 Release:    1
 Summary:    TODO
 License:    GPL3
@@ -53,6 +53,7 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/man/man1/gdbm_load.1.gz
 /usr/share/man/man1/gdbmtool.1.gz
 /usr/share/man/man3/gdbm.3.gz
+/usr/share/locale/ru/LC_MESSAGES/gdbm.mo
 
 %changelog
 # let's skip this for now

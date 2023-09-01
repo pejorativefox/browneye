@@ -1,5 +1,5 @@
 Name:       elfutils
-Version:    0.176
+Version:    0.189
 Release:    1
 Summary:    TODO
 License:    GPL3
@@ -13,7 +13,8 @@ TODO
 %setup -q -a0
 
 %build
-%configure
+%configure --disable-debuginfod         \
+           --enable-libdebuginfod=dummy
 %make_build
 
 %install
@@ -28,7 +29,7 @@ install -vm644 config/libelf.pc %{buildroot}/usr/lib64/pkgconfig/
 /usr/include/gelf.h
 /usr/include/libelf.h
 /usr/include/nlist.h
-/usr/lib64/libelf-0.176.so
+/usr/lib64/libelf-%{version}.so
 /usr/lib64/libelf.a
 /usr/lib64/libelf.so
 /usr/lib64/libelf.so.1
