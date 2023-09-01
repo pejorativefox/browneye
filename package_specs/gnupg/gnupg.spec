@@ -1,5 +1,5 @@
 Name:       gnupg
-Version:    2.2.9
+Version:    2.4.3
 Release:    1
 Summary:    GNU's tool for secure communication and data storage.
 License:    GPL
@@ -25,31 +25,18 @@ rm -rf %{buildroot}/usr/share/info/dir
 %files
 /usr/bin/dirmngr
 /usr/bin/dirmngr-client
-/usr/bin/gpg
-/usr/bin/gpg-agent
-/usr/bin/gpg-connect-agent
-/usr/bin/gpgconf
-/usr/bin/gpgparsemail
-/usr/bin/gpgscm
-/usr/bin/gpgsm
-/usr/bin/gpgtar
-/usr/bin/gpgv
+/usr/bin/gpg*
 /usr/bin/kbxutil
-/usr/bin/symcryptrun
 /usr/bin/watchgnupg
-/usr/libexec/gpg-check-pattern
-/usr/libexec/gpg-preset-passphrase
-/usr/libexec/gpg-protect-tool
-/usr/libexec/gpg-wks-client
+/usr/libexec/gpg*
 /usr/libexec/scdaemon
+/usr/libexec/dirmngr_ldap
 /usr/sbin/addgnupghome
 /usr/sbin/applygnupgdefaults
 /usr/share/doc/gnupg-2.2.9/*
 /usr/share/gnupg/distsigkey.gpg
 /usr/share/gnupg/*
-/usr/share/info/gnupg.info-1.gz
-/usr/share/info/gnupg.info-2.gz
-/usr/share/info/gnupg.info.gz
+/usr/share/info/gnu*
 /usr/share/locale/*
 /usr/share/man/*
 

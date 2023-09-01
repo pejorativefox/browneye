@@ -24,7 +24,6 @@ rm -rf %{buildroot}
 /usr/lib64/atkmm-1.6/include/atkmmconfig.h
 /usr/lib64/atkmm-1.6/proc/m4/convert.m4
 /usr/lib64/atkmm-1.6/proc/m4/convert_atk.m4
-/usr/lib64/libatkmm-1.6.la
 /usr/lib64/libatkmm-1.6.so
 /usr/lib64/libatkmm-1.6.so.1
 /usr/lib64/libatkmm-1.6.so.1.1.0

@@ -1,5 +1,5 @@
 Name:       freeglut
-Version:    3.2.1
+Version:    3.4.0
 Release:    1
 Summary:    GLUT is a window system independent toolkit for writing OpenGL programs
 License:    GPL
@@ -35,9 +35,10 @@ popd
 /usr/lib64/cmake/FreeGLUT/FreeGLUTConfigVersion.cmake
 /usr/lib64/cmake/FreeGLUT/FreeGLUTTargets-noconfig.cmake
 /usr/lib64/cmake/FreeGLUT/FreeGLUTTargets.cmake
+/usr/lib64/libglut.so.3.12.0 
+/usr/lib64/libglut.a
 /usr/lib64/libglut.so
 /usr/lib64/libglut.so.3
-/usr/lib64/libglut.so.3.11.0
 /usr/lib64/pkgconfig/glut.pc
 
 %changelog

@@ -1,5 +1,5 @@
 Name:       cpio 
-Version:    2.13
+Version:    2.14
 Release:    1
 Summary:    GNU cpio copies files into or out of a cpio or tar archive. The archive can be another file on the disk, a magnetic tape, or a pipe. 
 License:    GPL3

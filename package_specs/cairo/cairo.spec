@@ -6,7 +6,7 @@ License:    GPL3
 Prefix:     /usr
 Source0:    %{name}-%{version}.tar.xz
 
-Provides: pkgconfig(cairo)
+Provides: pkgconfig(cairo), pkgconfig(cairo-ft), pkgconfig(cairo-pdf), pkgconfig(cairo-png), pkgconfig(cairo-ps), pkgconfig(cairo-svg), pkgconfig(cairo-xlib), pkgconfig(cairo-xlib-xrender)
 
 %description
 TODO

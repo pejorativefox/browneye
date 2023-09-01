@@ -1,5 +1,5 @@
 Name:       libgcrypt
-Version:    1.8.4
+Version:    1.10.2
 Release:    1
 Summary:    TODO
 License:    GPL3
@@ -30,7 +30,8 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/gcrypt.h
 /usr/lib64/libgcrypt.so
 /usr/lib64/libgcrypt.so.20
-/usr/lib64/libgcrypt.so.20.2.4
+/usr/lib64/libgcrypt.so.20.4.2
+/usr/lib64/pkgconfig/libgcrypt.pc
 /usr/share/aclocal/libgcrypt.m4
 /usr/share/info/gcrypt.info-1.gz
 /usr/share/info/gcrypt.info-2.gz

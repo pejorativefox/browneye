@@ -1,11 +1,12 @@
 Name:       gtk+
-Version:    3.24.5
+Version:    3.24.38
 Release:    2
 Summary:    TODO
 License:    GPL3
 Prefix:     /usr
 Source0:    %{name}-%{version}.tar.xz
 
+Provides: pkgconfig(gdk-3.0), pkgconfig(gtk+-3.0)
 
 %description
 TODO
@@ -14,14 +15,23 @@ TODO
 %setup
 
 %build
-%configure  --sysconfdir=/etc         \
-            --enable-broadway-backend \
-            --enable-x11-backend
-%make_build
+mkdir build &&
+cd    build &&
+meson setup --prefix=/usr           \
+            --buildtype=release     \
+             -Dman=false             \
+             -Dbroadway_backend=true \
+             -Dwayland_backend=false \
+             -Dgtk_doc=false         \
+             ..                      
+ninja
 
 %install    
 rm -rf %{buildroot}
-%make_install
+pushd build
+DESTDIR=%{buildroot} ninja install
+popd
+
 glib-compile-schemas %{buildroot}/usr/share/glib-2.0/schemas
 rm -vf %{buildroot}%{_infodir}/dir*
 
@@ -42,7 +52,7 @@ gtk-query-immodules-3.0 --update-cache
 /usr/bin/gtk3-icon-browser
 /usr/bin/gtk3-widget-factory
 /usr/include/
-/usr/lib64/
+/usr/lib/
 /usr/share/
 
 %changelog

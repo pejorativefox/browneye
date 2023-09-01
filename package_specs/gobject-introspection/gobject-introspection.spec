@@ -17,6 +17,10 @@ TODO
 mkdir build
 pushd build
 meson setup --prefix=/usr \
+            --buildtype=release \
+            -Dcairo=disabled \
+            -Ddoctool=disabled \
+            -Dgtk_doc=false \
             ..
 ninja
 popd

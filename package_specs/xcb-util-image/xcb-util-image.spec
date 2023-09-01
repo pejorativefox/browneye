@@ -29,7 +29,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/xcb/xcb_image.h
 /usr/include/xcb/xcb_pixel.h
 /usr/lib64/libxcb-image.a
-/usr/lib64/libxcb-image.la
 /usr/lib64/libxcb-image.so
 /usr/lib64/libxcb-image.so.0
 /usr/lib64/libxcb-image.so.0.0.0

@@ -1,5 +1,5 @@
 Name:       at-spi2-atk
-Version:    2.30.0
+Version:    2.38.0
 Release:    1
 Summary:    TODO
 License:    GPL3

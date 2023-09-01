@@ -28,7 +28,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/X11/Xft/Xft.h
 /usr/include/X11/Xft/XftCompat.h
 /usr/lib64/libXft.a
-/usr/lib64/libXft.la
 /usr/lib64/libXft.so
 /usr/lib64/libXft.so.2
 /usr/lib64/libXft.so.2.3.2

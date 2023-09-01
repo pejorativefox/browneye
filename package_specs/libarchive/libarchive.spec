@@ -1,9 +1,9 @@
 Name:       libarchive
-Version:    3.4.0
+Version:    3.7.1
 Release:    1
 Summary:    TODO
 License:    GPL3
-Source0:    %{name}-%{version}.tar.gz
+Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
 
 %description

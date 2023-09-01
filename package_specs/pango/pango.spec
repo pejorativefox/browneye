@@ -1,5 +1,5 @@
 Name:       pango
-Version:    1.42.4
+Version:    1.50.14
 Release:    1
 Summary:    TODO
 License:    GPL3

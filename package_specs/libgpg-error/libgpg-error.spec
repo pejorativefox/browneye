@@ -1,5 +1,5 @@
 Name:       libgpg-error
-Version:    1.35
+Version:    1.47
 Release:    1
 Summary:    TODO
 License:    GPL3
@@ -24,14 +24,13 @@ rm -vf %{buildroot}%{_infodir}/dir*
 
 %files
 /usr/bin/gpg-error
-/usr/bin/gpg-error-config
 /usr/bin/gpgrt-config
 /usr/bin/yat2m
 /usr/include/gpg-error.h
 /usr/include/gpgrt.h
 /usr/lib64/libgpg-error.so
 /usr/lib64/libgpg-error.so.0
-/usr/lib64/libgpg-error.so.0.26.1
+/usr/lib64/libgpg-error.so.0.34.0
 /usr/lib64/pkgconfig/gpg-error.pc
 /usr/share/aclocal/gpg-error.m4
 /usr/share/aclocal/gpgrt.m4
@@ -62,6 +61,7 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/locale/zh_CN/LC_MESSAGES/libgpg-error.mo
 /usr/share/locale/zh_TW/LC_MESSAGES/libgpg-error.mo
 /usr/share/man/man1/gpgrt-config.1.gz
+/usr/share/locale/tr/LC_MESSAGES/libgpg-error.mo
 
 %changelog
 # let's skip this for now

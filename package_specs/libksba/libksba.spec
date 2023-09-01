@@ -1,5 +1,5 @@
 Name:       libksba
-Version:    1.3.5
+Version:    1.6.4
 Release:    1
 Summary:    X.509 certificate library
 License:    GPL
@@ -22,11 +22,11 @@ rm -rf %{buildroot}
 rm -rf %{buildroot}/usr/share/info/dir
 
 %files
-/usr/bin/ksba-config
 /usr/include/ksba.h
 /usr/lib64/libksba.so
 /usr/lib64/libksba.so.8
-/usr/lib64/libksba.so.8.11.6
+/usr/lib64/libksba.so.8.14.4
+/usr/lib64/pkgconfig/ksba.pc
 /usr/share/aclocal/ksba.m4
 /usr/share/info/ksba.info.gz
 

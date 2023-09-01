@@ -1,5 +1,5 @@
 Name:       mesa
-Version:    23.1.2
+Version:    23.1.6
 Release:    1
 Summary:    The Mesa 3D Graphics Library
 License:    GPL3

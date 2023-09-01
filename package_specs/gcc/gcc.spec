@@ -10,7 +10,7 @@ Prefix:     /usr
 The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, Go, and D, as well as libraries for these languages
 
 %prep
-%setup
+%setup -q
 
 %build
 case $(uname -m) in
@@ -22,13 +22,16 @@ esac
 
 mkdir -v build
 pushd build
-../configure --enable-languages=c,c++ \
-             --disable-multilib \
-              --disable-bootstrap \
-             --prefix=/usr \
-             --disable-libmpx \
+../configure --prefix=/usr            \
+             LD=ld                    \
+             --enable-languages=c,c++ \
+             --enable-default-pie     \
+             --enable-default-ssp     \
+             --disable-multilib       \
+             --disable-bootstrap      \
+             --disable-fixincludes    \
              --with-system-zlib
-%make_build
+%make_build 
 popd
 
 %install

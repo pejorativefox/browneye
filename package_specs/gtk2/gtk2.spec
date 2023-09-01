@@ -1,6 +1,6 @@
 Name:       gtk2+
-Version:    2.24.32
-Release:    2
+Version:    2.24.33
+Release:    1
 Summary:    TODO
 License:    GPL3
 Prefix:     /usr

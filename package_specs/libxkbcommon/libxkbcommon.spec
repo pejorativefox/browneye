@@ -1,5 +1,5 @@
 Name:       libxkbcommon
-Version:    0.8.4
+Version:    1.5.0
 Release:    1
 Summary:    TODO
 License:    GPL3
@@ -13,32 +13,29 @@ TODO
 %setup -a 0
 
 %build
-%configure
-%make_build
+mkdir build &&
+cd    build &&
 
+meson setup ..            \
+      --prefix=/usr       \
+      --buildtype=release \
+       -Denable-docs=false \
+       -Denable-wayland=false
+ninja
 
 %install    
 rm -rf %{buildroot}
-%make_install
+pushd build
+DESTDIR=%{buildroot} ninja install
+popd
 rm -vf %{buildroot}%{_infodir}/dir*
 
 %files
-/usr/include/xkbcommon/xkbcommon-compat.h
-/usr/include/xkbcommon/xkbcommon-compose.h
-/usr/include/xkbcommon/xkbcommon-keysyms.h
-/usr/include/xkbcommon/xkbcommon-names.h
-/usr/include/xkbcommon/xkbcommon-x11.h
-/usr/include/xkbcommon/xkbcommon.h
-/usr/lib64/libxkbcommon-x11.a
-/usr/lib64/libxkbcommon-x11.so
-/usr/lib64/libxkbcommon-x11.so.0
-/usr/lib64/libxkbcommon-x11.so.0.0.0
-/usr/lib64/libxkbcommon.a
-/usr/lib64/libxkbcommon.so
-/usr/lib64/libxkbcommon.so.0
-/usr/lib64/libxkbcommon.so.0.0.0
-/usr/lib64/pkgconfig/xkbcommon-x11.pc
-/usr/lib64/pkgconfig/xkbcommon.pc
+/usr/bin
+/usr/libexec/
+/usr/share/
+/usr/include/
+/usr/lib/
 
 %changelog
 # let's skip this for now
