@@ -22,19 +22,26 @@ patch -Np1 -i ../../SOURCES/glibc-2.38-memalign_fix-1.patch
 
 mkdir build
 pushd build
-../configure --prefix=/usr --disable-werror --enable-kernel=3.2 \
-             --enable-stack-protector=strong libc_cv_slibdir=/lib
-TEXINFO_XS=omit make
+../configure --prefix=/usr                            \
+             --disable-werror                         \
+             --enable-kernel=4.14                     \
+             --enable-stack-protector=strong          \
+             --with-headers=/usr/include              \
+             --libdir=%{_libdir}
+make
 popd
 
 %install
-#touch /root/rpmbuild/BUILD/glibc-%{version}/build/manual/libc.info # temp measure to stop docs from erroring
 rm -rf %{buildroot}
 pushd build
-TEXINFO_XS=omit make -j1 install_root=$RPM_BUILD_ROOT install #MAKEINFO=true
+sed '/test-installation/s@$(PERL)@echo not running@' -i ../Makefile
+make install_root=%{buildroot} install
+sed '/RTLDLIST=/s@/usr@@g' -i %{buildroot}/usr/bin/ldd
 popd
-rm -vf %{buildroot}%{_infodir}/dir*
 
+cp -v nscd/nscd.conf %{buildroot}/etc/nscd.conf
+mkdir -pv %{buildroot}/var/cache/nscd
+touch %{buildroot}/var/cache/nscd/.keep
 
 mkdir -pv %{buildroot}/etc
 cat > %{buildroot}/etc/nsswitch.conf << "EOF"
@@ -59,10 +66,12 @@ mkdir -pv %{buildroot}/etc/ld.so.conf.d/
 cat >> %{buildroot}/etc/ld.so.conf << "EOF"
 # Add an include directory
 include /etc/ld.so.conf.d/*.conf
+/usr/local/lib
+/opt/lib
 
 EOF
-mkdir -pv /etc/ld.so.conf.d
-
+mkdir -pv %{buildroot}/etc/ld.so.conf.d
+touch %{buildroot}/etc/ld.so.conf.d/.keep
 
 %files -f ../../SOURCES/glibc.filelist
 
