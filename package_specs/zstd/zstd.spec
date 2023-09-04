@@ -17,8 +17,8 @@ make prefix=/usr
 
 %install
 rm -rf %{buildroot}
-make prefix=%{buildroot}/usr/ install
-rm -v %{buildroot}/usr/lib/libzstd.a
+make prefix=%{buildroot}/usr/ libdir=%{buildroot}/%{_libdir} install
+rm -v %{buildroot}/usr/lib64/libzstd.a
 
 %files
 /usr/bin/unzstd
@@ -30,10 +30,10 @@ rm -v %{buildroot}/usr/lib/libzstd.a
 /usr/include/zdict.h
 /usr/include/zstd.h
 /usr/include/zstd_errors.h
-/usr/lib/libzstd.so
-/usr/lib/libzstd.so.1
-/usr/lib/libzstd.so.1.5.5
-/usr/lib/pkgconfig/libzstd.pc
+/usr/lib64/libzstd.so
+/usr/lib64/libzstd.so.1
+/usr/lib64/libzstd.so.1.5.5
+/usr/lib64/pkgconfig/libzstd.pc
 /usr/share/man/
 
 %changelog
