@@ -1,5 +1,5 @@
 Name:       zstd
-Version:    1.4.4
+Version:    1.5.5
 Release:    1
 Summary:    Fast real-time compression algorith
 License:    BSD
@@ -13,16 +13,12 @@ Fast real-time compression algorith
 %setup
 
 %build
-pushd build/cmake
-cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr .
-%make_build
-popd
+make prefix=/usr
 
 %install
 rm -rf %{buildroot}
-pushd build/cmake
-%make_install
-popd
+make prefix=%{buildroot}/usr/ install
+rm -v %{buildroot}/usr/lib/libzstd.a
 
 %files
 /usr/bin/unzstd
@@ -31,23 +27,19 @@ popd
 /usr/bin/zstdgrep
 /usr/bin/zstdless
 /usr/bin/zstdmt
-/usr/include/cover.h
-/usr/include/zbuff.h
 /usr/include/zdict.h
 /usr/include/zstd.h
 /usr/include/zstd_errors.h
-/usr/lib64/libzstd.a
-/usr/lib64/libzstd.so
-/usr/lib64/libzstd.so.1
-/usr/lib64/libzstd.so.1.4.4
-/usr/lib64/pkgconfig/libzstd.pc
-/usr/share/man/man1/unzstd.1.gz
-/usr/share/man/man1/zstd.1.gz
-/usr/share/man/man1/zstdcat.1.gz
-/usr/share/man/man1/zstdgrep.1.gz
-/usr/share/man/man1/zstdless.1.gz
+/usr/lib/libzstd.so
+/usr/lib/libzstd.so.1
+/usr/lib/libzstd.so.1.5.5
+/usr/lib/pkgconfig/libzstd.pc
+/usr/share/man/
 
 %changelog
+* Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 1.5.5
+- Version bump
+
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 1.4.4
 - Initial RPM
 
