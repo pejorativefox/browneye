@@ -13,7 +13,7 @@ A file type guesser
 %setup -q 
 
 %build
-./configure --prefix=/usr
+%configure
 %make_build
 
 %install
@@ -22,11 +22,11 @@ rm -rf %{buildroot}
 
 %files
 /usr/bin/file
-/usr/lib/libmagic.so
-/usr/lib/libmagic.so.1
-/usr/lib/libmagic.so.1.0.0
+/usr/lib64/libmagic.so
+/usr/lib64/libmagic.so.1
+/usr/lib64/libmagic.so.1.0.0
 /usr/include/magic.h
-/usr/lib/pkgconfig/libmagic.pc
+/usr/lib64/pkgconfig/libmagic.pc
 /usr/share/man/
 /usr/share/misc/magic.mgc
 
