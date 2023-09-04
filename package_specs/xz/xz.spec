@@ -15,7 +15,8 @@ XZ Utils is free general-purpose data compression software with a high compressi
 %build
 ./configure --prefix=/usr    \
             --disable-static \
-            --docdir=/usr/share/doc/xz-5.4.4
+            --docdir=/usr/share/doc/xz-5.4.4 \
+            --libdir=%{_libdir}
 %make_build
 
 %install
@@ -62,10 +63,10 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/lzma/stream_flags.h
 /usr/include/lzma/version.h
 /usr/include/lzma/vli.h
-/usr/lib/liblzma.so
-/usr/lib/liblzma.so.5
-/usr/lib/liblzma.so.%{version}
-/usr/lib/pkgconfig/liblzma.pc
+/usr/lib64/liblzma.so
+/usr/lib64/liblzma.so.5
+/usr/lib64/liblzma.so.%{version}
+/usr/lib64/pkgconfig/liblzma.pc
 /usr/share/
 
 
