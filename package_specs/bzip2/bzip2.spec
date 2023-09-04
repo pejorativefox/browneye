@@ -20,13 +20,15 @@ make -f Makefile-libbz2_so
 make clean
 make
 make PREFIX=%{buildroot}/usr install
-cp -av libbz2.so.* %{buildroot}/usr/lib
-ln -sv libbz2.so.1.0.8 %{buildroot}/usr/lib/libbz2.so
+mkdir -pv %{buildroot}/usr/lib64
+cp -av libbz2.so.* %{buildroot}/usr/lib64
+ln -sv libbz2.so.1.0.8 %{buildroot}/usr/lib64/libbz2.so
 
 cp -v bzip2-shared %{buildroot}/usr/bin/bzip2
 for i in %{buildroot}/usr/bin/{bzcat,bunzip2}; do
   ln -sfv bzip2 $i
 done
+rm -rf %{buildroot}/usr/lib
 
 %files
 /usr/bin/bunzip2
@@ -40,11 +42,10 @@ done
 /usr/bin/bzip2recover
 /usr/bin/bzless
 /usr/bin/bzmore
+/usr/lib64/libbz2.so
+/usr/lib64/libbz2.so.1.0
+/usr/lib64/libbz2.so.1.0.8
 /usr/include/bzlib.h
-/usr/lib/libbz2.a
-/usr/lib/libbz2.so
-/usr/lib/libbz2.so.1.0
-/usr/lib/libbz2.so.1.0.8
 /usr/share/man
 
 %changelog
