@@ -1,19 +1,19 @@
 Name:       mpfr
-Version:    4.0.2
+Version:    4.2.1
 Release:    1
-Summary:    TODO
+Summary:    Library for multiple-precision floating-point computation
 License:    GPL3
 Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
 
 %description
-TODO
+Library for multiple-precision floating-point computation
 
 %prep
-%setup -q -a0
+%setup -q
 
 %build
-%configure --disable-static --enable-thread-safe --docdir=/usr/share/doc/mpfr-4.0.2
+%configure --disable-static --enable-thread-safe --docdir=/usr/share/doc/mpfr-%{version}
 %make_build
 
 %install
@@ -24,28 +24,13 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/mpf2mpfr.h
 /usr/include/mpfr.h
-/usr/lib64/libmpfr.la
 /usr/lib64/libmpfr.so
 /usr/lib64/libmpfr.so.6
-/usr/lib64/libmpfr.so.6.0.2
+/usr/lib64/libmpfr.so.6.2.1
 /usr/lib64/pkgconfig/mpfr.pc
-/usr/share/doc/mpfr-4.0.2/AUTHORS
-/usr/share/doc/mpfr-4.0.2/BUGS
-/usr/share/doc/mpfr-4.0.2/COPYING
-/usr/share/doc/mpfr-4.0.2/COPYING.LESSER
-/usr/share/doc/mpfr-4.0.2/FAQ.html
-/usr/share/doc/mpfr-4.0.2/NEWS
-/usr/share/doc/mpfr-4.0.2/TODO
-/usr/share/doc/mpfr-4.0.2/examples/ReadMe
-/usr/share/doc/mpfr-4.0.2/examples/can_round.c
-/usr/share/doc/mpfr-4.0.2/examples/divworst.c
-/usr/share/doc/mpfr-4.0.2/examples/rndo-add.c
-/usr/share/doc/mpfr-4.0.2/examples/sample.c
-/usr/share/doc/mpfr-4.0.2/examples/version.c
+/usr/share/doc/mpfr-4.2.1/
 /usr/share/info/mpfr.info.gz
 
-
-
-
 %changelog
-# let's skip this for now
+* Wed Aug 30 2023 Chris Statzer <chris.statzer@gmail.com> 4.2.1
+- Version bump

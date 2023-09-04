@@ -1,5 +1,5 @@
 Name:       mpc
-Version:    1.1.0
+Version:    1.3.1
 Release:    1
 Summary:    TODO
 License:    GPL3
@@ -10,10 +10,10 @@ Prefix:     /usr
 TODO
 
 %prep
-%setup -q -a0
+%setup -q
 
 %build
-%configure --disable-static --docdir=/usr/share/doc/mpc-1.1.0
+%configure --disable-static --docdir=/usr/share/doc/mpc-%{version}
 %make_build
 
 %install
@@ -23,11 +23,11 @@ rm -vf %{buildroot}%{_infodir}/dir*
 
 %files
 /usr/include/mpc.h
-/usr/lib64/libmpc.la
 /usr/lib64/libmpc.so
 /usr/lib64/libmpc.so.3
-/usr/lib64/libmpc.so.3.1.0
+/usr/lib64/libmpc.so.3.3.1
 /usr/share/info/mpc.info.gz
 
 %changelog
-# let's skip this for now
+* Wed Aug 30 2023 Chris Statzer <chris.statzer@gmail.com> 1.3.1
+- Version bump

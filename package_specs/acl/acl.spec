@@ -1,9 +1,9 @@
 Name:       acl
-Version:    2.2.53
+Version:    2.3.1
 Release:    1
 Summary:    Linux access control lists.
 License:    LGPL
-Source0:    %{name}-%{version}.tar.gz
+Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
 
 %description
@@ -16,7 +16,7 @@ define more fine-grained discretionary access rights for files and directories.
 %build
 %configure --disable-static       \
            --libexecdir=/usr/lib  \
-           --docdir=/usr/share/doc/acl-2.2.53
+           --docdir=/usr/share/doc/acl-%{version}
 %make_build
 
 %install
@@ -29,22 +29,17 @@ rm -rf %{buildroot}
 /usr/bin/setfacl
 /usr/include/acl/libacl.h
 /usr/include/sys/acl.h
-/usr/lib64/libacl.la
 /usr/lib64/libacl.so
 /usr/lib64/libacl.so.1
-/usr/lib64/libacl.so.1.1.2253
+/usr/lib64/libacl.so.1.1.2301
 /usr/lib64/pkgconfig/libacl.pc
-/usr/share/doc/acl-2.2.53/*
-/usr/share/locale/de/LC_MESSAGES/acl.mo
-/usr/share/locale/en@boldquot/LC_MESSAGES/acl.mo
-/usr/share/locale/en@quot/LC_MESSAGES/acl.mo
-/usr/share/locale/es/LC_MESSAGES/acl.mo
-/usr/share/locale/fr/LC_MESSAGES/acl.mo
-/usr/share/locale/gl/LC_MESSAGES/acl.mo
-/usr/share/locale/pl/LC_MESSAGES/acl.mo
-/usr/share/locale/sv/LC_MESSAGES/acl.mo
-/usr/share/man/*
+/usr/share/doc/acl-%{version}/
+/usr/share/locale/
+/usr/share/man/
 
 %changelog
+* Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 
+- Version bump
+
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 2.2.53
 - Initial RPM release
