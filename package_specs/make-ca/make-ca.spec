@@ -39,8 +39,6 @@ make-ca -C /share/make-ca/certdata.txt
 /usr/libexec/make-ca/copy-trust-modifications
 /usr/sbin/make-ca
 /usr/share/man/man8/make-ca.8.gz
-/usr/lib/systemd/system/update-pki.service
-/usr/lib/systemd/system/update-pki.timer
 /share/make-ca/certdata.txt
 
 %changelog

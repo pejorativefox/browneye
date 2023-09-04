@@ -1,5 +1,5 @@
 Name:       openssh
-Version:    8.0p1
+Version:    9.4p1
 Release:    5
 Summary:    OpenSSH is the premier connectivity tool for remote login with the SSH protocol. 
 License:    GPL3
@@ -59,6 +59,7 @@ make_sshd_keys
 /usr/libexec/sftp-server
 /usr/libexec/ssh-keysign
 /usr/libexec/ssh-pkcs11-helper
+/usr/libexec/ssh-sk-helper
 /usr/sbin/sshd
 /usr/share/man/*
 /etc/finit.d/available/sshd.conf

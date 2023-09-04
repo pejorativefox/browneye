@@ -1,3 +1,5 @@
+%global __os_install_post /usr/lib/rpm/brp-compress %{nil}
+
 Name:       git
 Version:    2.22.0
 Release:    1

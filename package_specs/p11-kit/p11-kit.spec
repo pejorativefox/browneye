@@ -46,14 +46,11 @@ ln -s /usr/libexec/p11-kit/trust-extract-compat \
 /usr/include/p11-kit-1/p11-kit/pkcs11x.h
 /usr/include/p11-kit-1/p11-kit/remote.h
 /usr/include/p11-kit-1/p11-kit/uri.h
-/usr/lib64/libp11-kit.la
 /usr/lib64/libp11-kit.so
 /usr/lib64/libp11-kit.so.0
 /usr/lib64/libp11-kit.so.0.3.0
 /usr/lib64/p11-kit-proxy.so
-/usr/lib64/pkcs11/p11-kit-client.la
 /usr/lib64/pkcs11/p11-kit-client.so
-/usr/lib64/pkcs11/p11-kit-trust.la
 /usr/lib64/pkcs11/p11-kit-trust.so
 /usr/lib64/pkgconfig/p11-kit-1.pc
 /usr/libexec/p11-kit/p11-kit-remote
