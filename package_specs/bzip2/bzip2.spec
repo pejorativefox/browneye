@@ -1,57 +1,32 @@
 Name:       bzip2
-Version:    1.0.6
+Version:    1.0.8
 Release:    1
-Summary:    TODO
+Summary:    bzip2 is a free and open-source file compression program
 License:    GPL3
 Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
 %description
-TODO
+bzip2 is a free and open-source file compression program that uses the Burrows-Wheeler algorithm.
 
 %prep
 %setup -q -a0
 
 %build
-make -f Makefile-libbz2_so \
-    CC="%{__cc}" AR="%{__ar}" RANLIB="%{__ranlib}" \
-    CFLAGS="$RPM_OPT_FLAGS -D_FILE_OFFSET_BITS=64 -fpic -fPIC $O3" \
-    %{?_smp_mflags} all
-
-rm -f *.o
-	
-make CC="%{__cc}" AR="%{__ar}" RANLIB="%{__ranlib}" \
-     CFLAGS="$RPM_OPT_FLAGS -D_FILE_OFFSET_BITS=64 $O3" \
-     %{?_smp_mflags} all
-
-%install
 rm -rf %{buildroot}
-chmod 644 bzlib.h
-mkdir -p $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_libdir}/pkgconfig,%{_includedir}}
-cp -p bzlib.h $RPM_BUILD_ROOT%{_includedir}
-install -m 755 libbz2.so.%{version} $RPM_BUILD_ROOT%{_libdir}
-install -m 644 libbz2.a $RPM_BUILD_ROOT%{_libdir}
-# install -m 644 bzip2.pc $RPM_BUILD_ROOT%{_libdir}/pkgconfig/bzip2.pc
-install -m 755 bzip2-shared  $RPM_BUILD_ROOT%{_bindir}/bzip2
-install -m 755 bzip2recover bzgrep bzdiff bzmore  $RPM_BUILD_ROOT%{_bindir}/
+sed -i 's@\(ln -s -f \)$(PREFIX)/bin/@\1@' Makefile
+sed -i "s@(PREFIX)/man@(PREFIX)/share/man@g" Makefile
+make -f Makefile-libbz2_so
+make clean
+make
+make PREFIX=%{buildroot}/usr install
+cp -av libbz2.so.* %{buildroot}/usr/lib
+ln -sv libbz2.so.1.0.8 %{buildroot}/usr/lib/libbz2.so
 
-cp -p bzip2.1 bzdiff.1 bzgrep.1 bzmore.1  $RPM_BUILD_ROOT%{_mandir}/man1/
-ln -s bzip2 $RPM_BUILD_ROOT%{_bindir}/bunzip2
-ln -s bzip2 $RPM_BUILD_ROOT%{_bindir}/bzcat
-ln -s bzdiff $RPM_BUILD_ROOT%{_bindir}/bzcmp
-ln -s bzmore $RPM_BUILD_ROOT%{_bindir}/bzless
-ln -s bzgrep $RPM_BUILD_ROOT%{_bindir}/bzegrep
-ln -s bzgrep $RPM_BUILD_ROOT%{_bindir}/bzfgrep
-ln -s libbz2.so.%{version} $RPM_BUILD_ROOT%{_libdir}/libbz2.so.1
-ln -s libbz2.so.1 $RPM_BUILD_ROOT%{_libdir}/libbz2.so
-ln -s bzip2.1 $RPM_BUILD_ROOT%{_mandir}/man1/bzip2recover.1
-ln -s bzip2.1 $RPM_BUILD_ROOT%{_mandir}/man1/bunzip2.1
-ln -s bzip2.1 $RPM_BUILD_ROOT%{_mandir}/man1/bzcat.1
-ln -s bzdiff.1 $RPM_BUILD_ROOT%{_mandir}/man1/bzcmp.1
-ln -s bzmore.1 $RPM_BUILD_ROOT%{_mandir}/man1/bzless.1
-ln -s bzgrep.1 $RPM_BUILD_ROOT%{_mandir}/man1/bzegrep.1
-ln -s bzgrep.1 $RPM_BUILD_ROOT%{_mandir}/man1/bzfgrep.1
-ln -s libbz2.so.1 %{buildroot}/usr/lib64/libbz2.so.1.0
+cp -v bzip2-shared %{buildroot}/usr/bin/bzip2
+for i in %{buildroot}/usr/bin/{bzcat,bunzip2}; do
+  ln -sfv bzip2 $i
+done
 
 %files
 /usr/bin/bunzip2
@@ -66,23 +41,12 @@ ln -s libbz2.so.1 %{buildroot}/usr/lib64/libbz2.so.1.0
 /usr/bin/bzless
 /usr/bin/bzmore
 /usr/include/bzlib.h
-/usr/lib64/libbz2.a
-/usr/lib64/libbz2.so
-/usr/lib64/libbz2.so.1
-/usr/lib64/libbz2.so.1.0
-/usr/lib64/libbz2.so.1.0.6
-/usr/share/man/man1/bunzip2.1.gz
-/usr/share/man/man1/bzcat.1.gz
-/usr/share/man/man1/bzcmp.1.gz
-/usr/share/man/man1/bzdiff.1.gz
-/usr/share/man/man1/bzegrep.1.gz
-/usr/share/man/man1/bzfgrep.1.gz
-/usr/share/man/man1/bzgrep.1.gz
-/usr/share/man/man1/bzip2.1.gz
-/usr/share/man/man1/bzip2recover.1.gz
-/usr/share/man/man1/bzless.1.gz
-/usr/share/man/man1/bzmore.1.gz
-
+/usr/lib/libbz2.a
+/usr/lib/libbz2.so
+/usr/lib/libbz2.so.1.0
+/usr/lib/libbz2.so.1.0.8
+/usr/share/man
 
 %changelog
-# let's skip this for now
+* Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 1.0.8
+- Version bump
