@@ -43,4 +43,5 @@ rm -vf %{buildroot}%{_infodir}/dir*
 
 
 %changelog
-# let's skip this for now
+* Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 
+- added missing changelog :)
