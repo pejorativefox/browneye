@@ -27,7 +27,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/flex++
 /usr/include/FlexLexer.h
 /usr/lib64/libfl.a
-/usr/lib64/libfl.la
 /usr/lib64/libfl.so
 /usr/lib64/libfl.so.2
 /usr/lib64/libfl.so.2.0.0
