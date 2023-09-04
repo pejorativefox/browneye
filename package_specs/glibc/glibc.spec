@@ -76,4 +76,5 @@ touch %{buildroot}/etc/ld.so.conf.d/.keep
 %files -f ../../SOURCES/glibc.filelist
 
 %changelog
-# let's skip this for now
+* Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 2.38
+- Version bump
