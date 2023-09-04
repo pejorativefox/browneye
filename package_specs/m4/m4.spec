@@ -1,5 +1,5 @@
 Name:       m4
-Version:    1.4.18
+Version:    1.4.19
 Release:    1
 Summary:    M4 macro processor
 License:    GPL3
@@ -13,8 +13,6 @@ TODO
 %setup -q -a0
 
 %build
-sed -i 's/IO_ftrylockfile/IO_EOF_SEEN/' lib/*.c
-echo "#define _IO_IN_BACKUP 0x100" >> lib/stdio-impl.h
 %configure
 %make_build
 
@@ -29,6 +27,8 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/info/m4.info-2.gz
 /usr/share/info/m4.info.gz
 /usr/share/man/man1/m4.1.gz
+/usr/share/locale/
 
 %changelog
-# let's skip this for now
+* Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 1.4.19
+- Version bump
