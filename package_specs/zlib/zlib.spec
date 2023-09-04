@@ -13,22 +13,21 @@ The zlib compression library.
 %setup -q -a0
 
 %build
-./configure --prefix=/usr
+./configure --prefix=/usr --libdir=%{_libdir}
 %make_build
-rm -fv /usr/lib/libz.a
 
 %install
 rm -rf %{buildroot}
 %make_install
+rm -fv %{buildroot}/usr/lib64/libz.a
 
 %files
 /usr/include/zconf.h
 /usr/include/zlib.h
-/usr/lib/libz.a
-/usr/lib/libz.so
-/usr/lib/libz.so.1
-/usr/lib/libz.so.1.2.13
-/usr/lib/pkgconfig/zlib.pc
+/usr/lib64/libz.so
+/usr/lib64/libz.so.1
+/usr/lib64/libz.so.1.2.13
+/usr/lib64/pkgconfig/zlib.pc
 /usr/share/man/man3/zlib.3.gz
 
 
