@@ -1,44 +1,49 @@
 Name:       kmod
-Version:    26
+Version:    30
 Release:    1
-Summary:    TODO
+Summary:    Kernel module utilities
 License:    GPL3
 Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
 
 %description
-TODO
+The Kmod package contains libraries and utilities for loading kernel modules 
 
 %prep
-%setup -q -a0
+%setup -q
 
 %build
-%configure --with-xz              \
-           --with-zlib
+%configure  --with-openssl         \
+            --with-xz              \
+            --with-zstd            \
+            --with-zlib
 %make_build
 
 %install
 rm -rf %{buildroot}
 %make_install
 rm -vf %{buildroot}%{_infodir}/dir*
-pushd %{buildroot}/usr/bin
-for target in depmod insmod lsmod modinfo modprobe rmmod; do
-  ln -sfv kmod $target
+
+mkdir -pv %{buildroot}/usr/sbin
+
+for target in depmod insmod modinfo modprobe rmmod; do
+  ln -sfv ../bin/kmod %{buildroot}/usr/sbin/$target
 done
-popd
+
+ln -sfv kmod %{buildroot}/usr/bin/lsmod
+
 %files
 /usr/bin/kmod
-/usr/bin/depmod
-/usr/bin/insmod
 /usr/bin/lsmod
-/usr/bin/modinfo
-/usr/bin/modprobe
-/usr/bin/rmmod
+/usr/sbin/depmod
+/usr/sbin/insmod
+/usr/sbin/modinfo
+/usr/sbin/modprobe
+/usr/sbin/rmmod
 /usr/include/libkmod.h
-/usr/lib64/libkmod.la
 /usr/lib64/libkmod.so
 /usr/lib64/libkmod.so.2
-/usr/lib64/libkmod.so.2.3.4
+/usr/lib64/libkmod.so.2.4.0
 /usr/lib64/pkgconfig/libkmod.pc
 /usr/share/bash-completion/completions/kmod
 /usr/share/man/man5/depmod.d.5.gz

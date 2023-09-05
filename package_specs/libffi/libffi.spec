@@ -1,24 +1,18 @@
 Name:       libffi
-Version:    3.2.1
+Version:    3.4.4
 Release:    1
-Summary:    TODO
+Summary:    Foreign Function Interface library
 License:    GPL3
 Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
 %description
-TODO
+The Libffi library provides a portable, high level programming interface to various calling conventions. This allows a programmer to call any function specified by a call interface description at run time.
 
 %prep
-%setup -q -a0
+%setup -q
 
 %build
-sed -e '/^includesdir/ s/$(libdir).*$/$(includedir)/' \
-    -i include/Makefile.in
-
-sed -e '/^includedir/ s/=.*$/=@includedir@/' \
-    -e 's/^Cflags: -I${includedir}/Cflags:/' \
-    -i libffi.pc.in
 %configure --disable-static --with-gcc-arch=native
 %make_build
 
@@ -30,10 +24,9 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/ffi.h
 /usr/include/ffitarget.h
-/usr/lib/libffi.la
 /usr/lib/libffi.so
-/usr/lib/libffi.so.6
-/usr/lib/libffi.so.6.0.4
+/usr/lib/libffi.so.8
+/usr/lib/libffi.so.8.1.2
 /usr/lib64/pkgconfig/libffi.pc
 /usr/share/info/libffi.info.gz
 /usr/share/man/man3/ffi.3.gz
@@ -43,4 +36,5 @@ rm -vf %{buildroot}%{_infodir}/dir*
 
 
 %changelog
-# let's skip this for now
+* Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 
+- Version bump

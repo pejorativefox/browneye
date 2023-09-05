@@ -1,19 +1,22 @@
 Name:       autoconf
-Version:    2.69
+Version:    2.71
 Release:    1
-Summary:    TODO
+Summary:    Tool for producing configure scripts
 License:    GPL3
 Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
 
 %description
-TODO
+Autoconf is an extensible package of M4 macros that produce shell scripts to automatically configure software source code packages. 
 
 %prep
 %setup
 
 %build
-sed '361 s/{/\\{/' -i bin/autoscan.in
+sed -e 's/SECONDS|/&SHLVL|/'               \
+    -e '/BASH_ARGV=/a\        /^SHLVL=/ d' \
+    -i.orig tests/local.at
+
 %configure
 %make_build
 
@@ -36,6 +39,9 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/man/*
 
 %changelog
+* Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 2.71-1
+- Version bump
+
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 2.69
 - Initial RPM
 

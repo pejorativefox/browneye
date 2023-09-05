@@ -1,13 +1,13 @@
 Name:       intltool
 Version:    0.51.0
 Release:    1
-Summary:    TODO
+Summary:    gettext file processor
 License:    GPL3
 Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
 %description
-TODO
+intltool is a set of tools to centralize translation of many different file formats using GNU gettext-compatible PO files.
 
 %prep
 %setup -q -a0
@@ -32,4 +32,5 @@ rm -rf %{buildroot}
 /usr/share/man/*
 
 %changelog
-# let's skip this for now
+* Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 0.51.0-1
+- Version bump

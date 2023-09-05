@@ -1,7 +1,7 @@
 Name:       openssl
-Version:    1.1.1a
+Version:    3.1.2
 Release:    1
-Summary:    TODO
+Summary:    OpenSSL software library
 License:    GPL3
 Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
@@ -12,7 +12,7 @@ Requires: perl >= 0:5.004, libc.so.6()(64bit), libcrypto.so.1.1()(64bit), libdl.
 
 
 %description
-TODO
+OpenSSL is a software library for applications that provide secure communications over computer networks 
 
 %prep
 %setup
@@ -27,12 +27,13 @@ TODO
 %install
 rm -rf %{buildroot}
 sed -i '/INSTALL_LIBS/s/libcrypto.a libssl.a//' Makefile
-%make_install
+%make_install MANSUFFIX=ssl
 rm -vf %{buildroot}%{_infodir}/dir*
 rm -rf %{buildroot}/usr/share/doc/openssl
 rm -rf %{buildroot}/usr/share/man
 
 %files
+/usr/include/openssl/
 /etc/ssl/ct_log_list.cnf
 /etc/ssl/ct_log_list.cnf.dist
 /etc/ssl/misc/CA.pl
@@ -42,17 +43,19 @@ rm -rf %{buildroot}/usr/share/man
 /etc/ssl/openssl.cnf.dist
 /usr/bin/c_rehash
 /usr/bin/openssl
-/usr/include/openssl/*
-/usr/lib64/engines-1.1/afalg.so
-/usr/lib64/engines-1.1/capi.so
-/usr/lib64/engines-1.1/padlock.so
-/usr/lib64/libcrypto.so
-/usr/lib64/libcrypto.so.1.1
-/usr/lib64/libssl.so
-/usr/lib64/libssl.so.1.1
-/usr/lib64/pkgconfig/libcrypto.pc
-/usr/lib64/pkgconfig/libssl.pc
+/usr/lib64/engines-3/afalg.so                                                                                                                                                                         
+/usr/lib64/engines-3/capi.so                                                                                                                                                                          
+/usr/lib64/engines-3/loader_attic.so                                                                                                                                                                  
+/usr/lib64/engines-3/padlock.so                                                                                                                                                                       
+/usr/lib64/libcrypto.so                                                                                                                                                                               
+/usr/lib64/libcrypto.so.3                                                                                                                                                                             
+/usr/lib64/libssl.so                                                                                                                                                                                  
+/usr/lib64/libssl.so.3                                                                                                                                                                                
+/usr/lib64/ossl-modules/legacy.so                                                                                                                                                                     
+/usr/lib64/pkgconfig/libcrypto.pc                                                                                                                                                                     
+/usr/lib64/pkgconfig/libssl.pc                                                                                                                                                                        
 /usr/lib64/pkgconfig/openssl.pc
 
 %changelog
-# let's skip this for now
+* Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 3.1.2-1
+- Version bump
