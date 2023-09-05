@@ -1,7 +1,7 @@
 Name:       bash
-Version:    5.0
+Version:    5.2.15
 Release:    1
-Summary:    TODO
+Summary:    Bourne Again SHell
 License:    GPL3
 Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
@@ -10,14 +10,14 @@ Provides: /bin/bash
 Provides: /bin/sh
 
 %description
-TODO
+GNU sh-compatible shell 
 
 %prep
-%setup -q -a0
+%setup -q
 
 %build
-%configure --docdir=/usr/share/doc/bash-5.0 \
-           --without-bash-malloc            \
+%configure --docdir=/usr/share/doc/bash-%{version} \
+           --without-bash-malloc                   \
            --with-installed-readline
 
 %make_build
@@ -46,9 +46,6 @@ if test -d /etc/profile.d/; then
 fi
 
 EOF
-
-
-
 
 %files
 /etc/profile.d
@@ -114,6 +111,7 @@ EOF
 /usr/include/bash/version.h
 /usr/include/bash/xmalloc.h
 /usr/include/bash/y.tab.h
+/usr/include/bash/execute_cmd.h
 /usr/lib64/bash/Makefile.inc
 /usr/lib64/bash/basename
 /usr/lib64/bash/dirname
@@ -144,55 +142,19 @@ EOF
 /usr/lib64/bash/unlink
 /usr/lib64/bash/whoami
 /usr/lib64/pkgconfig/bash.pc
-/usr/share/doc/bash-5.0/CHANGES
-/usr/share/doc/bash-5.0/COMPAT
-/usr/share/doc/bash-5.0/FAQ
-/usr/share/doc/bash-5.0/INTRO
-/usr/share/doc/bash-5.0/NEWS
-/usr/share/doc/bash-5.0/POSIX
-/usr/share/doc/bash-5.0/RBASH
-/usr/share/doc/bash-5.0/README
-/usr/share/doc/bash-5.0/bash.html
-/usr/share/doc/bash-5.0/bashref.html
+/usr/lib64/bash/Makefile.sample
+/usr/lib64/bash/accept
+/usr/lib64/bash/csv
+/usr/lib64/bash/cut
+/usr/lib64/bash/dsv
+/usr/lib64/bash/getconf
+/usr/lib64/bash/mkfifo
+/usr/lib64/bash/mktemp
+/usr/lib64/bash/rm
+/usr/lib64/bash/stat
+/usr/share/doc/bash-%{version}/
 /usr/share/info/bash.info.gz
-/usr/share/locale/af/LC_MESSAGES/bash.mo
-/usr/share/locale/bg/LC_MESSAGES/bash.mo
-/usr/share/locale/ca/LC_MESSAGES/bash.mo
-/usr/share/locale/cs/LC_MESSAGES/bash.mo
-/usr/share/locale/da/LC_MESSAGES/bash.mo
-/usr/share/locale/de/LC_MESSAGES/bash.mo
-/usr/share/locale/el/LC_MESSAGES/bash.mo
-/usr/share/locale/en@boldquot/LC_MESSAGES/bash.mo
-/usr/share/locale/en@quot/LC_MESSAGES/bash.mo
-/usr/share/locale/eo/LC_MESSAGES/bash.mo
-/usr/share/locale/es/LC_MESSAGES/bash.mo
-/usr/share/locale/et/LC_MESSAGES/bash.mo
-/usr/share/locale/fi/LC_MESSAGES/bash.mo
-/usr/share/locale/fr/LC_MESSAGES/bash.mo
-/usr/share/locale/ga/LC_MESSAGES/bash.mo
-/usr/share/locale/gl/LC_MESSAGES/bash.mo
-/usr/share/locale/hr/LC_MESSAGES/bash.mo
-/usr/share/locale/hu/LC_MESSAGES/bash.mo
-/usr/share/locale/id/LC_MESSAGES/bash.mo
-/usr/share/locale/it/LC_MESSAGES/bash.mo
-/usr/share/locale/ja/LC_MESSAGES/bash.mo
-/usr/share/locale/lt/LC_MESSAGES/bash.mo
-/usr/share/locale/nb/LC_MESSAGES/bash.mo
-/usr/share/locale/nl/LC_MESSAGES/bash.mo
-/usr/share/locale/pl/LC_MESSAGES/bash.mo
-/usr/share/locale/pt/LC_MESSAGES/bash.mo
-/usr/share/locale/pt_BR/LC_MESSAGES/bash.mo
-/usr/share/locale/ro/LC_MESSAGES/bash.mo
-/usr/share/locale/ru/LC_MESSAGES/bash.mo
-/usr/share/locale/sk/LC_MESSAGES/bash.mo
-/usr/share/locale/sl/LC_MESSAGES/bash.mo
-/usr/share/locale/sr/LC_MESSAGES/bash.mo
-/usr/share/locale/sv/LC_MESSAGES/bash.mo
-/usr/share/locale/tr/LC_MESSAGES/bash.mo
-/usr/share/locale/uk/LC_MESSAGES/bash.mo
-/usr/share/locale/vi/LC_MESSAGES/bash.mo
-/usr/share/locale/zh_CN/LC_MESSAGES/bash.mo
-/usr/share/locale/zh_TW/LC_MESSAGES/bash.mo
+/usr/share/locale/
 /usr/share/man/man1/bash.1.gz
 /usr/share/man/man1/bashbug.1.gz
 

@@ -1,16 +1,16 @@
 Name:       grep
-Version:    3.3
+Version:    3.11
 Release:    1
-Summary:    TODO
+Summary:    Text searching cli tool
 License:    GPL3
 Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
 
 %description
-TODO
+grep is a command-line utility for searching plain-text data sets for lines that match a regular expression. 
 
 %prep
-%setup -q -a0
+%setup -q
 
 %build
 %configure
@@ -67,12 +67,13 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/locale/tr/LC_MESSAGES/grep.mo
 /usr/share/locale/uk/LC_MESSAGES/grep.mo
 /usr/share/locale/vi/LC_MESSAGES/grep.mo
+/usr/share/locale/ka/LC_MESSAGES/grep.mo
+/usr/share/locale/ta/LC_MESSAGES/grep.mo
 /usr/share/locale/zh_CN/LC_MESSAGES/grep.mo
 /usr/share/locale/zh_TW/LC_MESSAGES/grep.mo
-/usr/share/man/man1/egrep.1.gz
-/usr/share/man/man1/fgrep.1.gz
 /usr/share/man/man1/grep.1.gz
 
 
 %changelog
-# let's skip this for now
+* Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 
+- Version bump

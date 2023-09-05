@@ -1,21 +1,20 @@
 Name:       expat
-Version:    2.2.6
+Version:    2.5.0
 Release:    1
-Summary:    TODO
+Summary:    stream-oriented XML parser
 License:    GPL3
-Source0:    %{name}-%{version}.tar.bz2
+Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
 
 %description
-TODO
+stream-oriented XML parser
 
 %prep
-%setup -q -a0
+%setup -q
 
 %build
-sed -i 's|usr/bin/env |bin/|' run.sh.in
 %configure --disable-static \
-           --docdir=/usr/share/doc/expat-2.2.6
+           --docdir=/usr/share/doc/expat-%{version}
 %make_build
 
 %install
@@ -28,14 +27,12 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/expat.h
 /usr/include/expat_config.h
 /usr/include/expat_external.h
-/usr/lib64/libexpat.la
+/usr/lib64/cmake/expat-%{version}/
+/usr/lib64/libexpat.so.1.8.10
 /usr/lib64/libexpat.so
 /usr/lib64/libexpat.so.1
-/usr/lib64/libexpat.so.1.6.8
 /usr/lib64/pkgconfig/expat.pc
-/usr/share/doc/expat-2.2.6/AUTHORS
-/usr/share/doc/expat-2.2.6/changelog
-/usr/share/man/man1/xmlwf.1.gz
+/usr/share/doc/expat-%{version}/
 
 %changelog
 # let's skip this for now

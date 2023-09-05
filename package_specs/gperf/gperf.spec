@@ -1,16 +1,16 @@
 Name:       gperf
 Version:    3.1
 Release:    1
-Summary:    TODO
+Summary:    GNU hash function generator
 License:    GPL3
 Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
 %description
-TODO
+GNU gperf is a perfect hash function generator.
 
 %prep
-%setup -q -a0
+%setup -q
 
 %build
 %configure --docdir=/usr/share/doc/gperf-3.1
@@ -28,4 +28,5 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/man/man1/gperf.1.gz
 
 %changelog
-# let's skip this for now
+* Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 3.1
+- Version bump
