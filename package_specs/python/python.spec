@@ -23,23 +23,20 @@ The Python programming language
 %setup -q -n Python-%{version}
 
 %build
-%configure  --enable-shared      \
-            --with-system-expat  \
-            --with-system-ffi    \
-            --enable-optimizations
+%configure  --enable-shared        \
+            --with-system-expat    \
+            --with-system-ffi      \
+            --enable-optimizations \
+            --with-platlibdir=lib64
 %make_build
 
 %install
 rm -rf %{buildroot}
 %make_install
-chmod -v 755 %{buildroot}/usr/lib64/libpython3.7m.so
-chmod -v 755 %{buildroot}/usr/lib64/libpython3.so
 rm -vf %{buildroot}%{_infodir}/dir*
-rm -vrf %{buildroot}/usr/lib/python3.7/site-packages/pip/_internal/models/__pycache__
-rm -rf %{buildroot}/usr/lib/python3.7/test
-ln -s python3.7 %{buildroot}/usr/bin/python
+ln -s python3.11 %{buildroot}/usr/bin/python
 
-%files
+%files -f ../../SOURCES/python.filelist
 
 %changelog
 * Tue May 19 2020 Chris Statzer <chris.statzer@qq.com> 3.7.2-2

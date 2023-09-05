@@ -1,16 +1,16 @@
 Name:       ninja
-Version:    1.9.0
+Version:    1.11.1
 Release:    1
-Summary:    TODO
+Summary:    Ninja is a small build system with a focus on speed
 License:    GPL3
 Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
 %description
-TODO
+Ninja is a small build system with a focus on speed
 
 %prep
-%setup -q -a0
+%setup -q
 
 %build
 export NINJAJOBS=4
@@ -38,4 +38,5 @@ install -vDm644 misc/zsh-completion  %{buildroot}/usr/share/zsh/site-functions/_
 /usr/share/zsh/site-functions/_ninja
 
 %changelog
-# let's skip this for now
+* Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 1.11.1
+- Version bump

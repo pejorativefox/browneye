@@ -1,22 +1,20 @@
 Name:       coreutils
-Version:    8.30
+Version:    9.3
 Release:    1
-Summary:    TODO
+Summary:    GNU operating system tools
 License:    GPL3
 Source0:    %{name}-%{version}.tar.xz
 Patch:      coreutils-8.30-i18n-1.patch
 Prefix:     /usr
 
 %description
-TODO
+The GNU Core Utilities are the basic file, shell and text manipulation utilities of the GNU operating system.
 
 %prep
-%setup
-#%patch -p1
+%setup -q
 
 %build
 
-sed -i '/test.lock/s/^/#/' gnulib-tests/gnulib.mk
 autoreconf -fiv
 export FORCE_UNSAFE_CONFIGURE=1  
 %configure --enable-no-install-program=kill,uptime
@@ -34,6 +32,7 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/base32
 /usr/bin/base64
 /usr/bin/basename
+/usr/bin/basenc
 /usr/bin/cat
 /usr/bin/chcon
 /usr/bin/chgrp
@@ -138,5 +137,8 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/man/*
 
 %changelog
+* Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 9.3
+- Version bump
+
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 8.30
 - Initial RPM
