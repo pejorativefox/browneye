@@ -1,16 +1,16 @@
 Name:       vim
-Version:    8.1
-Release:    5
+Version:    9.0.1677 
+Release:    1
 Summary:    vi Improved Text editor
 License:    GPL3
-Source0:    %{name}-%{version}.tar.bz2
+Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
 %description
 Vim is a highly configurable text editor built to make creating and changing any kind of text very efficient. It is included as "vi" with most UNIX systems and with Apple OS X. 
 
 %prep
-%setup -n vim81
+%setup -q
 
 %build
 echo '#define SYS_VIMRC_FILE "/etc/vimrc"' >> src/feature.h
@@ -23,8 +23,6 @@ rm -rf %{buildroot}
 rm -vf %{buildroot}%{_infodir}/dir*
 rm %{buildroot}/usr/share/applications/gvim.desktop
 rm -rf %{buildroot}/usr/share/icons/*
-rm %{buildroot}/usr/share/vim/vim81/tools/vim132
-
 
 %files
 /usr/bin/ex
@@ -40,6 +38,9 @@ rm %{buildroot}/usr/share/vim/vim81/tools/vim132
 /usr/share/man/*
 
 %changelog
-* Thu May 15 2020 Chris Statzer <chris.statzer@qq.com> 8.1-4
+* Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 9.0.1677-1
+- Version bump
+
+* Fri May 15 2020 Chris Statzer <chris.statzer@qq.com> 8.1-4
 - Removed gtk/X11 build
 

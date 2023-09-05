@@ -1,7 +1,7 @@
 Name:       texinfo
 Version:    7.0.3
 Release:    1
-Summary:    TODO
+Summary:    GNU texinfo utility
 License:    GPL3
 Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
@@ -10,15 +10,13 @@ AutoReq: no
 
 Requires: libc.so.6()(64bit), libncursesw.so.6()(64bit), perl >= 0:5.004
 
-
 %description
-TODO
+The Texinfo package contains programs for reading, writing, and converting info pages. 
 
 %prep
-%setup -q -a0
+%setup -q
 
 %build
-sed -i '5481,5485 s/({/(\\{/' tp/Texinfo/Parser.pm
 %configure --disable-static
 %make_build
 
@@ -37,8 +35,14 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/texi2dvi
 /usr/bin/texi2pdf
 /usr/bin/texindex
-/usr/lib64/
-/usr/share/
+/usr/lib64/texinfo/MiscXS.so
+/usr/lib64/texinfo/Parsetexi.so
+/usr/lib64/texinfo/XSParagraph.so
+/usr/share/info/
+/usr/share/texinfo/
+/usr/share/locale/
+/usr/share/man/
 
 %changelog
-# let's skip this for now
+* Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 7.0.3-1
+- Version bump
