@@ -1,42 +1,38 @@
 Name:       libcap
-Version:    2.26
-Release:    2
-Summary:    TODO
-License:    GPL3
+Version:    2.69
+Release:    1
+Summary:    POSIX 1003.1e capabilities
+License:    GPL2
 Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
 
 Provides: libcap.so.2()(64bit)
 
 %description
-TODO
+POSIX 1003.1e capabilities
 
 %prep
-%setup -q -a0
+%setup -q 
 
 %build
-sed -i '/install.*STALIBNAME/d' libcap/Makefile
+sed -i '/install -m.*STA/d' libcap/Makefile
 %make_build
 
 %install    
 rm -rf %{buildroot}
-#%make_install
+%make_install prefix=/usr
 	
-make install RAISE_SETFCAP=no \
-             DESTDIR=%{buildroot} \
-             LIBDIR=%{_libdir} \
-             SBINDIR=%{_sbindir} \
-             PKGCONFIGDIR=%{_libdir}/pkgconfig/
-
-#chmod +x %{buildroot}/lib64/libcap.so.2.26
-
 %files
 /usr/include/sys/capability.h
+/usr/include/sys/psx_syscall.h
 /usr/lib64/libcap.so
 /usr/lib64/libcap.so.2
-/usr/lib64/libcap.so.2.26
+/usr/lib64/libcap.so.2.69
+/usr/lib64/libpsx.so
+/usr/lib64/libpsx.so.2
+/usr/lib64/libpsx.so.2.69
 /usr/lib64/pkgconfig/libcap.pc
-/usr/lib64/security/pam_cap.so
+/usr/lib64/pkgconfig/libpsx.pc
 /usr/sbin/capsh
 /usr/sbin/getcap
 /usr/sbin/getpcaps
@@ -44,4 +40,5 @@ make install RAISE_SETFCAP=no \
 /usr/share/man/
 
 %changelog
-# let's skip this for now
+* Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 
+- Version bump
