@@ -13,13 +13,16 @@ The ncurses (new curses) library is a free software emulation of curses in Syste
 %setup
 
 %build
-sed -i '/LIBTOOL_INSTALL/d' c++/Makefile.in
-%configure --mandir=/usr/share/man \
-           --with-shared \
-           --without-debug \
-           --without-normal \
-           --enable-pc-files \
-           --enable-widec
+#sed -i '/LIBTOOL_INSTALL/d' c++/Makefile.in
+%configure  --prefix=/usr           \
+            --mandir=/usr/share/man \
+            --with-shared           \
+            --without-debug         \
+            --without-normal        \
+            --with-cxx-shared       \
+            --enable-pc-files       \
+            --enable-widec          \
+            --with-pkg-config-libdir=/usr/lib/pkgconfig
 %make_build
 
 %install
@@ -70,30 +73,35 @@ done
 /usr/lib64/libmenuw.so
 /usr/lib64/libmenuw.so.6
 /usr/lib64/libmenuw.so.6.4
-/usr/lib64/libncurses++w.a
 /usr/lib64/libncursesw.so
 /usr/lib64/libncursesw.so.6
 /usr/lib64/libncursesw.so.6.4
 /usr/lib64/libpanelw.so
 /usr/lib64/libpanelw.so.6
 /usr/lib64/libpanelw.so.6.4
-/usr/lib64/pkgconfig/formw.pc
-/usr/lib64/pkgconfig/menuw.pc
-/usr/lib64/pkgconfig/ncurses++w.pc
-/usr/lib64/pkgconfig/ncursesw.pc
-/usr/lib64/pkgconfig/panelw.pc
 /usr/lib64/libform.so
 /usr/lib64/libmenu.so
 /usr/lib64/libncurses.so
 /usr/lib64/libpanel.so
+/usr/lib64/libncurses++w.so
+/usr/lib64/libncurses++w.so.6
+/usr/lib64/libncurses++w.so.6.4
 /usr/lib64/pkgconfig/form.pc
 /usr/lib64/pkgconfig/menu.pc
 /usr/lib64/pkgconfig/ncurses.pc
 /usr/lib64/pkgconfig/panel.pc
+/usr/lib/pkgconfig/formw.pc
+/usr/lib/pkgconfig/menuw.pc
+/usr/lib/pkgconfig/ncurses++w.pc
+/usr/lib/pkgconfig/ncursesw.pc
+/usr/lib/pkgconfig/panelw.pc
 /usr/share/man/
 /usr/share/tabset/
 /usr/share/terminfo/
 
 %changelog
+* Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 
+- Version bump
+
 * Sat Jun 17 2023 Chris Statzer <chris.statzer@gmail.com> 6.4
 - Bumped version to 6.4
