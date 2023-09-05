@@ -1,20 +1,20 @@
 Name:       less
-Version:    530
+Version:    643
 Release:    1
-Summary:    TODO
+Summary:    open-source file pager. 
 License:    GPL3
 Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
 %description
-TODO
+Less is a free, open-source file pager. 
 
 %prep
-%setup -q -a0
+%setup -q
 
 %build
 
-%configure --sysconfdir=/etc
+%configure 
 %make_build
 
 %install
@@ -31,4 +31,5 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/man/man1/lesskey.1.gz
 
 %changelog
-# let's skip this for now
+* Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 643-1
+ Version bump
