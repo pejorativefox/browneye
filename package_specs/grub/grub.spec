@@ -20,7 +20,6 @@ GNU GRUB is a Multiboot boot loader. It was derived from GRUB, the GRand Unified
 %configure  --prefix=/usr        \
             --sysconfdir=/etc    \
             --disable-efiemu     \
-            --enable-grub-mkfont \
             --with-platform=efi  \
             --target=x86_64      \
             --disable-werror
@@ -51,7 +50,6 @@ mv -v %{buildroot}/etc/bash_completion.d/grub %{buildroot}/usr/share/bash-comple
 /usr/share/grub/grub-mkconfig_lib
 /usr/share/info/
 /usr/share/locale/ 
-/usr/share/man/
 
 %changelog
 * Tue Jun 13 2023 Chris Statzer <chris.statzer@gmail.com> 2.06-1

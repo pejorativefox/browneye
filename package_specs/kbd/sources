@@ -1,2 +1,2 @@
-c1635a5a83b63aca7f97a3eab39ebaa6 http://ftp.iij.ad.jp/pub/linux/kernel/linux/utils/kbd/kbd-2.0.4.tar.xz
-f75cca16a38da6caa7d52151f7136895 http://www.linuxfromscratch.org/patches/downloads/kbd/kbd-2.0.4-backspace-1.patch
+986241b5d94c6bd4ed2f6d2a5ab4320b https://www.kernel.org/pub/linux/utils/kbd/kbd-2.6.1.tar.xz
+f75cca16a38da6caa7d52151f7136895 https://www.linuxfromscratch.org/patches/lfs/12.0/kbd-2.6.1-backspace-1.patch

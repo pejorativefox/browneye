@@ -1,7 +1,7 @@
 Name:       gawk
-Version:    4.2.1
+Version:    5.2.2
 Release:    1
-Summary:    TODO
+Summary:    GNU pattern scanner
 License:    GPL3
 Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
@@ -9,10 +9,10 @@ Prefix:     /usr
 Provides: /bin/gawk
 
 %description
-TODO
+Gawk is a powerful text-processing and data-manipulating tool
 
 %prep
-%setup -q -a0
+%setup -q
 
 %build
 sed -i 's/extras//' Makefile.in
@@ -27,7 +27,8 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/bin/awk
 /usr/bin/gawk
-/usr/bin/gawk-4.2.1
+/usr/bin/gawk-%{version}
+/usr/bin/gawkbug
 /usr/include/gawkapi.h
 /usr/lib64/gawk/filefuncs.so
 /usr/lib64/gawk/fnmatch.so
@@ -43,6 +44,8 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/lib64/gawk/time.so
 /usr/libexec/awk/grcat
 /usr/libexec/awk/pwcat
+/usr/share/awk/isnumeric.awk
+/usr/share/awk/ns_passwd.awk
 /usr/share/awk/assert.awk
 /usr/share/awk/bits2str.awk
 /usr/share/awk/cliff_rand.awk
@@ -72,34 +75,10 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/info/gawk.info.gz
 /usr/share/info/gawkinet.info.gz
 /usr/share/info/gawkworkflow.info.gz
-/usr/share/locale/ca/LC_MESSAGES/gawk.mo
-/usr/share/locale/da/LC_MESSAGES/gawk.mo
-/usr/share/locale/de/LC_MESSAGES/gawk.mo
-/usr/share/locale/es/LC_MESSAGES/gawk.mo
-/usr/share/locale/fi/LC_MESSAGES/gawk.mo
-/usr/share/locale/fr/LC_MESSAGES/gawk.mo
-/usr/share/locale/id/LC_MESSAGES/gawk.mo
-/usr/share/locale/it/LC_MESSAGES/gawk.mo
-/usr/share/locale/ja/LC_MESSAGES/gawk.mo
-/usr/share/locale/ms/LC_MESSAGES/gawk.mo
-/usr/share/locale/nl/LC_MESSAGES/gawk.mo
-/usr/share/locale/pl/LC_MESSAGES/gawk.mo
-/usr/share/locale/pt_BR/LC_MESSAGES/gawk.mo
-/usr/share/locale/sv/LC_MESSAGES/gawk.mo
-/usr/share/locale/vi/LC_MESSAGES/gawk.mo
-/usr/share/locale/zh_CN/LC_MESSAGES/gawk.mo
-/usr/share/man/man1/gawk.1.gz
-/usr/share/man/man3/filefuncs.3am.gz
-/usr/share/man/man3/fnmatch.3am.gz
-/usr/share/man/man3/fork.3am.gz
-/usr/share/man/man3/inplace.3am.gz
-/usr/share/man/man3/ordchr.3am.gz
-/usr/share/man/man3/readdir.3am.gz
-/usr/share/man/man3/readfile.3am.gz
-/usr/share/man/man3/revoutput.3am.gz
-/usr/share/man/man3/revtwoway.3am.gz
-/usr/share/man/man3/rwarray.3am.gz
-/usr/share/man/man3/time.3am.gz
+/usr/share/locale/
+/usr/share/man/
+/usr/share/info/
 
 %changelog
-# let's skip this for now
+* Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 5.2.2-1
+- Version bump

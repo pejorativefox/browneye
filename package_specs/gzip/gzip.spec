@@ -1,16 +1,16 @@
 Name:       gzip
-Version:    1.10
+Version:    1.12
 Release:    1
-Summary:    TODO
+Summary:    GNU data compression program
 License:    GPL3
 Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
 
 %description
-TODO
+Gzip is a popular data compression program originally written by Jean-loup Gailly for the GNU project. 
 
 %prep
-%setup -q -a0
+%setup -q
 
 %build
 
@@ -38,17 +38,8 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/zmore
 /usr/bin/znew
 /usr/share/info/gzip.info.gz
-/usr/share/man/man1/gunzip.1.gz
-/usr/share/man/man1/gzexe.1.gz
-/usr/share/man/man1/gzip.1.gz
-/usr/share/man/man1/zcat.1.gz
-/usr/share/man/man1/zcmp.1.gz
-/usr/share/man/man1/zdiff.1.gz
-/usr/share/man/man1/zforce.1.gz
-/usr/share/man/man1/zgrep.1.gz
-/usr/share/man/man1/zless.1.gz
-/usr/share/man/man1/zmore.1.gz
-/usr/share/man/man1/znew.1.gz
+/usr/share/man/
 
 %changelog
-# let's skip this for now
+* Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 1.12-1
+- Version bump
