@@ -24,6 +24,9 @@ case $(uname -m) in
 esac
 
 mkdir -v build
+
+echo "MULTILIB_OSDIRNAMES = m64=../lib64" >> gcc/config/i386/t-linux64
+
 pushd build
 ../configure --prefix=/usr            \
              LD=ld                    \
@@ -33,7 +36,8 @@ pushd build
              --disable-multilib       \
              --disable-bootstrap      \
              --disable-fixincludes    \
-             --with-system-zlib
+             --with-system-zlib       \
+             --libdir=%{_libdir}
 %make_build
 popd
 
@@ -53,12 +57,13 @@ Summary: The GNU Standard C++ Library v3
 The GNU Standard C++ Library v3 is an ongoing project to implement the ISO 14882 C++ Standard Library as described in clauses 20 through 33 and annex D (prior to the 2017 standard the library clauses started with 17).
 
 %files -n libstdc++
-/usr/lib/libstdc++.a
-/usr/lib/libstdc++.so
-/usr/lib/libstdc++.so.6
-/usr/lib/libstdc++.so.6.0.32
-/usr/lib/libstdc++.so.6.0.32-gdb.py
-/usr/lib/libstdc++fs.a
+/usr/lib64/libstdc++.a
+/usr/lib64/libstdc++.so
+/usr/lib64/libstdc++.so.6
+/usr/lib64/libstdc++.so.6.0.32
+/usr/lib64/libstdc++.so.6.0.32-gdb.py
+/usr/lib64/libstdc++fs.a
+/usr/lib64/libstdc++exp.a
 /usr/share/gcc-13.2.0/python/libstdcxx/__init__.py
 /usr/share/gcc-13.2.0/python/libstdcxx/v6/__init__.py
 /usr/share/gcc-13.2.0/python/libstdcxx/v6/printers.py
@@ -71,89 +76,10 @@ Provides: libgcc_s.so.1()(64bit), libgcc_s.so.1(GCC_3.0)(64bit), libgcc_s.so.1(G
 The GCC low-level runtime library
 
 %files -n libgcc
-/usr/lib/libgcc_s.so
-/usr/lib/libgcc_s.so.1
+/usr/lib64/libgcc_s.so
+/usr/lib64/libgcc_s.so.1
 
-%files
-/usr/bin/c++
-/usr/bin/cpp
-/usr/bin/g++
-/usr/bin/cc
-/usr/bin/gcc
-/usr/bin/gcc-ar
-/usr/bin/gcc-nm
-/usr/bin/gcc-ranlib
-/usr/bin/gcov
-/usr/bin/gcov-dump
-/usr/bin/gcov-tool
-/usr/bin/x86_64-pc-linux-gnu-c++
-/usr/bin/x86_64-pc-linux-gnu-g++
-/usr/bin/x86_64-pc-linux-gnu-gcc
-/usr/bin/x86_64-pc-linux-gnu-gcc-%{version}
-/usr/bin/x86_64-pc-linux-gnu-gcc-ar
-/usr/bin/x86_64-pc-linux-gnu-gcc-nm
-/usr/bin/x86_64-pc-linux-gnu-gcc-ranlib
-/usr/bin/lto-dump
-/usr/lib/libasan.a
-/usr/lib/libasan.so
-/usr/lib/libasan.so.8
-/usr/lib/libasan.so.8.0.0
-/usr/lib/libhwasan.a
-/usr/lib/libhwasan.so
-/usr/lib/libhwasan.so.0
-/usr/lib/libhwasan.so.0.0.0
-/usr/lib/libhwasan_preinit.o
-/usr/lib/libstdc++exp.a
-/usr/lib/libtsan.so.2
-/usr/lib/libtsan.so.2.0.0
-/usr/include/c++/%{version}/*
-/usr/lib/gcc/x86_64-pc-linux-gnu/%{version}/*
-/usr/lib/libasan_preinit.o
-/usr/lib/libatomic.a
-/usr/lib/libatomic.so
-/usr/lib/libatomic.so.1
-/usr/lib/libatomic.so.1.2.0
-/usr/lib/libcc1.so
-/usr/lib/libcc1.so.0
-/usr/lib/libcc1.so.0.0.0
-/usr/lib/libgomp.a
-/usr/lib/libgomp.so
-/usr/lib/libgomp.so.1
-/usr/lib/libgomp.so.1.0.0
-/usr/lib/libgomp.spec
-/usr/lib/libitm.a
-/usr/lib/libitm.so
-/usr/lib/libitm.so.1
-/usr/lib/libitm.so.1.0.0
-/usr/lib/libitm.spec
-/usr/lib/liblsan.a
-/usr/lib/liblsan.so
-/usr/lib/liblsan.so.0
-/usr/lib/liblsan.so.0.0.0
-/usr/lib/liblsan_preinit.o
-/usr/lib/libquadmath.a
-/usr/lib/libquadmath.so
-/usr/lib/libquadmath.so.0
-/usr/lib/libquadmath.so.0.0.0
-/usr/lib/libsanitizer.spec
-/usr/lib/libssp.a
-/usr/lib/libssp.so
-/usr/lib/libssp.so.0
-/usr/lib/libssp.so.0.0.0
-/usr/lib/libssp_nonshared.a
-/usr/lib/libsupc++.a
-/usr/lib/libtsan.a
-/usr/lib/libtsan.so
-/usr/lib/libtsan_preinit.o
-/usr/lib/libubsan.a
-/usr/lib/libubsan.so
-/usr/lib/libubsan.so.1
-/usr/lib/libubsan.so.1.0.0
-/usr/libexec/gcc/x86_64-pc-linux-gnu/%{version}/*
-/usr/share/info/*
-/usr/share/locale/*
-/usr/share/man/*
-
+%files -f ../../SOURCES/gcc.filelist
 
 %changelog
 * Sun Sep 3 2023 Chris Statzer <chris.statzer@gmail.com> 13.2.0
