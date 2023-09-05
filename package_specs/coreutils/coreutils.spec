@@ -137,8 +137,8 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/man/*
 
 %changelog
-* Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 9.3
+* Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 9.3-1
 - Version bump
 
-* Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 8.30
+* Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 8.30-1
 - Initial RPM
