@@ -22,7 +22,7 @@ The ncurses (new curses) library is a free software emulation of curses in Syste
             --with-cxx-shared       \
             --enable-pc-files       \
             --enable-widec          \
-            --with-pkg-config-libdir=/usr/lib/pkgconfig
+            --with-pkg-config-libdir=/usr/lib64/pkgconfig
 %make_build
 
 %install
@@ -34,6 +34,7 @@ for lib in ncurses form panel menu ; do
     echo "INPUT(-l${lib}w)" > %{buildroot}/usr/lib64/lib${lib}.so
     ln -sfv ${lib}w.pc        %{buildroot}/usr/lib64/pkgconfig/${lib}.pc
 done
+
 
 %files
 /usr/bin/captoinfo
@@ -90,11 +91,11 @@ done
 /usr/lib64/pkgconfig/menu.pc
 /usr/lib64/pkgconfig/ncurses.pc
 /usr/lib64/pkgconfig/panel.pc
-/usr/lib/pkgconfig/formw.pc
-/usr/lib/pkgconfig/menuw.pc
-/usr/lib/pkgconfig/ncurses++w.pc
-/usr/lib/pkgconfig/ncursesw.pc
-/usr/lib/pkgconfig/panelw.pc
+/usr/lib64/pkgconfig/formw.pc
+/usr/lib64/pkgconfig/menuw.pc
+/usr/lib64/pkgconfig/ncurses++w.pc
+/usr/lib64/pkgconfig/ncursesw.pc
+/usr/lib64/pkgconfig/panelw.pc
 /usr/share/man/
 /usr/share/tabset/
 /usr/share/terminfo/
