@@ -1,6 +1,6 @@
 Name:       util-linux
-Version:    2.33.1
-Release:    2
+Version:    2.39.1
+Release:    1
 Summary:    util-linux is a random collection of Linux utilities
 License:    GPL3
 Source0:    %{name}-%{version}.tar.xz
@@ -10,11 +10,10 @@ Prefix:     /usr
 util-linux is a random collection of Linux utilities
 
 %prep
-%setup -q -a0
+%setup -q
 
 %build
-%configure  ADJTIME_PATH=/var/lib/hwclock/adjtime   \
-            --docdir=/usr/share/doc/util-linux-2.33.1 \
+%configure   ADJTIME_PATH=/var/lib/hwclock/adjtime \
             --disable-chfn-chsh  \
             --disable-login      \
             --disable-nologin    \
@@ -26,7 +25,7 @@ util-linux is a random collection of Linux utilities
             --without-python     \
             --without-systemd    \
             --without-systemdsystemunitdir \
-            --disable-makeinstall-chown
+            --docdir=/usr/share/doc/util-linux-%{version}
 %make_build
 
 %install
@@ -99,28 +98,33 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/wdctl
 /usr/bin/whereis
 /usr/bin/x86_64
+/usr/bin/fadvise
+/usr/bin/hardlink
+/usr/bin/irqtop
+/usr/bin/lsfd
+/usr/bin/lsirq
+/usr/bin/pipesz
+/usr/bin/scriptlive
+/usr/bin/uclampset
+/usr/bin/waitpid
+/usr/sbin/blkpr
 /usr/include/blkid/blkid.h
 /usr/include/libfdisk/libfdisk.h
 /usr/include/libmount/libmount.h
 /usr/include/libsmartcols/libsmartcols.h
 /usr/include/uuid/uuid.h
-/usr/lib64/libblkid.la
 /usr/lib64/libblkid.so
 /usr/lib64/libblkid.so.1
 /usr/lib64/libblkid.so.1.1.0
-/usr/lib64/libfdisk.la
 /usr/lib64/libfdisk.so
 /usr/lib64/libfdisk.so.1
 /usr/lib64/libfdisk.so.1.1.0
-/usr/lib64/libmount.la
 /usr/lib64/libmount.so
 /usr/lib64/libmount.so.1
 /usr/lib64/libmount.so.1.1.0
-/usr/lib64/libsmartcols.la
 /usr/lib64/libsmartcols.so
 /usr/lib64/libsmartcols.so.1
 /usr/lib64/libsmartcols.so.1.1.0
-/usr/lib64/libuuid.la
 /usr/lib64/libuuid.so
 /usr/lib64/libuuid.so.1
 /usr/lib64/libuuid.so.1.3.0
@@ -139,7 +143,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/sbin/chcpu
 /usr/sbin/ctrlaltdel
 /usr/sbin/delpart
-/usr/sbin/fdformat
 /usr/sbin/fdisk
 /usr/sbin/findfs
 /usr/sbin/fsck
@@ -170,12 +173,14 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/sbin/uuidd
 /usr/sbin/wipefs
 /usr/sbin/zramctl
-/usr/share/doc/util-linux-2.33.1/getopt/getopt-parse.bash
-/usr/share/doc/util-linux-2.33.1/getopt/getopt-parse.tcsh
+/usr/share/doc/
 /usr/share/locale/
 /usr/share/bash-completion/
 /usr/share/man/
 
 %changelog
+* Wed Sep 6 Chris Statzer <chris.statzer@gmail.com> 4.0.3-1
+- Version bump
+
 * Sun Jun 18 2023 Chris Statzer <chris.statzer@gmail.com> 2.33.1-2
 - /sbin/raw is no longer built automatically with kernerls past 5.4 as raw.h was removed from kernel headers

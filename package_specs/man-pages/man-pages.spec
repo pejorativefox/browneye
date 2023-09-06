@@ -10,7 +10,7 @@ Prefix:     /usr
 The Linux man-pages project documents the Linux kernel and C library interfaces that are employed by user-space programs.
 
 %prep
-%setup
+%setup -q
 
 %build
 rm -v man3/crypt*
