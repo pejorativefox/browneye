@@ -34,7 +34,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/ifconfig
 /usr/bin/ping
 /usr/bin/ping6
-/usr/bin/talk
 /usr/bin/telnet
 /usr/bin/tftp
 /usr/bin/traceroute

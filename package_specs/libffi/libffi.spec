@@ -24,9 +24,9 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/ffi.h
 /usr/include/ffitarget.h
-/usr/lib/libffi.so
-/usr/lib/libffi.so.8
-/usr/lib/libffi.so.8.1.2
+/usr/lib64/libffi.so
+/usr/lib64/libffi.so.8
+/usr/lib64/libffi.so.8.1.2
 /usr/lib64/pkgconfig/libffi.pc
 /usr/share/info/libffi.info.gz
 /usr/share/man/man3/ffi.3.gz

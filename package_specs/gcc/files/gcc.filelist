@@ -840,9 +840,9 @@
 /usr/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/cc1
 /usr/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/plugin/gengtype
 /usr/libexec/gcc/x86_64-pc-linux-gnu/13.2.0/liblto_plugin.so
-/usr/lib/libcc1.so.0.0.0
-/usr/lib/libcc1.so.0
-/usr/lib/libcc1.so
+/usr/lib64/libcc1.so.0.0.0
+/usr/lib64/libcc1.so.0
+/usr/lib64/libcc1.so
 /usr/share/info/gccint.info.gz
 /usr/share/info/cppinternals.info.gz
 /usr/share/info/libquadmath.info.gz

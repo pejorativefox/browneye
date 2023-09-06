@@ -15,7 +15,8 @@ Expect is a tool for automating interactive applications.
 %build
 %configure  --with-tcl=/usr/lib   \
             --enable-shared         \
-            --with-tclinclude=/usr/include
+            --with-tclinclude=/usr/include \
+            --with-tcl=/usr/lib64
 %make_build
 
 %install

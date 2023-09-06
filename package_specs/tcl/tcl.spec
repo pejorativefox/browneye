@@ -44,6 +44,7 @@ popd
 rm -rf %{buildroot}
 pushd unix
 %make_install
+DESTDIR=%{buildroot} make install-private-headers
 mv %{buildroot}/usr/lib %{buildroot}/usr/lib64
 popd
 

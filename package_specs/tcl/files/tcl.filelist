@@ -1140,3 +1140,12 @@
 /usr/lib64/sqlite3.40.0/libsqlite3.40.0.so
 /usr/lib64/sqlite3.40.0/pkgIndex.tcl
 /usr/lib64/tclConfig.sh
+/usr/lib64/lib/tcl8.6/tzdata/
+/usr/include/tclInt.h
+/usr/include/tclIntDecls.h
+/usr/include/tclIntPlatDecls.h
+/usr/include/tclOOInt.h
+/usr/include/tclOOIntDecls.h
+/usr/include/tclPort.h
+/usr/include/tclUnixPort.h
+

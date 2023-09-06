@@ -27,7 +27,8 @@ The Python programming language
             --with-system-expat    \
             --with-system-ffi      \
             --enable-optimizations \
-            --with-platlibdir=lib64
+            --with-platlibdir=lib64 \
+            --without-ensurepip
 %make_build
 
 %install

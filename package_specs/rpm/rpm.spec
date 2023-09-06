@@ -36,10 +36,10 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/rpmspec
 /usr/bin/rpmverify
 /usr/bin/rpmlua
-/usr/lib/python3.11/site-packages/rpm-4.18.1-py3.11.egg-info
-/usr/lib/python3.11/site-packages/rpm/__init__.py
-/usr/lib/python3.11/site-packages/rpm/_rpm.so
-/usr/lib/python3.11/site-packages/rpm/transaction.py
+/usr/lib64/python3.11/site-packages/rpm-4.18.1-py3.11.egg-info
+/usr/lib64/python3.11/site-packages/rpm/__init__.py
+/usr/lib64/python3.11/site-packages/rpm/_rpm.so
+/usr/lib64/python3.11/site-packages/rpm/transaction.py
 /usr/lib64/librpm.so
 /usr/lib64/librpm.so.9
 /usr/lib64/librpm.so.9.4.0

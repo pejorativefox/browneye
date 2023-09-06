@@ -1,4 +1,4 @@
-Name:       python3-jinja
+Name:       python-jinja
 Version:    3.1.2
 Release:    1
 Summary:    Python templating language
