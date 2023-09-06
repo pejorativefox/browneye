@@ -42,6 +42,7 @@ unset BUILD_ZLIB BUILD_BZIP2
 rm -rf %{buildroot}
 %make_install
 rm -vf %{buildroot}%{_infodir}/dir*
+rm %{buildroot}/usr/share/man/man3/Thread.3
 
 %files -f ../../SOURCES/perl.filelist
 

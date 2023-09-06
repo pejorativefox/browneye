@@ -26,6 +26,7 @@ pushd build
 install -v -dm755  %{buildroot}/usr/share/doc/dejagnu-1.6.3
 install -v -m644   doc/dejagnu.{html,txt} %{buildroot}/usr/share/doc/dejagnu-1.6.3
 %make_install
+rm %{buildroot}/usr/share/info/dir
 popd
 
 %files
