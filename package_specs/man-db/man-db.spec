@@ -53,5 +53,5 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/man/
 
 %changelog
-* Wed Sep 6 Chris Statzer <chris.statzer@gmail.com> 2.11.12-1
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 2.11.12-1
 - Version bump

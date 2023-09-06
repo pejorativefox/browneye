@@ -1,25 +1,23 @@
 Name:       lua
-Version:    5.3.5
+Version:    5.4.6
 Release:    2
 Summary:    Lua High-level programming language
 License:    GPL3
 Prefix:     /usr
 Source0:    %{name}-%{version}.tar.gz
-Patch:      lua-5.3.5-shared_library-1.patch
 
-Provides: liblua.so.5.3()(64bit)
+Provides: liblua.so.5.4()(64bit)
 
 %description
 Lua is a lightweight, high-level, multi-paradigm programming language designed primarily for embedded use in applications.
 
 %prep
-%setup
-%patch -p1
+%setup -q
 
 %build
 cat > lua.pc << "EOF"
-V=5.3
-R=5.3.5
+V=5.4
+R=5.4.6
 
 prefix=/usr
 INSTALL_BIN=${prefix}/bin
@@ -40,25 +38,22 @@ Libs: -L${libdir} -llua -lm -ldl
 Cflags: -I${includedir}
 EOF
 
-sed -i '/#define LUA_ROOT/s:/usr/local/:/usr/:' src/luaconf.h
-
-
-make MYCFLAGS="-DLUA_COMPAT_5_2 -DLUA_COMPAT_5_1" linux
-
+patch -Np1 -i ../../SOURCES/lua-5.4.6-shared_library-1.patch 
+make linux
 
 %install    
 rm -rf %{buildroot}
 pushd src
 mkdir -pv %{buildroot}/usr/bin
 mkdir -pv %{buildroot}/usr/include
-mkdir -pv %{buildroot}/usr/lib
+mkdir -pv %{buildroot}/usr/lib64
 chmod +x lua luac
 install -v -m755 -D lua luac %{buildroot}/usr/bin
 install -v -m644 -D lua.h luaconf.h lualib.h lauxlib.h lua.hpp %{buildroot}/usr/include
-install -v -m644 -D liblua.so liblua.so.5.3 liblua.so.5.3.4 %{buildroot}/usr/lib
+install -v -m644 -D liblua.so liblua.so.5.4 liblua.so.5.4.6 %{buildroot}/usr/lib64
 popd
 mkdir -pv %{buildroot}/usr/lib/pkgconfig/
-install -v -m644 -D lua.pc %{buildroot}/usr/lib/pkgconfig/lua.pc
+install -v -m644 -D lua.pc %{buildroot}/usr/lib64/pkgconfig/lua.pc
 rm -vf %{buildroot}%{_infodir}/dir*
 
 %files
@@ -69,10 +64,10 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/lua.hpp
 /usr/include/luaconf.h
 /usr/include/lualib.h
-/usr/lib/liblua.so
-/usr/lib/liblua.so.5.3
-/usr/lib/liblua.so.5.3.4
-/usr/lib/pkgconfig/lua.pc
+/usr/lib64/liblua.so.5.4
+/usr/lib64/liblua.so.5.4.6
+/usr/lib64/liblua.so
+/usr/lib64/pkgconfig/lua.pc
 
 %changelog
 * Sun Jun 18 2023 Chris Statzer <chris.statzer@gmail.com> 5.3.5-2

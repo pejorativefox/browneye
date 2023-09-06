@@ -7,7 +7,7 @@ Source0:    sqlite-autoconf-3420000.tar.gz
 Prefix:     /usr
 
 %description
-
+The SQLite package is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine. 
 
 %prep
 %setup -n sqlite-autoconf-3420000

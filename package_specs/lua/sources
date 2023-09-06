@@ -1,2 +1,2 @@
-4f4b4f323fd3514a68e0ab3da8ce3455 https://www.lua.org/ftp/lua-5.3.5.tar.gz
-63ecacd3ff6552537a73f8c30c396caf http://www.linuxfromscratch.org/patches/downloads/lua/lua-5.3.5-shared_library-1.patch
+25a429319dff20dfbfb9956c2b5be911 https://www.lua.org/ftp/lua-5.4.6.tar.gz
+dd9bafa25310f188f711b2670275e0cc https://www.linuxfromscratch.org/patches/blfs/12.0/lua-5.4.6-shared_library-1.patch
