@@ -1,5 +1,5 @@
 Name:       linux
-Version:    6.3.8
+Version:    6.4.12
 Release:    1
 Summary:    Linux
 License:    GPL3
@@ -11,7 +11,7 @@ Source1:    linux-%{version}.config
 Linux
 
 %prep
-%setup -n linux-%{version}
+%setup -q -n linux-%{version}
 
 %build
 make mrproper
