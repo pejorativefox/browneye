@@ -10,7 +10,7 @@ Prefix:     /usr
 
 AutoReq: no
 
-Requires: libc.so.6()(64bit), libcrypto.so.1.1()(64bit), libcurl.so.4()(64bit), libexpat.so.1()(64bit), libpthread.so.0()(64bit), librt.so.1()(64bit), libssl.so.1.1()(64bit), libz.so.1()(64bit), perl >= 0:5.004
+Requires: libc.so.6()(64bit), libcrypto.so.3()(64bit), libcurl.so.4()(64bit), libexpat.so.1()(64bit), libpthread.so.0()(64bit), librt.so.1()(64bit), libssl.so.3()(64bit), libz.so.1()(64bit), perl >= 0:5.004
 
 
 %description
