@@ -1,17 +1,17 @@
 Name:       lame
 Version:    3.100
 Release:    1
-Summary:    TODO
+Summary:    mp3 encoder
 License:    GPL3
 Prefix:     /usr
 Source0:    %{name}-%{version}.tar.gz
 
 
 %description
-TODO
+The LAME package contains an MP3 encoder and optionally, an MP3 frame analyzer. 
 
 %prep
-%setup -a 0 
+%setup -q
 
 %build
 %configure --enable-mp3rtp --disable-static
@@ -26,7 +26,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/mp3rtp
 /usr/bin/lame
 /usr/include/lame/lame.h
-/usr/lib64/libmp3lame.la
 /usr/lib64/libmp3lame.so
 /usr/lib64/libmp3lame.so.0
 /usr/lib64/libmp3lame.so.0.0.0
@@ -48,5 +47,5 @@ rm -vf %{buildroot}%{_infodir}/dir*
 
 
 %changelog
-# let's skip this for now
-
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 3.100
+- Version bump
