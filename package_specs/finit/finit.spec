@@ -1,19 +1,17 @@
 
 Name:       finit
-Version:    3.2
+Version:    4.4
 Release:    1
 Summary:    TODO
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}-%{version}-rc1.tar.xz
-
-
+Source0:    %{name}-%{version}.tar.xz
 
 %description
 TODO
 
 %prep
-%setup -a 0 -n finit-3.2-rc1
+%setup -q
 
 %build
 %configure --enable-dbus-plugin --enable-rw-rootfs --enable-progress 
@@ -24,9 +22,6 @@ TODO
 %make_install
 
 %files
-/usr/bin/logit
-/usr/include/finit/*
-/usr/lib64/finit/*
 /usr/sbin/finit
 /usr/sbin/halt
 /usr/sbin/init
@@ -36,8 +31,46 @@ TODO
 /usr/sbin/shutdown
 /usr/sbin/suspend
 /usr/sbin/telinit
-/usr/share/doc/finit/*
-
+/usr/include/finit/cgroup.h
+/usr/include/finit/cond.h
+/usr/include/finit/conf.h
+/usr/include/finit/finit.h
+/usr/include/finit/helpers.h
+/usr/include/finit/log.h
+/usr/include/finit/plugin.h
+/usr/include/finit/service.h
+/usr/include/finit/svc.h
+/usr/lib64/finit/plugins/bootmisc.so
+/usr/lib64/finit/plugins/dbus.so
+/usr/lib64/finit/plugins/modprobe.so
+/usr/lib64/finit/plugins/netlink.so
+/usr/lib64/finit/plugins/pidfile.so
+/usr/lib64/finit/plugins/procps.so
+/usr/lib64/finit/plugins/rtc.so
+/usr/lib64/finit/plugins/sys.so
+/usr/lib64/finit/plugins/tty.so
+/usr/lib64/finit/plugins/urandom.so
+/usr/lib64/finit/plugins/usr.so
+/usr/lib64/finit/rescue.conf
+/usr/lib64/finit/sample.conf
+/usr/lib64/finit/system/hotplug.conf
+/usr/lib64/finit/tmpfiles.d/finit.conf
+/usr/lib64/tmpfiles.d/dnsmasq.conf
+/usr/lib64/tmpfiles.d/etc.conf
+/usr/lib64/tmpfiles.d/frr.conf
+/usr/lib64/tmpfiles.d/legacy.conf
+/usr/lib64/tmpfiles.d/lldpd.conf
+/usr/lib64/tmpfiles.d/openswan.conf
+/usr/lib64/tmpfiles.d/quagga.conf
+/usr/lib64/tmpfiles.d/sshd.conf
+/usr/lib64/tmpfiles.d/uuidd.conf
+/usr/lib64/tmpfiles.d/var.conf
+/usr/lib64/tmpfiles.d/x11.conf
+/usr/libexec/finit/getty
+/usr/libexec/finit/logit
+/usr/share/doc/finit/
+/usr/share/man/
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 4.4-1
+- Version bump
