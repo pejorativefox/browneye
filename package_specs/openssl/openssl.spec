@@ -8,7 +8,7 @@ Prefix:     /usr
 
 AutoReq: no
 
-Requires: perl >= 0:5.004, libc.so.6()(64bit), libcrypto.so.1.1()(64bit), libdl.so.2()(64bit), libpthread.so.0()(64bit), libssl.so.1.1()(64bit)
+Requires: perl >= 0:5.004, libc.so.6()(64bit), libcrypto.so.3()(64bit), libdl.so.2()(64bit), libpthread.so.0()(64bit), libssl.so.3()(64bit)
 
 
 %description

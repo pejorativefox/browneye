@@ -23,6 +23,7 @@ rm -rf %{buildroot}
 rm -vf %{buildroot}%{_infodir}/dir*
 rm %{buildroot}/usr/share/applications/gvim.desktop
 rm -rf %{buildroot}/usr/share/icons/*
+rm -rf %{buildroot}/usr/share/vim/vim90/tools/vim132
 
 %files
 /usr/bin/ex
@@ -34,8 +35,8 @@ rm -rf %{buildroot}/usr/share/icons/*
 /usr/bin/vimtutor
 /usr/bin/xxd
 /usr/share/applications/vim.desktop
-/usr/share/vim/*
-/usr/share/man/*
+/usr/share/vim/
+/usr/share/man/
 
 %changelog
 * Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 9.0.1677-1

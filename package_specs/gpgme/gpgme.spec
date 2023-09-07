@@ -22,8 +22,7 @@ export PYTHON=/bin/python3.11
 rm -rf %{buildroot}
 %make_install
 rm -rf %{buildroot}/usr/share/info/dir
-ln -sfv /usr/lib64/python3.11/site-packages/gpg-1.21.0-py3.11-linux-x86_64.egg/gpg/ %{buildroot}/usr/lib64/python3.11/site-packages/gpg
-exit
+ln -sfv gpg-1.21.0-py3.11-linux-x86_64.egg/gpg/ %{buildroot}/usr/lib64/python3.11/site-packages/gpg
 
 %files
 /usr/bin/gpgme-json

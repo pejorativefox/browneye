@@ -6,6 +6,8 @@ License:    GPL
 Source0:    %{name}-%{version}.tar.bz2
 Prefix:     /usr
 
+Provides: pkgconfig(libassuan)
+
 %description
 GnuPG ipc library.
 
