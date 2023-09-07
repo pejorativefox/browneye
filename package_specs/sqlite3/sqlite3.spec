@@ -1,16 +1,16 @@
 Name:       sqlite3
-Version:    3.42.0
+Version:    3.24.0
 Release:    1
 Summary:    SQLlite database engine.
 License:    GPL
-Source0:    sqlite-autoconf-3420000.tar.gz
+Source0:    sqlite-autoconf-3240000.tar.gz
 Prefix:     /usr
 
 %description
 The SQLite package is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine. 
 
 %prep
-%setup -n sqlite-autoconf-3420000
+%setup -n sqlite-autoconf-3240000
 
 %build
 %configure  --disable-static  \
@@ -19,7 +19,12 @@ The SQLite package is a software library that implements a self-contained, serve
                       -DSQLITE_ENABLE_UNLOCK_NOTIFY=1   \
                       -DSQLITE_ENABLE_DBSTAT_VTAB=1     \
                       -DSQLITE_SECURE_DELETE=1          \
-                      -DSQLITE_ENABLE_FTS3_TOKENIZER=1" 
+                      -DSQLITE_ENABLE_FTS3_TOKENIZER=1
+                      -DSQLITE_DISABLE_DIRSYNC=1 \
+                      -DSQLITE_ENABLE_FTS3_PARENTHESIS=1 \
+                      -DSQLITE_ENABLE_DBPAGE_VTAB \
+		      -Wall -fno-strict-aliasing"
+        
 %make_build
 
 %install
