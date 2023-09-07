@@ -1,5 +1,5 @@
 Name:       libdnf
-Version:    0.70.2
+Version:    0.71.0
 Release:    1
 Summary:    Software management library. 
 License:    GPL
