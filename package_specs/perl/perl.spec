@@ -9,8 +9,14 @@ Prefix:     /usr
 AutoReq: no
 
 Provides: /bin/perl
+Provides: perl = 5.38.0-1
+Provides: perl >= 1:5.6
+Provides: libperl.so
+Provides: perl(File::HomeDir)
 
-Requires: libc.so.6()(64bit), libcrypt.so.2()(64bit), libdl.so.2()(64bit), libgdbm.so.6()(64bit), libgdbm_compat.so.4()(64bit), libm.so.6()(64bit), libpthread.so.0()(64bit), librt.so.1()(64bit), libutil.so.1()(64bit)
+Requires: libc.so.6()(64bit), libcrypt.so.2()(64bit), libdl.so.2()(64bit), libgdbm.so.6()(64bit), libgdbm_compat.so.4()(64bit)
+Requires: libm.so.6()(64bit), libpthread.so.0()(64bit), librt.so.1()(64bit), libutil.so.1()(64bit)
+
 
 %description
 Perl programming language
