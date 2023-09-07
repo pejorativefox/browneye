@@ -33,10 +33,10 @@ popd
 /usr/bin/zck_read_header
 /usr/bin/zckdl
 /usr/include/zck.h
-/usr/lib/libzck.so
-/usr/lib/libzck.so.1
-/usr/lib/libzck.so.1.1.4
-/usr/lib/pkgconfig/zck.pc
+/usr/lib64/libzck.so
+/usr/lib64/libzck.so.1
+/usr/lib64/libzck.so.1.1.4
+/usr/lib64/pkgconfig/zck.pc
 
 %changelog
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 1.1.4

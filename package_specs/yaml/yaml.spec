@@ -24,7 +24,6 @@ rm -rf %{buildroot}
 /usr/include/yaml.h
 /usr/lib64/libyaml-0.so.2
 /usr/lib64/libyaml-0.so.2.0.5
-/usr/lib64/libyaml.la
 /usr/lib64/libyaml.so
 /usr/lib64/pkgconfig/yaml-0.1.pc
 

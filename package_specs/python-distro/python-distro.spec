@@ -1,4 +1,4 @@
-Name:       python3-distro
+Name:       python-distro
 Version:    1.8.0
 Release:    1
 Summary:    An OS platform information API
@@ -16,14 +16,11 @@ distro provides information about the OS distribution it runs on, such as a reli
 
 %install
 rm -rf %{buildroot}
-mkdir -pv %{buildroot}/lib/python3.7/site-packages/distro
-cp src/distro/* %{buildroot}/lib/python3.7/site-packages/distro
+mkdir -pv %{buildroot}/usr/lib64/python3.11/site-packages/distro
+cp src/distro/* %{buildroot}/usr/lib64/python3.11/site-packages/distro
 
 %files
-/lib/python3.7/site-packages/distro/__init__.py
-/lib/python3.7/site-packages/distro/__main__.py
-/lib/python3.7/site-packages/distro/distro.py
-/lib/python3.7/site-packages/distro/py.typed
+/usr/lib64/python3.11/site-packages/distro/
 
 %changelog
 * Sun Jun 18 2023 Chris Statzer <chris.statzer@gmail.com> 1.8.0

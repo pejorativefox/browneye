@@ -37,7 +37,6 @@ rm -rf %{buildroot}
 /usr/include/json-c/linkhash.h
 /usr/include/json-c/printbuf.h
 /usr/lib64/libjson-c.a
-/usr/lib64/libjson-c.la
 /usr/lib64/libjson-c.so
 /usr/lib64/libjson-c.so.4
 /usr/lib64/libjson-c.so.4.0.0

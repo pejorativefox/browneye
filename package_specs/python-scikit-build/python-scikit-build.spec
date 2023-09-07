@@ -1,4 +1,4 @@
-Name:       python3-scikit-build
+Name:       python-scikit-build
 Version:    0.13.0
 Release:    1
 Summary:    Improved build system generator for CPython C, C++, Cython and Fortran extensions 
@@ -17,9 +17,10 @@ Improved build system generator for CPython C, C++, Cython and Fortran extension
 %install
 rm -rf %{buildroot}
 python3 setup.py install --root %{buildroot}
+mv %{buildroot}/usr/lib %{buildroot}/usr/lib64
 
 %files
-/usr/lib/python3.7/site-packages/*
+/usr/lib64/python3.11/site-packages/
 
 %changelog
 * Sun Jun 18 2023 Chris Statzer <chris.statzer@gmail.com> 0.13.0

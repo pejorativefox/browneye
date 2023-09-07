@@ -27,6 +27,7 @@ pushd build-glib
 meson --prefix=/usr      \
       -Dman=false        \
       -Dselinux=disabled \
+      --buildtype=release \
       ..
 ninja
 popd
@@ -38,12 +39,7 @@ DESTDIR=%{buildroot} ninja install
 popd
 rm -vf %{buildroot}%{_infodir}/dir*
 
-%files
-/usr/bin/
-/usr/include/
-/usr/lib/
-/usr/share/
-/usr/libexec/
+%files -f ../../SOURCES/glib.filelist
 
 %changelog
 * Wed Aug 30 2023 Chris Statzer <chris.statzer@gmail.com> 2.77.2

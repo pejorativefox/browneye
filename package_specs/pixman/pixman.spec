@@ -1,7 +1,7 @@
 Name:       pixman
-Version:    0.38.0
+Version:    0.42.2
 Release:    1
-Summary:    TODO
+Summary:    Low-level image libraary
 License:    GPL3
 Prefix:     /usr
 Source0:    %{name}-%{version}.tar.gz
@@ -9,7 +9,7 @@ Source0:    %{name}-%{version}.tar.gz
 
 
 %description
-TODO
+The Pixman package contains a library that provides low-level pixel manipulation features such as image compositing and trapezoid rasterization. 
 
 %prep
 %setup -a 0
@@ -26,13 +26,11 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/pixman-1/pixman-version.h
 /usr/include/pixman-1/pixman.h
-/usr/lib64/libpixman-1.la
 /usr/lib64/libpixman-1.so
 /usr/lib64/libpixman-1.so.0
-/usr/lib64/libpixman-1.so.0.38.0
+/usr/lib64/libpixman-1.so.0.42.2
 /usr/lib64/pkgconfig/pixman-1.pc
 
-
 %changelog
-# let's skip this for now
-
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 0.42.2
+- Version bump

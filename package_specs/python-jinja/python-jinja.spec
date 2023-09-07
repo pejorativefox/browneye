@@ -18,9 +18,11 @@ Jinja is a modern and designer-friendly templating language for Python, modelled
 rm -rf %{buildroot}
 python3 setup.py install --root %{buildroot}
 
+mv %{buildroot}/usr/lib %{buildroot}/usr/lib64
+
 %files
-/usr/lib/python3.11/site-packages/jinja2/
-/usr/lib/python3.11/site-packages/Jinja2-3.1.2-py3.11.egg-info/
+/usr/lib64/python3.11/site-packages/jinja2/
+/usr/lib64/python3.11/site-packages/Jinja2-3.1.2-py3.11.egg-info/
 
 %changelog
 * Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 3.1.2-1

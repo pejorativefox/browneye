@@ -79,7 +79,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/freetype2/freetype/tttables.h
 /usr/include/freetype2/freetype/tttags.h
 /usr/include/freetype2/ft2build.h
-/usr/lib64/libfreetype.la
 /usr/lib64/libfreetype.so
 /usr/lib64/libfreetype.so.6
 /usr/lib64/libfreetype.so.6.16.1

@@ -1,16 +1,16 @@
 Name:       check
-Version:    0.15.2
+Version:    0.12.0
 Release:    1
-Summary:    Unit testing framework for C
+Summary:    TODO
 License:    GPL3
 Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
 %description
-Check is a unit testing framework for C.
+TODO
 
 %prep
-%setup -q
+%setup -q -a0
 
 %build
 %configure 
@@ -61,5 +61,4 @@ sed -i '1 s/tools/usr/' %{buildroot}/usr/bin/checkmk
 /usr/share/man/man1/checkmk.1.gz
 
 %changelog
-* Mon Sep 4 2023 Chris Statzer <chris.statzer@gmail.com> 0.15.02-1
-- Version bump
+# let's skip this for now

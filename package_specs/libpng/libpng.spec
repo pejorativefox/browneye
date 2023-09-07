@@ -7,7 +7,7 @@ Prefix:     /usr
 Source0:    %{name}-%{version}.tar.xz
 Patch:     libpng-1.6.36-apng.patch
 
-BuildRequires: zlib, pkg-config
+BuildRequires: zlib, pkgconf
 
 Provides: pkgconfig(libpng)
 
@@ -19,13 +19,14 @@ TODO
 %patch -p 1
 
 %build
-LIBS=-lpthread ./configure --prefix=/usr --disable-static 
+LIBS=-lpthread ./configure --prefix=/usr --disable-static --libdir=%{_libdir}
 %make_build
 
 %install    
 rm -rf %{buildroot}
 %make_install
 rm -vf %{buildroot}%{_infodir}/dir*
+rm -vf %{buildroot}/usr/lib64/libpng.la
 
 %files
 /usr/bin/libpng-config
@@ -38,14 +39,12 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/png.h
 /usr/include/pngconf.h
 /usr/include/pnglibconf.h
-/usr/lib/libpng.la
-/usr/lib/libpng.so
-/usr/lib/libpng16.la
-/usr/lib/libpng16.so
-/usr/lib/libpng16.so.16
-/usr/lib/libpng16.so.16.36.0
-/usr/lib/pkgconfig/libpng.pc
-/usr/lib/pkgconfig/libpng16.pc
+/usr/lib64/libpng.so
+/usr/lib64/libpng16.so
+/usr/lib64/libpng16.so.16
+/usr/lib64/libpng16.so.16.36.0
+/usr/lib64/pkgconfig/libpng.pc
+/usr/lib64/pkgconfig/libpng16.pc
 /usr/share/man/man3/libpng.3.gz
 /usr/share/man/man3/libpngpf.3.gz
 /usr/share/man/man5/png.5.gz

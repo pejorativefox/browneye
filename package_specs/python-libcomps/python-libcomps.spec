@@ -1,4 +1,4 @@
-Name:       python3-libcomps
+Name:       python-libcomps
 Version:    0.1.15
 Release:    1
 Summary:    Libcomps is alternative for yum.comps library.
@@ -19,7 +19,7 @@ rm -rf %{buildroot}
 python3 setup.py install --root %{buildroot}
 
 %files
-/usr/lib/python3.7/site-packages/*
+/usr/lib64/python3.11/site-packages/
 
 %changelog
 * Sun Jun 18 2023 Chris Statzer <chris.statzer@gmail.com> 0.1.15
