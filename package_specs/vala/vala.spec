@@ -34,7 +34,6 @@ rm -rf %{buildroot}
 /usr/bin/vapigen-0.40
 /usr/include/vala-0.40/vala.h
 /usr/include/vala-0.40/valagee.h
-/usr/lib64/libvala-0.40.la
 /usr/lib64/libvala-0.40.so
 /usr/lib64/libvala-0.40.so.0
 /usr/lib64/libvala-0.40.so.0.0.0
@@ -42,7 +41,6 @@ rm -rf %{buildroot}
 /usr/lib64/pkgconfig/vapigen-0.40.pc
 /usr/lib64/pkgconfig/vapigen.pc
 /usr/lib64/vala-0.40/gen-introspect-0.40
-/usr/lib64/vala-0.40/libvalaccodegen.la
 /usr/lib64/vala-0.40/libvalaccodegen.so
 /usr/share/aclocal/vala.m4
 /usr/share/aclocal/vapigen.m4
@@ -50,7 +48,6 @@ rm -rf %{buildroot}
 /usr/share/vala/vapi/libvala-0.40.vapi
 /usr/share/man/*
 /usr/share/vala-0.40/*
-/usr/share/devhelp/books/vala-0.40/*
 
 %changelog
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 0.40.8

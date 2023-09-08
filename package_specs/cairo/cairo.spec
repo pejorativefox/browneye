@@ -65,6 +65,7 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/lib64/pkgconfig/cairo-svg.pc
 /usr/lib64/pkgconfig/cairo-tee.pc
 /usr/lib64/pkgconfig/cairo.pc
+/usr/lib64/pkgconfig/cairo-fc.pc
 /usr/share/gtk-doc/html/cairo/
 
 %changelog

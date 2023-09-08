@@ -38,7 +38,7 @@ cmake -DCMAKE_INSTALL_PREFIX=/usr               \
       -DLLVM_INCLUDE_BENCHMARKS=OFF             \
       -DCLANG_DEFAULT_PIE_ON_LINUX=ON           \
       -Wno-dev -G Ninja ..                      
-ninja -j4
+ninja
 popd
 
 
@@ -48,12 +48,7 @@ pushd build
 DESTDIR=%{buildroot} ninja install 
 popd
 
-%files
-/usr/bin/
-/usr/include/llvm/
-/usr/include/llvm-c/
-/usr/lib/
-/usr/share/opt-viewer/
+%files -f ../../SOURCES/llvm.filelist
 
 %changelog
 * Tue Jun 13 2023 Chris Statzer <chris.statzer@gmail.com> 16.0.5

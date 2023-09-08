@@ -14,7 +14,7 @@ Programs to manage, build and install using the RPM package format.
 
 %build
 export PYTHON=/bin/python3.11
-%configure --without-lua --enable-python
+%configure --without-lua --enable-python --localstatedir=/var/
 %make_build
 
 %install    

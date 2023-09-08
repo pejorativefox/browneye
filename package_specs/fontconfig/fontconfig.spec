@@ -1,18 +1,18 @@
 Name:       fontconfig
 Version:    2.13.1
 Release:    1
-Summary:    TODO
+Summary:    Font access library
 License:    GPL3
 Prefix:     /usr
 Source0:    %{name}-%{version}.tar.bz2
 
-
+BuildRequires: freetype >= 2.13.1
 
 %description
-TODO
+The Fontconfig package contains a library and support programs used for configuring and customizing font access.
 
 %prep
-%setup -a 0
+%setup -q
 
 
 %build
@@ -60,7 +60,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/fontconfig/fcfreetype.h
 /usr/include/fontconfig/fcprivate.h
 /usr/include/fontconfig/fontconfig.h
-/usr/lib64/libfontconfig.la
 /usr/lib64/libfontconfig.so
 /usr/lib64/libfontconfig.so.1
 /usr/lib64/libfontconfig.so.1.12.0

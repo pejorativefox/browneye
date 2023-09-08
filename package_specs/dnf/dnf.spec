@@ -43,11 +43,11 @@ mv %{buildroot}/usr/lib %{buildroot}/usr/lib64
 /etc/dnf/dnf.conf
 /etc/dnf/protected.d/dnf.conf
 /etc/dnf/protected.d/yum.conf
-/etc/bash_completion.d/dnf
 /etc/libreport/events.d/collect_dnf.conf
 /etc/dnf/dnf-strict.conf
 /etc/dnf/protected.d/python3-dnf.conf
 /etc/logrotate.d/dnf
+/usr/share/bash-completion/completions/dnf
 /usr/lib64/tmpfiles.d/dnf.conf
 /usr/lib64/systemd/
 /usr/lib64/python3.11/site-packages/dnf
