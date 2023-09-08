@@ -1,19 +1,19 @@
 Name:       htop
-Version:    2.2.0
+Version:    3.2.2
 Release:    1
-Summary:    TODO
+Summary:    interactive process viewer 
 License:    GPL3
-Source0:    %{name}-%{version}.tar.gz
+Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
 
 %description
-TODO
+interactive process viewer 
 
 %prep
-%setup -q -a0
+%setup -q
 
 %build
-%configure --prefix=/usr --disable-static
+%configure
 %make_build
 
 %install
@@ -25,7 +25,8 @@ rm -rf %{buildroot}
 /usr/share/applications/htop.desktop
 /usr/share/man/man1/htop.1.gz
 /usr/share/pixmaps/htop.png
-
+/usr/share/icons/hicolor/scalable/apps/htop.svg
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 3.2.2-1
+- Version bump

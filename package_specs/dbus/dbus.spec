@@ -1,10 +1,10 @@
 Name:       dbus
-Version:    1.12.12
-Release:    3
+Version:    1.14.8
+Release:    1
 Summary:    D-BUS message bus
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}-%{version}.tar.gz
+Source0:    %{name}-%{version}.tar.xz
 
 %description
 D-BUS is a system for sending messages between applications.
@@ -18,7 +18,7 @@ D-BUS is a system for sending messages between applications.
             --disable-doxygen-docs               \
             --disable-xml-docs                   \
             --disable-static                     \
-            --docdir=/usr/share/doc/dbus-1.12.12 \
+            --docdir=/usr/share/doc/dbus-1.14.8  \
             --with-console-auth-dir=/run/console \
             --with-system-pid-file=/run/dbus/pid \
             --with-system-socket=/run/dbus/system_bus_socket
@@ -36,6 +36,7 @@ useradd -c "D-Bus Message Daemon User" -d /var/run/dbus \
         -u 18 -g messagebus -s /bin/false messagebus
 chown -v root:messagebus /usr/libexec/dbus-daemon-launch-helper &&
 chmod -v      4750       /usr/libexec/dbus-daemon-launch-helper
+dbus-uuidgen --ensure
 
 %package daemon
 Summary:        D-BUS message bus
@@ -64,6 +65,7 @@ The DBUS daemon
 /usr/share/doc/dbus-%{version}/*
 /usr/share/xml/dbus-1/busconfig.dtd
 /usr/share/xml/dbus-1/introspect.dtd
+/usr/share/xml/dbus-1/catalog.xml
 
 %package x11
 Summary:  x11 addons for D-BUS
@@ -79,12 +81,14 @@ Summary: D-BUS libraries
 This package contains libraries for accessing D-BUS.
 
 %files libs
-/usr/lib64/libdbus-1.la
 /usr/lib64/libdbus-1.so
 /usr/lib64/libdbus-1.so.3
-/usr/lib64/libdbus-1.so.3.19.9
+/usr/lib64/libdbus-1.so.3.32.3
 
 %changelog
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 1.14.8-1
+- Version bump
+
 * Thu May 15 2020 Chris Statzer <chris.statzer@qq.com> 1.12.12
 - Split up the dbus components into seperate packages isolating the
   X11 and lib components.
