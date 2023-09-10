@@ -1,18 +1,18 @@
 Name:       xcb-util-image
-Version:    0.4.0
+Version:    0.4.1
 Release:    1
-Summary:    TODO
+Summary:    XCB image utilities
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}-%{version}.tar.bz2
+Source0:    %{name}-%{version}.tar.xz
 
 
 
 %description
-TODO
+XCB image utilities
 
 %prep
-%setup -a 0
+%setup -q
 
 
 %build
@@ -29,11 +29,11 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/xcb/xcb_image.h
 /usr/include/xcb/xcb_pixel.h
 /usr/lib64/libxcb-image.a
-/usr/lib64/libxcb-image.la
 /usr/lib64/libxcb-image.so
 /usr/lib64/libxcb-image.so.0
 /usr/lib64/libxcb-image.so.0.0.0
 /usr/lib64/pkgconfig/xcb-image.pc
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 0.4.1-1
+- Version bump

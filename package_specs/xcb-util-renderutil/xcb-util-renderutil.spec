@@ -1,18 +1,18 @@
 Name:       xcb-util-renderutil
-Version:    0.3.9
+Version:    0.3.10
 Release:    1
-Summary:    TODO
+Summary:    XCB render utilities
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}-%{version}.tar.bz2
+Source0:    %{name}-%{version}.tar.xz
 
 
 
 %description
-TODO
+XCB render utilities
 
 %prep
-%setup -a 0
+%setup -q
 
 
 %build
@@ -27,7 +27,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/xcb/xcb_renderutil.h
 /usr/lib64/libxcb-render-util.a
-/usr/lib64/libxcb-render-util.la
 /usr/lib64/libxcb-render-util.so
 /usr/lib64/libxcb-render-util.so.0
 /usr/lib64/libxcb-render-util.so.0.0.0
@@ -35,4 +34,5 @@ rm -vf %{buildroot}%{_infodir}/dir*
 
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 0.3.10-1
+- Version bump

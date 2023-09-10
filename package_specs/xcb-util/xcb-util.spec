@@ -1,19 +1,16 @@
 Name:       xcb-util
-Version:    0.4.0
+Version:    0.4.1
 Release:    1
-Summary:    TODO
+Summary:    XCB utilities
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}-%{version}.tar.bz2
-
-
+Source0:    %{name}-%{version}.tar.xz
 
 %description
-TODO
+XCB utilities
 
 %prep
-%setup -a 0
-
+%setup -q
 
 %build
 %configure 
@@ -30,7 +27,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/xcb/xcb_event.h
 /usr/include/xcb/xcb_util.h
 /usr/lib64/libxcb-util.a
-/usr/lib64/libxcb-util.la
 /usr/lib64/libxcb-util.so
 /usr/lib64/libxcb-util.so.1
 /usr/lib64/libxcb-util.so.1.0.0
@@ -40,4 +36,5 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/lib64/pkgconfig/xcb-util.pc
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 0.4.1-1
+- Version bump

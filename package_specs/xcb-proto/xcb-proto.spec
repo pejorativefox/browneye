@@ -1,16 +1,16 @@
 Name:       xcb-proto
-Version:    1.13
+Version:    1.15
 Release:    1
-Summary:    TODO
+Summary:    XML-XCB protocol library
 License:    GPL3
-Source0:    %{name}-%{version}.tar.bz2
+Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
 
 %description
-TODO
+The xcb-proto package provides the XML-XCB protocol descriptions that libxcb uses to generate the majority of its code and API. 
 
 %prep
-%setup -q -a0
+%setup -q
 
 %build 
 %configure
@@ -20,11 +20,14 @@ TODO
 rm -rf %{buildroot}
 %make_install
 rm -vf %{buildroot}%{_infodir}/dir*
+mv %{buildroot}/usr/lib/* %{buildroot}/usr/lib64/
+rm -rf %{buildroot}/lib
 
 %files
-/usr/lib64/pkgconfig/xcb-proto.pc
 /usr/share/xcb/
-/usr/lib/python3.7/site-packages/
+/usr/lib64/python3.11/site-packages/
+/usr/lib64/pkgconfig/xcb-proto.pc
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 1.15-1
+- Version bump

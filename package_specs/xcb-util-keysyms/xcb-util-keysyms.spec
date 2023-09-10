@@ -1,18 +1,16 @@
 Name:       xcb-util-keysyms
-Version:    0.4.0
+Version:    0.4.1
 Release:    1
-Summary:    TODO
+Summary:    XCB key symbols
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}-%{version}.tar.bz2
-
-
+Source0:    %{name}-%{version}.tar.xz
 
 %description
-TODO
+XCB key symbols
 
 %prep
-%setup -a 0
+%setup -q
 
 
 %build
@@ -27,11 +25,11 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/xcb/xcb_keysyms.h
 /usr/lib64/libxcb-keysyms.a
-/usr/lib64/libxcb-keysyms.la
 /usr/lib64/libxcb-keysyms.so
 /usr/lib64/libxcb-keysyms.so.1
 /usr/lib64/libxcb-keysyms.so.1.0.0
 /usr/lib64/pkgconfig/xcb-keysyms.pc
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 0.4.1-1
+- Version bump
