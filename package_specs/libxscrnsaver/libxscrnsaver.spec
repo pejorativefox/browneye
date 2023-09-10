@@ -1,18 +1,16 @@
-Name:       libXScrnSaver
-Version:    1.2.3
+Name:       libxscrnsaver
+Version:    1.2.4
 Release:    1
-Summary:    TODO
+Summary:    X11 screensaver library
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}-%{version}.tar.bz2
-
-
+Source0:    libXScrnSaver-%{version}.tar.xz
 
 %description
-TODO
+X11 screensaver library
 
 %prep
-%setup -a 0
+%setup -q -n libXScrnSaver-%{version}
 
 
 %build
@@ -27,7 +25,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/X11/extensions/scrnsaver.h
 /usr/lib64/libXss.a
-/usr/lib64/libXss.la
 /usr/lib64/libXss.so
 /usr/lib64/libXss.so.1
 /usr/lib64/libXss.so.1.0.0
@@ -45,6 +42,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/man/man3/XScreenSaverUnsetAttributes.3.gz
 /usr/share/man/man3/Xss.3.gz
 
-
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 1.2.4-1
+- Version bump

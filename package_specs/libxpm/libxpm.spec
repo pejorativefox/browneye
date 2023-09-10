@@ -1,19 +1,16 @@
-Name:       libXpm
-Version:    3.5.12
+Name:       libxpm
+Version:    3.5.16
 Release:    1
-Summary:    TODO
+Summary:    XPM file format
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}-%{version}.tar.bz2
-
-
+Source0:    libXpm-%{version}.tar.xz
 
 %description
-TODO
+X Pixmap (XPM) image file format library.
 
 %prep
-%setup -a 0
-
+%setup -q -n libXpm-%{version}
 
 %build
 %configure 
@@ -29,14 +26,12 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/sxpm
 /usr/include/X11/xpm.h
 /usr/lib64/libXpm.a
-/usr/lib64/libXpm.la
 /usr/lib64/libXpm.so
 /usr/lib64/libXpm.so.4
 /usr/lib64/libXpm.so.4.11.0
 /usr/lib64/pkgconfig/xpm.pc
-/usr/share/man/man1/cxpm.1.gz
-/usr/share/man/man1/sxpm.1.gz
-
+/usr/share/man/
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 3.5.16
+- Version bump

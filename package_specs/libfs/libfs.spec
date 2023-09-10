@@ -1,18 +1,16 @@
-Name:       libFS
-Version:    1.0.7
+Name:       libfs
+Version:    1.0.9
 Release:    1
-Summary:    TODO
+Summary:    X Font Service client library
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}-%{version}.tar.bz2
-
-
+Source0:    libFS-%{version}.tar.xz
 
 %description
-TODO
+X Font Service client library
 
 %prep
-%setup -a 0
+%setup -q -n libFS-%{version}
 
 
 %build
@@ -27,7 +25,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/X11/fonts/FSlib.h
 /usr/lib64/libFS.a
-/usr/lib64/libFS.la
 /usr/lib64/libFS.so
 /usr/lib64/libFS.so.6
 /usr/lib64/libFS.so.6.0.0
@@ -35,4 +32,5 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/doc/libFS/FSlib.txt
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 1.0.9-1
+- Version bump

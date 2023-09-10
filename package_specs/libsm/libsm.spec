@@ -1,19 +1,18 @@
-Name:       libSM
-Version:    1.2.3
+Name:       libsm
+Version:    1.2.4
 Release:    1
-Summary:    TODO
+Summary:    X Session Management Library
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}-%{version}.tar.bz2
+Source0:    libSM-%{version}.tar.xz
 
-
+BuildRequires: libice
 
 %description
-TODO
+X Session Management Library
 
 %prep
-%setup -a 0
-
+%setup -q -n libSM-%{version}
 
 %build
 %configure
@@ -29,7 +28,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/X11/SM/SMlib.h
 /usr/include/X11/SM/SMproto.h
 /usr/lib64/libSM.a
-/usr/lib64/libSM.la
 /usr/lib64/libSM.so
 /usr/lib64/libSM.so.6
 /usr/lib64/libSM.so.6.0.1
@@ -38,4 +36,5 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/doc/libSM/xsmp.xml
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 1.2.4-1
+- Version bump

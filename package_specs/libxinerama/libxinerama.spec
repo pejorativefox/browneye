@@ -1,19 +1,16 @@
-Name:       libXinerama
-Version:    1.1.4
+Name:       libxinerama
+Version:    1.1.5
 Release:    1
-Summary:    TODO
+Summary:    Xlib API for Xinerama extension to X11 Protocol
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}-%{version}.tar.bz2
-
-
+Source0:    libXinerama-%{version}.tar.xz
 
 %description
-TODO
+Xlib API for Xinerama extension to X11 Protocol
 
 %prep
-%setup -a 0
-
+%setup -q -n libXinerama-%{version}
 
 %build
 %configure 
@@ -28,7 +25,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/X11/extensions/Xinerama.h
 /usr/include/X11/extensions/panoramiXext.h
 /usr/lib64/libXinerama.a
-/usr/lib64/libXinerama.la
 /usr/lib64/libXinerama.so
 /usr/lib64/libXinerama.so.1
 /usr/lib64/libXinerama.so.1.0.0
@@ -40,4 +36,5 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/man/man3/XineramaQueryVersion.3.gz
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 1.1.5-1
+- Version bump

@@ -13,7 +13,7 @@ Provides: pkgconfig(dri)
 Open source implementations of OpenGL, OpenGL ES, Vulkan, OpenCL.
 
 %prep
-%setup -a 0
+%setup -q
 
 %build
 export GLL_DRV="svga,swrast,radeonsi"
@@ -41,29 +41,29 @@ popd
 
 %files
 /usr/include/
-/usr/lib/dri/
-/usr/lib/libEGL.so
-/usr/lib/libEGL.so.1
-/usr/lib/libEGL.so.1.0.0
-/usr/lib/libGL.so
-/usr/lib/libGL.so.1
-/usr/lib/libGL.so.1.2.0
-/usr/lib/libGLESv1_CM.so
-/usr/lib/libGLESv1_CM.so.1
-/usr/lib/libGLESv1_CM.so.1.1.0
-/usr/lib/libGLESv2.so
-/usr/lib/libGLESv2.so.2
-/usr/lib/libGLESv2.so.2.0.0
-/usr/lib/libgbm.so
-/usr/lib/libgbm.so.1
-/usr/lib/libgbm.so.1.0.0
-/usr/lib/libglapi.so
-/usr/lib/libglapi.so.0
-/usr/lib/libglapi.so.0.0.0
-/usr/lib/libxatracker.so
-/usr/lib/libxatracker.so.2
-/usr/lib/libxatracker.so.2.5.0
-/usr/lib/pkgconfig/
+/usr/lib64/dri/
+/usr/lib64/libEGL.so
+/usr/lib64/libEGL.so.1
+/usr/lib64/libEGL.so.1.0.0
+/usr/lib64/libGL.so
+/usr/lib64/libGL.so.1
+/usr/lib64/libGL.so.1.2.0
+/usr/lib64/libGLESv1_CM.so
+/usr/lib64/libGLESv1_CM.so.1
+/usr/lib64/libGLESv1_CM.so.1.1.0
+/usr/lib64/libGLESv2.so
+/usr/lib64/libGLESv2.so.2
+/usr/lib64/libGLESv2.so.2.0.0
+/usr/lib64/libgbm.so
+/usr/lib64/libgbm.so.1
+/usr/lib64/libgbm.so.1.0.0
+/usr/lib64/libglapi.so
+/usr/lib64/libglapi.so.0
+/usr/lib64/libglapi.so.0.0.0
+/usr/lib64/libxatracker.so
+/usr/lib64/libxatracker.so.2
+/usr/lib64/libxatracker.so.2.5.0
+/usr/lib64/pkgconfig/
 /usr/share/drirc.d/00-mesa-defaults.conf
 
 %changelog

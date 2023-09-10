@@ -1,19 +1,16 @@
-Name:       libICE
-Version:    1.0.9
+Name:       libice
+Version:    1.1.1
 Release:    1
-Summary:    TODO
+Summary:    Inter-Client Exchange Library.
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}-%{version}.tar.bz2
-
-
+Source0:    libICE-%{version}.tar.xz
 
 %description
-TODO
+Inter-Client Exchange Library.
 
 %prep
-%setup -a 0
-
+%setup -q -n libICE-%{version}
 
 %build
 %configure ICE_LIBS=-lpthread
@@ -32,7 +29,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/X11/ICE/ICEproto.h
 /usr/include/X11/ICE/ICEutil.h
 /usr/lib64/libICE.a
-/usr/lib64/libICE.la
 /usr/lib64/libICE.so
 /usr/lib64/libICE.so.6
 /usr/lib64/libICE.so.6.3.0
@@ -41,4 +37,5 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/doc/libICE/ice.xml
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 1.1.1-1
+- Version bump

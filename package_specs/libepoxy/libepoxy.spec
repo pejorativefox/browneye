@@ -1,7 +1,7 @@
 Name:       libepoxy
-Version:    1.5.3
+Version:    1.5.10
 Release:    1
-Summary:    TODO
+Summary:    OpenGL function management
 License:    GPL3
 Prefix:     /usr
 Source0:    %{name}-%{version}.tar.xz
@@ -9,7 +9,7 @@ Source0:    %{name}-%{version}.tar.xz
 Provides: pkgconfig(epoxy)
 
 %description
-TODO
+libepoxy is a library for handling OpenGL function pointer management. 
 
 %prep
 %setup -a 0
@@ -42,5 +42,5 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/lib/pkgconfig/epoxy.pc
 
 %changelog
-# let's skip this for now
-
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 1.5.10-1
+- Version bump

@@ -1,19 +1,16 @@
 Name:       xtrans
-Version:    1.3.5
+Version:    1.5.0
 Release:    1
-Summary:    TODO
+Summary:    X Window System Protocols Transport layer
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}-%{version}.tar.bz2
-
-
+Source0:    %{name}-%{version}.tar.xz
 
 %description
-TODO
+X Window System Protocols Transport laye
 
 %prep
-%setup -a 0
-
+%setup -q
 
 %build
 %configure ICE_LIBS=-lpthread
@@ -37,4 +34,5 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/pkgconfig/xtrans.pc
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 1.5.0-1
+- Version bump

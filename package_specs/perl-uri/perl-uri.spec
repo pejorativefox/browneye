@@ -26,10 +26,10 @@ rm -rf %{buildroot}
 find %{buildroot} -name perllocal.pod -delete
 
 %files
-/usr/lib/perl5/site_perl/5.28.1/URI.pm
-/usr/lib/perl5/site_perl/5.28.1/URI/*
-/usr/lib/perl5/site_perl/5.28.1/x86_64-linux-thread-multi/auto/URI/.packlist
-/usr/share/man/*
+/usr/lib64/perl5/5.38.0/site_perl/URI/
+/usr/lib64/perl5/5.38.0/site_perl/URI.pm
+/usr/lib64/perl5/5.38.0/site_perl/auto/URI/.packlist
+/usr/share/man/
 
 %changelog
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 1.74

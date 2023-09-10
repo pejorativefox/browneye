@@ -36,7 +36,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/sndfile-salvage
 /usr/include/sndfile.h
 /usr/include/sndfile.hh
-/usr/lib64/libsndfile.la
 /usr/lib64/libsndfile.so
 /usr/lib64/libsndfile.so.1
 /usr/lib64/libsndfile.so.1.0.28
