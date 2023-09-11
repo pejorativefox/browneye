@@ -1,19 +1,18 @@
-Name:       libXcomposite
-Version:    0.4.4
+Name:       libxcomposite
+Version:    0.4.6
 Release:    1
-Summary:    TODO
+Summary:    Xorg composite ext library
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}-%{version}.tar.bz2
+Source0:    libXcomposite-%{version}.tar.xz
 
-
+BuildRequires: libxfixes
 
 %description
-TODO
+Xlib-based client library for the Composite extension to the X11 protocol.
 
 %prep
-%setup -a 0
-
+%setup -q -n libXcomposite-%{version}
 
 %build
 %configure 
@@ -27,23 +26,12 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/X11/extensions/Xcomposite.h
 /usr/lib64/libXcomposite.a
-/usr/lib64/libXcomposite.la
 /usr/lib64/libXcomposite.so
 /usr/lib64/libXcomposite.so.1
 /usr/lib64/libXcomposite.so.1.0.0
 /usr/lib64/pkgconfig/xcomposite.pc
-/usr/share/man/man3/XCompositeCreateRegionFromBorderClip.3.gz
-/usr/share/man/man3/XCompositeGetOverlayWindow.3.gz
-/usr/share/man/man3/XCompositeNameWindowPixmap.3.gz
-/usr/share/man/man3/XCompositeQueryExtension.3.gz
-/usr/share/man/man3/XCompositeQueryVersion.3.gz
-/usr/share/man/man3/XCompositeRedirectSubwindows.3.gz
-/usr/share/man/man3/XCompositeRedirectWindow.3.gz
-/usr/share/man/man3/XCompositeReleaseOverlayWindow.3.gz
-/usr/share/man/man3/XCompositeUnredirectSubwindows.3.gz
-/usr/share/man/man3/XCompositeUnredirectWindow.3.gz
-/usr/share/man/man3/XCompositeVersion.3.gz
-/usr/share/man/man3/Xcomposite.3.gz
+/usr/share/man/
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 0.4.6-1
+- Version bump

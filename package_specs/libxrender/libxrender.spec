@@ -1,19 +1,16 @@
-Name:       libXrender
-Version:    0.9.10
+Name:       libxrender
+Version:    0.9.11
 Release:    1
-Summary:    TODO
+Summary:    Render Extension to the X11 protocol.
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}-%{version}.tar.bz2
-
-
+Source0:    libXrender-%{version}.tar.xz
 
 %description
-TODO
+Render Extension to the X11 protocol.
 
 %prep
-%setup -a 0
-
+%setup -q -n libXrender-%{version}
 
 %build
 %configure 
@@ -27,7 +24,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/X11/extensions/Xrender.h
 /usr/lib64/libXrender.a
-/usr/lib64/libXrender.la
 /usr/lib64/libXrender.so
 /usr/lib64/libXrender.so.1
 /usr/lib64/libXrender.so.1.3.0
@@ -35,4 +31,5 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/doc/libXrender/libXrender.txt
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 0.9.11-1
+- Version bump

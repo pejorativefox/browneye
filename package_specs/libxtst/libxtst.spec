@@ -1,19 +1,18 @@
-Name:       libXtst
-Version:    1.2.3
+Name:       libxtst
+Version:    1.2.4
 Release:    1
-Summary:    TODO
+Summary:    Xlib-based library for XTEST & RECORD
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}-%{version}.tar.bz2
+Source0:    libXtst-%{version}.tar.xz
 
-
+BuildRequires: libxi
 
 %description
-TODO
+Xlib-based library for XTEST & RECORD
 
 %prep
-%setup -a 0
-
+%setup -q -n libXtst-%{version}
 
 %build
 %configure 
@@ -28,24 +27,14 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/X11/extensions/XTest.h
 /usr/include/X11/extensions/record.h
 /usr/lib64/libXtst.a
-/usr/lib64/libXtst.la
 /usr/lib64/libXtst.so
 /usr/lib64/libXtst.so.6
 /usr/lib64/libXtst.so.6.1.0
 /usr/lib64/pkgconfig/xtst.pc
 /usr/share/doc/libXtst/recordlib.xml
 /usr/share/doc/libXtst/xtestlib.xml
-/usr/share/man/man3/XTestCompareCurrentCursorWithWindow.3.gz
-/usr/share/man/man3/XTestCompareCursorWithWindow.3.gz
-/usr/share/man/man3/XTestDiscard.3.gz
-/usr/share/man/man3/XTestFakeButtonEvent.3.gz
-/usr/share/man/man3/XTestFakeKeyEvent.3.gz
-/usr/share/man/man3/XTestFakeMotionEvent.3.gz
-/usr/share/man/man3/XTestFakeRelativeMotionEvent.3.gz
-/usr/share/man/man3/XTestGrabControl.3.gz
-/usr/share/man/man3/XTestQueryExtension.3.gz
-/usr/share/man/man3/XTestSetGContextOfGC.3.gz
-/usr/share/man/man3/XTestSetVisualIDOfVisual.3.gz
+/usr/share/man/
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 1.2.4-1
+- Version bump

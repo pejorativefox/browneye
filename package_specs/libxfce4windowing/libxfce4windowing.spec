@@ -6,6 +6,8 @@ License:    LGPL
 Source0:    %{name}-%{version}.tar.bz2
 Prefix:     /usr
 
+BuildRequires: libwnck
+
 %description
 Libxfce4windowing is an abstraction library that attempts to present windowing concepts (screens, toplevel windows, workspaces, etc.) in a windowing-system-independent manner.
 

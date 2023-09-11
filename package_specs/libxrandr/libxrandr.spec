@@ -1,19 +1,16 @@
-Name:       libXrandr
-Version:    1.5.1
+Name:       libxrandr
+Version:    1.5.3
 Release:    1
-Summary:    TODO
+Summary:    Xlib Resize, Rotate and Reflection (RandR) extension library.
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}-%{version}.tar.bz2
-
-
+Source0:    libXrandr-%{version}.tar.xz
 
 %description
-TODO
+Xlib Resize, Rotate and Reflection (RandR) extension library.
 
 %prep
-%setup -a 0
-
+%setup -q -n libXrandr-%{version}
 
 %build
 %configure 
@@ -27,26 +24,12 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
  /usr/include/X11/extensions/Xrandr.h
 /usr/lib64/libXrandr.a
-/usr/lib64/libXrandr.la
 /usr/lib64/libXrandr.so
 /usr/lib64/libXrandr.so.2
 /usr/lib64/libXrandr.so.2.2.0
 /usr/lib64/pkgconfig/xrandr.pc
-/usr/share/man/man3/XRRConfigCurrentConfiguration.3.gz
-/usr/share/man/man3/XRRConfigCurrentRate.3.gz
-/usr/share/man/man3/XRRConfigRates.3.gz
-/usr/share/man/man3/XRRConfigRotations.3.gz
-/usr/share/man/man3/XRRConfigSizes.3.gz
-/usr/share/man/man3/XRRConfigTimes.3.gz
-/usr/share/man/man3/XRRFreeScreenConfigInfo.3.gz
-/usr/share/man/man3/XRRGetScreenInfo.3.gz
-/usr/share/man/man3/XRRQueryExtension.3.gz
-/usr/share/man/man3/XRRQueryVersion.3.gz
-/usr/share/man/man3/XRRRootToScreen.3.gz
-/usr/share/man/man3/XRRSelectInput.3.gz
-/usr/share/man/man3/XRRSetScreenConfig.3.gz
-/usr/share/man/man3/XRRSetScreenConfigAndRate.3.gz
-/usr/share/man/man3/Xrandr.3.gz
+/usr/share/man/
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 1.5.3-1
+- Version bump

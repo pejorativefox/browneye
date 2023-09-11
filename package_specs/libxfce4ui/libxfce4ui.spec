@@ -6,6 +6,8 @@ License:    GPL
 Source0:    %{name}-%{version}.tar.bz2
 Prefix:     /usr
 
+BuildRequires: xfconf
+
 %description
 Commonly used Xfce widgets among Xfce applications
 
