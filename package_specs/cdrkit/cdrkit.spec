@@ -5,7 +5,7 @@ Summary:    cdrkit is a collection of computer programs for CD and DVD authoring
 License:    GPL3
 Prefix:     /usr
 Source0:    %{name}-%{version}.tar.gz
-
+Patch0:     cdrkit-1.1.11-gcc10.patch 
 AutoReq: no
 
 %description
@@ -13,6 +13,7 @@ cdrkit is a collection of computer programs for CD and DVD authoring
 
 %prep
 %setup -a 0
+%patch0 -p1
 
 %build
 mkdir build
