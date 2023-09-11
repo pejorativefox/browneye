@@ -28,10 +28,8 @@ rm -rf %{buildroot}
 /usr/lib64/libSDL-1.2.so.0
 /usr/lib64/libSDL-1.2.so.0.11.4
 /usr/lib64/libSDL.a
-/usr/lib64/libSDL.la
 /usr/lib64/libSDL.so
 /usr/lib64/libSDLmain.a
-/usr/lib64/libSDLmain.la
 /usr/lib64/pkgconfig/sdl.pc
 /usr/share/aclocal/sdl.m4
 /usr/share/man/man3/

@@ -6,6 +6,9 @@ License:    zlib
 Source0:    SDL2_ttf-%{version}.tar.gz
 Prefix:     /usr
 
+BuildRequires: sdl2
+BuildRequires: freetype
+
 %description
 This is a sample library which allows you to use TrueType fonts in your SDL applications.
 
@@ -25,7 +28,6 @@ rm -rf %{buildroot}
 /usr/lib64/libSDL2_ttf-2.0.so.0
 /usr/lib64/libSDL2_ttf-2.0.so.0.14.1
 /usr/lib64/libSDL2_ttf.a
-/usr/lib64/libSDL2_ttf.la
 /usr/lib64/libSDL2_ttf.so
 /usr/lib64/pkgconfig/SDL2_ttf.pc
 

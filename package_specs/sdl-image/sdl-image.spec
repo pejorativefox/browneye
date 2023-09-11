@@ -6,6 +6,8 @@ License:    zlib
 Source0:    SDL_image-%{version}.tar.gz
 Prefix:     /usr
 
+BuildRequires: sdl
+
 %description
 SDL_image is an image file loading library
 
@@ -25,7 +27,6 @@ rm -rf %{buildroot}
 /usr/lib64/libSDL_image-1.2.so.0
 /usr/lib64/libSDL_image-1.2.so.0.8.4
 /usr/lib64/libSDL_image.a
-/usr/lib64/libSDL_image.la
 /usr/lib64/libSDL_image.so
 /usr/lib64/pkgconfig/SDL_image.pc
 
