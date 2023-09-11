@@ -7,6 +7,11 @@ Prefix:     /usr
 Source0:    %{name}-%{version}.tar.xz
 
 
+BuildRequires: pkgconfig(freetype2)
+BuildRequires: pkgconfig(xext)
+BuildRequires: pkgconfig(xcb-render)
+BuildRequires: pkgconfig(xrender)
+
 %description
 Cairo is a 2D graphics library with support for multiple output devices.
 
@@ -43,6 +48,13 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/cairo/cairo-tee.h
 /usr/include/cairo/cairo-version.h
 /usr/include/cairo/cairo.h
+/usr/include/cairo/cairo-xcb.h
+/usr/include/cairo/cairo-xlib-xrender.h
+/usr/include/cairo/cairo-xlib.h
+/usr/lib64/pkgconfig/cairo-xcb-shm.pc
+/usr/lib64/pkgconfig/cairo-xcb.pc
+/usr/lib64/pkgconfig/cairo-xlib-xrender.pc
+/usr/lib64/pkgconfig/cairo-xlib.pc
 /usr/lib64/cairo/cairo-fdr.so
 /usr/lib64/cairo/cairo-sphinx.so
 /usr/lib64/cairo/libcairo-trace.so

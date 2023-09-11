@@ -6,6 +6,8 @@ License:    LGPL
 Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
 
+BuildRequires: cairomm
+
 %description
 gtkmm is the official C++ interface for the popular GUI library GTK+.
 
@@ -24,11 +26,9 @@ rm -rf %{buildroot}
 /usr/include/gdkmm-3.0/
 /usr/include/gtkmm-3.0/
 /usr/lib64/gtkmm-3.0/
-/usr/lib64/libgdkmm-3.0.la
 /usr/lib64/libgdkmm-3.0.so
 /usr/lib64/libgdkmm-3.0.so.1
 /usr/lib64/libgdkmm-3.0.so.1.1.0
-/usr/lib64/libgtkmm-3.0.la
 /usr/lib64/libgtkmm-3.0.so
 /usr/lib64/libgtkmm-3.0.so.1
 /usr/lib64/libgtkmm-3.0.so.1.1.0

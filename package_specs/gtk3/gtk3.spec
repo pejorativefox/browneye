@@ -12,7 +12,7 @@ Provides: pkgconfig(gdk-3.0), pkgconfig(gtk+-3.0)
 TODO
 
 %prep
-%setup
+%setup -q
 
 %build
 mkdir build &&
@@ -38,22 +38,7 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %post
 gtk-query-immodules-3.0 --update-cache
 
-%files
-/etc/gtk-3.0/im-multipress.conf
-/usr/bin/broadwayd
-/usr/bin/gtk-builder-tool
-/usr/bin/gtk-encode-symbolic-svg
-/usr/bin/gtk-launch
-/usr/bin/gtk-query-immodules-3.0
-/usr/bin/gtk-query-settings
-/usr/bin/gtk-update-icon-cache
-/usr/bin/gtk3-demo
-/usr/bin/gtk3-demo-application
-/usr/bin/gtk3-icon-browser
-/usr/bin/gtk3-widget-factory
-/usr/include/
-/usr/lib/
-/usr/share/
+%files -f ../../SOURCES/gtk3.filelist
 
 %changelog
 # let's skip this for now

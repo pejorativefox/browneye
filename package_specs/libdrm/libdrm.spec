@@ -6,14 +6,11 @@ License:    GPL3
 Prefix:     /usr
 Source0:    %{name}-%{version}.tar.xz
 
-
-
 %description
 Libdrm provides a userspace library for accessing the direct rendering manager (DRM) on operating systems that support the ioctl interface. Libdrm is a low-level library, typically used by graphics drivers such as the Mesa DRI drivers, the X drivers, libva and similar projects. 
 
 %prep
-%setup -a 0
-
+%setup -q
 
 %build
 mkdir build
@@ -54,7 +51,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/lib64/libdrm_radeon.so.1.0.1
 /usr/lib64/pkgconfig/
 /usr/share/libdrm/amdgpu.ids
-/usr/share/man/
 
 %changelog
 * Thu Jun 15 2023 Chris Statzer <chris.statzer@gmail.com> 2.4.115

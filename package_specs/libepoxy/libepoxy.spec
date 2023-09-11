@@ -12,7 +12,7 @@ Provides: pkgconfig(epoxy)
 libepoxy is a library for handling OpenGL function pointer management. 
 
 %prep
-%setup -a 0
+%setup -q
 
 %build
 mkdir -pv build
@@ -36,10 +36,10 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/epoxy/gl_generated.h
 /usr/include/epoxy/glx.h
 /usr/include/epoxy/glx_generated.h
-/usr/lib/libepoxy.so
-/usr/lib/libepoxy.so.0
-/usr/lib/libepoxy.so.0.0.0
-/usr/lib/pkgconfig/epoxy.pc
+/usr/lib64/libepoxy.so
+/usr/lib64/libepoxy.so.0
+/usr/lib64/libepoxy.so.0.0.0
+/usr/lib64/pkgconfig/epoxy.pc
 
 %changelog
 * Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 1.5.10-1

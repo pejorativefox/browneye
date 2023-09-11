@@ -58,6 +58,12 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/lib64/pkgconfig/pangofc.pc
 /usr/lib64/pkgconfig/pangoft2.pc
 /usr/lib64/pkgconfig/pangoot.pc
+/usr/lib64/girepository-1.0/PangoXft-1.0.typelib
+/usr/lib64/libpangoxft-1.0.so
+/usr/lib64/libpangoxft-1.0.so.0
+/usr/lib64/libpangoxft-1.0.so.0.5000.14
+/usr/lib64/pkgconfig/pangoxft.pc
+/usr/share/gir-1.0/PangoXft-1.0.gir
 /usr/share/gir-1.0/Pango-1.0.gir
 /usr/share/gir-1.0/PangoCairo-1.0.gir
 /usr/share/gir-1.0/PangoFT2-1.0.gir

@@ -6,6 +6,8 @@ License:    LGPL
 Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
 
+BuildRequires: glibmm
+
 %description
 pangomm is the official C++ interface for the Pango font layout library. 
 
