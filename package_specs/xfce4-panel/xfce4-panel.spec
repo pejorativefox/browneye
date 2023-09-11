@@ -6,6 +6,12 @@ License:    GPL2
 Source0:    %{name}-%{version}.tar.bz2
 Prefix:     /usr
 
+BuildRequires: libxfce4util
+BuildRequires: garcon
+BuildRequires: exo
+BuildRequires: libxfce4windowing
+
+
 %description
 Panel for the Xfce desktop environment
 

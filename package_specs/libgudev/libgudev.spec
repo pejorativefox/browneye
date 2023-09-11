@@ -30,7 +30,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/gudev-1.0/gudev/gudevenumtypes.h
 /usr/include/gudev-1.0/gudev/gudevtypes.h
 /usr/lib64/girepository-1.0/GUdev-1.0.typelib
-/usr/lib64/libgudev-1.0.la
 /usr/lib64/libgudev-1.0.so
 /usr/lib64/libgudev-1.0.so.0
 /usr/lib64/libgudev-1.0.so.0.2.0
@@ -39,5 +38,5 @@ rm -vf %{buildroot}%{_infodir}/dir*
 
 
 %changelog
-# let's skip this for now
-
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 230-1
+- Version bump

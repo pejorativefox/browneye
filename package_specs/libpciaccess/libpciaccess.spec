@@ -1,19 +1,16 @@
 Name:       libpciaccess
-Version:    0.14
+Version:    0.17
 Release:    1
-Summary:    TODO
+Summary:    Generic PCI access library.
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}-%{version}.tar.bz2
-
-
+Source0:    %{name}-%{version}.tar.xz
 
 %description
-TODO
+Generic PCI access library.
 
 %prep
-%setup -a 0
-
+%setup -q
 
 %build
 %configure 
@@ -27,11 +24,11 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/pciaccess.h
 /usr/lib64/libpciaccess.a
-/usr/lib64/libpciaccess.la
 /usr/lib64/libpciaccess.so
 /usr/lib64/libpciaccess.so.0
 /usr/lib64/libpciaccess.so.0.11.1
 /usr/lib64/pkgconfig/pciaccess.pc
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 0.17-1
+- Version bump

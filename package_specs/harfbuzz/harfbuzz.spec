@@ -28,6 +28,7 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/hb-ot-shape-closure
 /usr/bin/hb-shape
 /usr/bin/hb-subset
+/usr/bin/hb-view
 /usr/lib64/cmake/harfbuzz/harfbuzz-config.cmake
 /usr/lib64/girepository-1.0/HarfBuzz-0.0.typelib
 /usr/lib64/libharfbuzz-cairo.so

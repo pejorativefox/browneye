@@ -23,7 +23,6 @@ rm -rf %{buildroot}
 %files
 /usr/include/lzo/
 /usr/lib64/liblzo2.a
-/usr/lib64/liblzo2.la
 /usr/lib64/pkgconfig/lzo2.pc
 /usr/share/doc/lzo/
 

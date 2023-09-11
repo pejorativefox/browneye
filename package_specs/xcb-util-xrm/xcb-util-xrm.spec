@@ -10,7 +10,7 @@ Source0:    %{name}-%{version}.tar.bz2
 TODO
 
 %prep
-%setup -a 0
+%setup -q
 
 %build
 %configure
@@ -25,7 +25,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/xcb/xcb_xrm.h
 /usr/lib64/libxcb-xrm.a
-/usr/lib64/libxcb-xrm.la
 /usr/lib64/libxcb-xrm.so
 /usr/lib64/libxcb-xrm.so.0
 /usr/lib64/libxcb-xrm.so.0.0.0

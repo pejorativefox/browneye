@@ -6,6 +6,9 @@ License:    GPL
 Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
 
+BuildRequires: gsettings-desktop-schemas
+BuildRequires: gnutls
+
 %description
 Network related gio modules for GLib. 
 

@@ -6,10 +6,14 @@ License:    GPL3
 Prefix:     /usr
 Source0:    %{name}-%{version}.tar.xz
 
+BuildRequires: libtheora
+BuildRequires: libvorbis
+
 %description
+TODO
 
 %prep
-%setup
+%setup -q
 
 %build
 sed -i 's/-lflite"/-lflite -lasound"/' configure &&

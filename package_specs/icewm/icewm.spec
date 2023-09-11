@@ -6,6 +6,9 @@ License:    GPL2
 Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
+BuildRequires: imlib2
+BuildRequires: pulseaudio
+
 %description
 A small win9x like window manager
 

@@ -27,10 +27,10 @@ popd
 
 %files
 /usr/include/libportal/
-/usr/lib/libportal.so
-/usr/lib/libportal.so.0
-/usr/lib/libportal.so.0.0.1
-/usr/lib/pkgconfig/libportal.pc
+/usr/lib64/libportal.so
+/usr/lib64/libportal.so.0
+/usr/lib64/libportal.so.0.0.1
+/usr/lib64/pkgconfig/libportal.pc
 
 %changelog
 * Tue Jan 19 2021 Chris Statzer <chris.statzer@qq.com> 0.3

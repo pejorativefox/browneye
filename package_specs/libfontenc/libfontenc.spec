@@ -1,19 +1,16 @@
 Name:       libfontenc
-Version:    1.1.3
+Version:    1.1.7
 Release:    1
-Summary:    TODO
+Summary:    X font encoding library.
 License:    GPL3
 Prefix:     /usr
-Source0:    %{name}-%{version}.tar.bz2
-
-
+Source0:    %{name}-%{version}.tar.xz
 
 %description
-TODO
+X font encoding library.
 
 %prep
-%setup -a 0
-
+%setup -q
 
 %build
 %configure 
@@ -27,11 +24,11 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/X11/fonts/fontenc.h
 /usr/lib64/libfontenc.a
-/usr/lib64/libfontenc.la
 /usr/lib64/libfontenc.so
 /usr/lib64/libfontenc.so.1
 /usr/lib64/libfontenc.so.1.0.0
 /usr/lib64/pkgconfig/fontenc.pc
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 1.1.7-1
+- Version bump

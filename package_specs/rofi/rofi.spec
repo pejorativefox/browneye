@@ -6,6 +6,9 @@ License:    GPL
 Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
+Buildrequires: libxkbcommon
+BuildRequires: xcb-util-xrm
+
 %description
 Rofi application launcher
 

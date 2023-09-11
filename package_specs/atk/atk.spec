@@ -1,5 +1,5 @@
 Name:       atk
-Version:    2.30.0
+Version:    2.38.0
 Release:    1
 Summary:    ATK provides the set of accessibility interfaces
 License:    LGPL
@@ -15,7 +15,7 @@ applications. Using the ATK interfaces, accessibility tools have full access to 
 control running applications. 
 
 %prep
-%setup
+%setup -q
 
 %build
 mkdir build-atk
@@ -33,16 +33,19 @@ popd
 rm -vf %{buildroot}%{_infodir}/dir*
 
 %files
-/usr/include/atk-1.0/atk/*
-/usr/lib/girepository-1.0/Atk-1.0.typelib
-/usr/lib/libatk-1.0.so
-/usr/lib/libatk-1.0.so.0
-/usr/lib/libatk-1.0.so.0.23009.1
-/usr/lib/pkgconfig/atk.pc
+/usr/include/atk-1.0/atk/
+/usr/lib64/girepository-1.0/Atk-1.0.typelib
+/usr/lib64/libatk-1.0.so
+/usr/lib64/libatk-1.0.so.0
+/usr/lib64/libatk-1.0.so.0.23809.1
+/usr/lib64/pkgconfig/atk.pc
 /usr/share/gir-1.0/Atk-1.0.gir
-/usr/share/locale/*
+/usr/share/locale/
 
 %changelog
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 2.38.0-1
+- Version bump
+
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 3.30.1
 - Initial RPM release
 

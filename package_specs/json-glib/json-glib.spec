@@ -28,11 +28,11 @@ popd
 %files
 /usr/bin/json-glib-format
 /usr/bin/json-glib-validate
-/usr/lib/girepository-1.0/Json-1.0.typelib
-/usr/lib/libjson-glib-1.0.so
-/usr/lib/libjson-glib-1.0.so.0
-/usr/lib/libjson-glib-1.0.so.0.400.2
-/usr/lib/pkgconfig/json-glib-1.0.pc
+/usr/lib64/girepository-1.0/Json-1.0.typelib
+/usr/lib64/libjson-glib-1.0.so
+/usr/lib64/libjson-glib-1.0.so.0
+/usr/lib64/libjson-glib-1.0.so.0.400.2
+/usr/lib64/pkgconfig/json-glib-1.0.pc
 /usr/share/gir-1.0/Json-1.0.gir
 /usr/share/installed-tests/*
 /usr/libexec/installed-tests/json-glib-1.0/*

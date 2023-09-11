@@ -1,12 +1,12 @@
 Name:       dnf-plugins-core
-Version:    4.0.15
+Version:    4.4.2
 Release:    1
 Summary:    Core DNF Plugins 
 License:    GPL
 Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
-BuildRequires: dnf, python3-sphinx
+BuildRequires: dnf, python-sphinx
 
 %description
 Core DNF pluigins providing additional dnf functionality.

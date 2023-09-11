@@ -11,7 +11,7 @@ Source0:    %{name}-%{version}.tar.xz
 TODO
 
 %prep
-%setup -q -a 0 
+%setup -q
 
 %build
 %configure  --prefix=/usr    \
@@ -24,12 +24,17 @@ rm -rf %{buildroot}
 %make_install
 
 %files
-/usr/include/ogg/*
-/usr/lib64/*
-/usr/share/doc/*
-/usr/share/aclocal/*
-
+/usr/include/ogg/config_types.h
+/usr/include/ogg/ogg.h
+/usr/include/ogg/os_types.h
+/usr/lib64/libogg.so
+/usr/lib64/libogg.so.0
+/usr/lib64/libogg.so.0.8.3
+/usr/lib64/pkgconfig/ogg.pc
+/usr/share/aclocal/ogg.m4
+/usr/share/doc/libogg-1.3.3/
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 1.3.3-1
+- Version bump
 

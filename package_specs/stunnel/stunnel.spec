@@ -33,10 +33,9 @@ cp %{SOURCE2} %{buildroot}/etc/service.d/
 /usr/bin/stunnel
 /usr/bin/stunnel3
 /usr/etc/stunnel/stunnel.conf-sample
-/usr/lib64/stunnel/libstunnel.la
 /usr/lib64/stunnel/libstunnel.so
-/usr/share/doc/stunnel/*
-/usr/share/man/*
+/usr/share/doc/stunnel/
+/usr/share/man/
 /etc/finit.d/available/stunnel.conf
 /etc/service.d/stunnel.service
 

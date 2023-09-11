@@ -25,12 +25,10 @@ rm -rf %{buildroot}
 /usr/bin/dwebp
 /usr/include/webp/
 /usr/lib64/libwebp.a
-/usr/lib64/libwebp.la
 /usr/lib64/libwebp.so
 /usr/lib64/libwebp.so.7
 /usr/lib64/libwebp.so.7.1.0
 /usr/lib64/libwebpdemux.a
-/usr/lib64/libwebpdemux.la
 /usr/lib64/libwebpdemux.so
 /usr/lib64/libwebpdemux.so.2
 /usr/lib64/libwebpdemux.so.2.0.6

@@ -11,7 +11,7 @@ Source0:    %{name}-%{version}.tar.bz2
 TODO
 
 %prep
-%setup -a 0
+%setup -q
 
 %build
 %configure
@@ -28,12 +28,12 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/mtdev-plumbing.h
 /usr/include/mtdev.h
 /usr/lib64/libmtdev.a
-/usr/lib64/libmtdev.la
 /usr/lib64/libmtdev.so
 /usr/lib64/libmtdev.so.1
 /usr/lib64/libmtdev.so.1.0.0
 /usr/lib64/pkgconfig/mtdev.pc
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 1.1.5-1
+- Version bump
 

@@ -6,6 +6,8 @@ License:    GPL
 Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
 
+BuildRequires: nettle
+
 %description
 The GnuTLS package contains libraries and userspace tools which provide a secure 
 layer over a reliable transport layer. Currently the GnuTLS library implements 
@@ -38,11 +40,9 @@ rm -rf %{buildroot}/usr/share/info/dir
 /usr/bin/psktool
 /usr/bin/srptool
 /usr/include/gnutls/*
-/usr/lib64/libgnutls.la
 /usr/lib64/libgnutls.so
 /usr/lib64/libgnutls.so.30
 /usr/lib64/libgnutls.so.30.14.11
-/usr/lib64/libgnutlsxx.la
 /usr/lib64/libgnutlsxx.so
 /usr/lib64/libgnutlsxx.so.28
 /usr/lib64/libgnutlsxx.so.28.1.0

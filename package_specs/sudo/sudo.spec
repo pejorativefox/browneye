@@ -38,22 +38,17 @@ ln -sfv libsudo_util.so.0.0.0 /usr/lib/sudo/libsudo_util.so.0
 /usr/etc/sudoers
 /usr/etc/sudoers.dist
 /usr/include/sudo_plugin.h
-/usr/lib/sudo/group_file.la
 /usr/lib/sudo/group_file.so
-/usr/lib/sudo/libsudo_util.la
 /usr/lib/sudo/libsudo_util.so
 /usr/lib/sudo/libsudo_util.so.0
 /usr/lib/sudo/libsudo_util.so.0.0.0
-/usr/lib/sudo/sudo_noexec.la
 /usr/lib/sudo/sudo_noexec.so
-/usr/lib/sudo/sudoers.la
 /usr/lib/sudo/sudoers.so
-/usr/lib/sudo/system_group.la
 /usr/lib/sudo/system_group.so
 /usr/sbin/visudo
-/usr/share/doc/sudo-1.8.23/*
-/usr/share/man/*
-/usr/share/locale/*
+/usr/share/doc/sudo-1.8.23/
+/usr/share/man/
+/usr/share/locale/
 
 %changelog
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 1.8.23

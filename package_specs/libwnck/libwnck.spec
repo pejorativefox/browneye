@@ -6,6 +6,8 @@ License:    LGPL
 Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
 
+Requires: startup-notification
+
 %description
 Library to manage X windows and workspaces (via pagers, tasklists, etc.)
 
@@ -43,11 +45,11 @@ popd
 /usr/include/libwnck-3.0/libwnck/workspace.h
 /usr/share/gir-1.0/Wnck-3.0.gir
 /usr/share/locale/*
-/usr/lib/girepository-1.0/Wnck-3.0.typelib
-/usr/lib/libwnck-3.so
-/usr/lib/libwnck-3.so.0
-/usr/lib/libwnck-3.so.0.3.0
-/usr/lib/pkgconfig/libwnck-3.0.pc
+/usr/lib64/girepository-1.0/Wnck-3.0.typelib
+/usr/lib64/libwnck-3.so
+/usr/lib64/libwnck-3.so.0
+/usr/lib64/libwnck-3.so.0.3.0
+/usr/lib64/pkgconfig/libwnck-3.0.pc
 
 %changelog
 * Tue Dec 10 2019 Chris Statzer <chris.statzer@qq.com> 3.32.0

@@ -6,6 +6,8 @@ License:    GPL
 Source0:    %{name}-%{version}.tar.bz2
 Prefix:     /usr
 
+BuildRequires: iceauth
+
 %description
 A session manager for Xfce
 

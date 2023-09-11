@@ -6,6 +6,8 @@ License:    LGPL
 Source0:    %{name}-%{version}.tar.bz2
 Prefix:     /usr
 
+BuildRequires: libxfce4ui
+
 %description
 Implementation of the freedesktop.org menu specification
 

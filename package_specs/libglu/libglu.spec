@@ -24,7 +24,6 @@ rm -rf %{buildroot}
 /usr/include/GL/glu.h
 /usr/include/GL/glu_mangle.h
 /usr/lib64/libGLU.a
-/usr/lib64/libGLU.la
 /usr/lib64/libGLU.so
 /usr/lib64/libGLU.so.1
 /usr/lib64/libGLU.so.1.3.1

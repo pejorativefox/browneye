@@ -6,6 +6,9 @@ License:    GPL
 Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
 
+BuildRequires: vala
+BuildRequires: glib-networking
+
 %description
 The libsoup is a HTTP client/server library for GNOME.
 

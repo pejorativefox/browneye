@@ -6,12 +6,13 @@ License:    GPL3
 Prefix:     /usr
 Source0:    %{name}-%{version}.tar.gz
 
+BuildRequires: nasm
 
 %description
 TODO
 
 %prep
-%setup -a 0
+%setup -q
 
 %build
 sed -i 's/cp -p/cp/' build/make/Makefile &&
@@ -51,5 +52,5 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/lib/pkgconfig/vpx.pc
 
 %changelog
-# let's skip this for now
-
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 1.8.0-1
+- Version bump
