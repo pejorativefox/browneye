@@ -6,6 +6,9 @@ License:    GPL3
 Prefix:     /usr
 Source0:    %{name}-%{version}.tar.bz2
 
+BuildRequires: lua
+BuildRequires: imagemagick
+
 %description
 TODO
 
@@ -15,7 +18,11 @@ TODO
 %build
 mkdir build
 pushd build
-cmake .. -DCMAKE_INSTALL_PREFIX:PATH=/usr -DPREFIX=/usr
+export LUA_INCLUDE_DIR=/usr/include
+cmake ..  -DCMAKE_INSTALL_PREFIX:PATH=/usr \
+          -DPREFIX=/usr \
+          -DLUA_INCLUDE_DIR=/usr/include \
+          -DLUA_LIBRARY=/usr/lib64
 make
 popd
 

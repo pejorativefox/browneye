@@ -29,7 +29,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/libevdev-1.0/libevdev/libevdev-uinput.h
 /usr/include/libevdev-1.0/libevdev/libevdev.h
 /usr/lib64/libevdev.a
-/usr/lib64/libevdev.la
 /usr/lib64/libevdev.so
 /usr/lib64/libevdev.so.2
 /usr/lib64/libevdev.so.2.2.0

@@ -6,6 +6,8 @@ License:    NO_IDEA
 Source0:    poppler-%{version}.tar.xz
 Prefix:     /usr
 
+BuildRequires: openjpeg
+
 %description
 Poppler is a PDF rendering library based on the xpdf-3.0 code base. 
 

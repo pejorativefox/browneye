@@ -6,6 +6,8 @@ License:    GPL3
 Prefix:     /usr
 Source0:    %{name}-%{version}.tar.xz
 
+BuildRequires: mtdev
+Buildrequires: libevdev
 
 %description
 TODO
@@ -17,7 +19,7 @@ TODO
 mkdir build
 pushd build
 meson --prefix=/usr \
-      -Dudev-dir=/lib/udev  \
+      -Dudev-dir=/lib64/udev  \
       -Ddebug-gui=false     \
       -Dtests=false         \
       -Ddocumentation=false \
@@ -35,16 +37,16 @@ popd
 rm -vf %{buildroot}%{_infodir}/dir*
 
 %files
-/lib/udev/libinput-device-group
-/lib/udev/libinput-model-quirks
-/lib/udev/rules.d/80-libinput-device-groups.rules
-/lib/udev/rules.d/90-libinput-model-quirks.rules
+/lib64/udev/libinput-device-group
+/lib64/udev/libinput-model-quirks
+/lib64/udev/rules.d/80-libinput-device-groups.rules
+/lib64/udev/rules.d/90-libinput-model-quirks.rules
 /usr/bin/libinput
 /usr/include/libinput.h
-/usr/lib/libinput.so
-/usr/lib/libinput.so.10
-/usr/lib/libinput.so.10.13.0
-/usr/lib/pkgconfig/libinput.pc
+/usr/lib64/libinput.so
+/usr/lib64/libinput.so.10
+/usr/lib64/libinput.so.10.13.0
+/usr/lib64/pkgconfig/libinput.pc
 /usr/libexec/libinput/libinput-debug-events
 /usr/libexec/libinput/libinput-list-devices
 /usr/libexec/libinput/libinput-measure

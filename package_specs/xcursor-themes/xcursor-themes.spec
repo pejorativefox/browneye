@@ -6,7 +6,7 @@ License:    GPL3
 Prefix:     /usr
 Source0:    %{name}-%{version}.tar.bz2
 
-
+BuildRequires: xcursorgen
 
 %description
 TODO

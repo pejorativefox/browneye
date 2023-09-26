@@ -6,6 +6,9 @@ License:    GPL
 Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
 
+BuildRequires: gtkmm
+BuildRequires: libcanberra
+
 %description
 PulseAudio Volume Control (pavucontrol) is a simple GTK based volume control tool ("mixer") for the PulseAudio sound server.
 

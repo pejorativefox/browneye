@@ -24,7 +24,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/include/ass/ass.h
 /usr/include/ass/ass_types.h
-/usr/lib64/libass.la
 /usr/lib64/libass.so
 /usr/lib64/libass.so.9
 /usr/lib64/libass.so.9.0.2

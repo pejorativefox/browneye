@@ -1,9 +1,9 @@
 Name:       util-macros
-Version:    1.19.2
+Version:    1.20.0
 Release:    1
 Summary:    TODO
 License:    GPL3
-Source0:    %{name}-%{version}.tar.bz2
+Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
 
 %description
@@ -27,4 +27,5 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/util-macros/INSTALL
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 1.20.0-1
+- Version bump

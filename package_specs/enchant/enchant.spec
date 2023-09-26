@@ -27,7 +27,6 @@ rm -rf %{buildroot}
 /usr/include/enchant-2/enchant-provider.h
 /usr/include/enchant-2/enchant.h
 /usr/lib64/libenchant-2.a
-/usr/lib64/libenchant-2.la
 /usr/lib64/libenchant-2.so
 /usr/lib64/libenchant-2.so.2
 /usr/lib64/libenchant-2.so.2.2.11

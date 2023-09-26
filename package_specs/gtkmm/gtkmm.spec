@@ -1,5 +1,5 @@
 Name:       gtkmm
-Version:    3.24.2
+Version:    3.24.8
 Release:    1
 Summary:    gtkmm is the official C++ interface for the popular GUI library GTK+.
 License:    LGPL
@@ -7,20 +7,28 @@ Source0:    %{name}-%{version}.tar.xz
 Prefix:     /usr
 
 BuildRequires: cairomm
+BuildRequires: pangomm
+BuildRequires: atkmm
+BuildRequires: glibmm
 
 %description
 gtkmm is the official C++ interface for the popular GUI library GTK+.
 
 %prep
-%setup
+%setup -q
 
 %build
-%configure
-%make_build
+mkdir gtk-build
+pushd gtk-build
+meson --prefix=/usr --buildtype=release ..
+ninja 
+popd
 
 %install
 rm -rf %{buildroot}
-%make_install
+pushd gtk-build
+DESTDIR=%{buildroot} ninja install
+popd
 
 %files
 /usr/include/gdkmm-3.0/
@@ -35,9 +43,10 @@ rm -rf %{buildroot}
 /usr/lib64/pkgconfig/gdkmm-3.0.pc
 /usr/lib64/pkgconfig/gtkmm-3.0.pc
 /usr/lib64/gdkmm-3.0/include/gdkmmconfig.h
-/usr/share/devhelp/books/gtkmm-3.0/gtkmm-3.0.devhelp2
-/usr/share/doc/gtkmm-3.0/
 
 %changelog
-* Sun May 17 2020 Chris Statzer <chris.statzer@qq.com> 3.24.2
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 3.24.8-1
+- Version bump
+
+* Sun May 17 2020 Chris Statzer <chris.statzer@qq.com> 3.24.2-1
 - Initial RPM

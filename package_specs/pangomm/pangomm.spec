@@ -1,5 +1,5 @@
 Name:       pangomm
-Version:    2.42.1
+Version:    2.46.3
 Release:    1
 Summary:    pangomm is the official C++ interface for the Pango font layout library. 
 License:    LGPL
@@ -15,17 +15,20 @@ pangomm is the official C++ interface for the Pango font layout library.
 %setup
 
 %build
-%configure
-%make_build
+mkdir build
+pushd build
+meson setup --prefix=/usr --buildtype=release ..
+ninja
+popd
 
 %install
 rm -rf %{buildroot}
-%make_install
+pushd build
+DESTDIR=%{buildroot} ninja install
+popd
 
 %files
 /usr/include/pangomm-1.4/
-/usr/share/doc/pangomm-1.4/
-/usr/lib64/libpangomm-1.4.la
 /usr/lib64/libpangomm-1.4.so
 /usr/lib64/libpangomm-1.4.so.1
 /usr/lib64/libpangomm-1.4.so.1.0.30
@@ -34,9 +37,11 @@ rm -rf %{buildroot}
 /usr/lib64/pangomm-1.4/proc/m4/convert_pango.m4
 /usr/lib64/pangomm-1.4/proc/m4/convert_pangomm.m4
 /usr/lib64/pkgconfig/pangomm-1.4.pc
-/usr/share/devhelp/books/pangomm-1.4/pangomm-1.4.devhelp2
 
 %changelog
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 2.46.3-1
+- Version bump
+
 * Sun May 17 2020 Chris Statzer <chris.statzer@qq.com> 2.42.1
 - Initial RPM
 

@@ -1,16 +1,16 @@
 Name:       libseccomp
 Version:    2.4.2
 Release:    1
-Summary:    TODO
+Summary:    Kernel syscall interface library
 License:    GPL3
 Source0:    %{name}-%{version}.tar.gz
 Prefix:     /usr
 
 %description
-TODO
+Platform independent, interface to the Linux Kernel's syscall filtering mechanism. 
 
 %prep
-%setup -q -a0
+%setup -q 
 
 %build
 %configure --prefix=/usr --disable-static
@@ -25,12 +25,12 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/bin/scmp_sys_resolver
 /usr/include/seccomp-syscalls.h
 /usr/include/seccomp.h
-/usr/lib64/libseccomp.la
 /usr/lib64/libseccomp.so
 /usr/lib64/libseccomp.so.2
 /usr/lib64/libseccomp.so.2.4.2
 /usr/lib64/pkgconfig/libseccomp.pc
-/usr/share/man/*
+/usr/share/man/
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 2.4.2-1
+- Version bump

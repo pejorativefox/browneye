@@ -24,7 +24,6 @@ rm -rf %{buildroot}/usr/share/info/dir
 %files
 /usr/bin/ksba-config
 /usr/include/ksba.h
-/usr/lib64/libksba.la
 /usr/lib64/libksba.so
 /usr/lib64/libksba.so.8
 /usr/lib64/libksba.so.8.11.6

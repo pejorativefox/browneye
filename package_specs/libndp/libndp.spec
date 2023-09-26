@@ -28,7 +28,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 %files
 /usr/bin/ndptool
 /usr/include/ndp.h
-/usr/lib64/libndp.la
 /usr/lib64/libndp.so
 /usr/lib64/libndp.so.0
 /usr/lib64/libndp.so.0.1.1
@@ -36,5 +35,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/man/man8/ndptool.8.gz
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 1.7-1
+- Version bump
 

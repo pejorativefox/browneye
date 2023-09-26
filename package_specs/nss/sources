@@ -1,2 +1,2 @@
-1f6cc6c702379478a3a72298caaef0a7 https://ftp.mozilla.org/pub/security/nss/releases/NSS_3_42_1_RTM/src/nss-3.42.1.tar.gz
-ee90a1dc6ae266ec6c842d8019a6ef48 http://www.linuxfromscratch.org/patches/downloads/nss/nss-3.42.1-standalone-1.patch
+589167c3be81d09b9e332ff17d46ebca https://archive.mozilla.org/pub/security/nss/releases/NSS_3_92_RTM/src/nss-3.92.tar.gz
+f8a7ce473bd61792ef182cf0fb2d359a https://www.linuxfromscratch.org/patches/blfs/12.0/nss-3.92-standalone-1.patch

@@ -1,22 +1,23 @@
 Name:       nss
-Version:    3.42.1
+Version:    3.92
 Release:    1
 Summary:    TODO
 License:    GPL3
 Source0:    %{name}-%{version}.tar.gz
-Patch:      nss-3.42.1-standalone-1.patch
 Prefix:     /usr
+
+BuildRequires: nspr
 
 %description
 TODO
 
 %prep
-%setup -q -a0
-%patch -p1
+%setup -q
 
 %build
+patch -Np1 -i ../../SOURCES/nss-3.92-standalone-1.patch
 pushd nss
-make -j1 BUILD_OPT=1                  \
+%make_build BUILD_OPT=1                  \
   NSPR_INCLUDE_DIR=/usr/include/nspr  \
   USE_SYSTEM_ZLIB=1                   \
   ZLIB_LIBS=-lz                       \
@@ -57,8 +58,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/lib/libfreebl3.so
 /usr/lib/libfreeblpriv3.chk
 /usr/lib/libfreeblpriv3.so
-/usr/lib/libgtest1.so
-/usr/lib/libgtestutil.so
 /usr/lib/libnss3.so
 /usr/lib/libnssckbi.so
 /usr/lib/libnssdbm3.chk
@@ -70,6 +69,9 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/lib/libsoftokn3.so
 /usr/lib/libssl3.so
 /usr/lib/pkgconfig/nss.pc
+/usr/lib/libnssckbi-testlib.so
+/usr/lib/libpkcs11testmodule.so
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 3.92-1
+- Version bump

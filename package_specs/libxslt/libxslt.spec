@@ -29,11 +29,9 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/include/libexslt/
 /usr/include/libxslt/
 /usr/share/man/
-/usr/lib64/libexslt.la
 /usr/lib64/libexslt.so
 /usr/lib64/libexslt.so.0
 /usr/lib64/libexslt.so.0.8.20
-/usr/lib64/libxslt.la
 /usr/lib64/libxslt.so
 /usr/lib64/libxslt.so.1
 /usr/lib64/libxslt.so.1.1.33
@@ -44,5 +42,6 @@ rm -vf %{buildroot}%{_infodir}/dir*
 /usr/share/doc/libxslt-1.1.33/
 
 %changelog
-# let's skip this for now
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 1.1.33-1
+- Version bump
 

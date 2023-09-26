@@ -1,5 +1,5 @@
 Name:       atkmm
-Version:    2.28.0
+Version:    2.28.3
 Release:    1
 Summary:    atkmm is the C++ binding for the ATK library. 
 License:    LGPL
@@ -13,27 +13,32 @@ atkmm is the C++ binding for the ATK library.
 %setup
 
 %build
-%configure
-%make_build
+mkdir build
+pushd build
+meson setup --prefix=/usr --buildtype=release ..
+ninja
+popd
 
 %install
 rm -rf %{buildroot}
-%make_install
+pushd build
+DESTDIR=%{buildroot} ninja install
+popd
 
 %files
 /usr/lib64/atkmm-1.6/include/atkmmconfig.h
 /usr/lib64/atkmm-1.6/proc/m4/convert.m4
 /usr/lib64/atkmm-1.6/proc/m4/convert_atk.m4
-/usr/lib64/libatkmm-1.6.la
 /usr/lib64/libatkmm-1.6.so
 /usr/lib64/libatkmm-1.6.so.1
 /usr/lib64/libatkmm-1.6.so.1.1.0
 /usr/lib64/pkgconfig/atkmm-1.6.pc
-/usr/share/devhelp/books/atkmm-1.6/atkmm-1.6.devhelp2
 /usr/include/atkmm-1.6/
-/usr/share/doc/atkmm-1.6/
 
 %changelog
-* Sun May 17 2020 Chris Statzer <chris.statzer@qq.com> 2.28.0
+* Wed Sep 6 2023 Chris Statzer <chris.statzer@gmail.com> 2.28.3-1
+- Version bump
+
+* Sun May 17 2020 Chris Statzer <chris.statzer@qq.com> 2.28.0-1
 - Initial RPM
 

@@ -1,13 +1,15 @@
 Name:       LVM2
 Version:    2.03.05
 Release:    1
-Summary:    TODO
+Summary:    LVM library
 License:    GPL3
 Source0:    %{name}.%{version}.tgz
 Prefix:     /usr
 
+BuildRequires: libaio
+
 %description
-TODO
+Provides logical volume management facilities on linux.
 
 %prep
 %setup -q -a0 -n LVM2.%{version}
